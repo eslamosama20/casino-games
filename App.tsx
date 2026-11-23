@@ -135,13 +135,28 @@ export default function App() {
   };
 
   const activeBg =
-    currentScreen === 'setup' || currentScreen === 'winner' ? BG_NEON : BG_STAGE;
+    currentScreen === 'buzzer_player' || currentScreen === 'buzzer_lobby'
+      ? BG_SPLASH
+      : currentScreen === 'setup' || currentScreen === 'winner'
+      ? BG_NEON
+      : BG_STAGE;
+
+  const isVibrantScreen =
+    currentScreen === 'buzzer_player' ||
+    currentScreen === 'buzzer_lobby' ||
+    currentScreen === 'setup' ||
+    currentScreen === 'winner';
 
   return (
     <SafeAreaProvider>
       <ErrorBoundary>
         <ImageBackground source={activeBg} style={styles.bgImage} resizeMode="cover">
-          <View style={styles.bgOverlay}>
+          <View
+            style={[
+              styles.bgOverlay,
+              isVibrantScreen && styles.bgOverlayLight,
+            ]}
+          >
             <SafeAreaView style={styles.safeArea} edges={['top', 'bottom', 'left', 'right']}>
               <StatusBar style="light" />
               {currentScreen === 'setup' && (
@@ -227,6 +242,9 @@ const styles = StyleSheet.create({
   bgOverlay: {
     flex: 1,
     backgroundColor: 'rgba(8, 11, 24, 0.56)',
+  },
+  bgOverlayLight: {
+    backgroundColor: 'rgba(8, 11, 24, 0.30)',
   },
   safeArea: {
     flex: 1,
