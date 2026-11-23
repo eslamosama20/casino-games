@@ -7,6 +7,7 @@ import {
   ScrollView,
   Platform,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Player } from '../types';
@@ -28,6 +29,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
   onNewGameSamePlayers,
   onChangePlayers,
 }) => {
+  const insets = useSafeAreaInsets();
   useEffect(() => {
     soundManager.playWinner();
   }, []);
@@ -98,7 +100,17 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
       </ScrollView>
 
       {/* Action Buttons */}
-      <View style={styles.footer}>
+      <View
+        style={[
+          styles.footer,
+          {
+            paddingBottom: Math.max(
+              insets.bottom,
+              Platform.OS === 'android' ? 28 : 16
+            ) + 12,
+          },
+        ]}
+      >
         <TouchableOpacity
           style={styles.primaryBtn}
           onPress={onNewGameSamePlayers}
@@ -129,7 +141,7 @@ const styles = StyleSheet.create({
   scrollContent: {
     padding: theme.spacing.lg,
     paddingTop: theme.spacing.xl,
-    paddingBottom: 150,
+    paddingBottom: 24,
     alignItems: 'center',
   },
   trophyContainer: {
@@ -250,14 +262,9 @@ const styles = StyleSheet.create({
     writingDirection: 'rtl',
   },
   footer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
     backgroundColor: theme.colors.background,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.md,
-    paddingBottom: Platform.OS === 'android' ? 36 : theme.spacing.lg,
     borderTopWidth: 1,
     borderTopColor: theme.colors.surfaceBorder,
     gap: 10,

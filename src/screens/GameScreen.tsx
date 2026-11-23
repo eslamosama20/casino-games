@@ -9,6 +9,7 @@ import {
   Alert,
   Platform,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
@@ -31,6 +32,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   onPlayerWon,
   onQuitGame,
 }) => {
+  const insets = useSafeAreaInsets();
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -441,7 +443,17 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </View>
 
       {/* Bottom Controls */}
-      <View style={styles.bottomBar}>
+      <View
+        style={[
+          styles.bottomBar,
+          {
+            paddingBottom: Math.max(
+              insets.bottom,
+              Platform.OS === 'android' ? 28 : 16
+            ) + 12,
+          },
+        ]}
+      >
         <TouchableOpacity
           style={styles.nextBtn}
           onPress={handleNextQuestion}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, SafeAreaView, I18nManager, Platform } from 'react-native';
+import { StyleSheet, I18nManager, Platform } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from './src/constants/theme';
 import { GameMode, Player, ScreenType } from './src/types';
 import { SetupScreen } from './src/screens/SetupScreen';
@@ -65,38 +66,40 @@ export default function App() {
   };
 
   return (
-    <ErrorBoundary>
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar style="light" />
-        {currentScreen === 'setup' && (
-          <SetupScreen onNext={handleSetupComplete} />
-        )}
-        {currentScreen === 'categories' && (
-          <CategoryScreen
-            onBack={() => setCurrentScreen('setup')}
-            onStartGame={handleStartGame}
-          />
-        )}
-        {currentScreen === 'game' && (
-          <GameScreen
-            players={players}
-            targetScore={targetScore}
-            selectedCategoryIds={selectedCategoryIds}
-            onPlayerWon={handlePlayerWon}
-            onQuitGame={() => setCurrentScreen('setup')}
-          />
-        )}
-        {currentScreen === 'winner' && winner && (
-          <WinnerScreen
-            winner={winner}
-            allPlayers={players}
-            targetScore={targetScore}
-            onNewGameSamePlayers={handleNewGameSamePlayers}
-            onChangePlayers={handleChangePlayers}
-          />
-        )}
-      </SafeAreaView>
-    </ErrorBoundary>
+    <SafeAreaProvider>
+      <ErrorBoundary>
+        <SafeAreaView style={styles.safeArea} edges={['top', 'bottom', 'left', 'right']}>
+          <StatusBar style="light" />
+          {currentScreen === 'setup' && (
+            <SetupScreen onNext={handleSetupComplete} />
+          )}
+          {currentScreen === 'categories' && (
+            <CategoryScreen
+              onBack={() => setCurrentScreen('setup')}
+              onStartGame={handleStartGame}
+            />
+          )}
+          {currentScreen === 'game' && (
+            <GameScreen
+              players={players}
+              targetScore={targetScore}
+              selectedCategoryIds={selectedCategoryIds}
+              onPlayerWon={handlePlayerWon}
+              onQuitGame={() => setCurrentScreen('setup')}
+            />
+          )}
+          {currentScreen === 'winner' && winner && (
+            <WinnerScreen
+              winner={winner}
+              allPlayers={players}
+              targetScore={targetScore}
+              onNewGameSamePlayers={handleNewGameSamePlayers}
+              onChangePlayers={handleChangePlayers}
+            />
+          )}
+        </SafeAreaView>
+      </ErrorBoundary>
+    </SafeAreaProvider>
   );
 }
 

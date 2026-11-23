@@ -9,6 +9,7 @@ import {
   Alert,
   Platform,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
@@ -24,6 +25,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
   onBack,
   onStartGame,
 }) => {
+  const insets = useSafeAreaInsets();
   const [categories, setCategories] = useState<Category[]>([]);
   const [remainingCounts, setRemainingCounts] = useState<Record<string, number>>({});
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -183,7 +185,17 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
       )}
 
       {/* Start Button */}
-      <View style={styles.footer}>
+      <View
+        style={[
+          styles.footer,
+          {
+            paddingBottom: Math.max(
+              insets.bottom,
+              Platform.OS === 'android' ? 28 : 16
+            ) + 12,
+          },
+        ]}
+      >
         <TouchableOpacity
           style={[
             styles.primaryBtn,
@@ -295,7 +307,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     padding: theme.spacing.md,
-    paddingBottom: 110,
+    paddingBottom: 24,
   },
   subTitle: {
     color: theme.colors.textSecondary,
@@ -388,14 +400,9 @@ const styles = StyleSheet.create({
     color: theme.colors.danger,
   },
   footer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
     backgroundColor: theme.colors.background,
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.md,
-    paddingBottom: Platform.OS === 'android' ? 36 : theme.spacing.lg,
     borderTopWidth: 1,
     borderTopColor: theme.colors.surfaceBorder,
   },
