@@ -233,6 +233,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(8, 11, 24, 0.56)',
   },
   bgOverlayLight: {
+    flex: 1,
     backgroundColor: 'rgba(8, 11, 24, 0.30)',
   },
   safeArea: {
