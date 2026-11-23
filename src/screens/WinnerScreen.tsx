@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,8 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Player } from '../types';
+import { ConfettiEffect } from '../components/ConfettiEffect';
+import { soundManager } from '../services/soundService';
 
 interface WinnerScreenProps {
   winner: Player;
@@ -25,11 +27,18 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
   onNewGameSamePlayers,
   onChangePlayers,
 }) => {
+  useEffect(() => {
+    soundManager.playWinner();
+  }, []);
+
   // Sort leaderboard descending
   const sortedPlayers = [...allPlayers].sort((a, b) => b.score - a.score);
 
   return (
     <View style={styles.container}>
+      {/* Celebratory animated confetti */}
+      <ConfettiEffect />
+
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
@@ -142,6 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 6,
+    writingDirection: 'rtl',
   },
   winnerName: {
     color: theme.colors.gold,
@@ -149,6 +159,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 10,
+    writingDirection: 'rtl',
   },
   scorePill: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -162,6 +173,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
     fontSize: 13,
     fontWeight: '600',
+    writingDirection: 'rtl',
   },
   leaderboardCard: {
     width: '100%',
@@ -185,6 +197,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
     fontSize: 16,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   leaderboardRow: {
     flexDirection: 'row',
@@ -218,6 +231,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'right',
     marginHorizontal: 10,
+    writingDirection: 'rtl',
   },
   scoreContainer: {
     flexDirection: 'row',
@@ -232,6 +246,7 @@ const styles = StyleSheet.create({
   scoreLabel: {
     color: theme.colors.textMuted,
     fontSize: 11,
+    writingDirection: 'rtl',
   },
   footer: {
     position: 'absolute',
@@ -257,6 +272,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontSize: 16,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   secondaryBtn: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -273,5 +289,6 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     fontSize: 15,
     fontWeight: '600',
+    writingDirection: 'rtl',
   },
 });

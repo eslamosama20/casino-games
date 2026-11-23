@@ -1,12 +1,32 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import bundledData from '../data/questions.json';
 import { Category, Question } from '../types';
+import { config } from '../constants/config';
 
 const SEEN_QUESTIONS_KEY = '@casino_games:seen_questions';
 const QUESTIONS_CACHE_KEY = '@casino_games:questions_cache';
 const CATEGORIES_CACHE_KEY = '@casino_games:categories_cache';
+const DATASET_VERSION_KEY = '@casino_games:dataset_version';
+
+export interface SyncResult {
+  success: boolean;
+  message: string;
+  isOnline: boolean;
+  updated: boolean;
+  version: number;
+}
 
 export const questionService = {
+  // Get cached version
+  async getDatasetVersion(): Promise<number> {
+    try {
+      const v = await AsyncStorage.getItem(DATASET_VERSION_KEY);
+      return v ? parseInt(v, 10) : bundledData.version || 1;
+    } catch {
+      return bundledData.version || 1;
+    }
+  },
+
   // Load categories (cached or bundled fallback)
   async getCategories(): Promise<Category[]> {
     try {
@@ -117,22 +137,70 @@ export const questionService = {
     return shuffled;
   },
 
-  // Placeholder for future backend API sync
-  async syncQuestionsFromApi(apiUrl: string): Promise<boolean> {
+  // Synchronize questions from API with timeout
+  async syncQuestionsFromApi(): Promise<SyncResult> {
+    const cachedVersion = await this.getDatasetVersion();
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), config.API_TIMEOUT_MS);
+
     try {
-      const response = await fetch(apiUrl);
-      if (!response.ok) throw new Error('Network response was not ok');
+      const url = `${config.API_BASE_URL}/api/sync?version=${cachedVersion}`;
+      const response = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        return {
+          success: false,
+          message: 'فشل الاتصال بالخادم',
+          isOnline: false,
+          updated: false,
+          version: cachedVersion,
+        };
+      }
+
       const data = await response.json();
 
+      if (data.upToDate) {
+        return {
+          success: true,
+          message: 'الأسئلة محدثة لآخر إصدار',
+          isOnline: true,
+          updated: false,
+          version: cachedVersion,
+        };
+      }
+
+      // We have new questions & categories to cache
       if (data.categories && data.questions) {
         await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(data.categories));
         await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(data.questions));
-        return true;
+        await AsyncStorage.setItem(DATASET_VERSION_KEY, String(data.version || cachedVersion + 1));
+
+        return {
+          success: true,
+          message: 'تم تحديث الأسئلة بنجاح ✓',
+          isOnline: true,
+          updated: true,
+          version: data.version,
+        };
       }
-      return false;
+
+      return {
+        success: false,
+        message: 'استجابة غير صالحة',
+        isOnline: true,
+        updated: false,
+        version: cachedVersion,
+      };
     } catch (e) {
-      console.warn('syncQuestionsFromApi error:', e);
-      return false;
+      clearTimeout(timeoutId);
+      return {
+        success: false,
+        message: 'وضع أوفلاين',
+        isOnline: false,
+        updated: false,
+        version: cachedVersion,
+      };
     }
   },
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -27,6 +27,19 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
     'اللاعب 2',
   ]);
   const [newPlayerInput, setNewPlayerInput] = useState<string>('');
+  const [syncStatus, setSyncStatus] = useState<{ text: string; isOnline: boolean } | null>(null);
+
+  useEffect(() => {
+    // Non-blocking auto sync on load
+    const doSync = async () => {
+      const result = await questionService.syncQuestionsFromApi();
+      setSyncStatus({
+        text: result.isOnline ? (result.updated ? 'تم تحديث الأسئلة ✓' : 'الأسئلة محدثة ✓') : 'وضع أوفلاين',
+        isOnline: result.isOnline,
+      });
+    };
+    doSync();
+  }, []);
 
   const handleAddPlayer = () => {
     const trimmed = newPlayerInput.trim();
@@ -105,14 +118,41 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
             onPress={handleResetQuestionsHistory}
             activeOpacity={0.7}
           >
-            <MaterialCommunityIcons name="refresh" size={20} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons name="refresh" size={18} color={theme.colors.textSecondary} />
             <Text style={styles.resetButtonText}>تصفير السجل</Text>
           </TouchableOpacity>
+
           <View style={styles.titleContainer}>
-            <MaterialCommunityIcons name="cards-playing-outline" size={32} color={theme.colors.gold} />
+            <MaterialCommunityIcons name="cards-playing-outline" size={28} color={theme.colors.gold} />
             <Text style={styles.title}>كازينو الألعاب</Text>
           </View>
         </View>
+
+        {/* Sync Badge */}
+        {syncStatus && (
+          <View style={styles.syncBadgeContainer}>
+            <View
+              style={[
+                styles.syncBadge,
+                syncStatus.isOnline ? styles.syncBadgeOnline : styles.syncBadgeOffline,
+              ]}
+            >
+              <MaterialCommunityIcons
+                name={syncStatus.isOnline ? 'cloud-check' : 'cloud-off-outline'}
+                size={14}
+                color={syncStatus.isOnline ? theme.colors.success : theme.colors.textMuted}
+              />
+              <Text
+                style={[
+                  styles.syncBadgeText,
+                  syncStatus.isOnline ? styles.syncBadgeTextOnline : styles.syncBadgeTextOffline,
+                ]}
+              >
+                {syncStatus.text}
+              </Text>
+            </View>
+          </View>
+        )}
 
         {/* Mode Selector */}
         <View style={styles.card}>
@@ -271,7 +311,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: theme.spacing.lg,
+    marginBottom: theme.spacing.sm,
     paddingTop: theme.spacing.sm,
   },
   titleContainer: {
@@ -280,10 +320,11 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   title: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: 'bold',
     color: theme.colors.gold,
     letterSpacing: 0.5,
+    writingDirection: 'rtl',
   },
   resetButton: {
     flexDirection: 'row',
@@ -300,6 +341,40 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     fontSize: 12,
     fontWeight: '600',
+    writingDirection: 'rtl',
+  },
+  syncBadgeContainer: {
+    alignItems: 'flex-end',
+    marginBottom: theme.spacing.md,
+  },
+  syncBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    gap: 6,
+  },
+  syncBadgeOnline: {
+    backgroundColor: theme.colors.successBg,
+    borderWidth: 1,
+    borderColor: theme.colors.success,
+  },
+  syncBadgeOffline: {
+    backgroundColor: theme.colors.surfaceElevated,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+  },
+  syncBadgeText: {
+    fontSize: 11,
+    fontWeight: '600',
+    writingDirection: 'rtl',
+  },
+  syncBadgeTextOnline: {
+    color: theme.colors.success,
+  },
+  syncBadgeTextOffline: {
+    color: theme.colors.textMuted,
   },
   card: {
     backgroundColor: theme.colors.surface,
@@ -315,6 +390,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
     marginBottom: theme.spacing.md,
     textAlign: 'right',
+    writingDirection: 'rtl',
   },
   modeToggleContainer: {
     flexDirection: 'row',
@@ -339,6 +415,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     fontSize: 15,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   modeOptionTextActive: {
     color: theme.colors.background,
@@ -370,10 +447,11 @@ const styles = StyleSheet.create({
   scoreUnit: {
     fontSize: 12,
     color: theme.colors.textSecondary,
+    writingDirection: 'rtl',
   },
   playersHeader: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   playerItem: {
@@ -408,6 +486,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
     fontSize: 15,
     fontWeight: '600',
+    writingDirection: 'rtl',
   },
   removeBtn: {
     padding: 4,
@@ -428,6 +507,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
+    writingDirection: 'rtl',
   },
   addPlayerBtn: {
     backgroundColor: theme.colors.gold,
@@ -443,6 +523,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontWeight: 'bold',
     fontSize: 14,
+    writingDirection: 'rtl',
   },
   footer: {
     position: 'absolute',
@@ -467,5 +548,6 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontSize: 17,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
 });

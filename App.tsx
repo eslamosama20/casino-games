@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, I18nManager } from 'react-native';
 import { theme } from './src/constants/theme';
 import { GameMode, Player, ScreenType } from './src/types';
 import { SetupScreen } from './src/screens/SetupScreen';
 import { CategoryScreen } from './src/screens/CategoryScreen';
 import { GameScreen } from './src/screens/GameScreen';
 import { WinnerScreen } from './src/screens/WinnerScreen';
+
+// Ensure RTL layout support at app initialization
+try {
+  if (!I18nManager.isRTL) {
+    I18nManager.allowRTL(true);
+    I18nManager.forceRTL(true);
+  }
+} catch (e) {
+  // Ignore in web preview if not supported
+}
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<ScreenType>('setup');

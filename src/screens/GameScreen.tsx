@@ -13,6 +13,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category, Player, Question } from '../types';
 import { questionService } from '../services/questionService';
+import { soundManager } from '../services/soundService';
 
 interface GameScreenProps {
   players: Player[];
@@ -36,6 +37,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
 
   // Timer states (30 seconds)
   const [timerRunning, setTimerRunning] = useState<boolean>(false);
@@ -79,7 +81,8 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           if (prev <= 1) {
             clearInterval(timerIntervalRef.current!);
             setTimerRunning(false);
-            // Haptic notification when timer ends
+            // Buzzer sound & Haptic notification when timer ends
+            soundManager.playBuzzer();
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
             return 0;
           }
@@ -110,9 +113,18 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setTimeLeft(30);
   };
 
+  const handleToggleMute = () => {
+    const updated = soundManager.toggleMute();
+    setIsMuted(updated);
+  };
+
   // Adjust score
   const updateScore = (playerId: string, delta: number) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    if (delta > 0) {
+      soundManager.playPoint();
+    }
+
     const updated = players.map((p) => {
       if (p.id === playerId) {
         const newScore = Math.max(0, p.score + delta);
@@ -126,6 +138,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     // Check if any player hit targetScore
     const winner = updated.find((p) => p.score >= targetScore);
     if (winner) {
+      soundManager.playWinner();
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       onPlayerWon(winner, updated);
     }
@@ -168,19 +181,35 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     <View style={styles.container}>
       {/* Top Header */}
       <View style={styles.topBar}>
-        <TouchableOpacity
-          style={styles.quitBtn}
-          onPress={() => {
-            Alert.alert('إنهاء الجولة', 'هل تريد الرجوع للقائمة الرئيسية؟', [
-              { text: 'إلغاء', style: 'cancel' },
-              { text: 'خروج', style: 'destructive', onPress: onQuitGame },
-            ]);
-          }}
-          activeOpacity={0.7}
-        >
-          <MaterialCommunityIcons name="close" size={22} color={theme.colors.textMuted} />
-        </TouchableOpacity>
+        <View style={styles.topBarIconsLeft}>
+          <TouchableOpacity
+            style={styles.iconCircleBtn}
+            onPress={() => {
+              Alert.alert('إنهاء الجولة', 'هل تريد الرجوع للقائمة الرئيسية؟', [
+                { text: 'إلغاء', style: 'cancel' },
+                { text: 'خروج', style: 'destructive', onPress: onQuitGame },
+              ]);
+            }}
+            activeOpacity={0.7}
+          >
+            <MaterialCommunityIcons name="close" size={20} color={theme.colors.textMuted} />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.iconCircleBtn}
+            onPress={handleToggleMute}
+            activeOpacity={0.7}
+          >
+            <MaterialCommunityIcons
+              name={isMuted ? 'volume-off' : 'volume-high'}
+              size={20}
+              color={isMuted ? theme.colors.textMuted : theme.colors.gold}
+            />
+          </TouchableOpacity>
+        </View>
+
         <Text style={styles.topBarTitle}>لوحة إدارة اللعبة</Text>
+
         <View style={styles.targetBadge}>
           <Text style={styles.targetBadgeText}>الهدف: {targetScore}</Text>
         </View>
@@ -408,15 +437,23 @@ const styles = StyleSheet.create({
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.sm,
   },
-  quitBtn: {
-    padding: 6,
+  topBarIconsLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  iconCircleBtn: {
+    padding: 8,
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: 8,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
   },
   topBarTitle: {
     color: theme.colors.textPrimary,
     fontSize: 16,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   targetBadge: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -430,6 +467,7 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
     fontSize: 12,
     fontWeight: '700',
+    writingDirection: 'rtl',
   },
   scoreboardWrapper: {
     paddingVertical: theme.spacing.sm,
@@ -458,6 +496,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
     marginBottom: 4,
+    writingDirection: 'rtl',
   },
   scoreRow: {
     flexDirection: 'row',
@@ -515,6 +554,7 @@ const styles = StyleSheet.create({
   loadingText: {
     color: theme.colors.textSecondary,
     fontSize: 16,
+    writingDirection: 'rtl',
   },
   questionCard: {
     backgroundColor: theme.colors.surface,
@@ -545,19 +585,22 @@ const styles = StyleSheet.create({
   categoryTagText: {
     fontSize: 12,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   questionCounter: {
     color: theme.colors.textMuted,
     fontSize: 12,
+    writingDirection: 'rtl',
   },
   questionText: {
     color: theme.colors.textPrimary,
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: 'bold',
     textAlign: 'center',
-    lineHeight: 30,
-    minHeight: 80,
+    lineHeight: 29,
+    minHeight: 75,
     marginVertical: theme.spacing.md,
+    writingDirection: 'rtl',
   },
   answerContainer: {
     marginTop: theme.spacing.sm,
@@ -576,12 +619,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
     marginBottom: 4,
+    writingDirection: 'rtl',
   },
   answerText: {
     color: theme.colors.textPrimary,
-    fontSize: 17,
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+    writingDirection: 'rtl',
   },
   answerHiddenBox: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -596,6 +641,7 @@ const styles = StyleSheet.create({
   answerHiddenText: {
     color: theme.colors.textMuted,
     fontSize: 13,
+    writingDirection: 'rtl',
   },
   toggleAnswerBtn: {
     backgroundColor: theme.colors.gold,
@@ -615,6 +661,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontSize: 14,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   toggleAnswerBtnTextActive: {
     color: theme.colors.gold,
@@ -652,6 +699,7 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
     fontSize: 13,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   timerButtonTextActive: {
     color: theme.colors.danger,
@@ -685,6 +733,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontSize: 16,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   modalOverlay: {
     flex: 1,
@@ -707,6 +756,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginVertical: 10,
+    writingDirection: 'rtl',
   },
   modalMessage: {
     color: theme.colors.textSecondary,
@@ -714,6 +764,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 22,
     marginBottom: 20,
+    writingDirection: 'rtl',
   },
   modalActions: {
     width: '100%',
@@ -729,6 +780,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontWeight: 'bold',
     fontSize: 15,
+    writingDirection: 'rtl',
   },
   modalCancelBtn: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -740,5 +792,6 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     fontWeight: '600',
     fontSize: 14,
+    writingDirection: 'rtl',
   },
 });
