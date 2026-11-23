@@ -18,9 +18,10 @@ import { questionService } from '../services/questionService';
 
 interface SetupScreenProps {
   onNext: (settings: { mode: GameMode; targetScore: number; players: Player[] }) => void;
+  onOpenBuzzerLobby?: () => void;
 }
 
-export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
+export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLobby }) => {
   const insets = useSafeAreaInsets();
   const [mode, setMode] = useState<GameMode>('individuals');
   const [targetScore, setTargetScore] = useState<number>(10);
@@ -166,6 +167,33 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
               </Text>
             </View>
           </View>
+        )}
+
+        {/* Live Buzzer Multiplayer Banner */}
+        {onOpenBuzzerLobby && (
+          <TouchableOpacity
+            style={styles.buzzerEntryBanner}
+            onPress={onOpenBuzzerLobby}
+            activeOpacity={0.85}
+          >
+            <View style={styles.buzzerEntryLeft}>
+              <MaterialCommunityIcons name="chevron-left" size={24} color={theme.colors.gold} />
+            </View>
+            <View style={styles.buzzerEntryTextWrap}>
+              <View style={styles.buzzerEntryTitleRow}>
+                <Text style={styles.buzzerEntryTitle}>غرفة الجرس المباشر</Text>
+                <View style={styles.newPill}>
+                  <Text style={styles.newPillText}>جديد 🔔</Text>
+                </View>
+              </View>
+              <Text style={styles.buzzerEntrySub}>
+                الحكم يعمل غرفة بكود والمتسابقين يدوسوا الجرس من موبايلاتهم لايف!
+              </Text>
+            </View>
+            <View style={styles.buzzerEntryIconCircle}>
+              <MaterialCommunityIcons name="bell-ring" size={26} color="#0F172A" />
+            </View>
+          </TouchableOpacity>
         )}
 
         {/* Mode Selector */}
@@ -591,5 +619,61 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     writingDirection: 'rtl',
+  },
+  buzzerEntryBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+    borderWidth: 1.5,
+    borderColor: theme.colors.gold,
+    borderRadius: theme.borderRadius.lg,
+    padding: 14,
+    marginBottom: theme.spacing.md,
+    gap: 12,
+  },
+  buzzerEntryLeft: {
+    justifyContent: 'center',
+  },
+  buzzerEntryTextWrap: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
+  buzzerEntryTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 4,
+  },
+  buzzerEntryTitle: {
+    color: theme.colors.gold,
+    fontSize: 16,
+    fontWeight: '900',
+    writingDirection: 'rtl',
+  },
+  newPill: {
+    backgroundColor: theme.colors.danger,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 999,
+  },
+  newPillText: {
+    color: '#FFFFFF',
+    fontSize: 11,
+    fontWeight: '800',
+  },
+  buzzerEntrySub: {
+    color: theme.colors.textSecondary,
+    fontSize: 12,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+    lineHeight: 18,
+  },
+  buzzerEntryIconCircle: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: theme.colors.gold,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

@@ -22,11 +22,36 @@ export interface Player {
   id: string;
   name: string;
   score: number;
+  connected?: boolean;
 }
 
 export type GameMode = 'individuals' | 'teams';
 
-export type ScreenType = 'setup' | 'categories' | 'game' | 'winner';
+export type ScreenType =
+  | 'setup'
+  | 'categories'
+  | 'game'
+  | 'winner'
+  | 'buzzer_lobby'
+  | 'buzzer_player';
+
+export type BuzzerState = 'locked' | 'open' | 'buzzed';
+
+export interface LiveBuzzerRoom {
+  code: string;
+  targetScore: number;
+  status: 'lobby' | 'playing' | 'finished';
+  players: Player[];
+  buzzerState: BuzzerState;
+  buzzedBy: {
+    playerId: string;
+    name: string;
+    timestamp: number;
+  } | null;
+  lockedOutPlayerIds: string[];
+  currentOptions: string[] | null;
+  winner: Player | null;
+}
 
 export interface GameSettings {
   mode: GameMode;

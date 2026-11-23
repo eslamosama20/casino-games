@@ -14,14 +14,16 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
-import { Category, Player, Question, DifficultyLevel } from '../types';
+import { Category, Player, Question, DifficultyLevel, BuzzerState } from '../types';
 import { questionService } from '../services/questionService';
 import { soundManager } from '../services/soundService';
+import { buzzerService } from '../services/buzzerService';
 
 interface GameScreenProps {
   players: Player[];
   targetScore: number;
   selectedCategoryIds: string[];
+  liveRoomCode?: string;
   onPlayerWon: (winner: Player, allPlayers: Player[]) => void;
   onQuitGame: () => void;
 }
@@ -30,11 +32,14 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   players: initialPlayers,
   targetScore,
   selectedCategoryIds,
+  liveRoomCode,
   onPlayerWon,
   onQuitGame,
 }) => {
   const insets = useSafeAreaInsets();
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
+  const [buzzerState, setBuzzerState] = useState<BuzzerState>('locked');
+  const [buzzedBy, setBuzzedBy] = useState<{ playerId: string; name: string } | null>(null);
   const [scoreBadge, setScoreBadge] = useState<{
     playerId: string;
     text: string;
@@ -163,14 +168,43 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setIsMuted(updated);
   };
 
+  // Live Buzzer room synchronization for Host
+  useEffect(() => {
+    if (!liveRoomCode) return;
+
+    const unsubRoom = buzzerService.onRoomUpdate((room) => {
+      if (room.code !== liveRoomCode) return;
+      setBuzzerState(room.buzzerState);
+      setBuzzedBy(room.buzzedBy ? { playerId: room.buzzedBy.playerId, name: room.buzzedBy.name } : null);
+      if (room.players && room.players.length > 0) {
+        setPlayers(room.players);
+      }
+    });
+
+    const unsubWinner = buzzerService.onBuzzerWinner((data) => {
+      if (data.room.code !== liveRoomCode) return;
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+      soundManager.playReveal();
+    });
+
+    return () => {
+      unsubRoom();
+      unsubWinner();
+    };
+  }, [liveRoomCode]);
+
   // Adjust score (supports negative scores / التسليب!)
-  const updateScore = (playerId: string, delta: number) => {
+  const updateScore = (playerId: string, delta: number, reopenOnWrong = false) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (delta > 0) {
       soundManager.playPoint();
     } else {
       // Play buzzer or negative feedback when losing points
       soundManager.playBuzzer();
+    }
+
+    if (liveRoomCode) {
+      buzzerService.updateScore(liveRoomCode, playerId, delta, reopenOnWrong);
     }
 
     // Trigger visual floating badge on player card
@@ -217,6 +251,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setIsAnswerVisible(false);
     setShowHint(false);
     setShowOptions(false);
+    if (liveRoomCode) {
+      buzzerService.lockBuzzer(liveRoomCode, true);
+    }
 
     const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
     const catsToFetch = filterToUse ? [filterToUse] : selectedCategoryIds;
@@ -421,6 +458,97 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         </ScrollView>
       </View>
 
+      {/* Live Buzzer Host Control Bar */}
+      {liveRoomCode && (
+        <View style={styles.liveBuzzerBar}>
+          <View style={styles.liveBuzzerHeader}>
+            <View style={styles.liveRoomPill}>
+              <View style={styles.livePulseDot} />
+              <Text style={styles.liveRoomPillText}>غرفة الجرس #{liveRoomCode}</Text>
+            </View>
+            <Text style={styles.liveBuzzerHintText}>
+              {buzzerState === 'locked'
+                ? 'اقرأ السؤال ثم افتح الجرس'
+                : buzzerState === 'open'
+                ? 'الجرس مفتوح! في انتظار أسرع ضغطة...'
+                : 'تم الضغط على الجرس!'}
+            </Text>
+          </View>
+
+          {buzzerState === 'locked' && (
+            <TouchableOpacity
+              style={styles.openBuzzerBtn}
+              onPress={() => {
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
+                soundManager.playCardFlip();
+                buzzerService.openBuzzer(liveRoomCode, false);
+              }}
+              activeOpacity={0.85}
+            >
+              <MaterialCommunityIcons name="bell-ring" size={20} color="#0F172A" />
+              <Text style={styles.openBuzzerBtnText}>افتح الجرس للمتسابقين 🟢 (دوسوا!)</Text>
+            </TouchableOpacity>
+          )}
+
+          {buzzerState === 'open' && (
+            <View style={styles.buzzerOpenRow}>
+              <TouchableOpacity
+                style={styles.lockBuzzerSmallBtn}
+                onPress={() => buzzerService.lockBuzzer(liveRoomCode, false)}
+                activeOpacity={0.8}
+              >
+                <MaterialCommunityIcons name="lock" size={16} color={theme.colors.textPrimary} />
+                <Text style={styles.lockBuzzerSmallText}>قفل</Text>
+              </TouchableOpacity>
+              <View style={styles.buzzerOpenIndicator}>
+                <MaterialCommunityIcons name="broadcast" size={18} color="#4ADE80" />
+                <Text style={styles.buzzerOpenIndicatorText}>
+                  الجرس مفتوح الآن — منتظر أول واحد يدوس 🚨
+                </Text>
+              </View>
+            </View>
+          )}
+
+          {buzzerState === 'buzzed' && buzzedBy && (
+            <View style={styles.buzzerWinnerBox}>
+              <View style={styles.buzzerWinnerTop}>
+                <MaterialCommunityIcons name="alarm-light" size={22} color={theme.colors.gold} />
+                <Text style={styles.buzzerWinnerText}>
+                  🥇 {buzzedBy.name} داس الأول! الإجابة عنده الآن 🎤
+                </Text>
+              </View>
+              <View style={styles.buzzerWinnerActions}>
+                <TouchableOpacity
+                  style={styles.buzzerCorrectBtn}
+                  onPress={() => updateScore(buzzedBy.playerId, 1, false)}
+                  activeOpacity={0.85}
+                >
+                  <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
+                  <Text style={styles.buzzerCorrectBtnText}>صح (+1)</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.buzzerWrongReopenBtn}
+                  onPress={() => updateScore(buzzedBy.playerId, -1, true)}
+                  activeOpacity={0.85}
+                >
+                  <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
+                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح للباقي 🔄</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.buzzerReopenAllBtn}
+                  onPress={() => buzzerService.openBuzzer(liveRoomCode, true)}
+                  activeOpacity={0.85}
+                >
+                  <MaterialCommunityIcons name="refresh" size={16} color={theme.colors.gold} />
+                </TouchableOpacity>
+              </View>
+            </View>
+          )}
+        </View>
+      )}
+
       {/* Main Question Section */}
       <View style={styles.centerSection}>
         {loading ? (
@@ -522,7 +650,14 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   onPress={() => {
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                     soundManager.playChipClick();
-                    setShowOptions(!showOptions);
+                    const nextShow = !showOptions;
+                    setShowOptions(nextShow);
+                    if (liveRoomCode && currentQuestion?.options) {
+                      buzzerService.setLiveOptions(
+                        liveRoomCode,
+                        nextShow ? currentQuestion.options : null
+                      );
+                    }
                   }}
                   activeOpacity={0.75}
                 >
@@ -1488,5 +1623,161 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginTop: 2,
     writingDirection: 'rtl',
+  },
+  liveBuzzerBar: {
+    marginHorizontal: theme.spacing.md,
+    marginBottom: 8,
+    backgroundColor: theme.colors.surface,
+    borderRadius: 16,
+    padding: 12,
+    borderWidth: 1.5,
+    borderColor: theme.colors.gold,
+  },
+  liveBuzzerHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  liveRoomPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(255, 215, 0, 0.14)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 999,
+  },
+  livePulseDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#22C55E',
+  },
+  liveRoomPillText: {
+    color: theme.colors.gold,
+    fontSize: 12,
+    fontWeight: '900',
+  },
+  liveBuzzerHintText: {
+    color: theme.colors.textSecondary,
+    fontSize: 11.5,
+    fontWeight: '700',
+  },
+  openBuzzerBtn: {
+    backgroundColor: '#22C55E',
+    borderRadius: 12,
+    paddingVertical: 11,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  openBuzzerBtnText: {
+    color: '#0F172A',
+    fontSize: 14,
+    fontWeight: '900',
+  },
+  buzzerOpenRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  lockBuzzerSmallBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: theme.colors.surfaceElevated,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+  },
+  lockBuzzerSmallText: {
+    color: theme.colors.textPrimary,
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  buzzerOpenIndicator: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(34, 197, 94, 0.14)',
+    borderWidth: 1,
+    borderColor: '#4ADE80',
+    borderRadius: 10,
+    paddingVertical: 9,
+    paddingHorizontal: 10,
+  },
+  buzzerOpenIndicatorText: {
+    color: '#4ADE80',
+    fontSize: 12.5,
+    fontWeight: '800',
+  },
+  buzzerWinnerBox: {
+    backgroundColor: 'rgba(255, 215, 0, 0.14)',
+    borderRadius: 12,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: theme.colors.gold,
+    gap: 10,
+  },
+  buzzerWinnerTop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  buzzerWinnerText: {
+    color: theme.colors.gold,
+    fontSize: 15,
+    fontWeight: '900',
+    textAlign: 'center',
+  },
+  buzzerWinnerActions: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  buzzerCorrectBtn: {
+    flex: 1,
+    backgroundColor: '#22C55E',
+    borderRadius: 10,
+    paddingVertical: 9,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+  },
+  buzzerCorrectBtnText: {
+    color: '#0F172A',
+    fontSize: 13,
+    fontWeight: '900',
+  },
+  buzzerWrongReopenBtn: {
+    flex: 1.5,
+    backgroundColor: theme.colors.danger,
+    borderRadius: 10,
+    paddingVertical: 9,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+  },
+  buzzerWrongReopenText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '900',
+  },
+  buzzerReopenAllBtn: {
+    width: 40,
+    backgroundColor: theme.colors.surfaceElevated,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.gold,
   },
 });
