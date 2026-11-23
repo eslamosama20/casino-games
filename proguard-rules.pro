@@ -1,0 +1,6 @@
+-keep class expo.modules.av.** { *; }
+-dontwarn expo.modules.av.**
+-keep class expo.modules.core.** { *; }
+-dontwarn expo.modules.core.**
+-keep class expo.modules.kotlin.** { *; }
+-dontwarn expo.modules.kotlin.**
