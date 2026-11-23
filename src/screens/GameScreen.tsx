@@ -282,6 +282,21 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
   const diffBadge = getDifficultyBadge(currentQuestion?.difficulty);
 
+  // Safe quit prompt (supports Web window.confirm + Native Alert.alert)
+  const handleQuitRequest = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    if (Platform.OS === 'web' && typeof window !== 'undefined') {
+      if (window.confirm('هل تريد إنهاء الجولة والرجوع للقائمة الرئيسية؟')) {
+        onQuitGame();
+      }
+    } else {
+      Alert.alert('إنهاء الجولة', 'هل تريد الرجوع للقائمة الرئيسية؟', [
+        { text: 'إلغاء', style: 'cancel' },
+        { text: 'خروج', style: 'destructive', onPress: onQuitGame },
+      ]);
+    }
+  };
+
   return (
     <View style={styles.container}>
       {/* Top Header */}
@@ -289,12 +304,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         <View style={styles.topBarIconsLeft}>
           <TouchableOpacity
             style={styles.iconCircleBtn}
-            onPress={() => {
-              Alert.alert('إنهاء الجولة', 'هل تريد الرجوع للقائمة الرئيسية؟', [
-                { text: 'إلغاء', style: 'cancel' },
-                { text: 'خروج', style: 'destructive', onPress: onQuitGame },
-              ]);
-            }}
+            onPress={handleQuitRequest}
             activeOpacity={0.7}
           >
             <MaterialCommunityIcons name="close" size={20} color={theme.colors.textMuted} />
