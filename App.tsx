@@ -135,28 +135,17 @@ export default function App() {
   };
 
   const activeBg =
-    currentScreen === 'buzzer_player' || currentScreen === 'buzzer_lobby'
-      ? BG_SPLASH
-      : currentScreen === 'setup' || currentScreen === 'winner'
-      ? BG_NEON
-      : BG_STAGE;
-
-  const isVibrantScreen =
+    currentScreen === 'game' ||
     currentScreen === 'buzzer_player' ||
-    currentScreen === 'buzzer_lobby' ||
-    currentScreen === 'setup' ||
-    currentScreen === 'winner';
+    currentScreen === 'buzzer_lobby'
+      ? BG_SPLASH
+      : BG_NEON;
 
   return (
     <SafeAreaProvider>
       <ErrorBoundary>
         <ImageBackground source={activeBg} style={styles.bgImage} resizeMode="cover">
-          <View
-            style={[
-              styles.bgOverlay,
-              isVibrantScreen && styles.bgOverlayLight,
-            ]}
-          >
+          <View style={styles.bgOverlayLight}>
             <SafeAreaView style={styles.safeArea} edges={['top', 'bottom', 'left', 'right']}>
               <StatusBar style="light" />
               {currentScreen === 'setup' && (
