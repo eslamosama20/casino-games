@@ -30,6 +30,14 @@ export const questionService = {
   // Load categories (cached or bundled fallback)
   async getCategories(): Promise<Category[]> {
     try {
+      const cachedVersion = await this.getDatasetVersion();
+      const bundleVer = bundledData.version || 1;
+      if (bundleVer > cachedVersion) {
+        await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(bundledData.categories));
+        await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(bundledData.questions));
+        await AsyncStorage.setItem(DATASET_VERSION_KEY, String(bundleVer));
+        return bundledData.categories as Category[];
+      }
       const cached = await AsyncStorage.getItem(CATEGORIES_CACHE_KEY);
       if (cached) {
         return JSON.parse(cached);
@@ -43,6 +51,14 @@ export const questionService = {
   // Load all questions (cached or bundled fallback)
   async getAllQuestions(): Promise<Question[]> {
     try {
+      const cachedVersion = await this.getDatasetVersion();
+      const bundleVer = bundledData.version || 1;
+      if (bundleVer > cachedVersion) {
+        await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(bundledData.categories));
+        await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(bundledData.questions));
+        await AsyncStorage.setItem(DATASET_VERSION_KEY, String(bundleVer));
+        return bundledData.questions as Question[];
+      }
       const cached = await AsyncStorage.getItem(QUESTIONS_CACHE_KEY);
       if (cached) {
         return JSON.parse(cached);
