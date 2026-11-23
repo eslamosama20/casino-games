@@ -30,7 +30,6 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
   const [syncStatus, setSyncStatus] = useState<{ text: string; isOnline: boolean } | null>(null);
 
   useEffect(() => {
-    // Non-blocking auto sync on load
     const doSync = async () => {
       const result = await questionService.syncQuestionsFromApi();
       setSyncStatus({
@@ -40,6 +39,13 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
     };
     doSync();
   }, []);
+
+  // Update existing player name in place
+  const handleEditPlayerName = (index: number, newName: string) => {
+    const updated = [...playerNames];
+    updated[index] = newName;
+    setPlayerNames(updated);
+  };
 
   const handleAddPlayer = () => {
     const trimmed = newPlayerInput.trim();
@@ -56,7 +62,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
 
   const handleRemovePlayer = (index: number) => {
     if (playerNames.length <= 2) {
-      Alert.alert('تنبيه', 'لازم على الأقل اتنين للمنافسة!');
+      Alert.alert('تنبيه', 'لازم على الأقل اتنين للمنافسة! تقدر تعدل أساميهم براحتك.');
       return;
     }
     const updated = [...playerNames];
@@ -83,12 +89,18 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
   };
 
   const handleContinue = () => {
-    if (playerNames.length < 2) {
+    // Validate names are not empty
+    const cleanedNames = playerNames.map((n, idx) => {
+      const trimmed = n.trim();
+      return trimmed.length > 0 ? trimmed : (mode === 'teams' ? `فريق ${idx + 1}` : `اللاعب ${idx + 1}`);
+    });
+
+    if (cleanedNames.length < 2) {
       Alert.alert('تنبيه', 'يجب تحديد لاعبين على الأقل للبدء.');
       return;
     }
 
-    const players: Player[] = playerNames.map((name, idx) => ({
+    const players: Player[] = cleanedNames.map((name, idx) => ({
       id: `p_${Date.now()}_${idx}`,
       name,
       score: 0,
@@ -233,9 +245,10 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
           </View>
         </View>
 
-        {/* Players / Teams List */}
+        {/* Players / Teams List with In-Place Editable Names & Delete */}
         <View style={styles.card}>
           <View style={styles.playersHeader}>
+            <Text style={styles.sectionHint}>اضغط على الاسم واكتب اللي تحبه مباشرة ✏️</Text>
             <Text style={styles.sectionTitle}>
               {mode === 'teams' ? 'أسماء الفرق' : 'أسماء المتسابقين'} ({playerNames.length})
             </Text>
@@ -243,35 +256,50 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext }) => {
 
           {playerNames.map((name, index) => (
             <View key={index} style={styles.playerItem}>
+              {/* Delete button on left */}
               <TouchableOpacity
                 onPress={() => handleRemovePlayer(index)}
                 style={styles.removeBtn}
-                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                activeOpacity={0.6}
               >
-                <MaterialCommunityIcons name="trash-can-outline" size={20} color={theme.colors.danger} />
+                <MaterialCommunityIcons
+                  name="trash-can-outline"
+                  size={22}
+                  color={playerNames.length <= 2 ? theme.colors.textMuted : theme.colors.danger}
+                />
               </TouchableOpacity>
-              <View style={styles.playerNameContainer}>
-                <Text style={styles.playerName}>{name}</Text>
-                <View style={styles.playerBadge}>
-                  <Text style={styles.playerBadgeText}>#{index + 1}</Text>
-                </View>
+
+              {/* Editable Name Input directly in place! */}
+              <TextInput
+                style={styles.editablePlayerInput}
+                value={name}
+                onChangeText={(text) => handleEditPlayerName(index, text)}
+                placeholder={mode === 'teams' ? `فريق ${index + 1}` : `اللاعب ${index + 1}`}
+                placeholderTextColor={theme.colors.textMuted}
+                textAlign="right"
+                returnKeyType="done"
+              />
+
+              {/* Player Index Badge on right */}
+              <View style={styles.playerBadge}>
+                <Text style={styles.playerBadgeText}>#{index + 1}</Text>
               </View>
             </View>
           ))}
 
-          {/* Add input */}
+          {/* Add player row */}
           <View style={styles.addPlayerRow}>
             <TouchableOpacity
               style={styles.addPlayerBtn}
               onPress={handleAddPlayer}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons name="plus" size={22} color={theme.colors.background} />
+              <MaterialCommunityIcons name="plus" size={20} color={theme.colors.background} />
               <Text style={styles.addPlayerBtnText}>إضافة</Text>
             </TouchableOpacity>
             <TextInput
               style={styles.input}
-              placeholder={mode === 'teams' ? 'اسم الفريق...' : 'اسم اللاعب...'}
+              placeholder={mode === 'teams' ? 'اكتب اسم فريق جديد...' : 'اكتب اسم لاعب جديد...'}
               placeholderTextColor={theme.colors.textMuted}
               value={newPlayerInput}
               onChangeText={setNewPlayerInput}
@@ -384,11 +412,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
   },
+  playersHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: theme.spacing.md,
+  },
+  sectionHint: {
+    fontSize: 11,
+    color: theme.colors.textMuted,
+    writingDirection: 'rtl',
+  },
   sectionTitle: {
     fontSize: 16,
     fontWeight: '700',
     color: theme.colors.textPrimary,
-    marginBottom: theme.spacing.md,
     textAlign: 'right',
     writingDirection: 'rtl',
   },
@@ -449,52 +487,47 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     writingDirection: 'rtl',
   },
-  playersHeader: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
   playerItem: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: theme.borderRadius.md,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     marginBottom: 8,
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
   },
-  playerNameContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
   playerBadge: {
     backgroundColor: theme.colors.surfaceBorder,
-    paddingHorizontal: 8,
-    paddingVertical: 2,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
     borderRadius: 6,
+    marginLeft: 8,
   },
   playerBadgeText: {
     color: theme.colors.gold,
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '700',
   },
-  playerName: {
+  editablePlayerInput: {
+    flex: 1,
     color: theme.colors.textPrimary,
     fontSize: 15,
     fontWeight: '600',
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     writingDirection: 'rtl',
   },
   removeBtn: {
-    padding: 4,
+    padding: 8,
+    marginRight: 6,
   },
   addPlayerRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 8,
+    marginTop: 10,
     gap: 10,
   },
   input: {
