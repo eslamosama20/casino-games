@@ -10,6 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
@@ -54,6 +55,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
   }, []);
 
   const toggleCategory = (id: string) => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (selectedIds.includes(id)) {
       setSelectedIds(selectedIds.filter((item) => item !== id));
     } else {
@@ -62,6 +64,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
   };
 
   const handleToggleSelectAll = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (selectedIds.length === categories.length) {
       setSelectedIds([]);
     } else {

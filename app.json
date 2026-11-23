@@ -33,7 +33,8 @@
             "enableMinifyInReleaseBuilds": false
           }
         }
-      ]
+      ],
+      "expo-audio"
     ],
     "extra": {
       "eas": {

@@ -34,6 +34,12 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 }) => {
   const insets = useSafeAreaInsets();
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
+  const [activePlayerId, setActivePlayerId] = useState<string>(initialPlayers[0]?.id || '');
+  const [scoreBadge, setScoreBadge] = useState<{
+    playerId: string;
+    text: string;
+    color: string;
+  } | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -141,6 +147,16 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       soundManager.playBuzzer();
     }
 
+    // Trigger visual floating badge on player card
+    setScoreBadge({
+      playerId,
+      text: delta > 0 ? '+1 🔥' : '-1 ⚠️',
+      color: delta > 0 ? theme.colors.success : theme.colors.danger,
+    });
+    setTimeout(() => {
+      setScoreBadge(null);
+    }, 1200);
+
     const updated = players.map((p) => {
       if (p.id === playerId) {
         // Allow negative scores freely (e.g. -1, -2, -5)
@@ -161,12 +177,19 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     }
   };
 
-  // Move to next question
+  // Move to next question with auto-advancing turn
   const handleNextQuestion = async () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     handleResetTimer();
     setIsAnswerVisible(false);
     setShowHint(false);
+
+    // Auto-advance turn to next player in list
+    if (players.length > 1) {
+      const currentActiveIdx = players.findIndex((p) => p.id === activePlayerId);
+      const nextActiveIdx = (currentActiveIdx + 1) % players.length;
+      setActivePlayerId(players[nextActiveIdx].id);
+    }
 
     const nextIndex = currentIndex + 1;
     if (nextIndex < questions.length) {
@@ -258,14 +281,46 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         >
           {players.map((p) => {
             const isLeading = p.score === Math.max(...players.map((x) => x.score)) && p.score > 0;
+            const isActive = p.id === activePlayerId;
             return (
-              <View
+              <TouchableOpacity
                 key={p.id}
-                style={[styles.scoreCard, isLeading && styles.scoreCardLeading]}
+                style={[
+                  styles.scoreCard,
+                  isLeading && styles.scoreCardLeading,
+                  isActive && styles.scoreCardActive,
+                ]}
+                onPress={() => {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  setActivePlayerId(p.id);
+                }}
+                activeOpacity={0.85}
               >
-                <Text style={styles.playerCardName} numberOfLines={1}>
-                  {p.name}
-                </Text>
+                {/* Floating Score Badge Animation */}
+                {scoreBadge?.playerId === p.id && (
+                  <View style={[styles.floatingScoreBadge, { backgroundColor: scoreBadge.color }]}>
+                    <Text style={styles.floatingScoreText}>{scoreBadge.text}</Text>
+                  </View>
+                )}
+
+                {/* Status Badges */}
+                {isActive && (
+                  <View style={styles.activeTurnPill}>
+                    <Text style={styles.activeTurnPillText}>صاحب الدور 🎯</Text>
+                  </View>
+                )}
+
+                <View style={styles.playerNameContainer}>
+                  {isLeading && (
+                    <MaterialCommunityIcons name="crown" size={14} color={theme.colors.gold} />
+                  )}
+                  <Text
+                    style={[styles.playerCardName, isActive && styles.playerCardNameActive]}
+                    numberOfLines={1}
+                  >
+                    {p.name}
+                  </Text>
+                </View>
 
                 <View style={styles.scoreRow}>
                   <Text style={[styles.scoreMain, p.score < 0 && styles.scoreNegative]}>
@@ -292,10 +347,21 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     <Text style={styles.miniBtnText}>+1</Text>
                   </TouchableOpacity>
                 </View>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </ScrollView>
+
+        {/* Interactive Turn Announcement Pill */}
+        <View style={styles.turnBanner}>
+          <MaterialCommunityIcons name="bullhorn-outline" size={16} color={theme.colors.gold} />
+          <Text style={styles.turnBannerText}>
+            السؤال موجه إلى:{' '}
+            <Text style={styles.turnBannerPlayerName}>
+              {players.find((p) => p.id === activePlayerId)?.name || 'الجميع'}
+            </Text>
+          </Text>
+        </View>
       </View>
 
       {/* Main Question Section */}
@@ -557,24 +623,89 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   scoreCard: {
-    width: 120,
+    width: 124,
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.md,
     padding: 10,
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
     alignItems: 'center',
+    position: 'relative',
   },
   scoreCardLeading: {
     borderColor: theme.colors.gold,
     backgroundColor: theme.colors.surfaceElevated,
   },
+  scoreCardActive: {
+    borderColor: theme.colors.gold,
+    backgroundColor: 'rgba(255, 215, 0, 0.08)',
+    borderWidth: 1.5,
+  },
+  activeTurnPill: {
+    backgroundColor: theme.colors.gold,
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 8,
+    marginBottom: 4,
+  },
+  activeTurnPillText: {
+    color: theme.colors.background,
+    fontSize: 9,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  playerNameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    marginBottom: 4,
+  },
   playerCardName: {
     color: theme.colors.textPrimary,
     fontSize: 13,
     fontWeight: 'bold',
-    marginBottom: 4,
     writingDirection: 'rtl',
+  },
+  playerCardNameActive: {
+    color: theme.colors.gold,
+  },
+  floatingScoreBadge: {
+    position: 'absolute',
+    top: -12,
+    zIndex: 20,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 6,
+  },
+  floatingScoreText: {
+    color: '#FFF',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  turnBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    marginTop: 8,
+    paddingHorizontal: theme.spacing.md,
+    paddingVertical: 4,
+  },
+  turnBannerText: {
+    color: theme.colors.textSecondary,
+    fontSize: 12,
+    fontWeight: '600',
+    writingDirection: 'rtl',
+  },
+  turnBannerPlayerName: {
+    color: theme.colors.gold,
+    fontWeight: 'bold',
+    fontSize: 13,
   },
   scoreRow: {
     flexDirection: 'row',
