@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "categories": [
     {
       "id": "football",
@@ -60,1294 +60,389 @@
   ],
   "questions": [
     {
-      "id": "fb_001",
-      "categoryId": "football",
-      "question": "مين الهداف التاريخي لمنتخب مصر في تصفيات وبطولات أفريقيا؟",
-      "answer": "حسام حسن",
+      "id": "cha_001",
+      "categoryId": "challenges",
+      "question": "تحدي الـ 5 ثواني: قول 3 أكلات شعبية مصرية بتبدأ بحرف 'الفاء'!",
+      "answer": "فول، فلافل، فتة، فريك",
       "difficulty": "easy"
     },
     {
-      "id": "fb_002",
-      "categoryId": "football",
-      "question": "مين اللاعب المصري الملقب بـ 'الماجيكو' وكان بيلبس رقم 22 في الأهلي؟",
-      "answer": "محمد محمد أبو تريكة",
+      "id": "cha_002",
+      "categoryId": "challenges",
+      "question": "تحدي الألوان: اذكر 5 خضروات لونها أخضر في 5 ثواني فقط!",
+      "answer": "خيار، جرجير، ملوخية، سبانخ، كوسة",
       "difficulty": "easy"
     },
     {
-      "id": "fb_003",
-      "categoryId": "football",
-      "question": "في أي نادي إنجليزي يلعب محمد صلاح حالياً؟",
-      "answer": "ليفربول",
+      "id": "cha_003",
+      "categoryId": "challenges",
+      "question": "تحدي البديهة: قول 3 حيوانات لا تبيض في 5 ثواني!",
+      "answer": "الأسد، الفيل، الحصان، القطة، الكلب",
       "difficulty": "easy"
     },
     {
-      "id": "fb_004",
-      "categoryId": "football",
-      "question": "مين النادي الإسباني الملقب بـ 'الميرنجي' والأكثر تتويجاً بدوري أبطال أوروبا؟",
-      "answer": "ريال مدريد",
+      "id": "cha_004",
+      "categoryId": "challenges",
+      "question": "تحدي السينما: اذكر 3 أفلام لأحمد حلمي في 5 ثواني!",
+      "answer": "كده رضا، عسل أسود، إكس لارج، زكي شان",
       "difficulty": "easy"
     },
     {
-      "id": "fb_005",
-      "categoryId": "football",
-      "question": "مين هو هداف كأس العالم قطر 2022؟",
-      "answer": "كيليان مبابي (8 أهداف)",
+      "id": "cha_005",
+      "categoryId": "challenges",
+      "question": "تحدي الدول: اذكر 3 دول تبدأ بحرف 'الكاف' في 5 ثواني!",
+      "answer": "كندا، كينيا، الكويت، كولومبيا",
       "difficulty": "easy"
     },
     {
-      "id": "fb_006",
-      "categoryId": "football",
-      "question": "مين حارس المرمى التاريخي لمنتخب مصر الملقب بـ 'السد العالي'؟",
-      "answer": "عصام الحضري",
+      "id": "cha_006",
+      "categoryId": "challenges",
+      "question": "حكم كوميدي: قلّد صوت منبه الموبايل بأعلى صوتك لمدة 5 ثواني!",
+      "answer": "تنفيذ صوت المنبه المزعج بنجاح",
       "difficulty": "easy"
     },
     {
-      "id": "fb_007",
-      "categoryId": "football",
-      "question": "أي منتخب فاز بلقب كأس العالم 2022 في قطر؟",
-      "answer": "الأرجنتين",
+      "id": "cha_007",
+      "categoryId": "challenges",
+      "question": "تحدي الضحك: ممنوع تبتسم أو تضحك لمدة 15 ثانية بينما المنافس يحاول يضحكك!",
+      "answer": "الصمود بوجه جامد بدون أي ابتسامة",
       "difficulty": "easy"
     },
     {
-      "id": "fb_008",
-      "categoryId": "football",
-      "question": "مين اللاعب الأسطوري الملقب بـ 'البرغوث'؟",
-      "answer": "ليونيل ميسي",
+      "id": "cha_008",
+      "categoryId": "challenges",
+      "question": "تحدي الكورة: سمّي 3 لاعبين مصريين محترفين في أوروبا حالياً أو سابقاً!",
+      "answer": "محمد صلاح، مرموش، تريزيجيه، ميدو، النني",
       "difficulty": "easy"
     },
     {
-      "id": "fb_009",
-      "categoryId": "football",
-      "question": "مين النادي الأوروبي صاحب لقب 'الريدز'؟",
-      "answer": "ليفربول",
+      "id": "cha_009",
+      "categoryId": "challenges",
+      "question": "حكم سريع: اعمل 5 عدات ضغط (Push-ups) على الأرض فوراً!",
+      "answer": "أداء التمرين بحماس",
       "difficulty": "easy"
     },
     {
-      "id": "fb_010",
-      "categoryId": "football",
-      "question": "كام عدد لاعبي فريق كرة القدم داخل الملعب في بداية المباراة؟",
-      "answer": "11 لاعب",
+      "id": "cha_010",
+      "categoryId": "challenges",
+      "question": "تحدي الغناء: غنّي مطلع أي أغنية لأم كلثوم بصوتك في 10 ثواني!",
+      "answer": "أداء مطلع الأغنية بنجاح",
       "difficulty": "easy"
     },
     {
-      "id": "fb_011",
-      "categoryId": "football",
-      "question": "مين أول منتخب عربي وأفريقي يصل لنصف نهائي كأس العالم عبر التاريخ؟",
-      "answer": "منتخب المغرب (مونديال 2022)",
+      "id": "cha_011",
+      "categoryId": "challenges",
+      "question": "تحدي تمثيل بدون كلام (Charades): مثّل لفريقك فيلم 'إسماعيلية رايح جاي' في 20 ثانية!",
+      "answer": "تمثيل الفيلم أو أغنية كامننا بالإشارة فقط",
       "difficulty": "medium"
     },
     {
-      "id": "fb_012",
-      "categoryId": "football",
-      "question": "مين النادي الوحيد في العالم اللي حقق السداسية التاريخية مرتين؟",
-      "answer": "برشلونة الإسباني",
+      "id": "cha_012",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة النطق: كرر الجملة دي 3 مرات متتالية بسرعة وبدون غلط: 'خيط حرير على حيط خليل'!",
+      "answer": "نطق الجملة 3 مرات بنجاح وسرعة",
       "difficulty": "medium"
     },
     {
-      "id": "fb_013",
-      "categoryId": "football",
-      "question": "مين المدرب الأرجنتيني الذي قاد مصر للتأهل لمونديال روسيا 2018 بعد غياب 28 سنة؟",
-      "answer": "هيكتور كوبر",
+      "id": "cha_013",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة النطق: كرر الجملة دي 3 مرات بسرعة وبدون تلعثم: 'شجرة الأبنوس داسها الأتوبيس'!",
+      "answer": "نطق الجملة 3 مرات بنجاح وبسرعة",
       "difficulty": "medium"
     },
     {
-      "id": "fb_014",
-      "categoryId": "football",
-      "question": "مين الهداف التاريخي لبطولة دوري أبطال أوروبا حتى الآن؟",
-      "answer": "كريستيانو رونالدو (140 هدف)",
+      "id": "cha_014",
+      "categoryId": "challenges",
+      "question": "تحدي الحساب الذهني السريع: كام ناتج (8 × 7) + 14 في 5 ثواني فقط؟",
+      "answer": "70 (لأن 8 × 7 = 56 + 14 = 70)",
       "difficulty": "medium"
     },
     {
-      "id": "fb_015",
-      "categoryId": "football",
-      "question": "في أي نادي مصري بدأ محمد صلاح مسيرته الاحترافية في الدوري الممتاز؟",
-      "answer": "المقاولون العرب",
+      "id": "cha_015",
+      "categoryId": "challenges",
+      "question": "تحدي الجغرافيا: اذكر 4 عواصم عربية في قارة إفريقيا في 7 ثواني!",
+      "answer": "القاهرة، طرابلس، تونس، الجزائر، الرباط، الخرطوم",
       "difficulty": "medium"
     },
     {
-      "id": "fb_016",
-      "categoryId": "football",
-      "question": "مين صاحب هدف فوز الزمالك بنهائي دوري أبطال أفريقيا 2002 ضد الرجاء؟",
-      "answer": "تامر عبد الحميد (دونجا)",
+      "id": "cha_016",
+      "categoryId": "challenges",
+      "question": "تحدي التقليد: قلّد طريقة كلام وإيفيه مشهور للزعيم عادل إمام في مسرحية الواد سيد الشغال!",
+      "answer": "تقليد إيفيه مشهور بنجاح",
       "difficulty": "medium"
     },
     {
-      "id": "fb_017",
-      "categoryId": "football",
-      "question": "مين صاحب أسرع هدف في تاريخ كأس العالم (سجله بعد 11 ثانية)؟",
-      "answer": "هاكان شوكور (تركيا أمام كوريا الجنوبية 2002)",
+      "id": "cha_017",
+      "categoryId": "challenges",
+      "question": "تحدي الأندية: اذكر 4 أندية في الدوري الإنجليزي الممتاز في 5 ثواني!",
+      "answer": "ليفربول، مانشستر سيتي، آرسنال، تشيلسي، مان يونايتد",
       "difficulty": "medium"
     },
     {
-      "id": "fb_018",
-      "categoryId": "football",
-      "question": "مين فاز بجائزة الكرة الذهبية (Ballon d'Or) لسنة 2024؟",
-      "answer": "رودري (لاعب مانشستر سيتي وإسبانيا)",
+      "id": "cha_018",
+      "categoryId": "challenges",
+      "question": "تحدي الفواكه: قول 4 فواكه تبدأ بحرف 'الميم' أو 'التاء' في 6 ثواني!",
+      "answer": "موز، مانجو، مشمش، تفاح، تين، توت",
       "difficulty": "medium"
     },
     {
-      "id": "fb_019",
-      "categoryId": "football",
-      "question": "أي منتخب فاز ببطولة يورو 2024 الصيف الماضي؟",
-      "answer": "منتخب إسبانيا",
+      "id": "cha_019",
+      "categoryId": "challenges",
+      "question": "حكم غنائي: غنّي أغنية أطفال مشهورة (زي 'ماما زمنها جاية') بنبرة شخص غضبان جداً!",
+      "answer": "أداء الأغنية بالتمثيل الكوميدي",
       "difficulty": "medium"
     },
     {
-      "id": "fb_020",
-      "categoryId": "football",
-      "question": "مين المدرب السويسري الذي قاد الأهلي للفوز ببطولات محلية وأفريقية متتالية منذ 2022؟",
-      "answer": "مارسيل كولر",
+      "id": "cha_020",
+      "categoryId": "challenges",
+      "question": "تحدي أسماء البنات: اذكر 5 أسماء بنات تنتهي بحرف 'الألف' في 6 ثواني!",
+      "answer": "سارة، دنيا، رنا، علياء، علا، دينا",
       "difficulty": "medium"
     },
     {
-      "id": "fb_021",
-      "categoryId": "football",
-      "question": "مين هو صاحب أول هدف رسمي في تاريخ بطولات كأس العالم سنة 1930؟",
-      "answer": "الفرنسي لوسيان لوران",
+      "id": "cha_021",
+      "categoryId": "challenges",
+      "question": "تحدي الحساب الخاطف: كام ناتج (12 × 12) - 24 في أقل من 5 ثواني؟",
+      "answer": "120 (لأن 144 - 24 = 120)",
       "difficulty": "hard"
     },
     {
-      "id": "fb_022",
-      "categoryId": "football",
-      "question": "مين هو اللاعب الوحيد الذي سجل هاتريك في نهائيين مختلفين لكأس العالم؟",
-      "answer": "كيليان مبابي (سجل في 2022 وكان له هدف في 2018)",
+      "id": "cha_022",
+      "categoryId": "challenges",
+      "question": "تحدي الحروف الممنوعة: تكلم لمدة 20 ثانية عن الكورة بدون ما تنطق حرف 'الميم' نهائياً!",
+      "answer": "الحديث المتواصل 20 ثانية بدون أي حرف ميم",
       "difficulty": "hard"
     },
     {
-      "id": "fb_023",
-      "categoryId": "football",
-      "question": "مين النادي الفائز بلقب الدوري الإنجليزي الذهبي (بدون أي هزيمة) موسم 2003-2004؟",
-      "answer": "آرسنال",
+      "id": "cha_023",
+      "categoryId": "challenges",
+      "question": "تحدي تمثيل صامت صعب: مثّل لفريقك فيلم 'الفيل الأزرق' بدون كلام في 25 ثانية!",
+      "answer": "تمثيل الفيلم وحركة العين والأكشن بالإشارة",
       "difficulty": "hard"
     },
     {
-      "id": "fb_024",
-      "categoryId": "football",
-      "question": "مين هداف منتخب مصر التاريخي في الألعاب الأولمبية؟",
-      "answer": "مصطفى كامل طه / إبراهيم رياض",
+      "id": "cha_024",
+      "categoryId": "challenges",
+      "question": "تحدي الدول المركبة: اذكر 3 دول في العالم اسمها يتكون من كلمتين أو أكثر في 7 ثواني!",
+      "answer": "المملكة المتحدة، الولايات المتحدة، جنوب أفريقيا، نيوزيلندا",
       "difficulty": "hard"
     },
     {
-      "id": "fb_025",
-      "categoryId": "football",
-      "question": "ما هي الدولة التي استضافت أول بطولة لكأس الأمم الأفريقية عام 1957 وفازت بها مصر؟",
-      "answer": "السودان",
+      "id": "cha_025",
+      "categoryId": "challenges",
+      "question": "تحدي الذاكرة الصعبة: اذكر 5 عناصر من الجدول الدوري في 6 ثواني!",
+      "answer": "هيدروجين، هيليوم، كربون، نيتروجين، أكسجين، حديد، ذهب",
       "difficulty": "hard"
     },
     {
-      "id": "fb_026",
-      "categoryId": "football",
-      "question": "كم مرة توج منتخب مصر ببطولة كأس الأمم الأفريقية؟",
-      "answer": "7 مرات (رقم قياسي)",
+      "id": "cha_026",
+      "categoryId": "challenges",
+      "question": "حكم تمثيل: مثّل مشهد درامي حزين جداً كأنك فقدت ساندوتش شاورما لسه شاريه حالا!",
+      "answer": "أداء تمثيلي حزين ومضحك ومقنع للمقدم",
       "difficulty": "hard"
     },
     {
-      "id": "fb_027",
-      "categoryId": "football",
-      "question": "مين اللاعب الذي سجل هدف مصر الوحيد في كأس العالم 1990 بإيطاليا؟",
-      "answer": "مجدي عبد الغني (ركلة جزاء ضد هولندا)",
+      "id": "cha_027",
+      "categoryId": "challenges",
+      "question": "تحدي عواصم العالم: ما هي عواصم (كندا، أستراليا، البرازيل) في 10 ثواني؟",
+      "answer": "أوتاوا (كندا)، كانبيرا (أستراليا)، برازيليا (البرازيل)",
       "difficulty": "hard"
     },
     {
-      "id": "fb_028",
-      "categoryId": "football",
-      "question": "مين النادي الملقب بـ 'الغواصات الصفراء' في الدوري الإسباني؟",
-      "answer": "فياريال",
+      "id": "cha_028",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة النطق الأسطوري: كرر 3 مرات بسرعة: 'لوري ورا لوري.. بطة نطت من لوري' بدون غلطة!",
+      "answer": "نطق الجملة بدون تلعثم 3 مرات",
       "difficulty": "hard"
     },
     {
-      "id": "fb_029",
-      "categoryId": "football",
-      "question": "مين اللاعب الإيطالي الشهير صاحب ركلة الترجيح الضائعة في نهائي مونديال 1994؟",
-      "answer": "روبرتو باجيو",
+      "id": "cha_029",
+      "categoryId": "challenges",
+      "question": "تحدي التاريخ: اذكر 3 ملوك أو فراعنة بنوا أهرامات أو معابد في مصر القديمة في 5 ثواني!",
+      "answer": "خوفو، خفرع، منقرع، رمسيس الثاني، حتشبسوت",
       "difficulty": "hard"
     },
     {
-      "id": "fb_030",
-      "categoryId": "football",
-      "question": "ما هي المدينة التي أقيم فيها نهائي القرن الأفريقي بين الأهلي والزمالك عام 2020؟",
-      "answer": "القاهرة (استاد القاهرة الدولي)",
+      "id": "cha_030",
+      "categoryId": "challenges",
+      "question": "حكم الاعتراف: اعترف بأغرب أو أكسف موقف حصل لك في الشارع قدام كل المنافسين!",
+      "answer": "قول موقف حقيقي محرج بجرأة وضحك",
       "difficulty": "hard"
     },
     {
-      "id": "mov_001",
-      "categoryId": "movies",
-      "question": "في فيلم 'الناظر'، إيه أسماء الثلاث شخصيات التي مثلها الراحل علاء ولي الدين؟",
-      "answer": "عاشور الأب، وجواهر الأم، وصلاح الابن",
+      "id": "cha_031",
+      "categoryId": "challenges",
+      "question": "تحدي الـ 5 ثواني: قول 3 دول عربية تطل على البحر الأبيض المتوسط!",
+      "answer": "مصر، ليبيا، تونس، الجزائر، المغرب، لبنان، سوريا، فلسطين",
       "difficulty": "easy"
     },
     {
-      "id": "mov_002",
-      "categoryId": "movies",
-      "question": "مين الفنان اللي مثل دور 'حزلقوم' و'الكبير' و'جوني' في الكبير أوي؟",
-      "answer": "أحمد مكي",
+      "id": "cha_032",
+      "categoryId": "challenges",
+      "question": "تحدي الذاكرة السريعة: اذكر 3 سور في القرآن الكريم تبدأ بـ 'قل' في 5 ثواني!",
+      "answer": "الإخلاص (قل هو الله أحد)، الفلق، الناس، الكافرون",
       "difficulty": "easy"
     },
     {
-      "id": "mov_003",
-      "categoryId": "movies",
-      "question": "في فيلم 'صعيدي في الجامعة الأمريكية'، إيه كان اسم الأغنية الشهيرة لمحمد هنيدي؟",
-      "answer": "كاجولوه",
+      "id": "cha_033",
+      "categoryId": "challenges",
+      "question": "تحدي التمثيل: مثّل لفريقك بالإشارة فقط إنك بتصطاد سمكة كبيرة وسحبتك في البحر!",
+      "answer": "أداء تمثيلي حركي مقنع ومضحك بدون أي كلام",
       "difficulty": "easy"
     },
     {
-      "id": "mov_004",
-      "categoryId": "movies",
-      "question": "مين بطل شخصية 'اللمبي' في السينما المصرية؟",
-      "answer": "محمد سعد",
+      "id": "cha_034",
+      "categoryId": "challenges",
+      "question": "حكم غنائي كوميدي: غنّي مطلع أي أغنية لمحمد منير وأنت كابس على مناخيرك بصوابعك!",
+      "answer": "أداء الأغنية بصوت خنفان مضحك",
       "difficulty": "easy"
     },
     {
-      "id": "mov_005",
-      "categoryId": "movies",
-      "question": "مين الفنان صاحب الإيفيه الشهير: 'مين حبيب بابااا.. الألمان خسروا يا زرووق'؟",
-      "answer": "محمود عبد العزيز (عبد الملك زرزور)",
+      "id": "cha_035",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة البديهة: قول 4 أشياء بنشوفها في المطبخ بحرف 'السين' في 5 ثواني!",
+      "answer": "سكين، سمنة، سكر، سيراميك، سفرة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cha_036",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة النطق: كرر الجملة دي 3 مرات متتالية بدون غلط: 'طاسة ترن في طاسة ترن'!",
+      "answer": "نطق الجملة 3 مرات بنجاح وسرعة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cha_037",
+      "categoryId": "challenges",
+      "question": "تحدي الصمود: اقف على رجل واحدة واغمض عينك الاتنين لمدة 15 ثانية متواصلة بدون ما تقع!",
+      "answer": "الصمود بتوازن كامل 15 ثانية",
       "difficulty": "easy"
     },
     {
-      "id": "mov_006",
-      "categoryId": "movies",
-      "question": "في فيلم 'كده رضا'، كان إيه أسماء الثلاث توائم لأحمد حلمي؟",
-      "answer": "سمسم، وبيبو، وبرنس",
+      "id": "cha_038",
+      "categoryId": "challenges",
+      "question": "تحدي الحساب الخاطف: كام ناتج (9 × 6) + 16 في 5 ثواني فقط؟",
+      "answer": "70 (لأن 9 × 6 = 54 + 16 = 70)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cha_039",
+      "categoryId": "challenges",
+      "question": "حكم الإحراج: قول نكتة بايخة جداً للفريق المنافس، ولو حد ابتسم تاخد نقطة!",
+      "answer": "إلقاء نكتة ومحاولة إضحاك المنافسين",
       "difficulty": "easy"
     },
     {
-      "id": "mov_007",
-      "categoryId": "movies",
-      "question": "مين الممثل الشهير بـ 'الزعيم' في المسرح والسينما؟",
-      "answer": "عادل إمام",
+      "id": "cha_040",
+      "categoryId": "challenges",
+      "question": "تحدي السينما: سمّي 3 أفلام للنجم محمد هنيدي في 5 ثواني!",
+      "answer": "صعيدي في الجامعة الأمريكية، همام في أمستردام، فول الصين العظيم",
       "difficulty": "easy"
     },
     {
-      "id": "mov_008",
-      "categoryId": "movies",
-      "question": "في فيلم 'غبي منه فيه'، مين مثل دور 'المعلم سلطان' صاحب جملة 'صلاة النبي أحسن'؟",
-      "answer": "طلعت زكريا",
+      "id": "cha_041",
+      "categoryId": "challenges",
+      "question": "تحدي أسماء الأولاد: اذكر 4 أسماء أولاد تبدأ بحرف 'الياء' في 6 ثواني!",
+      "answer": "يوسف، ياسين، يحيى، يونس، يزيد",
       "difficulty": "easy"
     },
     {
-      "id": "mov_009",
-      "categoryId": "movies",
-      "question": "مين الفنانة التي جسدت شخصية 'وداد' في مسلسل جعفر العمدة؟",
-      "answer": "جوري بكر",
+      "id": "cha_042",
+      "categoryId": "challenges",
+      "question": "تحدي تمثيل صامت: مثّل مشهد إنك بتفتح تلاجة في نص الليل ولقيت صرصار طار في وشك!",
+      "answer": "تمثيل صامت حركي كوميدي مقنع",
       "difficulty": "easy"
     },
     {
-      "id": "mov_010",
-      "categoryId": "movies",
-      "question": "إيه اسم المسلسل الرمضاني الشهير اللي قام ببطولته أحمد السقا وباسم سمرة في شخصية عيسى الوزان؟",
-      "answer": "العتاولة",
+      "id": "cha_043",
+      "categoryId": "challenges",
+      "question": "تحدي المعلومات السريعة: اذكر 3 كواكب في المجموعة الشمسية في 4 ثواني فقط!",
+      "answer": "عطارد، الزهرة، الأرض، المريخ، المشتري، زحل",
       "difficulty": "easy"
     },
     {
-      "id": "mov_011",
-      "categoryId": "movies",
-      "question": "في فيلم 'فول الصين العظيم'، كان إيه اسم خطيبة محيي الشرقاوي الصينية؟",
-      "answer": "لي",
+      "id": "cha_044",
+      "categoryId": "challenges",
+      "question": "تحدي الحروف المشتركة: قول 3 دول في العالم تبدأ بحرف 'الباء' في 5 ثواني!",
+      "answer": "البرازيل، بلجيكا، بولندا، البحرين، بلغاريا",
       "difficulty": "medium"
     },
     {
-      "id": "mov_012",
-      "categoryId": "movies",
-      "question": "مين المؤلف العبقري اللي كتب ملحمة 'ليالي الحلمية' و'الشهد والدموع'؟",
-      "answer": "أسامة أنور عكاشة",
+      "id": "cha_045",
+      "categoryId": "challenges",
+      "question": "حكم المهارة: انطق الحروف الهجائية من 'الألف' لـ 'الياء' كاملة في أقل من 10 ثواني!",
+      "answer": "تسميع الحروف العربية كاملة بسرعة بدون خطأ",
       "difficulty": "medium"
     },
     {
-      "id": "mov_013",
-      "categoryId": "movies",
-      "question": "في فيلم 'عسل أسود'، إيه كان اسم السائق الوفي اللي مثل دوره لطفي لبيب؟",
-      "answer": "راضي (عم راضي)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_014",
-      "categoryId": "movies",
-      "question": "مين جسد دور العالم الفلكي 'أحمد مظهر' في فيلم الأيدي الناعمة؟",
-      "answer": "أحمد مظهر (البرنس شوكت)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_015",
-      "categoryId": "movies",
-      "question": "في فيلم 'أمير الظلام'، إيه كان اسم الشخصية التي جسدها عادل إمام؟",
-      "answer": "الجنرال سعيد الظريف",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_016",
-      "categoryId": "movies",
-      "question": "إيه اسم الجزيرة التي كان ينفي إليها الخارجين عن القانون في فيلم الجزيرة؟",
-      "answer": "جزيرة النخيلة (أو الجزيرة في الصعيد)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_017",
-      "categoryId": "movies",
-      "question": "مين المخرج العالمي اللي أخرج فيلم 'باب الحديد' و'الأرض' و'المصير'؟",
-      "answer": "يوسف شاهين",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_018",
-      "categoryId": "movies",
-      "question": "في فيلم 'إتش دبور'، إيه كان اسم والد دبور رجل الأعمال الثري؟",
-      "answer": "سري بك (حسن حسني)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_019",
-      "categoryId": "movies",
-      "question": "مين الممثل اللي لعب دور الشرير 'صفوت الشريف/رشدي' في فيلم البريء لأحمد زكي؟",
-      "answer": "محمود عبد العزيز (العقيد توفيق شركس)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_020",
-      "categoryId": "movies",
-      "question": "ما هو اسم الشخصية التي اشتهر بها الفنان يحيى الفخراني في مسلسل 'ونوس'؟",
-      "answer": "ونوس (الشيطان)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_021",
-      "categoryId": "movies",
-      "question": "ما هو أول فيلم سينمائي مصري ناطق بالكامل؟",
-      "answer": "فيلم أولاد الذوات (سنة 1932)",
+      "id": "cha_046",
+      "categoryId": "challenges",
+      "question": "تحدي الكلام الممنوع: صف كرتون 'توم وجيري' في 20 ثانية بدون ما تنطق كلمتي 'قط' أو 'فار'!",
+      "answer": "الوصف الناجح بدون الكلمتين المحظورتين",
       "difficulty": "hard"
     },
     {
-      "id": "mov_022",
-      "categoryId": "movies",
-      "question": "في فيلم 'ثرثرة فوق النيل' المأخوذ عن رواية نجيب محفوظ، مين مثل شخصية 'أنيس زكي'؟",
-      "answer": "عماد حمدي",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_023",
-      "categoryId": "movies",
-      "question": "ما هي سنة عرض المسرحية التاريخية 'مدرسة المشاغبين' لأول مرة؟",
-      "answer": "سنة 1973",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_024",
-      "categoryId": "movies",
-      "question": "مين اللي مثل دور الطبيب النفسي المعالج لأحمد حلمي في فيلم 'آسف على الإزعاج'؟",
-      "answer": "محمود حميدة",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_025",
-      "categoryId": "movies",
-      "question": "في فيلم 'الهروب' للمخرج عاطف الطيب، إيه كان الاسم الكامل لشخصية البطل أحمد زكي؟",
-      "answer": "منتصر عبد الغفار",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_026",
-      "categoryId": "movies",
-      "question": "ما هو اسم المسلسل التاريخي الذي قام ببطولته يوسف الشريف مجسداً شخصية 'زين' في القدس عام 2120؟",
-      "answer": "النهاية",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_027",
-      "categoryId": "movies",
-      "question": "مين الممثلة التي شاركت رشدي أباظة بطولة فيلم 'الرجل الثاني' في دور سمرة؟",
-      "answer": "سامية جمال",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_028",
-      "categoryId": "movies",
-      "question": "في فيلم 'الأرض' للكاتب عبد الرحمن الشرقاوي، مين مثل دور 'أبو سويلم'؟",
-      "answer": "محمود المليجي",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_029",
-      "categoryId": "movies",
-      "question": "مين ملحن الموسيقى التصويرية الخالدة لمسلسل 'رأفت الهجان'؟",
-      "answer": "الموسيقار عمار الشريعي",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mov_030",
-      "categoryId": "movies",
-      "question": "ما هو الفيلم الوحيد الذي جمع بين كوكب الشرق أم كلثوم والموسيقار محمد عبد الوهاب كممثلين؟",
-      "answer": "لم يجمعهما أي فيلم سينمائي معاً كممثلين!",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_001",
-      "categoryId": "general",
-      "question": "ما هي أكبر قارة مساحة وسكاناً في العالم؟",
-      "answer": "قارة آسيا",
+      "id": "cha_047",
+      "categoryId": "challenges",
+      "question": "تحدي الأندية العالمية: اذكر 3 أندية إيطالية في السيريا آ في 5 ثواني!",
+      "answer": "يوفنتوس، ميلان، إنتر ميلان، روما، نابولي",
       "difficulty": "easy"
     },
     {
-      "id": "gen_002",
-      "categoryId": "general",
-      "question": "ما هو الكوكب الملقب بـ 'الكوكب الأحمر'؟",
-      "answer": "المريخ",
+      "id": "cha_048",
+      "categoryId": "challenges",
+      "question": "تحدي سرعة النطق الملحمي: كرر 3 مرات بسرعة: 'خميس خمش خشم حبش.. وحبش خمش خشم خميس'!",
+      "answer": "نطق الجملة 3 مرات بنجاح دون تلعثم",
+      "difficulty": "hard"
+    },
+    {
+      "id": "cha_049",
+      "categoryId": "challenges",
+      "question": "حكم التقليد الصوتي: قلّد صوت معلق كروي مصري مشهور (زي مدحت شلبي أو الشوالي) في لقطة هدف!",
+      "answer": "أداء تعليق صوتي حماسي ومضحك",
       "difficulty": "easy"
     },
     {
-      "id": "gen_003",
-      "categoryId": "general",
-      "question": "ما هو أطول نهر في العالم؟",
-      "answer": "نهر النيل",
+      "id": "cha_050",
+      "categoryId": "challenges",
+      "question": "تحدي الذاكرة القوية: اذكر 4 ماركات سيارات عالمية في 5 ثواني فقط!",
+      "answer": "تويوتا، مرسيدس، بي إم دبليو، هيونداي، نيسان",
       "difficulty": "easy"
     },
     {
-      "id": "gen_004",
-      "categoryId": "general",
-      "question": "ما هي عاصمة جمهورية مصر العربية؟",
-      "answer": "القاهرة",
+      "id": "cha_051",
+      "categoryId": "challenges",
+      "question": "حكم اللياقة: اعمل 7 عدات قفز في الهواء (Jumping Jacks) فوراً بنشاط!",
+      "answer": "أداء التمرين بنجاح",
       "difficulty": "easy"
     },
     {
-      "id": "gen_005",
-      "categoryId": "general",
-      "question": "ما هو الحيوان الملقب بـ 'سفينة الصحراء'؟",
-      "answer": "الجمل",
+      "id": "cha_052",
+      "categoryId": "challenges",
+      "question": "تحدي العملات: ما هي عملات (بريطانيا، روسيا، الكويت) في 8 ثواني؟",
+      "answer": "الجنيه الإسترليني، الروبل، الدينار الكويتي",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cha_053",
+      "categoryId": "challenges",
+      "question": "تحدي الإيقاع السريع: سقف 5 تسقيفات سريعة على فخذيك بدون توقف وبإيقاع ثابت في ثانيتين!",
+      "answer": "تنفيذ التحدي الحركي بنجاح",
       "difficulty": "easy"
     },
     {
-      "id": "gen_006",
-      "categoryId": "general",
-      "question": "ما هو أكبر محيط مائي في الكرة الأرضية؟",
-      "answer": "المحيط الهادئ",
+      "id": "cha_054",
+      "categoryId": "challenges",
+      "question": "حكم الرزانة: اتكلم بنبرة مذيع نشرة أخبار رسمية جداً وقول 'السيدات والسادة، أسعار الفلافل في انخفاض مستمر'!",
+      "answer": "أداء تمثيلي بوقار إذاعي مضحك",
       "difficulty": "easy"
     },
     {
-      "id": "gen_007",
-      "categoryId": "general",
-      "question": "ما هي العملة الرسمية في اليابان؟",
-      "answer": "الين الياباني",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gen_008",
-      "categoryId": "general",
-      "question": "كم عدد ألوان قوس قزح؟",
-      "answer": "7 ألوان",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gen_009",
-      "categoryId": "general",
-      "question": "ما هو الغاز الأساسي الذي يتنفسه الإنسان للحياة؟",
-      "answer": "الأكسجين",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gen_010",
-      "categoryId": "general",
-      "question": "ما هي الدولة صاحبة أكبر عدد سكان في العالم حالياً؟",
-      "answer": "الهند (تجاوزت الصين رسمياً)",
-      "difficulty": "easy"
-    },
-    {
-      "id": "gen_011",
-      "categoryId": "general",
-      "question": "ما هو الغاز الأكثر وفرة في الغلاف الجوي بنسبة تقارب 78%؟",
-      "answer": "النيتروجين",
+      "id": "cha_055",
+      "categoryId": "challenges",
+      "question": "تحدي الجغرافيا الصعب: اذكر 3 دول آسيوية ينتهي اسمها بـ 'ستان' في 5 ثواني!",
+      "answer": "باكستان، أفغانستان، أوزبكستان، كازاخستان، تركمانستان",
       "difficulty": "medium"
-    },
-    {
-      "id": "gen_012",
-      "categoryId": "general",
-      "question": "ما هو المعدن الوحيد الذي يكون سائلاً في درجة حرارة الغرفة الطبيعية؟",
-      "answer": "الزئبق",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_013",
-      "categoryId": "general",
-      "question": "ما هي عاصمة سلطنة عُمان؟",
-      "answer": "مسقط",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_014",
-      "categoryId": "general",
-      "question": "كم عدد صمامات قلب الإنسان الطبيعي؟",
-      "answer": "4 صمامات",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_015",
-      "categoryId": "general",
-      "question": "ما هي أسرع حشرة على كوكب الأرض؟",
-      "answer": "اليعسوب (Dragonfly)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_016",
-      "categoryId": "general",
-      "question": "في أي قارة تقع دولة بيرو ومدينة ماتشو بيتشو الشهيرة؟",
-      "answer": "أمريكا الجنوبية",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_017",
-      "categoryId": "general",
-      "question": "من هو مخترع شبكة الويب العالمية (World Wide Web) عام 1989؟",
-      "answer": "تيم بيرنرز لي (Tim Berners-Lee)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_018",
-      "categoryId": "general",
-      "question": "ما هي أكبر بحيرة مياه عذبة في العالم من حيث الحجم والمساحة؟",
-      "answer": "بحيرة بايكال (الحجم) / بحيرة سوبيريور (المساحة)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_019",
-      "categoryId": "general",
-      "question": "ما هو أسرع طائر في العالم عند الانقضاض؟",
-      "answer": "صقر الشاهين (الدرك)، سرعته تتجاوز 320 كم/س",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_020",
-      "categoryId": "general",
-      "question": "ما هي المدينة الملقبة بـ 'مدينة الضباب'؟",
-      "answer": "لندن",
-      "difficulty": "medium"
-    },
-    {
-      "id": "gen_021",
-      "categoryId": "general",
-      "question": "ما هو العنصر الكيميائي الأكثر وفرة في قشرة الأرض؟",
-      "answer": "الأكسجين (حوالي 46.6%) ويليه السيليكون",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_022",
-      "categoryId": "general",
-      "question": "في أي عام تم افتتاح قناة السويس رسمياً للملاحة البحرية؟",
-      "answer": "عام 1869",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_023",
-      "categoryId": "general",
-      "question": "ما هو أعمق خندق بحري مسجل في المحيطات في كوكب الأرض؟",
-      "answer": "خندق ماريانا (عمق يقارب 11 ألف متر)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_024",
-      "categoryId": "general",
-      "question": "كم عدد العظام في جسم الإنسان البالغ؟",
-      "answer": "206 عظمة",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_025",
-      "categoryId": "general",
-      "question": "من هو العالم الفيزيائي الذي صاغ قوانين الحركة والجاذبية العامة؟",
-      "answer": "إسحاق نيوتن",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_026",
-      "categoryId": "general",
-      "question": "ما هو اسم أقدم سلالة حاكمة مستمرة في العالم حتى اليوم؟",
-      "answer": "العائلة الإمبراطورية في اليابان (أسرة ياماتو)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_027",
-      "categoryId": "general",
-      "question": "ما هي الدولة الإفريقية الوحيدة التي لم تُستعمر أوروبياً قط بجانب ليبيريا؟",
-      "answer": "إثيوبيا",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_028",
-      "categoryId": "general",
-      "question": "ما هي درجة الصفر المطلق بالمقياس المئوي السليزيوسي؟",
-      "answer": "-273.15 درجة مئوية",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_029",
-      "categoryId": "general",
-      "question": "ما هو الهرمون الملقب بهرمون النوم في جسم الإنسان وتفرزه الغدة الصنوبرية؟",
-      "answer": "الميلاتونين",
-      "difficulty": "hard"
-    },
-    {
-      "id": "gen_030",
-      "categoryId": "general",
-      "question": "في أي معركة بحرية هُزمت كليوباترا وماركوس أنطونيوس أمام أوكتافيوس عام 31 ق.م؟",
-      "answer": "معركة أكتيوم البحرية",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_001",
-      "categoryId": "riddles",
-      "question": "حاجة كل ما تاخد منها تكبر، وكل ما تحط فيها تصغر.. إيه هي؟",
-      "answer": "الحفرة",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_002",
-      "categoryId": "riddles",
-      "question": "حاجة عندها سنان كتير بس مابتعضش ولا بتاكل.. إيه هي؟",
-      "answer": "المشط",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_003",
-      "categoryId": "riddles",
-      "question": "شيء يملك عيناً واحدة ولكنه لا يرى بها شيئاً؟",
-      "answer": "إبرة الخياطة",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_004",
-      "categoryId": "riddles",
-      "question": "ابن الماء وإذا تركوني في الماء مت.. فمن أنا؟",
-      "answer": "الثلج",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_005",
-      "categoryId": "riddles",
-      "question": "حاجة بتسمع بلا ودان وبتتكلم بلا لسان؟",
-      "answer": "التليفون أو صدى الصوت",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_006",
-      "categoryId": "riddles",
-      "question": "حاجة كل ما تسخن عليها تنشف وتجمد ومبتسيحش؟",
-      "answer": "البيضة المسلوقة",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_007",
-      "categoryId": "riddles",
-      "question": "شيء يمشي ورائك في النور ويختفي تماماً في الظلام؟",
-      "answer": "الظل",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_008",
-      "categoryId": "riddles",
-      "question": "حاجة مليانة خرام وثقوب لكنها بتقدر تشيل المية وماتوقعهاش؟",
-      "answer": "الإسفنجة",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_009",
-      "categoryId": "riddles",
-      "question": "كل ما يزيد يقل.. إيه هو؟",
-      "answer": "العمر",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_010",
-      "categoryId": "riddles",
-      "question": "شيء نأكله ولا يؤكل، فما هو؟",
-      "answer": "الصحن أو الملعقة",
-      "difficulty": "easy"
-    },
-    {
-      "id": "rid_011",
-      "categoryId": "riddles",
-      "question": "حاجة بنشتريها باللون الأسود، ونستخدمها وهي حمرا، ونرميها بعد كدة رمادية؟",
-      "answer": "الفحم",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_012",
-      "categoryId": "riddles",
-      "question": "ما هو الشيء الذي إذا أكلت نصفه مت، وإذا أكلته كله عشت؟",
-      "answer": "السمسم (نصفه سم)",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_013",
-      "categoryId": "riddles",
-      "question": "حاجة تقدر تكسرها وتنهيها من غير ما تلمسها بإيدك؟",
-      "answer": "الوعد أو الصمت أو الخاطر",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_014",
-      "categoryId": "riddles",
-      "question": "حاجة في الشتاء تدفيك، وفي الصيف تغذيك، وفي الخريف تبكيك؟",
-      "answer": "شجرة البرتقال أو البصل",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_015",
-      "categoryId": "riddles",
-      "question": "أنا طويل عندما أكون صغيراً، وأقصر كلما كبرت في السن.. فمن أنا؟",
-      "answer": "شمعة أو قلم الرصاص",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_016",
-      "categoryId": "riddles",
-      "question": "له رأس ولا عين له، وهي لها عين ولا رأس لها.. فما هما؟",
-      "answer": "الدبوس والإبرة",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_017",
-      "categoryId": "riddles",
-      "question": "ما هو الشيء الذي يدخل الغابة ولا يلمس شجرة، ويعبر النهر ولا يتبلل؟",
-      "answer": "الصوت أو أشعة الشمس",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_018",
-      "categoryId": "riddles",
-      "question": "حاجة تمشي وتجري من غير رجلين، وتبكي من غير عينين؟",
-      "answer": "السحابة أو الغيمة",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_019",
-      "categoryId": "riddles",
-      "question": "شيء يولد كبيراً ويموت صغيراً؟",
-      "answer": "الشمعة أو قالب الثلج",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_020",
-      "categoryId": "riddles",
-      "question": "أرى كل شيء وليس لدي عيون، فما أنا؟",
-      "answer": "المرآة",
-      "difficulty": "medium"
-    },
-    {
-      "id": "rid_021",
-      "categoryId": "riddles",
-      "question": "ما هو الشيء الذي يملك مدناً بلا بيوت، وغابات بلا أشجار، وأنهاراً بلا ماء؟",
-      "answer": "الخريطة",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_022",
-      "categoryId": "riddles",
-      "question": "رجل كان يكتب كتاباً وكتب فيه: 'اليوم زارني صديق أعمى وأبكم وأصم، وعندما غادر سألني سؤالاً وأجبته'.. كيف حدث ذلك؟",
-      "answer": "كتب له الصديق السؤال على ورقة أو باللمس، وأجابه بالكتابة!",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_023",
-      "categoryId": "riddles",
-      "question": "ما هو الشيء الذي يكون أمامك دائماً ولكنك لا تستطيع رؤيته؟",
-      "answer": "المستقبل",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_024",
-      "categoryId": "riddles",
-      "question": "إذا كنت تشارك في سباق وتجاوزت المتسابق الثاني، فما هو مركزك الآن؟",
-      "answer": "المركز الثاني (وليس الأول!)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_025",
-      "categoryId": "riddles",
-      "question": "شيء له 4 أرجل في الصباح، ورجلان في الظهيرة، و3 أرجل في المساء؟",
-      "answer": "الإنسان (يحبو رضيعاً، ويمشي شاباً، ويتوكأ على عصا شيخاً)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_026",
-      "categoryId": "riddles",
-      "question": "ما هي الكلمة الوحيدة في القاموس التي تُنطق خطأ حتى لو نطقناها صح؟",
-      "answer": "كلمة 'خطأ'!",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_027",
-      "categoryId": "riddles",
-      "question": "غرفة بها 3 مصابيح مطفأة وباب مغلق، بالخارج 3 مفاتيح. مسموح لك بدخول الغرفة مرة واحدة فقط لمعرفة أي مفتاح يشغل أي مصباح.. ماذا تفعل؟",
-      "answer": "شغل المفتاح 1 لعدة دقائق ثم اطفئه وشغل 2 وادخل الغرفة: المضاء للمفتاح 2، والساخن للمفتاح 1، والبارد للمفتاح 3!",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_028",
-      "categoryId": "riddles",
-      "question": "خمسة أفراد يجلسون تحت مظلة صغيرة جداً ولم يتبلل أحد منهم بالمطر.. كيف ذلك؟",
-      "answer": "لأن السماء لم تكن تمطر أصلاً!",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_029",
-      "categoryId": "riddles",
-      "question": "ما هو الرقم الذي إذا ضربته في أي رقم آخر كان الناتج هو نفسه؟",
-      "answer": "الصفر (0)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rid_030",
-      "categoryId": "riddles",
-      "question": "شيء يمر عبر الزجاج دون أن يكسره؟",
-      "answer": "الضوء",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_001",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي: 'ابن الوز...'؟",
-      "answer": "عوّام",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_002",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي: 'اللي على راسه بطحة...'؟",
-      "answer": "يحسس عليها",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_003",
-      "categoryId": "music_proverbs",
-      "question": "مين الفنان المصري الملقب بـ 'الهضبة'؟",
-      "answer": "عمرو دياب",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_004",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'دخول الحمام مش زي...'؟",
-      "answer": "خروجه",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_005",
-      "categoryId": "music_proverbs",
-      "question": "مين صاحبة لقب 'سيدة الغناء العربي' وكوكب الشرق؟",
-      "answer": "أم كلثوم",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_006",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي الشهير: 'يا واخد القرد على ماله...'؟",
-      "answer": "يروح المال ويفضل القرد على حاله",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_007",
-      "categoryId": "music_proverbs",
-      "question": "مين المغني الملقب بـ 'الكينج' صاحب أغنية 'سو يا سو'؟",
-      "answer": "محمد منير",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_008",
-      "categoryId": "music_proverbs",
-      "question": "كمّل مطلع الأغنية: 'زحمة يا دنيا زحمة.. زحمة و...'؟",
-      "answer": "توهنا في الزحمة (أحمد عدوية)",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_009",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'اطبخ يا جارية كلف يا...'؟",
-      "answer": "سيدي",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_010",
-      "categoryId": "music_proverbs",
-      "question": "مين العندليب الأسمر صاحب أغنية 'جبار' و'سواح'؟",
-      "answer": "عبد الحليم حافظ",
-      "difficulty": "easy"
-    },
-    {
-      "id": "mus_011",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'الباب اللي يجيلك منه الريح...'؟",
-      "answer": "سده واستريح",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_012",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'إجري يا بني آدم جري الوحوش...'؟",
-      "answer": "غير رزقك لم تحوش",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_013",
-      "categoryId": "music_proverbs",
-      "question": "مين غنى الأغنية الشهيرة: 'قولي عملك إيه قلبي.. قلبي الحنين الوفي'؟",
-      "answer": "محمد عبد الوهاب",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_014",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي: 'القرعة تتباهى بـ...'؟",
-      "answer": "شعر بنت أختها",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_015",
-      "categoryId": "music_proverbs",
-      "question": "مين صاحب أغنية 'كلام الناس لا بيقدم ولا يأخر'؟",
-      "answer": "جورج وسوف",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_016",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'حبيبك يبلعلك الزلط، وعدوك...'؟",
-      "answer": "يتمنالك الغلط",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_017",
-      "categoryId": "music_proverbs",
-      "question": "مين الشاعر العامي الكبير كاتب أغاني 'يا واد يا تقيل' وأغاني الرباعيات؟",
-      "answer": "صلاح جاهين",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_018",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'اللي بيته من إزاز...'؟",
-      "answer": "ما يحدفش الناس بالطوب",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_019",
-      "categoryId": "music_proverbs",
-      "question": "مين صاحبة أغنية 'أما براوة يا براوة.. على حبيبي أما براوة'؟",
-      "answer": "نجاة الصغيرة",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_020",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشهير: 'عصفور في اليد خير من...'؟",
-      "answer": "عشرة على الشجرة",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mus_021",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي القديم: 'لبّس البوصة...'؟",
-      "answer": "تبقى عروسة",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_022",
-      "categoryId": "music_proverbs",
-      "question": "مين هو ملحن أغنية 'أنت عمري' لأم كلثوم ولقبت بـ 'لقاء السحاب'؟",
-      "answer": "محمد عبد الوهاب",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_023",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل النادر: 'المال السايب يعلّم...'؟",
-      "answer": "السرقة",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_024",
-      "categoryId": "music_proverbs",
-      "question": "مين كتب كلمات أغنية 'مصر اليوم في عيد' لشادية؟",
-      "answer": "عبد الوهاب محمد",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_025",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'ريحة البر أهون من...'؟",
-      "answer": "ركوب البحر",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_026",
-      "categoryId": "music_proverbs",
-      "question": "في أي سنة أطلقت أم كلثوم أغنية 'الأطلال' الشهيرة من كلمات إبراهيم ناجي؟",
-      "answer": "سنة 1966",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_027",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل الشعبي: 'ديل الكلب عمره ما...'؟",
-      "answer": "يتعدل (ولو علقوا فيه قالب)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_028",
-      "categoryId": "music_proverbs",
-      "question": "مين ملحن النشيد الوطني المصري الحالي 'بلادي بلادي'؟",
-      "answer": "سيد درويش (أعاد توزيعه محمد عبد الوهاب)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_029",
-      "categoryId": "music_proverbs",
-      "question": "كمّل المثل: 'يا مستني السمنة من بطن النملة...'؟",
-      "answer": "عمرك ما هتقلي",
-      "difficulty": "hard"
-    },
-    {
-      "id": "mus_030",
-      "categoryId": "music_proverbs",
-      "question": "مين المغنية صاحبة أغنية 'يا مسافر وحدك وفايتني' الشهيرة؟",
-      "answer": "نجاة علي (ولحنها وغناها أيضاً عبد الوهاب)",
-      "difficulty": "hard"
-    },
-    {
-      "id": "rev_001",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لين »",
-      "answer": "نيل",
-      "difficulty": "easy",
-      "hint": "نهر مصر الخالد"
-    },
-    {
-      "id": "rev_002",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رصم »",
-      "answer": "مصر",
-      "difficulty": "easy",
-      "hint": "أم الدنيا"
-    },
-    {
-      "id": "rev_003",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يلهأ »",
-      "answer": "أهلي",
-      "difficulty": "easy",
-      "hint": "نادي القرن الإفريقي"
-    },
-    {
-      "id": "rev_004",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةروك »",
-      "answer": "كورة",
-      "difficulty": "easy",
-      "hint": "الساحرة المستديرة"
-    },
-    {
-      "id": "rev_005",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ياش »",
-      "answer": "شاي",
-      "difficulty": "easy",
-      "hint": "المشروب الرسمي للمصريين"
-    },
-    {
-      "id": "rev_006",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لوف »",
-      "answer": "فول",
-      "difficulty": "easy",
-      "hint": "فطار المصريين المقدس"
-    },
-    {
-      "id": "rev_007",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رمق »",
-      "answer": "قمر",
-      "difficulty": "easy",
-      "hint": "منير في السماء بالليل"
-    },
-    {
-      "id": "rev_008",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رحب »",
-      "answer": "بحر",
-      "difficulty": "easy",
-      "hint": "مياه مالحة ومصيف"
-    },
-    {
-      "id": "rev_009",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« سمش »",
-      "answer": "شمس",
-      "difficulty": "easy",
-      "hint": "مصدر الدفء والنور"
-    },
-    {
-      "id": "rev_010",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« بهذ »",
-      "answer": "ذهب",
-      "difficulty": "easy",
-      "hint": "معدن نفيس أصفر"
-    },
-    {
-      "id": "rev_011",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« سيبوتأ »",
-      "answer": "أتوبيس",
-      "difficulty": "medium",
-      "hint": "وسيلة نقل عامة كبيرة"
-    },
-    {
-      "id": "rev_012",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيمعط »",
-      "answer": "طعمية",
-      "difficulty": "medium",
-      "hint": "اسم الفلافل في القاهرة والإسكندرية"
-    },
-    {
-      "id": "rev_013",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةرايط »",
-      "answer": "طيارة",
-      "difficulty": "medium",
-      "hint": "تطير في السماء بالسفر"
-    },
-    {
-      "id": "rev_014",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ونيزاك »",
-      "answer": "كازينو",
-      "difficulty": "medium",
-      "hint": "مكان ألعاب ترفيهي وهو اسم لعبتنا!"
-    },
-    {
-      "id": "rev_015",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« نويزفلت »",
-      "answer": "تلفزيون",
-      "difficulty": "medium",
-      "hint": "شاشة في كل بيت للأفلام"
-    },
-    {
-      "id": "rev_016",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« خيطب »",
-      "answer": "بطيخ",
-      "difficulty": "medium",
-      "hint": "فاكهة الصيف الحمراء اللذيذة"
-    },
-    {
-      "id": "rev_017",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« تامارهأ »",
-      "answer": "أهرامات",
-      "difficulty": "medium",
-      "hint": "عجيبة الدنيا السبع في الجيزة"
-    },
-    {
-      "id": "rev_018",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رتويبمك »",
-      "answer": "كمبيوتر",
-      "difficulty": "medium",
-      "hint": "جهاز إلكتروني ذكي للشغل والألعاب"
-    },
-    {
-      "id": "rev_019",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةنوركم »",
-      "answer": "مكرونة",
-      "difficulty": "medium",
-      "hint": "أكلة سريعة مع الصلصة أو بشاميل"
-    },
-    {
-      "id": "rev_020",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةنيشتوك »",
-      "answer": "كوتشينة",
-      "difficulty": "medium",
-      "hint": "كروت لعب البوكر والطرنيب"
-    },
-    {
-      "id": "rev_021",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ايندلا مأ »",
-      "answer": "أم الدنيا",
-      "difficulty": "hard",
-      "hint": "لقب يطلق على مصر"
-    },
-    {
-      "id": "rev_022",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« نيدلا حالص »",
-      "answer": "صلاح الدين",
-      "difficulty": "hard",
-      "hint": "محرر القدس وباني القلعة"
-    },
-    {
-      "id": "rev_023",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ملاعلا سأك »",
-      "answer": "كأس العالم",
-      "difficulty": "hard",
-      "hint": "أغلى بطولة كروية كل 4 سنين"
-    },
-    {
-      "id": "rev_024",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيرصم امنيس »",
-      "answer": "سينما مصرية",
-      "difficulty": "hard",
-      "hint": "هوليوود الشرق"
-    },
-    {
-      "id": "rev_025",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةهيدب ةعرس »",
-      "answer": "سرعة بديهة",
-      "difficulty": "hard",
-      "hint": "ذكاء وحضور ذهني سريع"
-    },
-    {
-      "id": "rev_026",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لاطبأ يرود »",
-      "answer": "دوري أبطال",
-      "difficulty": "hard",
-      "hint": "أقوى بطولة قارية للأندية"
-    },
-    {
-      "id": "rev_027",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« بنارألاب ةيخولم »",
-      "answer": "ملوخية بالأرانب",
-      "difficulty": "hard",
-      "hint": "أشهر أكلة في التراث المصري"
-    },
-    {
-      "id": "rev_028",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« مامإ لداع »",
-      "answer": "عادل إمام",
-      "difficulty": "hard",
-      "hint": "زعيم الكوميديا العربية"
-    },
-    {
-      "id": "rev_029",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لوهلا وبأ »",
-      "answer": "أبو الهول",
-      "difficulty": "hard",
-      "hint": "حارس الأهرامات التاريخي"
-    },
-    {
-      "id": "rev_030",
-      "categoryId": "reversed_words",
-      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةرهاقلا جرب »",
-      "answer": "برج القاهرة",
-      "difficulty": "hard",
-      "hint": "معلم شهير في جزيرة الزمالك"
     },
     {
       "id": "emj_001",
@@ -1590,214 +685,2569 @@
       "hint": "توم هانكس والكرة ويلسون في الجزيرة"
     },
     {
-      "id": "cha_001",
-      "categoryId": "challenges",
-      "question": "تحدي الـ 5 ثواني: قول 3 أكلات شعبية مصرية بتبدأ بحرف 'الفاء'!",
-      "answer": "فول، فلافل، فتة، فريك",
+      "id": "emo_001",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🤼‍♂️ 🏆 🥊 🇪🇬",
+      "answer": "النمر الأسود (أو حلم العمر)",
+      "difficulty": "easy",
+      "hint": "ملاكمة وبطولة وكفاح أحمد زكي أو حمادة هلال"
+    },
+    {
+      "id": "emo_002",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🦹‍♂️ 🏦 💰 🎭",
+      "answer": "لصوص لكن ظرفاء (أو عصابة حمادة وتوتو)",
+      "difficulty": "easy",
+      "hint": "سرقة بنك وكوميديا كلاسيكية"
+    },
+    {
+      "id": "emo_003",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n✈️ 🏝️ 🛬 👨‍👩‍👦",
+      "answer": "مطب صناعي",
+      "difficulty": "easy",
+      "hint": "أحمد حلمي ونور ومحمود البزاوي في الغردقة"
+    },
+    {
+      "id": "emo_004",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👮‍♂️ 🏃‍♂️ 🚔 🏢",
+      "answer": "تيتو (أو الحاسة السابعة)",
+      "difficulty": "easy",
+      "hint": "أحمد السقا والضابط خالد صالح"
+    },
+    {
+      "id": "emo_005",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🕶️ 🚘 🕵️‍♂️ 🇪🇬",
+      "answer": "مافيا",
+      "difficulty": "easy",
+      "hint": "أحمد السقا ومنى زكي وحسين فهمي"
+    },
+    {
+      "id": "emo_006",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n💍 🧙‍♂️ 🌋 🧝‍♂️",
+      "answer": "سيد الخواتم (The Lord of the Rings)",
+      "difficulty": "medium",
+      "hint": "فرودو ورحلة تدمير الخاتم في جبل الهلاك"
+    },
+    {
+      "id": "emo_007",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n⚡ 👓 🧙‍♂️ 🏰",
+      "answer": "هاري بوتر (Harry Potter)",
+      "difficulty": "easy",
+      "hint": "الولد الساحر ومدرسة هوجورتس"
+    },
+    {
+      "id": "emo_008",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🚢 🏴‍☠️ ⚓ 🦜",
+      "answer": "قراصنة الكاريبي (Pirates of the Caribbean)",
+      "difficulty": "easy",
+      "hint": "كابتن جاك سبارو وسفينة اللؤلؤة السوداء"
+    },
+    {
+      "id": "emo_009",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👻 🚫 🔫 🧪",
+      "answer": "صائدو الأشباح (Ghostbusters)",
+      "difficulty": "medium",
+      "hint": "فريق مطاردة الأرواح والكيانات في نيويورك"
+    },
+    {
+      "id": "emo_010",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🥷 🐢 🍕 🐀",
+      "answer": "سلاحف النينجا (TMNT)",
+      "difficulty": "easy",
+      "hint": "4 أبطال في المجاري يحبون البيتزا ومدربهم فأر"
+    },
+    {
+      "id": "emo_011",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👠 🎃 🏰 🕛",
+      "answer": "سندريلا (Cinderella)",
+      "difficulty": "easy",
+      "hint": "الحذاء الزجاجي وعربة اليقطين منتصف الليل"
+    },
+    {
+      "id": "emo_012",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🧞‍♂️ 🏖️ 🏖️ 👰",
+      "answer": "عروس النيل (أو عفريت مراتي)",
+      "difficulty": "medium",
+      "hint": "لبنى عبد العزيز ورشدي أباظة"
+    },
+    {
+      "id": "emo_013",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👑 🗡️ 🛡️ 🐎",
+      "answer": "الناصر صلاح الدين",
+      "difficulty": "medium",
+      "hint": "أحمد مظهر ويوسف شاهين والحروب الصليبية"
+    },
+    {
+      "id": "emo_014",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🚗 🚕 🚙 💥",
+      "answer": "سرقة قطار الشرق السريع (أو صعيدي رايح جاي)",
+      "difficulty": "medium",
+      "hint": "أكشن وسباق سيارات وكوميديا"
+    },
+    {
+      "id": "emo_015",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🧟‍♂️ 🏥 💉 💊",
+      "answer": "الزومبي (أو 12 قرد)",
+      "difficulty": "medium",
+      "hint": "فيروس طبي ومتحولون"
+    },
+    {
+      "id": "emo_016",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👶 🍼 👔 💼",
+      "answer": "الطفل الزعيم (The Boss Baby)",
+      "difficulty": "easy",
+      "hint": "رضيع يرتدي بدلة رسمية ويدير شركة سرية"
+    },
+    {
+      "id": "emo_017",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🐺 🌕 🌲 🩸",
+      "answer": "الرجل الذئب (The Wolfman)",
+      "difficulty": "medium",
+      "hint": "مستذئب يتحول مع اكتمال البدر في الغابة"
+    },
+    {
+      "id": "emo_018",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🤿 🦈 🌊 🏖️",
+      "answer": "الفك المفترس (JAWS)",
+      "difficulty": "easy",
+      "hint": "قرش أبيض عملاق يرعب المصطافين على الشاطئ"
+    },
+    {
+      "id": "emo_019",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👽 🚲 🌕 🛸",
+      "answer": "إي تي (E.T. the Extra-Terrestrial)",
+      "difficulty": "medium",
+      "hint": "كائن فضائي ودراجة تطير أمام القمر"
+    },
+    {
+      "id": "emo_020",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🎩 🪄 🐰 🃏",
+      "answer": "عالم السحر (Now You See Me / العظمة)",
+      "difficulty": "medium",
+      "hint": "فرسان السحر الأربعة والخدع البصرية"
+    },
+    {
+      "id": "emo_021",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👑 🦁 🐗 🐒",
+      "answer": "الأسد الملك (سيمبا وبومبا وتيمون)",
+      "difficulty": "easy",
+      "hint": "هاكونا ماتاتا وحيوانات السافانا"
+    },
+    {
+      "id": "emo_022",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🏢 🧗‍♂️ 💣 👨‍🚒",
+      "answer": "داي هارد (Die Hard)",
+      "difficulty": "hard",
+      "hint": "بروس ويليس في ناطحة سحاب ضد الإرهابيين"
+    },
+    {
+      "id": "emo_023",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n👨‍🍳 🍕 🍝 🇮🇹",
+      "answer": "العراب (The Godfather)",
+      "difficulty": "medium",
+      "hint": "عائلة كورليوني والمافيا الإيطالية في نيويورك"
+    },
+    {
+      "id": "emo_024",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🧊 🚢 🎻 🌊",
+      "answer": "تيتانيك (Titanic)",
+      "difficulty": "easy",
+      "hint": "عازفو الكمان أثناء غرق السفينة التاريخية"
+    },
+    {
+      "id": "emo_025",
+      "categoryId": "emoji_movies",
+      "question": "خمن اسم الفيلم من الإيموجي:\n\n🏎️ 🏁 🏆 🏎️",
+      "answer": "فورد ضد فيراري (Ford v Ferrari)",
+      "difficulty": "hard",
+      "hint": "سباق لومان 24 ساعة التاريخي"
+    },
+    {
+      "id": "fb_001",
+      "categoryId": "football",
+      "question": "مين الهداف التاريخي لمنتخب مصر في تصفيات وبطولات أفريقيا؟",
+      "answer": "حسام حسن",
       "difficulty": "easy"
     },
     {
-      "id": "cha_002",
-      "categoryId": "challenges",
-      "question": "تحدي الألوان: اذكر 5 خضروات لونها أخضر في 5 ثواني فقط!",
-      "answer": "خيار، جرجير، ملوخية، سبانخ، كوسة",
+      "id": "fb_002",
+      "categoryId": "football",
+      "question": "مين اللاعب المصري الملقب بـ 'الماجيكو' وكان بيلبس رقم 22 في الأهلي؟",
+      "answer": "محمد محمد أبو تريكة",
       "difficulty": "easy"
     },
     {
-      "id": "cha_003",
-      "categoryId": "challenges",
-      "question": "تحدي البديهة: قول 3 حيوانات لا تبيض في 5 ثواني!",
-      "answer": "الأسد، الفيل، الحصان، القطة، الكلب",
+      "id": "fb_003",
+      "categoryId": "football",
+      "question": "في أي نادي إنجليزي يلعب محمد صلاح حالياً؟",
+      "answer": "ليفربول",
       "difficulty": "easy"
     },
     {
-      "id": "cha_004",
-      "categoryId": "challenges",
-      "question": "تحدي السينما: اذكر 3 أفلام لأحمد حلمي في 5 ثواني!",
-      "answer": "كده رضا، عسل أسود، إكس لارج، زكي شان",
+      "id": "fb_004",
+      "categoryId": "football",
+      "question": "مين النادي الإسباني الملقب بـ 'الميرنجي' والأكثر تتويجاً بدوري أبطال أوروبا؟",
+      "answer": "ريال مدريد",
       "difficulty": "easy"
     },
     {
-      "id": "cha_005",
-      "categoryId": "challenges",
-      "question": "تحدي الدول: اذكر 3 دول تبدأ بحرف 'الكاف' في 5 ثواني!",
-      "answer": "كندا، كينيا، الكويت، كولومبيا",
+      "id": "fb_005",
+      "categoryId": "football",
+      "question": "مين هو هداف كأس العالم قطر 2022؟",
+      "answer": "كيليان مبابي (8 أهداف)",
       "difficulty": "easy"
     },
     {
-      "id": "cha_006",
-      "categoryId": "challenges",
-      "question": "حكم كوميدي: قلّد صوت منبه الموبايل بأعلى صوتك لمدة 5 ثواني!",
-      "answer": "تنفيذ صوت المنبه المزعج بنجاح",
+      "id": "fb_006",
+      "categoryId": "football",
+      "question": "مين حارس المرمى التاريخي لمنتخب مصر الملقب بـ 'السد العالي'؟",
+      "answer": "عصام الحضري",
       "difficulty": "easy"
     },
     {
-      "id": "cha_007",
-      "categoryId": "challenges",
-      "question": "تحدي الضحك: ممنوع تبتسم أو تضحك لمدة 15 ثانية بينما المنافس يحاول يضحكك!",
-      "answer": "الصمود بوجه جامد بدون أي ابتسامة",
+      "id": "fb_007",
+      "categoryId": "football",
+      "question": "أي منتخب فاز بلقب كأس العالم 2022 في قطر؟",
+      "answer": "الأرجنتين",
       "difficulty": "easy"
     },
     {
-      "id": "cha_008",
-      "categoryId": "challenges",
-      "question": "تحدي الكورة: سمّي 3 لاعبين مصريين محترفين في أوروبا حالياً أو سابقاً!",
-      "answer": "محمد صلاح، مرموش، تريزيجيه، ميدو، النني",
+      "id": "fb_008",
+      "categoryId": "football",
+      "question": "مين اللاعب الأسطوري الملقب بـ 'البرغوث'؟",
+      "answer": "ليونيل ميسي",
       "difficulty": "easy"
     },
     {
-      "id": "cha_009",
-      "categoryId": "challenges",
-      "question": "حكم سريع: اعمل 5 عدات ضغط (Push-ups) على الأرض فوراً!",
-      "answer": "أداء التمرين بحماس",
+      "id": "fb_009",
+      "categoryId": "football",
+      "question": "مين النادي الأوروبي صاحب لقب 'الريدز'؟",
+      "answer": "ليفربول",
       "difficulty": "easy"
     },
     {
-      "id": "cha_010",
-      "categoryId": "challenges",
-      "question": "تحدي الغناء: غنّي مطلع أي أغنية لأم كلثوم بصوتك في 10 ثواني!",
-      "answer": "أداء مطلع الأغنية بنجاح",
+      "id": "fb_010",
+      "categoryId": "football",
+      "question": "كام عدد لاعبي فريق كرة القدم داخل الملعب في بداية المباراة؟",
+      "answer": "11 لاعب",
       "difficulty": "easy"
     },
     {
-      "id": "cha_011",
-      "categoryId": "challenges",
-      "question": "تحدي تمثيل بدون كلام (Charades): مثّل لفريقك فيلم 'إسماعيلية رايح جاي' في 20 ثانية!",
-      "answer": "تمثيل الفيلم أو أغنية كامننا بالإشارة فقط",
+      "id": "fb_011",
+      "categoryId": "football",
+      "question": "مين أول منتخب عربي وأفريقي يصل لنصف نهائي كأس العالم عبر التاريخ؟",
+      "answer": "منتخب المغرب (مونديال 2022)",
       "difficulty": "medium"
     },
     {
-      "id": "cha_012",
-      "categoryId": "challenges",
-      "question": "تحدي سرعة النطق: كرر الجملة دي 3 مرات متتالية بسرعة وبدون غلط: 'خيط حرير على حيط خليل'!",
-      "answer": "نطق الجملة 3 مرات بنجاح وسرعة",
+      "id": "fb_012",
+      "categoryId": "football",
+      "question": "مين النادي الوحيد في العالم اللي حقق السداسية التاريخية مرتين؟",
+      "answer": "برشلونة الإسباني",
       "difficulty": "medium"
     },
     {
-      "id": "cha_013",
-      "categoryId": "challenges",
-      "question": "تحدي سرعة النطق: كرر الجملة دي 3 مرات بسرعة وبدون تلعثم: 'شجرة الأبنوس داسها الأتوبيس'!",
-      "answer": "نطق الجملة 3 مرات بنجاح وبسرعة",
+      "id": "fb_013",
+      "categoryId": "football",
+      "question": "مين المدرب الأرجنتيني الذي قاد مصر للتأهل لمونديال روسيا 2018 بعد غياب 28 سنة؟",
+      "answer": "هيكتور كوبر",
       "difficulty": "medium"
     },
     {
-      "id": "cha_014",
-      "categoryId": "challenges",
-      "question": "تحدي الحساب الذهني السريع: كام ناتج (8 × 7) + 14 في 5 ثواني فقط؟",
-      "answer": "70 (لأن 8 × 7 = 56 + 14 = 70)",
+      "id": "fb_014",
+      "categoryId": "football",
+      "question": "مين الهداف التاريخي لبطولة دوري أبطال أوروبا حتى الآن؟",
+      "answer": "كريستيانو رونالدو (140 هدف)",
       "difficulty": "medium"
     },
     {
-      "id": "cha_015",
-      "categoryId": "challenges",
-      "question": "تحدي الجغرافيا: اذكر 4 عواصم عربية في قارة إفريقيا في 7 ثواني!",
-      "answer": "القاهرة، طرابلس، تونس، الجزائر، الرباط، الخرطوم",
+      "id": "fb_015",
+      "categoryId": "football",
+      "question": "في أي نادي مصري بدأ محمد صلاح مسيرته الاحترافية في الدوري الممتاز؟",
+      "answer": "المقاولون العرب",
       "difficulty": "medium"
     },
     {
-      "id": "cha_016",
-      "categoryId": "challenges",
-      "question": "تحدي التقليد: قلّد طريقة كلام وإيفيه مشهور للزعيم عادل إمام في مسرحية الواد سيد الشغال!",
-      "answer": "تقليد إيفيه مشهور بنجاح",
+      "id": "fb_016",
+      "categoryId": "football",
+      "question": "مين صاحب هدف فوز الزمالك بنهائي دوري أبطال أفريقيا 2002 ضد الرجاء؟",
+      "answer": "تامر عبد الحميد (دونجا)",
       "difficulty": "medium"
     },
     {
-      "id": "cha_017",
-      "categoryId": "challenges",
-      "question": "تحدي الأندية: اذكر 4 أندية في الدوري الإنجليزي الممتاز في 5 ثواني!",
-      "answer": "ليفربول، مانشستر سيتي، آرسنال، تشيلسي، مان يونايتد",
+      "id": "fb_017",
+      "categoryId": "football",
+      "question": "مين صاحب أسرع هدف في تاريخ كأس العالم (سجله بعد 11 ثانية)؟",
+      "answer": "هاكان شوكور (تركيا أمام كوريا الجنوبية 2002)",
       "difficulty": "medium"
     },
     {
-      "id": "cha_018",
-      "categoryId": "challenges",
-      "question": "تحدي الفواكه: قول 4 فواكه تبدأ بحرف 'الميم' أو 'التاء' في 6 ثواني!",
-      "answer": "موز، مانجو، مشمش، تفاح، تين، توت",
+      "id": "fb_018",
+      "categoryId": "football",
+      "question": "مين فاز بجائزة الكرة الذهبية (Ballon d'Or) لسنة 2024؟",
+      "answer": "رودري (لاعب مانشستر سيتي وإسبانيا)",
       "difficulty": "medium"
     },
     {
-      "id": "cha_019",
-      "categoryId": "challenges",
-      "question": "حكم غنائي: غنّي أغنية أطفال مشهورة (زي 'ماما زمنها جاية') بنبرة شخص غضبان جداً!",
-      "answer": "أداء الأغنية بالتمثيل الكوميدي",
+      "id": "fb_019",
+      "categoryId": "football",
+      "question": "أي منتخب فاز ببطولة يورو 2024 الصيف الماضي؟",
+      "answer": "منتخب إسبانيا",
       "difficulty": "medium"
     },
     {
-      "id": "cha_020",
-      "categoryId": "challenges",
-      "question": "تحدي أسماء البنات: اذكر 5 أسماء بنات تنتهي بحرف 'الألف' في 6 ثواني!",
-      "answer": "سارة، دنيا، رنا، علياء، علا، دينا",
+      "id": "fb_020",
+      "categoryId": "football",
+      "question": "مين المدرب السويسري الذي قاد الأهلي للفوز ببطولات محلية وأفريقية متتالية منذ 2022؟",
+      "answer": "مارسيل كولر",
       "difficulty": "medium"
     },
     {
-      "id": "cha_021",
-      "categoryId": "challenges",
-      "question": "تحدي الحساب الخاطف: كام ناتج (12 × 12) - 24 في أقل من 5 ثواني؟",
-      "answer": "120 (لأن 144 - 24 = 120)",
+      "id": "fb_021",
+      "categoryId": "football",
+      "question": "مين هو صاحب أول هدف رسمي في تاريخ بطولات كأس العالم سنة 1930؟",
+      "answer": "الفرنسي لوسيان لوران",
       "difficulty": "hard"
     },
     {
-      "id": "cha_022",
-      "categoryId": "challenges",
-      "question": "تحدي الحروف الممنوعة: تكلم لمدة 20 ثانية عن الكورة بدون ما تنطق حرف 'الميم' نهائياً!",
-      "answer": "الحديث المتواصل 20 ثانية بدون أي حرف ميم",
+      "id": "fb_022",
+      "categoryId": "football",
+      "question": "مين هو اللاعب الوحيد الذي سجل هاتريك في نهائيين مختلفين لكأس العالم؟",
+      "answer": "كيليان مبابي (سجل في 2022 وكان له هدف في 2018)",
       "difficulty": "hard"
     },
     {
-      "id": "cha_023",
-      "categoryId": "challenges",
-      "question": "تحدي تمثيل صامت صعب: مثّل لفريقك فيلم 'الفيل الأزرق' بدون كلام في 25 ثانية!",
-      "answer": "تمثيل الفيلم وحركة العين والأكشن بالإشارة",
+      "id": "fb_023",
+      "categoryId": "football",
+      "question": "مين النادي الفائز بلقب الدوري الإنجليزي الذهبي (بدون أي هزيمة) موسم 2003-2004؟",
+      "answer": "آرسنال",
       "difficulty": "hard"
     },
     {
-      "id": "cha_024",
-      "categoryId": "challenges",
-      "question": "تحدي الدول المركبة: اذكر 3 دول في العالم اسمها يتكون من كلمتين أو أكثر في 7 ثواني!",
-      "answer": "المملكة المتحدة، الولايات المتحدة، جنوب أفريقيا، نيوزيلندا",
+      "id": "fb_024",
+      "categoryId": "football",
+      "question": "مين هداف منتخب مصر التاريخي في الألعاب الأولمبية؟",
+      "answer": "مصطفى كامل طه / إبراهيم رياض",
       "difficulty": "hard"
     },
     {
-      "id": "cha_025",
-      "categoryId": "challenges",
-      "question": "تحدي الذاكرة الصعبة: اذكر 5 عناصر من الجدول الدوري في 6 ثواني!",
-      "answer": "هيدروجين، هيليوم، كربون، نيتروجين، أكسجين، حديد، ذهب",
+      "id": "fb_025",
+      "categoryId": "football",
+      "question": "ما هي الدولة التي استضافت أول بطولة لكأس الأمم الأفريقية عام 1957 وفازت بها مصر؟",
+      "answer": "السودان",
       "difficulty": "hard"
     },
     {
-      "id": "cha_026",
-      "categoryId": "challenges",
-      "question": "حكم تمثيل: مثّل مشهد درامي حزين جداً كأنك فقدت ساندوتش شاورما لسه شاريه حالا!",
-      "answer": "أداء تمثيلي حزين ومضحك ومقنع للمقدم",
+      "id": "fb_026",
+      "categoryId": "football",
+      "question": "كم مرة توج منتخب مصر ببطولة كأس الأمم الأفريقية؟",
+      "answer": "7 مرات (رقم قياسي)",
       "difficulty": "hard"
     },
     {
-      "id": "cha_027",
-      "categoryId": "challenges",
-      "question": "تحدي عواصم العالم: ما هي عواصم (كندا، أستراليا، البرازيل) في 10 ثواني؟",
-      "answer": "أوتاوا (كندا)، كانبيرا (أستراليا)، برازيليا (البرازيل)",
+      "id": "fb_027",
+      "categoryId": "football",
+      "question": "مين اللاعب الذي سجل هدف مصر الوحيد في كأس العالم 1990 بإيطاليا؟",
+      "answer": "مجدي عبد الغني (ركلة جزاء ضد هولندا)",
       "difficulty": "hard"
     },
     {
-      "id": "cha_028",
-      "categoryId": "challenges",
-      "question": "تحدي سرعة النطق الأسطوري: كرر 3 مرات بسرعة: 'لوري ورا لوري.. بطة نطت من لوري' بدون غلطة!",
-      "answer": "نطق الجملة بدون تلعثم 3 مرات",
+      "id": "fb_028",
+      "categoryId": "football",
+      "question": "مين النادي الملقب بـ 'الغواصات الصفراء' في الدوري الإسباني؟",
+      "answer": "فياريال",
       "difficulty": "hard"
     },
     {
-      "id": "cha_029",
-      "categoryId": "challenges",
-      "question": "تحدي التاريخ: اذكر 3 ملوك أو فراعنة بنوا أهرامات أو معابد في مصر القديمة في 5 ثواني!",
-      "answer": "خوفو، خفرع، منقرع، رمسيس الثاني، حتشبسوت",
+      "id": "fb_029",
+      "categoryId": "football",
+      "question": "مين اللاعب الإيطالي الشهير صاحب ركلة الترجيح الضائعة في نهائي مونديال 1994؟",
+      "answer": "روبرتو باجيو",
       "difficulty": "hard"
     },
     {
-      "id": "cha_030",
-      "categoryId": "challenges",
-      "question": "حكم الاعتراف: اعترف بأغرب أو أكسف موقف حصل لك في الشارع قدام كل المنافسين!",
-      "answer": "قول موقف حقيقي محرج بجرأة وضحك",
+      "id": "fb_030",
+      "categoryId": "football",
+      "question": "ما هي المدينة التي أقيم فيها نهائي القرن الأفريقي بين الأهلي والزمالك عام 2020؟",
+      "answer": "القاهرة (استاد القاهرة الدولي)",
       "difficulty": "hard"
+    },
+    {
+      "id": "foo_001",
+      "categoryId": "football",
+      "question": "مين هداف الدوري المصري التاريخي برصيد 176 هدف؟",
+      "answer": "حسن الشاذلي (أسطورة نادي الترسانة)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_002",
+      "categoryId": "football",
+      "question": "في أي عام تأسس النادي الأهلي المصري؟",
+      "answer": "عام 1907",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_003",
+      "categoryId": "football",
+      "question": "في أي عام تأسس نادي الزمالك (قصر النيل سابقاً)؟",
+      "answer": "عام 1911",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_004",
+      "categoryId": "football",
+      "question": "مين النادي الملقب بـ 'الشياطين الحمر' في إنجلترا؟",
+      "answer": "مانشستر يونايتد",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_005",
+      "categoryId": "football",
+      "question": "مين اللاعب المصري الذي توج بجائزة أفضل لاعب في أفريقيا عام 1983؟",
+      "answer": "محمود الخطيب (بيبو)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_006",
+      "categoryId": "football",
+      "question": "مين هو الهداف التاريخي لكأس العالم عبر التاريخ برصيد 16 هدف؟",
+      "answer": "ميروسلاف كلوزه (ألمانيا)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_007",
+      "categoryId": "football",
+      "question": "أي منتخب فاز بلقب كأس العالم 2010 في جنوب أفريقيا؟",
+      "answer": "إسبانيا (هدف إنييستا الشهير)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_008",
+      "categoryId": "football",
+      "question": "أي منتخب فاز بلقب كأس العالم 2014 في البرازيل؟",
+      "answer": "ألمانيا (هدف ماريو غوتزه ضد الأرجنتين)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_009",
+      "categoryId": "football",
+      "question": "أي منتخب فاز بلقب كأس العالم 2018 في روسيا؟",
+      "answer": "فرنسا (ضد كرواتيا)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_010",
+      "categoryId": "football",
+      "question": "مين هو أصغر لاعب يسجل هدف في تاريخ كأس العالم؟",
+      "answer": "الأسطورة بيليه (سنة 1958 ضد ويلز بعمر 17 عاماً)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "foo_011",
+      "categoryId": "football",
+      "question": "مين الحارس الفائز بجائزة 'ياشين' لأفضل حارس في العالم لعام 2024؟",
+      "answer": "إيميليانو مارتينيز (حارس الأرجنتين وأستون فيلا)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_012",
+      "categoryId": "football",
+      "question": "مين هو الهداف التاريخي لنادي ريال مدريد؟",
+      "answer": "كريستيانو رونالدو (450 هدف)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_013",
+      "categoryId": "football",
+      "question": "مين هو الهداف التاريخي لنادي برشلونة؟",
+      "answer": "ليونيل ميسي (672 هدف)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_014",
+      "categoryId": "football",
+      "question": "مين اللاعب الذي سجل الهدف الأسطوري المعروف بـ 'يد الله' في مونديال 1986؟",
+      "answer": "دييجو أرماندو مارادونا",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_015",
+      "categoryId": "football",
+      "question": "ما هي أول دولة عربية شاركت في كأس العالم في التاريخ؟",
+      "answer": "مصر (مونديال إيطاليا 1934)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_016",
+      "categoryId": "football",
+      "question": "مين صاحب أول هدف لمنتخب مصر في تاريخ كأس العالم عام 1934؟",
+      "answer": "عبد الرحمن فوزي (سجل هدفين ضد المجر)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "foo_017",
+      "categoryId": "football",
+      "question": "مين النادي الألماني الأكثر تتويجاً بلقب البوندسليجا؟",
+      "answer": "بايرن ميونخ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_018",
+      "categoryId": "football",
+      "question": "مين النادي الفائز بلقب الدوري الألماني التاريخي 2023-2024 بدون أي هزيمة؟",
+      "answer": "باير ليفركوزن (بقيادة تشابي ألونسو)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_019",
+      "categoryId": "football",
+      "question": "كم دقيقة تستغرق الأشواط الإضافية كاملة في كرة القدم في حال التعادل؟",
+      "answer": "30 دقيقة (شوطين كل شوط 15 دقيقة)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_020",
+      "categoryId": "football",
+      "question": "كم عدد التبديلات المسموح بها لكل فريق في المباراة الرسمية (بدون الأشواط الإضافية) حالياً؟",
+      "answer": "5 تبديلات",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_021",
+      "categoryId": "football",
+      "question": "ما هو الملعب التاريخي الشهير لنادي مانشستر يونايتد الملقب بـ 'مسرح الأحلام'؟",
+      "answer": "أولد ترافورد (Old Trafford)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_022",
+      "categoryId": "football",
+      "question": "مين المدافع المصري التاريخي الذي لعب لأندية وست هام وويجان وتوتنهام في البريميرليج؟",
+      "answer": "أحمد حسام ميدو / أحمد المحمدي",
+      "difficulty": "medium"
+    },
+    {
+      "id": "foo_023",
+      "categoryId": "football",
+      "question": "ما هو النادي المصري الملقب بـ 'زعيم الثغر'؟",
+      "answer": "الاتحاد السكندري",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_024",
+      "categoryId": "football",
+      "question": "ما هو النادي المصري الملقب بـ 'دراويش الكرة المصرية'؟",
+      "answer": "الإسماعيلي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "foo_025",
+      "categoryId": "football",
+      "question": "ما هو النادي الملقب بـ 'النادي الملكي' في المغرب؟",
+      "answer": "الجيش الملكي (أو الرجاء والوداد كقطبي كازابلانكا)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_001",
+      "categoryId": "general",
+      "question": "ما هي أكبر قارة مساحة وسكاناً في العالم؟",
+      "answer": "قارة آسيا",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_002",
+      "categoryId": "general",
+      "question": "ما هو الكوكب الملقب بـ 'الكوكب الأحمر'؟",
+      "answer": "المريخ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_003",
+      "categoryId": "general",
+      "question": "ما هو أطول نهر في العالم؟",
+      "answer": "نهر النيل",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_004",
+      "categoryId": "general",
+      "question": "ما هي عاصمة جمهورية مصر العربية؟",
+      "answer": "القاهرة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_005",
+      "categoryId": "general",
+      "question": "ما هو الحيوان الملقب بـ 'سفينة الصحراء'؟",
+      "answer": "الجمل",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_006",
+      "categoryId": "general",
+      "question": "ما هو أكبر محيط مائي في الكرة الأرضية؟",
+      "answer": "المحيط الهادئ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_007",
+      "categoryId": "general",
+      "question": "ما هي العملة الرسمية في اليابان؟",
+      "answer": "الين الياباني",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_008",
+      "categoryId": "general",
+      "question": "كم عدد ألوان قوس قزح؟",
+      "answer": "7 ألوان",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_009",
+      "categoryId": "general",
+      "question": "ما هو الغاز الأساسي الذي يتنفسه الإنسان للحياة؟",
+      "answer": "الأكسجين",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_010",
+      "categoryId": "general",
+      "question": "ما هي الدولة صاحبة أكبر عدد سكان في العالم حالياً؟",
+      "answer": "الهند (تجاوزت الصين رسمياً)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_011",
+      "categoryId": "general",
+      "question": "ما هو الغاز الأكثر وفرة في الغلاف الجوي بنسبة تقارب 78%؟",
+      "answer": "النيتروجين",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_012",
+      "categoryId": "general",
+      "question": "ما هو المعدن الوحيد الذي يكون سائلاً في درجة حرارة الغرفة الطبيعية؟",
+      "answer": "الزئبق",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_013",
+      "categoryId": "general",
+      "question": "ما هي عاصمة سلطنة عُمان؟",
+      "answer": "مسقط",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_014",
+      "categoryId": "general",
+      "question": "كم عدد صمامات قلب الإنسان الطبيعي؟",
+      "answer": "4 صمامات",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_015",
+      "categoryId": "general",
+      "question": "ما هي أسرع حشرة على كوكب الأرض؟",
+      "answer": "اليعسوب (Dragonfly)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_016",
+      "categoryId": "general",
+      "question": "في أي قارة تقع دولة بيرو ومدينة ماتشو بيتشو الشهيرة؟",
+      "answer": "أمريكا الجنوبية",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_017",
+      "categoryId": "general",
+      "question": "من هو مخترع شبكة الويب العالمية (World Wide Web) عام 1989؟",
+      "answer": "تيم بيرنرز لي (Tim Berners-Lee)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_018",
+      "categoryId": "general",
+      "question": "ما هي أكبر بحيرة مياه عذبة في العالم من حيث الحجم والمساحة؟",
+      "answer": "بحيرة بايكال (الحجم) / بحيرة سوبيريور (المساحة)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_019",
+      "categoryId": "general",
+      "question": "ما هو أسرع طائر في العالم عند الانقضاض؟",
+      "answer": "صقر الشاهين (الدرك)، سرعته تتجاوز 320 كم/س",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_020",
+      "categoryId": "general",
+      "question": "ما هي المدينة الملقبة بـ 'مدينة الضباب'؟",
+      "answer": "لندن",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_021",
+      "categoryId": "general",
+      "question": "ما هو العنصر الكيميائي الأكثر وفرة في قشرة الأرض؟",
+      "answer": "الأكسجين (حوالي 46.6%) ويليه السيليكون",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_022",
+      "categoryId": "general",
+      "question": "في أي عام تم افتتاح قناة السويس رسمياً للملاحة البحرية؟",
+      "answer": "عام 1869",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_023",
+      "categoryId": "general",
+      "question": "ما هو أعمق خندق بحري مسجل في المحيطات في كوكب الأرض؟",
+      "answer": "خندق ماريانا (عمق يقارب 11 ألف متر)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_024",
+      "categoryId": "general",
+      "question": "كم عدد العظام في جسم الإنسان البالغ؟",
+      "answer": "206 عظمة",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_025",
+      "categoryId": "general",
+      "question": "من هو العالم الفيزيائي الذي صاغ قوانين الحركة والجاذبية العامة؟",
+      "answer": "إسحاق نيوتن",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_026",
+      "categoryId": "general",
+      "question": "ما هو اسم أقدم سلالة حاكمة مستمرة في العالم حتى اليوم؟",
+      "answer": "العائلة الإمبراطورية في اليابان (أسرة ياماتو)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_027",
+      "categoryId": "general",
+      "question": "ما هي الدولة الإفريقية الوحيدة التي لم تُستعمر أوروبياً قط بجانب ليبيريا؟",
+      "answer": "إثيوبيا",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_028",
+      "categoryId": "general",
+      "question": "ما هي درجة الصفر المطلق بالمقياس المئوي السليزيوسي؟",
+      "answer": "-273.15 درجة مئوية",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_029",
+      "categoryId": "general",
+      "question": "ما هو الهرمون الملقب بهرمون النوم في جسم الإنسان وتفرزه الغدة الصنوبرية؟",
+      "answer": "الميلاتونين",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_030",
+      "categoryId": "general",
+      "question": "في أي معركة بحرية هُزمت كليوباترا وماركوس أنطونيوس أمام أوكتافيوس عام 31 ق.م؟",
+      "answer": "معركة أكتيوم البحرية",
+      "difficulty": "hard"
+    },
+    {
+      "id": "gen_031",
+      "categoryId": "general",
+      "question": "ما هو أسرع حيوان بري على وجه الأرض؟",
+      "answer": "الفهد الصياد (الشيتا)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_032",
+      "categoryId": "general",
+      "question": "ما هو أكبر حيوان في العالم على الإطلاق ويعيش في المحيطات؟",
+      "answer": "الحوت الأزرق",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_033",
+      "categoryId": "general",
+      "question": "ما هي عاصمة اليابان؟",
+      "answer": "طوكيو",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_034",
+      "categoryId": "general",
+      "question": "ما هي عاصمة إيطاليا؟",
+      "answer": "روما",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_035",
+      "categoryId": "general",
+      "question": "ما هي عاصمة ألمانيا؟",
+      "answer": "برلين",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_036",
+      "categoryId": "general",
+      "question": "كم عدد قارات العالم المعترف بها؟",
+      "answer": "7 قارات",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_037",
+      "categoryId": "general",
+      "question": "ما هو الكوكب الأقرب إلى الشمس في المجموعة الشمسية؟",
+      "answer": "كوكب عطارد",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_038",
+      "categoryId": "general",
+      "question": "ما هو أكبر كوكب حجماً في المجموعة الشمسية؟",
+      "answer": "كوكب المشتري",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_039",
+      "categoryId": "general",
+      "question": "ما هي عاصمة المملكة العربية السعودية؟",
+      "answer": "الرياض",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_040",
+      "categoryId": "general",
+      "question": "ما هي عاصمة دولة الإمارات العربية المتحدة؟",
+      "answer": "أبوظبي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_041",
+      "categoryId": "general",
+      "question": "ما هو الرمز الكيميائي للماء في الكيمياء؟",
+      "answer": "H2O",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_042",
+      "categoryId": "general",
+      "question": "ما هو الرمز الكيميائي لكلوريد الصوديوم (ملح الطعام)؟",
+      "answer": "NaCl",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_043",
+      "categoryId": "general",
+      "question": "ما هو الرمز الكيميائي للذهب في الجدول الدوري؟",
+      "answer": "Au",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_044",
+      "categoryId": "general",
+      "question": "ما هو الرمز الكيميائي للحديد؟",
+      "answer": "Fe",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_045",
+      "categoryId": "general",
+      "question": "كم عدد أسنان الإنسان البالغ الطبيعية (بما فيها ضروس العقل)؟",
+      "answer": "32 سناً وضرساً",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_046",
+      "categoryId": "general",
+      "question": "ما هي أكبر صحراء حارة في العالم؟",
+      "answer": "الصحراء الكبرى الإفريقية",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_047",
+      "categoryId": "general",
+      "question": "ما هو أعلى جبل في العالم فوق مستوى سطح البحر؟",
+      "answer": "جبل إفرست (في سلسلة الهيمالايا)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_048",
+      "categoryId": "general",
+      "question": "في أي دولة تقع أهرامات الجيزة وأبو الهول؟",
+      "answer": "مصر",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_049",
+      "categoryId": "general",
+      "question": "ما هو المضيق المائي الذي يفصل بين المغرب وإسبانيا؟",
+      "answer": "مضيق جبل طارق",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_050",
+      "categoryId": "general",
+      "question": "ما هي قناة السويس؟ وما هما البحران اللذان تربط بينهما؟",
+      "answer": "البحر الأبيض المتوسط والبحر الأحمر",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_051",
+      "categoryId": "general",
+      "question": "من هو أول إنسان صعد إلى الفضاء الخارجي في التاريخ عام 1961؟",
+      "answer": "يوري جاجارين (رائد فضاء روسي)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_052",
+      "categoryId": "general",
+      "question": "من هو أول إنسان مشى على سطح القمر عام 1969؟",
+      "answer": "نيل أرمسترونج (أمريكي)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_053",
+      "categoryId": "general",
+      "question": "ما هو الغاز المنبعث من عوادم السيارات والاحتراق غير الكامل ويعتبر غازاً ساماً صامتاً؟",
+      "answer": "أول أكسيد الكربون (CO)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "gen_054",
+      "categoryId": "general",
+      "question": "ما هو الطائر الذي لا يطير ويعتبر أكبر طائر حجماً وبيضاً في العالم؟",
+      "answer": "النعامة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "gen_055",
+      "categoryId": "general",
+      "question": "ما هي الدولة صاحبة أكبر عدد جزر في العالم (أكثر من 260 ألف جزيرة)؟",
+      "answer": "السويد",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_001",
+      "categoryId": "movies",
+      "question": "في فيلم 'الناظر'، إيه أسماء الثلاث شخصيات التي مثلها الراحل علاء ولي الدين؟",
+      "answer": "عاشور الأب، وجواهر الأم، وصلاح الابن",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_002",
+      "categoryId": "movies",
+      "question": "مين الفنان اللي مثل دور 'حزلقوم' و'الكبير' و'جوني' في الكبير أوي؟",
+      "answer": "أحمد مكي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_003",
+      "categoryId": "movies",
+      "question": "في فيلم 'صعيدي في الجامعة الأمريكية'، إيه كان اسم الأغنية الشهيرة لمحمد هنيدي؟",
+      "answer": "كاجولوه",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_004",
+      "categoryId": "movies",
+      "question": "مين بطل شخصية 'اللمبي' في السينما المصرية؟",
+      "answer": "محمد سعد",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_005",
+      "categoryId": "movies",
+      "question": "مين الفنان صاحب الإيفيه الشهير: 'مين حبيب بابااا.. الألمان خسروا يا زرووق'؟",
+      "answer": "محمود عبد العزيز (عبد الملك زرزور)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_006",
+      "categoryId": "movies",
+      "question": "في فيلم 'كده رضا'، كان إيه أسماء الثلاث توائم لأحمد حلمي؟",
+      "answer": "سمسم، وبيبو، وبرنس",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_007",
+      "categoryId": "movies",
+      "question": "مين الممثل الشهير بـ 'الزعيم' في المسرح والسينما؟",
+      "answer": "عادل إمام",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_008",
+      "categoryId": "movies",
+      "question": "في فيلم 'غبي منه فيه'، مين مثل دور 'المعلم سلطان' صاحب جملة 'صلاة النبي أحسن'؟",
+      "answer": "طلعت زكريا",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_009",
+      "categoryId": "movies",
+      "question": "مين الفنانة التي جسدت شخصية 'وداد' في مسلسل جعفر العمدة؟",
+      "answer": "جوري بكر",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_010",
+      "categoryId": "movies",
+      "question": "إيه اسم المسلسل الرمضاني الشهير اللي قام ببطولته أحمد السقا وباسم سمرة في شخصية عيسى الوزان؟",
+      "answer": "العتاولة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_011",
+      "categoryId": "movies",
+      "question": "في فيلم 'فول الصين العظيم'، كان إيه اسم خطيبة محيي الشرقاوي الصينية؟",
+      "answer": "لي",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_012",
+      "categoryId": "movies",
+      "question": "مين المؤلف العبقري اللي كتب ملحمة 'ليالي الحلمية' و'الشهد والدموع'؟",
+      "answer": "أسامة أنور عكاشة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_013",
+      "categoryId": "movies",
+      "question": "في فيلم 'عسل أسود'، إيه كان اسم السائق الوفي اللي مثل دوره لطفي لبيب؟",
+      "answer": "راضي (عم راضي)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_014",
+      "categoryId": "movies",
+      "question": "مين جسد دور العالم الفلكي 'أحمد مظهر' في فيلم الأيدي الناعمة؟",
+      "answer": "أحمد مظهر (البرنس شوكت)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_015",
+      "categoryId": "movies",
+      "question": "في فيلم 'أمير الظلام'، إيه كان اسم الشخصية التي جسدها عادل إمام؟",
+      "answer": "الجنرال سعيد الظريف",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_016",
+      "categoryId": "movies",
+      "question": "إيه اسم الجزيرة التي كان ينفي إليها الخارجين عن القانون في فيلم الجزيرة؟",
+      "answer": "جزيرة النخيلة (أو الجزيرة في الصعيد)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_017",
+      "categoryId": "movies",
+      "question": "مين المخرج العالمي اللي أخرج فيلم 'باب الحديد' و'الأرض' و'المصير'؟",
+      "answer": "يوسف شاهين",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_018",
+      "categoryId": "movies",
+      "question": "في فيلم 'إتش دبور'، إيه كان اسم والد دبور رجل الأعمال الثري؟",
+      "answer": "سري بك (حسن حسني)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_019",
+      "categoryId": "movies",
+      "question": "مين الممثل اللي لعب دور الشرير 'صفوت الشريف/رشدي' في فيلم البريء لأحمد زكي؟",
+      "answer": "محمود عبد العزيز (العقيد توفيق شركس)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_020",
+      "categoryId": "movies",
+      "question": "ما هو اسم الشخصية التي اشتهر بها الفنان يحيى الفخراني في مسلسل 'ونوس'؟",
+      "answer": "ونوس (الشيطان)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_021",
+      "categoryId": "movies",
+      "question": "ما هو أول فيلم سينمائي مصري ناطق بالكامل؟",
+      "answer": "فيلم أولاد الذوات (سنة 1932)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_022",
+      "categoryId": "movies",
+      "question": "في فيلم 'ثرثرة فوق النيل' المأخوذ عن رواية نجيب محفوظ، مين مثل شخصية 'أنيس زكي'؟",
+      "answer": "عماد حمدي",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_023",
+      "categoryId": "movies",
+      "question": "ما هي سنة عرض المسرحية التاريخية 'مدرسة المشاغبين' لأول مرة؟",
+      "answer": "سنة 1973",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_024",
+      "categoryId": "movies",
+      "question": "مين اللي مثل دور الطبيب النفسي المعالج لأحمد حلمي في فيلم 'آسف على الإزعاج'؟",
+      "answer": "محمود حميدة",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_025",
+      "categoryId": "movies",
+      "question": "في فيلم 'الهروب' للمخرج عاطف الطيب، إيه كان الاسم الكامل لشخصية البطل أحمد زكي؟",
+      "answer": "منتصر عبد الغفار",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_026",
+      "categoryId": "movies",
+      "question": "ما هو اسم المسلسل التاريخي الذي قام ببطولته يوسف الشريف مجسداً شخصية 'زين' في القدس عام 2120؟",
+      "answer": "النهاية",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_027",
+      "categoryId": "movies",
+      "question": "مين الممثلة التي شاركت رشدي أباظة بطولة فيلم 'الرجل الثاني' في دور سمرة؟",
+      "answer": "سامية جمال",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_028",
+      "categoryId": "movies",
+      "question": "في فيلم 'الأرض' للكاتب عبد الرحمن الشرقاوي، مين مثل دور 'أبو سويلم'؟",
+      "answer": "محمود المليجي",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_029",
+      "categoryId": "movies",
+      "question": "مين ملحن الموسيقى التصويرية الخالدة لمسلسل 'رأفت الهجان'؟",
+      "answer": "الموسيقار عمار الشريعي",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_030",
+      "categoryId": "movies",
+      "question": "ما هو الفيلم الوحيد الذي جمع بين كوكب الشرق أم كلثوم والموسيقار محمد عبد الوهاب كممثلين؟",
+      "answer": "لم يجمعهما أي فيلم سينمائي معاً كممثلين!",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mov_031",
+      "categoryId": "movies",
+      "question": "في فيلم 'طير إنت'، إيه اسم الكائن السحري الذي مثل دوره ماجد الكدواني؟",
+      "answer": "مارد (مارد وشوشني)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_032",
+      "categoryId": "movies",
+      "question": "مين قال الإيفيه الشهير: 'يا باسط اليدين.. كبس النور يا إبراهيم' في فيلم التجربة الدنماركية؟",
+      "answer": "عادل إمام",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_033",
+      "categoryId": "movies",
+      "question": "في فيلم 'حرامية في تايلاند'، إيه كان اسم اللوحة المشهورة اللي حاولوا يسرقوها؟",
+      "answer": "لوحة الموناليزا (أو لوحة السيدة العذراء)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_034",
+      "categoryId": "movies",
+      "question": "مين بطل شخصية 'القرموطي' الكوميدية الشهيرة؟",
+      "answer": "أحمد آدم",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_035",
+      "categoryId": "movies",
+      "question": "في فيلم 'وش إجرام'، إيه كان اسم الشخصية التي جسدها محمد هنيدي؟",
+      "answer": "طه الطوخي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_036",
+      "categoryId": "movies",
+      "question": "مين مثل دور 'خالتي فرنسا' أمام عبلة كامل ومنى زكي؟",
+      "answer": "عبلة كامل (فرنسا) ومنى زكي (بطة)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_037",
+      "categoryId": "movies",
+      "question": "في فيلم 'سفارة في العمارة'، إيه كان اسم بطل الفيلم مهندس البترول؟",
+      "answer": "شريف خيري (عادل إمام)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_038",
+      "categoryId": "movies",
+      "question": "مين قال الجملة الأيقونية: 'كله رايح يا ابني.. كله رايح' في فيلم الفرح؟",
+      "answer": "صلاح عبد الله",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_039",
+      "categoryId": "movies",
+      "question": "في مسرحية 'المتزوجون'، مين قدم شخصية 'مسعود' أمام سمير غانم (مسعود ومسعودة)؟",
+      "answer": "جورج سيدهم (حنفي) وسمير غانم (مسعود)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_040",
+      "categoryId": "movies",
+      "question": "مين الفنانة التي جسدت شخصية 'فاطمة كشري' في مسلسل لن أعيش في جلباب أبي؟",
+      "answer": "عبلة كامل",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_041",
+      "categoryId": "movies",
+      "question": "في مسلسل 'لن أعيش في جلباب أبي'، إيه كان اسم الوكالة التي بدأ فيها عبد الغفور البرعي؟",
+      "answer": "وكالة الحاج إبراهيم سردينة (حسن حسني)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_042",
+      "categoryId": "movies",
+      "question": "مين مثل دور الشرير 'عتريس' في رائعة 'شيء من الخوف'؟",
+      "answer": "محمود مرسي",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_043",
+      "categoryId": "movies",
+      "question": "في مسرحية 'شاهد ماشفش حاجة'، إيه كان اسم الساكن المقتولة جارة سرحان عبد البصير؟",
+      "answer": "عنايات هانم",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_044",
+      "categoryId": "movies",
+      "question": "مين قال جملة: 'أنا لا بكذب ولا بتجمل' في مسرحية العيال كبرت؟",
+      "answer": "أحمد زكي (كمال)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_045",
+      "categoryId": "movies",
+      "question": "في فيلم 'يا أنا يا خالتي'، إيه كان اسم الخالة المشعوذة التي تنكر فيها هنيدي؟",
+      "answer": "الخالة نوسة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_046",
+      "categoryId": "movies",
+      "question": "مين بطل فيلم 'واحد من الناس' و'أبو علي'؟",
+      "answer": "كريم عبد العزيز",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_047",
+      "categoryId": "movies",
+      "question": "مين مخرج فيلم 'الفيل الأزرق' و'كيرة والجن'؟",
+      "answer": "مروان حامد",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_048",
+      "categoryId": "movies",
+      "question": "ما هي الرواية الشهيرة لأحمد مراد التي تحولت لفيلم 'تراب الماس'؟",
+      "answer": "رواية تراب الماس",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_049",
+      "categoryId": "movies",
+      "question": "مين مثل دور الساحر 'محمود عبد العزيز' في فيلم الساحر؟",
+      "answer": "منصور بهجت (محمود عبد العزيز)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_050",
+      "categoryId": "movies",
+      "question": "في فيلم 'رمضان مبروك أبو العلمين حمودة'، ما هي المادة التي كان يدرسها رمضان؟",
+      "answer": "اللغة العربية",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_051",
+      "categoryId": "movies",
+      "question": "مين قدم شخصية 'الدكتور عاطف' في فيلم الناظر؟",
+      "answer": "أحمد حلمي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_052",
+      "categoryId": "movies",
+      "question": "مين قال: 'ثانية واحدة أتحزم وأجيلك' في فيلم اللمبي 8 جيجا؟",
+      "answer": "محمد سعد",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mov_053",
+      "categoryId": "movies",
+      "question": "في فيلم 'أمير البحار'، إيه كان اسم قرصان السفينة الشرير؟",
+      "answer": "ميزو الحرامي / القراصنة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_054",
+      "categoryId": "movies",
+      "question": "مين الممثلة التي شاركت أحمد زكي بطولة فيلم 'معالي الوزير'؟",
+      "answer": "لبلبة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mov_055",
+      "categoryId": "movies",
+      "question": "في فيلم 'إكس لارج'، إيه كان الاسم الحركي لمجدي في برنامجه الإذاعي مع دينا؟",
+      "answer": "أبو سمرة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_001",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'ابن الوز...'؟",
+      "answer": "عوّام",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_002",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'اللي على راسه بطحة...'؟",
+      "answer": "يحسس عليها",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_003",
+      "categoryId": "music_proverbs",
+      "question": "مين الفنان المصري الملقب بـ 'الهضبة'؟",
+      "answer": "عمرو دياب",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_004",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'دخول الحمام مش زي...'؟",
+      "answer": "خروجه",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_005",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحبة لقب 'سيدة الغناء العربي' وكوكب الشرق؟",
+      "answer": "أم كلثوم",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_006",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي الشهير: 'يا واخد القرد على ماله...'؟",
+      "answer": "يروح المال ويفضل القرد على حاله",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_007",
+      "categoryId": "music_proverbs",
+      "question": "مين المغني الملقب بـ 'الكينج' صاحب أغنية 'سو يا سو'؟",
+      "answer": "محمد منير",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_008",
+      "categoryId": "music_proverbs",
+      "question": "كمّل مطلع الأغنية: 'زحمة يا دنيا زحمة.. زحمة و...'؟",
+      "answer": "توهنا في الزحمة (أحمد عدوية)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_009",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'اطبخ يا جارية كلف يا...'؟",
+      "answer": "سيدي",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_010",
+      "categoryId": "music_proverbs",
+      "question": "مين العندليب الأسمر صاحب أغنية 'جبار' و'سواح'؟",
+      "answer": "عبد الحليم حافظ",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_011",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'الباب اللي يجيلك منه الريح...'؟",
+      "answer": "سده واستريح",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_012",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'إجري يا بني آدم جري الوحوش...'؟",
+      "answer": "غير رزقك لم تحوش",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_013",
+      "categoryId": "music_proverbs",
+      "question": "مين غنى الأغنية الشهيرة: 'قولي عملك إيه قلبي.. قلبي الحنين الوفي'؟",
+      "answer": "محمد عبد الوهاب",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_014",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'القرعة تتباهى بـ...'؟",
+      "answer": "شعر بنت أختها",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_015",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحب أغنية 'كلام الناس لا بيقدم ولا يأخر'؟",
+      "answer": "جورج وسوف",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_016",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'حبيبك يبلعلك الزلط، وعدوك...'؟",
+      "answer": "يتمنالك الغلط",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_017",
+      "categoryId": "music_proverbs",
+      "question": "مين الشاعر العامي الكبير كاتب أغاني 'يا واد يا تقيل' وأغاني الرباعيات؟",
+      "answer": "صلاح جاهين",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_018",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'اللي بيته من إزاز...'؟",
+      "answer": "ما يحدفش الناس بالطوب",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_019",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحبة أغنية 'أما براوة يا براوة.. على حبيبي أما براوة'؟",
+      "answer": "نجاة الصغيرة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_020",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشهير: 'عصفور في اليد خير من...'؟",
+      "answer": "عشرة على الشجرة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_021",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي القديم: 'لبّس البوصة...'؟",
+      "answer": "تبقى عروسة",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_022",
+      "categoryId": "music_proverbs",
+      "question": "مين هو ملحن أغنية 'أنت عمري' لأم كلثوم ولقبت بـ 'لقاء السحاب'؟",
+      "answer": "محمد عبد الوهاب",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_023",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل النادر: 'المال السايب يعلّم...'؟",
+      "answer": "السرقة",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_024",
+      "categoryId": "music_proverbs",
+      "question": "مين كتب كلمات أغنية 'مصر اليوم في عيد' لشادية؟",
+      "answer": "عبد الوهاب محمد",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_025",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'ريحة البر أهون من...'؟",
+      "answer": "ركوب البحر",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_026",
+      "categoryId": "music_proverbs",
+      "question": "في أي سنة أطلقت أم كلثوم أغنية 'الأطلال' الشهيرة من كلمات إبراهيم ناجي؟",
+      "answer": "سنة 1966",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_027",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'ديل الكلب عمره ما...'؟",
+      "answer": "يتعدل (ولو علقوا فيه قالب)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_028",
+      "categoryId": "music_proverbs",
+      "question": "مين ملحن النشيد الوطني المصري الحالي 'بلادي بلادي'؟",
+      "answer": "سيد درويش (أعاد توزيعه محمد عبد الوهاب)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_029",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'يا مستني السمنة من بطن النملة...'؟",
+      "answer": "عمرك ما هتقلي",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_030",
+      "categoryId": "music_proverbs",
+      "question": "مين المغنية صاحبة أغنية 'يا مسافر وحدك وفايتني' الشهيرة؟",
+      "answer": "نجاة علي (ولحنها وغناها أيضاً عبد الوهاب)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "mus_031",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'يا مأمنة للرجال يا مأمنة لـ...'؟",
+      "answer": "المية في الغربال",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_032",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'على قد لحافك...'؟",
+      "answer": "مد رجليك",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_033",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'الغايب حجته...'؟",
+      "answer": "معاه",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_034",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'الصبر مفتاح...'؟",
+      "answer": "الفرج",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_035",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'طمع الفلوس يضيع...'؟",
+      "answer": "النفوس (أو الطمع قل ما جمع)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_036",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'من شابه أباه فما...'؟",
+      "answer": "ظلم",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_037",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'القرش الأبيض ينفع في...'؟",
+      "answer": "اليوم الأسود",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_038",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'يا خبر بفلوس.. بكرة...'؟",
+      "answer": "يبقى ببلاش",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_039",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'عصفور في اليد خير من...'؟",
+      "answer": "عشرة على الشجرة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_040",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'رجعت ريما لـ...'؟",
+      "answer": "عادتها القديمة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_041",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحب أغنية 'يا واد يا مصلحجي' و'بنت السلطان'؟",
+      "answer": "أحمد عدوية",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_042",
+      "categoryId": "music_proverbs",
+      "question": "مين غنى 'ألف ليلة وليلة' و'فكروني' من ألحان بليغ حمدي ومحمد عبد الوهاب؟",
+      "answer": "أم كلثوم",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_043",
+      "categoryId": "music_proverbs",
+      "question": "مين غنى 'يا مصطفى يا مصطفى.. أنا بحبك يا مصطفى'؟",
+      "answer": "بوب عزام",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_044",
+      "categoryId": "music_proverbs",
+      "question": "مين غنت الأغنية الوطنية الخالدة 'يا حبيبتي يا مصر'؟",
+      "answer": "شادية (من ألحان بليغ حمدي)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_045",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحب أغنية 'نور العين' الشهيرة التي حصدت جوائز عالمية سنة 1996؟",
+      "answer": "عمرو دياب",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_046",
+      "categoryId": "music_proverbs",
+      "question": "مين مطرب أغنية 'حبيبي يا نور العين' و'قمرين'؟",
+      "answer": "عمرو دياب",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_047",
+      "categoryId": "music_proverbs",
+      "question": "مين غنى أغنية 'تعالى أدلعك' التي حققت ملايين المشاهدات مؤخراً؟",
+      "answer": "بهاء سلطان",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_048",
+      "categoryId": "music_proverbs",
+      "question": "مين كاتب كلمات الأغنية الوطنية 'أحلف بسماها وبترابها' للعندليب؟",
+      "answer": "الشاعر عبد الرحمن الأبنودي",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_049",
+      "categoryId": "music_proverbs",
+      "question": "كمّل مطلع الأغنية: 'حارة السقايين.. ياما شوفنا فيها...'؟",
+      "answer": "عجب (محمد منير / شريفة فاضل)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_050",
+      "categoryId": "music_proverbs",
+      "question": "مين غنى 'الغزالة رايقة' في فيلم من أجل زيكو؟",
+      "answer": "محمد أسامة وكريم محمود عبد العزيز",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_051",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'الضربة اللي ما تكسرش ظهرك...'؟",
+      "answer": "تقويك",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_052",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'داري على شمعتك...'؟",
+      "answer": "تقيد",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_053",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل: 'لا تعايرني ولا أعايرك.. الهم...'؟",
+      "answer": "طايلني وطايلك",
+      "difficulty": "medium"
+    },
+    {
+      "id": "mus_054",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'يموت الزمار و...'؟",
+      "answer": "إيده بتلعب",
+      "difficulty": "easy"
+    },
+    {
+      "id": "mus_055",
+      "categoryId": "music_proverbs",
+      "question": "مين صاحب أغنية 'علشان ماليش غيرك' و'مشيت خلاص'؟",
+      "answer": "وائل جسار",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rev_001",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لين »",
+      "answer": "نيل",
+      "difficulty": "easy",
+      "hint": "نهر مصر الخالد"
+    },
+    {
+      "id": "rev_002",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رصم »",
+      "answer": "مصر",
+      "difficulty": "easy",
+      "hint": "أم الدنيا"
+    },
+    {
+      "id": "rev_003",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يلهأ »",
+      "answer": "أهلي",
+      "difficulty": "easy",
+      "hint": "نادي القرن الإفريقي"
+    },
+    {
+      "id": "rev_004",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةروك »",
+      "answer": "كورة",
+      "difficulty": "easy",
+      "hint": "الساحرة المستديرة"
+    },
+    {
+      "id": "rev_005",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ياش »",
+      "answer": "شاي",
+      "difficulty": "easy",
+      "hint": "المشروب الرسمي للمصريين"
+    },
+    {
+      "id": "rev_006",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لوف »",
+      "answer": "فول",
+      "difficulty": "easy",
+      "hint": "فطار المصريين المقدس"
+    },
+    {
+      "id": "rev_007",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رمق »",
+      "answer": "قمر",
+      "difficulty": "easy",
+      "hint": "منير في السماء بالليل"
+    },
+    {
+      "id": "rev_008",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رحب »",
+      "answer": "بحر",
+      "difficulty": "easy",
+      "hint": "مياه مالحة ومصيف"
+    },
+    {
+      "id": "rev_009",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« سمش »",
+      "answer": "شمس",
+      "difficulty": "easy",
+      "hint": "مصدر الدفء والنور"
+    },
+    {
+      "id": "rev_010",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« بهذ »",
+      "answer": "ذهب",
+      "difficulty": "easy",
+      "hint": "معدن نفيس أصفر"
+    },
+    {
+      "id": "rev_011",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« سيبوتأ »",
+      "answer": "أتوبيس",
+      "difficulty": "medium",
+      "hint": "وسيلة نقل عامة كبيرة"
+    },
+    {
+      "id": "rev_012",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيمعط »",
+      "answer": "طعمية",
+      "difficulty": "medium",
+      "hint": "اسم الفلافل في القاهرة والإسكندرية"
+    },
+    {
+      "id": "rev_013",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةرايط »",
+      "answer": "طيارة",
+      "difficulty": "medium",
+      "hint": "تطير في السماء بالسفر"
+    },
+    {
+      "id": "rev_014",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ونيزاك »",
+      "answer": "كازينو",
+      "difficulty": "medium",
+      "hint": "مكان ألعاب ترفيهي وهو اسم لعبتنا!"
+    },
+    {
+      "id": "rev_015",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« نويزفلت »",
+      "answer": "تلفزيون",
+      "difficulty": "medium",
+      "hint": "شاشة في كل بيت للأفلام"
+    },
+    {
+      "id": "rev_016",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« خيطب »",
+      "answer": "بطيخ",
+      "difficulty": "medium",
+      "hint": "فاكهة الصيف الحمراء اللذيذة"
+    },
+    {
+      "id": "rev_017",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« تامارهأ »",
+      "answer": "أهرامات",
+      "difficulty": "medium",
+      "hint": "عجيبة الدنيا السبع في الجيزة"
+    },
+    {
+      "id": "rev_018",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« رتويبمك »",
+      "answer": "كمبيوتر",
+      "difficulty": "medium",
+      "hint": "جهاز إلكتروني ذكي للشغل والألعاب"
+    },
+    {
+      "id": "rev_019",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةنوركم »",
+      "answer": "مكرونة",
+      "difficulty": "medium",
+      "hint": "أكلة سريعة مع الصلصة أو بشاميل"
+    },
+    {
+      "id": "rev_020",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةنيشتوك »",
+      "answer": "كوتشينة",
+      "difficulty": "medium",
+      "hint": "كروت لعب البوكر والطرنيب"
+    },
+    {
+      "id": "rev_021",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ايندلا مأ »",
+      "answer": "أم الدنيا",
+      "difficulty": "hard",
+      "hint": "لقب يطلق على مصر"
+    },
+    {
+      "id": "rev_022",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« نيدلا حالص »",
+      "answer": "صلاح الدين",
+      "difficulty": "hard",
+      "hint": "محرر القدس وباني القلعة"
+    },
+    {
+      "id": "rev_023",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ملاعلا سأك »",
+      "answer": "كأس العالم",
+      "difficulty": "hard",
+      "hint": "أغلى بطولة كروية كل 4 سنين"
+    },
+    {
+      "id": "rev_024",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيرصم امنيس »",
+      "answer": "سينما مصرية",
+      "difficulty": "hard",
+      "hint": "هوليوود الشرق"
+    },
+    {
+      "id": "rev_025",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةهيدب ةعرس »",
+      "answer": "سرعة بديهة",
+      "difficulty": "hard",
+      "hint": "ذكاء وحضور ذهني سريع"
+    },
+    {
+      "id": "rev_026",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لاطبأ يرود »",
+      "answer": "دوري أبطال",
+      "difficulty": "hard",
+      "hint": "أقوى بطولة قارية للأندية"
+    },
+    {
+      "id": "rev_027",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« بنارألاب ةيخولم »",
+      "answer": "ملوخية بالأرانب",
+      "difficulty": "hard",
+      "hint": "أشهر أكلة في التراث المصري"
+    },
+    {
+      "id": "rev_028",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« مامإ لداع »",
+      "answer": "عادل إمام",
+      "difficulty": "hard",
+      "hint": "زعيم الكوميديا العربية"
+    },
+    {
+      "id": "rev_029",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لوهلا وبأ »",
+      "answer": "أبو الهول",
+      "difficulty": "hard",
+      "hint": "حارس الأهرامات التاريخي"
+    },
+    {
+      "id": "rev_030",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةرهاقلا جرب »",
+      "answer": "برج القاهرة",
+      "difficulty": "hard",
+      "hint": "معلم شهير في جزيرة الزمالك"
+    },
+    {
+      "id": "rev_031",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« مدق ةرك »",
+      "answer": "كرة قدم",
+      "difficulty": "easy",
+      "hint": "اللعبة الشعبية الأولى عالمياً"
+    },
+    {
+      "id": "rev_032",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ىفشتسم »",
+      "answer": "مستشفى",
+      "difficulty": "easy",
+      "hint": "مكان علاج المرضى والأطباء"
+    },
+    {
+      "id": "rev_033",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةسردم »",
+      "answer": "مدرسة",
+      "difficulty": "easy",
+      "hint": "مكان تلقي العلم والدراسة"
+    },
+    {
+      "id": "rev_034",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةعماج »",
+      "answer": "جامعة",
+      "difficulty": "easy",
+      "hint": "صرح دراسي بعد الثانوية العامة"
+    },
+    {
+      "id": "rev_035",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيلديص »",
+      "answer": "صيدلية",
+      "difficulty": "easy",
+      "hint": "مكان صرف الدواء والعلاج"
+    },
+    {
+      "id": "rev_036",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« معطم »",
+      "answer": "مطعم",
+      "difficulty": "easy",
+      "hint": "مكان لتناول أشهى الوجبات"
+    },
+    {
+      "id": "rev_037",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« مطامط »",
+      "answer": "طماطم",
+      "difficulty": "easy",
+      "hint": "خضار أحمر للسلطة والصلصة"
+    },
+    {
+      "id": "rev_038",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« حافت »",
+      "answer": "تفاح",
+      "difficulty": "easy",
+      "hint": "فاكهة حمراء أو خضراء مقرمشة"
+    },
+    {
+      "id": "rev_039",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« لاقترب »",
+      "answer": "برتقال",
+      "difficulty": "easy",
+      "hint": "فاكهة الشتاء الغنية بفيتامين سي"
+    },
+    {
+      "id": "rev_040",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« زوم »",
+      "answer": "موز",
+      "difficulty": "easy",
+      "hint": "فاكهة صفراء يحبها القرد"
+    },
+    {
+      "id": "rev_041",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيردنكسإ »",
+      "answer": "إسكندرية",
+      "difficulty": "medium",
+      "hint": "عروس البحر الأبيض المتوسط في مصر"
+    },
+    {
+      "id": "rev_042",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يرصملا يلهألا »",
+      "answer": "الأهلي المصري",
+      "difficulty": "medium",
+      "hint": "نادي القرن الأكثر تتويجاً بالبطولات"
+    },
+    {
+      "id": "rev_043",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« كلامزلا يدان »",
+      "answer": "نادي الزمالك",
+      "difficulty": "medium",
+      "hint": "مدرسة الفن والهندسة في ميت عقبة"
+    },
+    {
+      "id": "rev_044",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« حالص دمحم »",
+      "answer": "محمد صلاح",
+      "difficulty": "medium",
+      "hint": "فخر العرب ونجم ليفربول"
+    },
+    {
+      "id": "rev_045",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« فيرشلا رمع »",
+      "answer": "عمر الشريف",
+      "difficulty": "medium",
+      "hint": "لورنس العرب والنجم العالمي المصري"
+    },
+    {
+      "id": "rev_046",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ظوفحم بيجن »",
+      "answer": "نجيب محفوظ",
+      "difficulty": "medium",
+      "hint": "أديب نوبل صاحب الحرافيش والثلاثية"
+    },
+    {
+      "id": "rev_047",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ليوز دمحأ »",
+      "answer": "أحمد زويل",
+      "difficulty": "medium",
+      "hint": "عالم الفيمتو ثانية الحائز على نوبل"
+    },
+    {
+      "id": "rev_048",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يرصم يرشوك »",
+      "answer": "كوشري مصري",
+      "difficulty": "medium",
+      "hint": "طبق الشعب المكون من مكرونة ورز وعدس ودقة"
+    },
+    {
+      "id": "rev_049",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ءارضخ ةيخولم »",
+      "answer": "ملوخية خضراء",
+      "difficulty": "medium",
+      "hint": "شوربة مصرية أصيلة مع الطشة"
+    },
+    {
+      "id": "rev_050",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يدلب يشواوح »",
+      "answer": "حواوشي بلدي",
+      "difficulty": "medium",
+      "hint": "لحمة متبلة جوه عيش ومخبوزة"
+    },
+    {
+      "id": "rev_051",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ينيعلا رصق »",
+      "answer": "قصر العيني",
+      "difficulty": "hard",
+      "hint": "أقدم وأشهر صرح طبي تعليمي في مصر"
+    },
+    {
+      "id": "rev_052",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« يليلخلا ناخ »",
+      "answer": "خان الخليلي",
+      "difficulty": "hard",
+      "hint": "أشهر سوق تاريخي وسياحي في القاهرة الفاطمية"
+    },
+    {
+      "id": "rev_053",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ريبكلا يرصملا فحتملا »",
+      "answer": "المتحف المصري الكبير",
+      "difficulty": "hard",
+      "hint": "أكبر متحف أثري في العالم لحضارة واحدة"
+    },
+    {
+      "id": "rev_054",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« ةيرادإلا ةمصاعلا »",
+      "answer": "العاصمة الإدارية",
+      "difficulty": "hard",
+      "hint": "المدينة الذكية الجديدة بمصر وبها أطول برج أيقوني"
+    },
+    {
+      "id": "rev_055",
+      "categoryId": "reversed_words",
+      "question": "خمن الكلمة الأصلية في 10 ثواني من الحروف المعكوسة:\n\n« فيرشلا رهزألا عماج »",
+      "answer": "جامع الأزهر الشريف",
+      "difficulty": "hard",
+      "hint": "منارة الإسلام والعلم في قلب القاهرة"
+    },
+    {
+      "id": "rid_001",
+      "categoryId": "riddles",
+      "question": "حاجة كل ما تاخد منها تكبر، وكل ما تحط فيها تصغر.. إيه هي؟",
+      "answer": "الحفرة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_002",
+      "categoryId": "riddles",
+      "question": "حاجة عندها سنان كتير بس مابتعضش ولا بتاكل.. إيه هي؟",
+      "answer": "المشط",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_003",
+      "categoryId": "riddles",
+      "question": "شيء يملك عيناً واحدة ولكنه لا يرى بها شيئاً؟",
+      "answer": "إبرة الخياطة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_004",
+      "categoryId": "riddles",
+      "question": "ابن الماء وإذا تركوني في الماء مت.. فمن أنا؟",
+      "answer": "الثلج",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_005",
+      "categoryId": "riddles",
+      "question": "حاجة بتسمع بلا ودان وبتتكلم بلا لسان؟",
+      "answer": "التليفون أو صدى الصوت",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_006",
+      "categoryId": "riddles",
+      "question": "حاجة كل ما تسخن عليها تنشف وتجمد ومبتسيحش؟",
+      "answer": "البيضة المسلوقة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_007",
+      "categoryId": "riddles",
+      "question": "شيء يمشي ورائك في النور ويختفي تماماً في الظلام؟",
+      "answer": "الظل",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_008",
+      "categoryId": "riddles",
+      "question": "حاجة مليانة خرام وثقوب لكنها بتقدر تشيل المية وماتوقعهاش؟",
+      "answer": "الإسفنجة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_009",
+      "categoryId": "riddles",
+      "question": "كل ما يزيد يقل.. إيه هو؟",
+      "answer": "العمر",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_010",
+      "categoryId": "riddles",
+      "question": "شيء نأكله ولا يؤكل، فما هو؟",
+      "answer": "الصحن أو الملعقة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_011",
+      "categoryId": "riddles",
+      "question": "حاجة بنشتريها باللون الأسود، ونستخدمها وهي حمرا، ونرميها بعد كدة رمادية؟",
+      "answer": "الفحم",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_012",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي إذا أكلت نصفه مت، وإذا أكلته كله عشت؟",
+      "answer": "السمسم (نصفه سم)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_013",
+      "categoryId": "riddles",
+      "question": "حاجة تقدر تكسرها وتنهيها من غير ما تلمسها بإيدك؟",
+      "answer": "الوعد أو الصمت أو الخاطر",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_014",
+      "categoryId": "riddles",
+      "question": "حاجة في الشتاء تدفيك، وفي الصيف تغذيك، وفي الخريف تبكيك؟",
+      "answer": "شجرة البرتقال أو البصل",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_015",
+      "categoryId": "riddles",
+      "question": "أنا طويل عندما أكون صغيراً، وأقصر كلما كبرت في السن.. فمن أنا؟",
+      "answer": "شمعة أو قلم الرصاص",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_016",
+      "categoryId": "riddles",
+      "question": "له رأس ولا عين له، وهي لها عين ولا رأس لها.. فما هما؟",
+      "answer": "الدبوس والإبرة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_017",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يدخل الغابة ولا يلمس شجرة، ويعبر النهر ولا يتبلل؟",
+      "answer": "الصوت أو أشعة الشمس",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_018",
+      "categoryId": "riddles",
+      "question": "حاجة تمشي وتجري من غير رجلين، وتبكي من غير عينين؟",
+      "answer": "السحابة أو الغيمة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_019",
+      "categoryId": "riddles",
+      "question": "شيء يولد كبيراً ويموت صغيراً؟",
+      "answer": "الشمعة أو قالب الثلج",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_020",
+      "categoryId": "riddles",
+      "question": "أرى كل شيء وليس لدي عيون، فما أنا؟",
+      "answer": "المرآة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_021",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يملك مدناً بلا بيوت، وغابات بلا أشجار، وأنهاراً بلا ماء؟",
+      "answer": "الخريطة",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_022",
+      "categoryId": "riddles",
+      "question": "رجل كان يكتب كتاباً وكتب فيه: 'اليوم زارني صديق أعمى وأبكم وأصم، وعندما غادر سألني سؤالاً وأجبته'.. كيف حدث ذلك؟",
+      "answer": "كتب له الصديق السؤال على ورقة أو باللمس، وأجابه بالكتابة!",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_023",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يكون أمامك دائماً ولكنك لا تستطيع رؤيته؟",
+      "answer": "المستقبل",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_024",
+      "categoryId": "riddles",
+      "question": "إذا كنت تشارك في سباق وتجاوزت المتسابق الثاني، فما هو مركزك الآن؟",
+      "answer": "المركز الثاني (وليس الأول!)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_025",
+      "categoryId": "riddles",
+      "question": "شيء له 4 أرجل في الصباح، ورجلان في الظهيرة، و3 أرجل في المساء؟",
+      "answer": "الإنسان (يحبو رضيعاً، ويمشي شاباً، ويتوكأ على عصا شيخاً)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_026",
+      "categoryId": "riddles",
+      "question": "ما هي الكلمة الوحيدة في القاموس التي تُنطق خطأ حتى لو نطقناها صح؟",
+      "answer": "كلمة 'خطأ'!",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_027",
+      "categoryId": "riddles",
+      "question": "غرفة بها 3 مصابيح مطفأة وباب مغلق، بالخارج 3 مفاتيح. مسموح لك بدخول الغرفة مرة واحدة فقط لمعرفة أي مفتاح يشغل أي مصباح.. ماذا تفعل؟",
+      "answer": "شغل المفتاح 1 لعدة دقائق ثم اطفئه وشغل 2 وادخل الغرفة: المضاء للمفتاح 2، والساخن للمفتاح 1، والبارد للمفتاح 3!",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_028",
+      "categoryId": "riddles",
+      "question": "خمسة أفراد يجلسون تحت مظلة صغيرة جداً ولم يتبلل أحد منهم بالمطر.. كيف ذلك؟",
+      "answer": "لأن السماء لم تكن تمطر أصلاً!",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_029",
+      "categoryId": "riddles",
+      "question": "ما هو الرقم الذي إذا ضربته في أي رقم آخر كان الناتج هو نفسه؟",
+      "answer": "الصفر (0)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_030",
+      "categoryId": "riddles",
+      "question": "شيء يمر عبر الزجاج دون أن يكسره؟",
+      "answer": "الضوء",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_031",
+      "categoryId": "riddles",
+      "question": "شيء تشتريه لتأكل به، ولكنك لا تأكله أبداً؟",
+      "answer": "الصحن أو الملعقة والشوكه",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_032",
+      "categoryId": "riddles",
+      "question": "له عين واحدة ولا يرى بها، ما هو؟",
+      "answer": "الإبرة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_033",
+      "categoryId": "riddles",
+      "question": "شيء يسير بلا قدمين ولا يدخل إلا بالأذنين، ما هو؟",
+      "answer": "الصوت أو الكلام",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_034",
+      "categoryId": "riddles",
+      "question": "من هو الخال الوحيد لأولاد عمتك؟",
+      "answer": "والدك (أبوك)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_035",
+      "categoryId": "riddles",
+      "question": "شيء ينبض بلا قلب، ويتحرك بلا جسد، ما هو؟",
+      "answer": "ساعة اليد أو الحائط",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_036",
+      "categoryId": "riddles",
+      "question": "بيت بلا أبواب ولا نوافذ، ويسكنه كائن يخرج منه حياً ولا يعود إليه؟",
+      "answer": "البيضة",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_037",
+      "categoryId": "riddles",
+      "question": "شيء إذا لمسته صرخ، فما هو؟",
+      "answer": "الجرس",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_038",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يحملك وتحمله في نفس الوقت؟",
+      "answer": "الحذاء",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_039",
+      "categoryId": "riddles",
+      "question": "ما هو الباب الذي يستحيل أن تفتحه مهما حاولت؟",
+      "answer": "الباب المفتوح!",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_040",
+      "categoryId": "riddles",
+      "question": "شيء يرتفع ولا ينزل أبداً، ما هو؟",
+      "answer": "العمر",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_041",
+      "categoryId": "riddles",
+      "question": "أخت خالتك وليست خالتك، فمن تكون؟",
+      "answer": "أمك!",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_042",
+      "categoryId": "riddles",
+      "question": "شيء يوجد وسط مكة، ما هو؟",
+      "answer": "حرف الكاف (مـ كـ ـة)",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_043",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي كلما أخذت منه كَبُر؟",
+      "answer": "الحفرة",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_044",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يقرصك دون أن تراه؟",
+      "answer": "الجوع أو البرد",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_045",
+      "categoryId": "riddles",
+      "question": "طائر إذا قلبته ترى عجباً، ما هو؟",
+      "answer": "بجع (مقلوبها عجب)!",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_046",
+      "categoryId": "riddles",
+      "question": "شيء يملك أسناناً كثيرة ولا يعض؟",
+      "answer": "المشط أو المنشار",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_047",
+      "categoryId": "riddles",
+      "question": "يمشي على رأسه دائماً، ما هو؟",
+      "answer": "المسمار (عند الطرق عليه)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_048",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي إذا غليته تجمد؟",
+      "answer": "البيض",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_049",
+      "categoryId": "riddles",
+      "question": "أنا أسود عندما تكون نظيفاً، وأبيض عندما تكون متسخاً.. فمن أنا؟",
+      "answer": "السبورة السوداء والطباشير",
+      "difficulty": "hard"
+    },
+    {
+      "id": "rid_050",
+      "categoryId": "riddles",
+      "question": "قطار كهربائي يسير نحو الشرق بسرعة 100 كم/س والرياح تهب نحو الغرب، فأين يتجه دخانه؟",
+      "answer": "القطار الكهربائي ليس له دخان أصلاً!",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_051",
+      "categoryId": "riddles",
+      "question": "شيء تذبحه وتبكي عليه دون ذنب؟",
+      "answer": "البصل",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_052",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي لا يمشي إلا بالضرب على رأسه؟",
+      "answer": "المسمار",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_053",
+      "categoryId": "riddles",
+      "question": "تستطيع أن تمسكه بيدك اليمنى ولا تستطيع أن تمسكه بيدك اليسرى أبداً.. ما هو؟",
+      "answer": "كوع يدك اليسرى!",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rid_054",
+      "categoryId": "riddles",
+      "question": "رجل خرج في المطر الشديد دون مظلة ولم تبتل شعرة واحدة من رأسه.. كيف؟",
+      "answer": "لأنه أصلع!",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rid_055",
+      "categoryId": "riddles",
+      "question": "له أوراق وليس نباتاً، وله جلد وليس حيواناً، وعنده علم وليس إنساناً؟",
+      "answer": "الكتاب",
+      "difficulty": "easy"
     }
   ]
 }
