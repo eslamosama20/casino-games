@@ -208,7 +208,16 @@ export const soundManager = {
     } catch {}
 
     // Pleasant ascending sparkle arpeggio
-    playWebTone([523.25, 659.25, 783.99, 1046.5], 'sine', 0.25, 0.28, 0.05);
+    const handledWeb = playWebTone([523.25, 659.25, 783.99, 1046.5], 'sine', 0.25, 0.28, 0.05);
+    if (handledWeb) return;
+
+    try {
+      const p = getPointPlayer();
+      if (p) {
+        if (typeof p.seekTo === 'function') p.seekTo(0);
+        if (typeof p.play === 'function') p.play();
+      }
+    } catch {}
   },
 
   // 5. Casino Chip Click
