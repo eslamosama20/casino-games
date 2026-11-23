@@ -23,6 +23,36 @@ interface BuzzerPlayerScreenProps {
   onExit: () => void;
 }
 
+const PLUS_REACTIONS = [
+  'ودّي يا معلم! 🔥🚀',
+  'ابسط يا عم! 😎✨',
+  'جامد ده يا فنان! 🏆👏',
+  'إيه الدماغ دي؟! 🧠⚡',
+  'يا عالمي! 👑🔥',
+  'ضربة معلم! 🎯💥',
+  'الله ينور عليك! 💡👏',
+  'شابوه والله! 🎩✨',
+  'عاش يا وحش! 🦁⚡',
+  'مين قدك النهاردة؟! 💪🔥',
+  'أيوة بقى ولّعها! 🔥🎊',
+  'ملعبك يا نجم! 🌟🎯',
+];
+
+const MINUS_REACTIONS = [
+  'ركّز يا عم هتفضحنا! 😂🤦‍♂️',
+  'إيه اللي بتقوله ده؟! 🫣💀',
+  'يا ساتر ع الهبد! 🤣📉',
+  'اهبد كمان اهبد! 🧱😂',
+  'النت فصل من دماغك ولا إيه؟! 📡🤣',
+  'اصحى معانا الجو سخن! ☕🔥',
+  'حاول تاني.. بس فكّر الأول! 🤭🧠',
+  'سالب في السريع! ⚠️😬',
+  'السالب بينادي عليك! 📉👻',
+  'راحت منك يا بطل! 💔😅',
+  'واضح إنك جاي تتفرج! 👀😂',
+  'لا كده كتير.. ركّز شوية! 🚨🤣',
+];
+
 export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   initialRoom,
   playerId,
@@ -31,8 +61,18 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 }) => {
   const [room, setRoom] = useState<LiveBuzzerRoom>(initialRoom);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
+  const [scoreToast, setScoreToast] = useState<{
+    delta: number;
+    text: string;
+  } | null>(null);
   const pulseAnim = useRef(new Animated.Value(1)).current;
   const pressScale = useRef(new Animated.Value(1)).current;
+  const toastAnim = useRef(new Animated.Value(0)).current;
+  const toastTimerRef = useRef<any>(null);
+  const prevMyScoreRef = useRef<number | null>(
+    initialRoom.players.find((p) => p.id === playerId)?.score ?? 0
+  );
+  const prevStatusRef = useRef<string>(initialRoom.status);
 
   useEffect(() => {
     const unsubUpdate = buzzerService.onRoomUpdate((updated) => {
@@ -82,6 +122,69 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
       unsubKicked();
     };
   }, [playerId, onExit]);
+
+  // Detect score changes for THIS player and trigger funny Egyptian reaction pop-up!
+  useEffect(() => {
+    const me = room.players.find((p) => p.id === playerId);
+    const currentScore = me?.score ?? 0;
+
+    // If game just restarted from lobby/finished to playing, reset baseline silently
+    if (prevStatusRef.current !== 'playing' && room.status === 'playing') {
+      prevStatusRef.current = room.status;
+      prevMyScoreRef.current = currentScore;
+      return;
+    }
+    prevStatusRef.current = room.status;
+
+    const prevScore = prevMyScoreRef.current;
+    if (prevScore !== null && currentScore !== prevScore) {
+      const delta = currentScore - prevScore;
+      let phrase = '';
+      if (delta > 0) {
+        soundManager.playPoint();
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+        if (currentScore === room.targetScore - 1) {
+          phrase = 'نقطة واحدة وتكسب الكل! 👑🔥';
+        } else {
+          phrase = PLUS_REACTIONS[Math.floor(Math.random() * PLUS_REACTIONS.length)];
+        }
+      } else {
+        soundManager.playBuzzer();
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => {});
+        if (currentScore <= -3 && Math.random() < 0.5) {
+          phrase = 'إنت غرقان في السالب يا صاحبي! 🌊😂';
+        } else {
+          phrase = MINUS_REACTIONS[Math.floor(Math.random() * MINUS_REACTIONS.length)];
+        }
+      }
+
+      setScoreToast({ delta, text: phrase });
+      toastAnim.setValue(0);
+      Animated.spring(toastAnim, {
+        toValue: 1,
+        friction: 5,
+        tension: 80,
+        useNativeDriver: true,
+      }).start();
+
+      if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+      toastTimerRef.current = setTimeout(() => {
+        Animated.timing(toastAnim, {
+          toValue: 0,
+          duration: 300,
+          useNativeDriver: true,
+        }).start(() => setScoreToast(null));
+      }, 2600);
+    }
+
+    prevMyScoreRef.current = currentScore;
+  }, [room.players, room.status, room.targetScore, playerId, toastAnim]);
+
+  useEffect(() => {
+    return () => {
+      if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    };
+  }, []);
 
   // Pulse animation when buzzer is open
   const isLockedOut = room.lockedOutPlayerIds.includes(playerId);
@@ -255,6 +358,45 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         showsVerticalScrollIndicator={false}
       >
         <Text style={styles.playerGreeting}>مرحباً {playerName} 👋</Text>
+
+        {/* Animated Egyptian Slang Score Reaction Banner */}
+        {scoreToast && (
+          <Animated.View
+            style={[
+              styles.scoreToastBox,
+              scoreToast.delta > 0 ? styles.scoreToastPlus : styles.scoreToastMinus,
+              {
+                opacity: toastAnim,
+                transform: [
+                  {
+                    scale: toastAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0.65, 1],
+                    }),
+                  },
+                  {
+                    translateY: toastAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [-16, 0],
+                    }),
+                  },
+                ],
+              },
+            ]}
+          >
+            <View
+              style={[
+                styles.scoreToastDeltaPill,
+                scoreToast.delta > 0 ? styles.deltaPillPlus : styles.deltaPillMinus,
+              ]}
+            >
+              <Text style={styles.scoreToastDeltaText}>
+                {scoreToast.delta > 0 ? `+${scoreToast.delta}` : `${scoreToast.delta}`}
+              </Text>
+            </View>
+            <Text style={styles.scoreToastText}>{scoreToast.text}</Text>
+          </Animated.View>
+        )}
 
         <Animated.View
           style={{
@@ -505,5 +647,52 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
     fontWeight: '900',
     fontSize: 13,
+  },
+  scoreToastBox: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderRadius: 18,
+    borderWidth: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  scoreToastPlus: {
+    backgroundColor: 'rgba(16, 185, 129, 0.24)',
+    borderColor: '#34D399',
+  },
+  scoreToastMinus: {
+    backgroundColor: 'rgba(239, 68, 68, 0.26)',
+    borderColor: '#F87171',
+  },
+  scoreToastDeltaPill: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 999,
+  },
+  deltaPillPlus: {
+    backgroundColor: '#10B981',
+  },
+  deltaPillMinus: {
+    backgroundColor: '#EF4444',
+  },
+  scoreToastDeltaText: {
+    color: '#FFFFFF',
+    fontWeight: '900',
+    fontSize: 15,
+  },
+  scoreToastText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '900',
+    textAlign: 'center',
+    flexShrink: 1,
   },
 });
