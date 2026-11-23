@@ -128,16 +128,20 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setIsMuted(updated);
   };
 
-  // Adjust score
+  // Adjust score (supports negative scores / التسليب!)
   const updateScore = (playerId: string, delta: number) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (delta > 0) {
       soundManager.playPoint();
+    } else {
+      // Play buzzer or negative feedback when losing points
+      soundManager.playBuzzer();
     }
 
     const updated = players.map((p) => {
       if (p.id === playerId) {
-        const newScore = Math.max(0, p.score + delta);
+        // Allow negative scores freely (e.g. -1, -2, -5)
+        const newScore = p.score + delta;
         return { ...p, score: newScore };
       }
       return p;
@@ -261,7 +265,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 </Text>
 
                 <View style={styles.scoreRow}>
-                  <Text style={styles.scoreMain}>{p.score}</Text>
+                  <Text style={[styles.scoreMain, p.score < 0 && styles.scoreNegative]}>
+                    {p.score}
+                  </Text>
                   <Text style={styles.scoreTarget}>/{targetScore}</Text>
                 </View>
 
@@ -566,6 +572,12 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
     fontSize: 22,
     fontWeight: 'bold',
+  },
+  scoreNegative: {
+    color: theme.colors.danger,
+    textShadowColor: 'rgba(239, 68, 68, 0.4)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 4,
   },
   scoreTarget: {
     color: theme.colors.textSecondary,
