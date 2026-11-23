@@ -34,7 +34,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 }) => {
   const insets = useSafeAreaInsets();
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
-  const [activePlayerId, setActivePlayerId] = useState<string>(initialPlayers[0]?.id || '');
   const [scoreBadge, setScoreBadge] = useState<{
     playerId: string;
     text: string;
@@ -192,13 +191,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setIsAnswerVisible(false);
     setShowHint(false);
 
-    // Auto-advance turn to next player in list
-    if (players.length > 1) {
-      const currentActiveIdx = players.findIndex((p) => p.id === activePlayerId);
-      const nextActiveIdx = (currentActiveIdx + 1) % players.length;
-      setActivePlayerId(players[nextActiveIdx].id);
-    }
-
     const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
     const catsToFetch = filterToUse ? [filterToUse] : selectedCategoryIds;
 
@@ -312,20 +304,13 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         >
           {players.map((p) => {
             const isLeading = p.score === Math.max(...players.map((x) => x.score)) && p.score > 0;
-            const isActive = p.id === activePlayerId;
             return (
-              <TouchableOpacity
+              <View
                 key={p.id}
                 style={[
                   styles.scoreCard,
                   isLeading && styles.scoreCardLeading,
-                  isActive && styles.scoreCardActive,
                 ]}
-                onPress={() => {
-                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                  setActivePlayerId(p.id);
-                }}
-                activeOpacity={0.85}
               >
                 {/* Floating Score Badge Animation */}
                 {scoreBadge?.playerId === p.id && (
@@ -334,19 +319,12 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   </View>
                 )}
 
-                {/* Status Badges */}
-                {isActive && (
-                  <View style={styles.activeTurnPill}>
-                    <Text style={styles.activeTurnPillText}>صاحب الدور 🎯</Text>
-                  </View>
-                )}
-
                 <View style={styles.playerNameContainer}>
                   {isLeading && (
                     <MaterialCommunityIcons name="crown" size={14} color={theme.colors.gold} />
                   )}
                   <Text
-                    style={[styles.playerCardName, isActive && styles.playerCardNameActive]}
+                    style={styles.playerCardName}
                     numberOfLines={1}
                   >
                     {p.name}
@@ -378,21 +356,10 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     <Text style={styles.miniBtnText}>+1</Text>
                   </TouchableOpacity>
                 </View>
-              </TouchableOpacity>
+              </View>
             );
           })}
         </ScrollView>
-
-        {/* Interactive Turn Announcement Pill */}
-        <View style={styles.turnBanner}>
-          <MaterialCommunityIcons name="bullhorn-outline" size={16} color={theme.colors.gold} />
-          <Text style={styles.turnBannerText}>
-            السؤال موجه إلى:{' '}
-            <Text style={styles.turnBannerPlayerName}>
-              {players.find((p) => p.id === activePlayerId)?.name || 'الجميع'}
-            </Text>
-          </Text>
-        </View>
       </View>
 
       {/* Main Question Section */}
