@@ -8,6 +8,7 @@ import {
   Modal,
   Alert,
   Platform,
+  Animated,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
@@ -58,6 +59,21 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [timeLeft, setTimeLeft] = useState<number>(30);
   const timerIntervalRef = useRef<any>(null);
 
+  // Creative animations for questions and scoring
+  const cardAnim = useRef(new Animated.Value(1)).current;
+  const badgeAnim = useRef(new Animated.Value(0)).current;
+
+  const triggerCardAnimation = () => {
+    cardAnim.setValue(0);
+    soundManager.playCardFlip();
+    Animated.spring(cardAnim, {
+      toValue: 1,
+      friction: 6,
+      tension: 60,
+      useNativeDriver: true,
+    }).start();
+  };
+
   // Load questions and categories
   const initializeQuestions = async () => {
     setLoading(true);
@@ -83,6 +99,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     // Immediately mark the first question as seen
     await questionService.markQuestionAsSeen(eligibleQuestions[0].id);
     setLoading(false);
+    triggerCardAnimation();
   };
 
   useEffect(() => {
@@ -160,9 +177,16 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       text: delta > 0 ? '+1 🔥' : '-1 ⚠️',
       color: delta > 0 ? theme.colors.success : theme.colors.danger,
     });
+    badgeAnim.setValue(0);
+    Animated.spring(badgeAnim, {
+      toValue: 1,
+      friction: 4,
+      tension: 75,
+      useNativeDriver: true,
+    }).start();
     setTimeout(() => {
       setScoreBadge(null);
-    }, 1200);
+    }, 1400);
 
     const updated = players.map((p) => {
       if (p.id === playerId) {
@@ -199,6 +223,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       setCurrentQuestion(available[0]);
       setCurrentIndex((prev) => prev + 1);
       await questionService.markQuestionAsSeen(available[0].id);
+      triggerCardAnimation();
 
       // Refresh counts
       const counts = await questionService.getRemainingCountsByCategory();
@@ -314,9 +339,30 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               >
                 {/* Floating Score Badge Animation */}
                 {scoreBadge?.playerId === p.id && (
-                  <View style={[styles.floatingScoreBadge, { backgroundColor: scoreBadge.color }]}>
+                  <Animated.View
+                    style={[
+                      styles.floatingScoreBadge,
+                      {
+                        backgroundColor: scoreBadge.color,
+                        transform: [
+                          {
+                            scale: badgeAnim.interpolate({
+                              inputRange: [0, 0.5, 1],
+                              outputRange: [0.3, 1.25, 1],
+                            }),
+                          },
+                          {
+                            translateY: badgeAnim.interpolate({
+                              inputRange: [0, 1],
+                              outputRange: [6, 0],
+                            }),
+                          },
+                        ],
+                      },
+                    ]}
+                  >
                     <Text style={styles.floatingScoreText}>{scoreBadge.text}</Text>
-                  </View>
+                  </Animated.View>
                 )}
 
                 <View style={styles.playerNameContainer}>
@@ -369,7 +415,28 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             <Text style={styles.loadingText}>جاري تحضير السؤال...</Text>
           </View>
         ) : currentQuestion ? (
-          <View style={styles.questionCard}>
+          <Animated.View
+            style={[
+              styles.questionCard,
+              {
+                opacity: cardAnim,
+                transform: [
+                  {
+                    scale: cardAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0.93, 1],
+                    }),
+                  },
+                  {
+                    translateY: cardAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [18, 0],
+                    }),
+                  },
+                ],
+              },
+            ]}
+          >
             {/* Category tag & Switcher Button */}
             <View style={styles.categoryRow}>
               <TouchableOpacity
@@ -452,6 +519,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 style={[styles.toggleAnswerBtn, isAnswerVisible && styles.toggleAnswerBtnActive]}
                 onPress={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  if (!isAnswerVisible) {
+                    soundManager.playReveal();
+                  }
                   setIsAnswerVisible(!isAnswerVisible);
                 }}
                 activeOpacity={0.8}
@@ -514,7 +584,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 />
               </View>
             </View>
-          </View>
+          </Animated.View>
         ) : null}
       </View>
 
@@ -715,45 +785,37 @@ const styles = StyleSheet.create({
     writingDirection: 'rtl',
   },
   scoreboardWrapper: {
-    paddingVertical: theme.spacing.sm,
+    paddingVertical: 2,
     borderBottomWidth: 1,
     borderBottomColor: theme.colors.surfaceBorder,
+    overflow: 'visible',
   },
   scoreboardContent: {
     paddingHorizontal: theme.spacing.md,
-    gap: 10,
+    paddingTop: 20,
+    paddingBottom: 8,
+    gap: 12,
+    overflow: 'visible',
   },
   scoreCard: {
-    width: 124,
+    width: 126,
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.md,
     padding: 10,
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: theme.colors.surfaceBorder,
     alignItems: 'center',
     position: 'relative',
+    overflow: 'visible',
   },
   scoreCardLeading: {
     borderColor: theme.colors.gold,
     backgroundColor: theme.colors.surfaceElevated,
-  },
-  scoreCardActive: {
-    borderColor: theme.colors.gold,
-    backgroundColor: 'rgba(255, 215, 0, 0.08)',
-    borderWidth: 1.5,
-  },
-  activeTurnPill: {
-    backgroundColor: theme.colors.gold,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 8,
-    marginBottom: 4,
-  },
-  activeTurnPillText: {
-    color: theme.colors.background,
-    fontSize: 9,
-    fontWeight: 'bold',
-    writingDirection: 'rtl',
+    shadowColor: theme.colors.gold,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    elevation: 4,
   },
   playerNameContainer: {
     flexDirection: 'row',
@@ -767,26 +829,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     writingDirection: 'rtl',
   },
-  playerCardNameActive: {
-    color: theme.colors.gold,
-  },
   floatingScoreBadge: {
     position: 'absolute',
-    top: -12,
-    zIndex: 20,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 12,
+    top: -14,
+    zIndex: 99,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: '#FFFFFF',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-    elevation: 6,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 12,
   },
   floatingScoreText: {
     color: '#FFF',
     fontSize: 12,
-    fontWeight: 'bold',
+    fontWeight: '900',
   },
   turnBanner: {
     flexDirection: 'row',
