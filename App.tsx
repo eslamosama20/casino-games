@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, SafeAreaView, I18nManager } from 'react-native';
+import { StyleSheet, SafeAreaView, I18nManager, Platform } from 'react-native';
 import { theme } from './src/constants/theme';
 import { GameMode, Player, ScreenType } from './src/types';
 import { SetupScreen } from './src/screens/SetupScreen';
 import { CategoryScreen } from './src/screens/CategoryScreen';
 import { GameScreen } from './src/screens/GameScreen';
 import { WinnerScreen } from './src/screens/WinnerScreen';
+import { ErrorBoundary } from './src/components/ErrorBoundary';
 
-// Ensure RTL layout support at app initialization
+// Safe RTL configuration
 try {
-  if (!I18nManager.isRTL) {
+  if (Platform.OS !== 'web') {
     I18nManager.allowRTL(true);
-    I18nManager.forceRTL(true);
   }
 } catch (e) {
-  // Ignore in web preview if not supported
+  // Ignore
 }
 
 export default function App() {
@@ -65,36 +65,38 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StatusBar style="light" />
-      {currentScreen === 'setup' && (
-        <SetupScreen onNext={handleSetupComplete} />
-      )}
-      {currentScreen === 'categories' && (
-        <CategoryScreen
-          onBack={() => setCurrentScreen('setup')}
-          onStartGame={handleStartGame}
-        />
-      )}
-      {currentScreen === 'game' && (
-        <GameScreen
-          players={players}
-          targetScore={targetScore}
-          selectedCategoryIds={selectedCategoryIds}
-          onPlayerWon={handlePlayerWon}
-          onQuitGame={() => setCurrentScreen('setup')}
-        />
-      )}
-      {currentScreen === 'winner' && winner && (
-        <WinnerScreen
-          winner={winner}
-          allPlayers={players}
-          targetScore={targetScore}
-          onNewGameSamePlayers={handleNewGameSamePlayers}
-          onChangePlayers={handleChangePlayers}
-        />
-      )}
-    </SafeAreaView>
+    <ErrorBoundary>
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar style="light" />
+        {currentScreen === 'setup' && (
+          <SetupScreen onNext={handleSetupComplete} />
+        )}
+        {currentScreen === 'categories' && (
+          <CategoryScreen
+            onBack={() => setCurrentScreen('setup')}
+            onStartGame={handleStartGame}
+          />
+        )}
+        {currentScreen === 'game' && (
+          <GameScreen
+            players={players}
+            targetScore={targetScore}
+            selectedCategoryIds={selectedCategoryIds}
+            onPlayerWon={handlePlayerWon}
+            onQuitGame={() => setCurrentScreen('setup')}
+          />
+        )}
+        {currentScreen === 'winner' && winner && (
+          <WinnerScreen
+            winner={winner}
+            allPlayers={players}
+            targetScore={targetScore}
+            onNewGameSamePlayers={handleNewGameSamePlayers}
+            onChangePlayers={handleChangePlayers}
+          />
+        )}
+      </SafeAreaView>
+    </ErrorBoundary>
   );
 }
 
