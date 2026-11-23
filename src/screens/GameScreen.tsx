@@ -46,6 +46,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
+  const [showOptions, setShowOptions] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
@@ -95,6 +96,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setCurrentQuestion(eligibleQuestions[0]);
     setIsAnswerVisible(false);
     setShowHint(false);
+    setShowOptions(false);
 
     // Immediately mark the first question as seen
     await questionService.markQuestionAsSeen(eligibleQuestions[0].id);
@@ -214,6 +216,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     handleResetTimer();
     setIsAnswerVisible(false);
     setShowHint(false);
+    setShowOptions(false);
 
     const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
     const catsToFetch = filterToUse ? [filterToUse] : selectedCategoryIds;
@@ -506,6 +509,84 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 {showHint && (
                   <View style={styles.hintContentBox}>
                     <Text style={styles.hintContentText}>{currentQuestion.hint}</Text>
+                  </View>
+                )}
+              </View>
+            )}
+
+            {/* Multiple Choice Options Lifeline for Contestants */}
+            {currentQuestion.options && currentQuestion.options.length > 0 && (
+              <View style={styles.optionsWrapper}>
+                <TouchableOpacity
+                  style={styles.optionsToggleBtn}
+                  onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                    soundManager.playChipClick();
+                    setShowOptions(!showOptions);
+                  }}
+                  activeOpacity={0.75}
+                >
+                  <MaterialCommunityIcons name="format-list-bulleted" size={16} color={theme.colors.gold} />
+                  <Text style={styles.optionsToggleText}>
+                    {showOptions ? 'إخفاء الاختيارات' : 'خيارات للمتسابقين لو مش عارفين؟ 🔠'}
+                  </Text>
+                  <MaterialCommunityIcons
+                    name={showOptions ? 'chevron-up' : 'chevron-down'}
+                    size={16}
+                    color={theme.colors.gold}
+                  />
+                </TouchableOpacity>
+
+                {showOptions && (
+                  <View style={styles.optionsGrid}>
+                    {currentQuestion.options.map((opt, oIdx) => {
+                      const letter = ['أ', 'ب', 'ج', 'د'][oIdx] || `${oIdx + 1}`;
+                      const isCorrect =
+                        opt.trim().toLowerCase() === currentQuestion.answer.trim().toLowerCase() ||
+                        currentQuestion.answer.toLowerCase().includes(opt.toLowerCase());
+                      return (
+                        <View
+                          key={oIdx}
+                          style={[
+                            styles.optionCard,
+                            isCorrect && styles.optionCardCorrect,
+                          ]}
+                        >
+                          <View
+                            style={[
+                              styles.optionLetterBadge,
+                              isCorrect && styles.optionLetterBadgeCorrect,
+                            ]}
+                          >
+                            <Text
+                              style={[
+                                styles.optionLetterText,
+                                isCorrect && styles.optionLetterTextCorrect,
+                              ]}
+                            >
+                              {letter}
+                            </Text>
+                          </View>
+                          <Text
+                            style={[
+                              styles.optionText,
+                              isCorrect && styles.optionTextCorrect,
+                            ]}
+                            numberOfLines={2}
+                          >
+                            {opt}
+                          </Text>
+                          {isCorrect && (
+                            <MaterialCommunityIcons
+                              name="check-circle"
+                              size={15}
+                              color={theme.colors.gold}
+                              style={styles.correctCheckIcon}
+                            />
+                          )}
+                        </View>
+                      );
+                    })}
                   </View>
                 )}
               </View>
@@ -1046,6 +1127,81 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
     writingDirection: 'rtl',
+  },
+  optionsWrapper: {
+    alignItems: 'center',
+    marginBottom: 8,
+    width: '100%',
+  },
+  optionsToggleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(255, 215, 0, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 215, 0, 0.25)',
+    borderRadius: 8,
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+  },
+  optionsToggleText: {
+    color: theme.colors.gold,
+    fontSize: 12,
+    fontWeight: '700',
+    writingDirection: 'rtl',
+  },
+  optionsGrid: {
+    width: '100%',
+    marginTop: 8,
+    gap: 6,
+  },
+  optionCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: theme.colors.surfaceElevated,
+    borderRadius: 8,
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+    gap: 8,
+  },
+  optionCardCorrect: {
+    borderColor: theme.colors.gold,
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+  },
+  optionLetterBadge: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    backgroundColor: theme.colors.surfaceBorder,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  optionLetterBadgeCorrect: {
+    backgroundColor: theme.colors.gold,
+  },
+  optionLetterText: {
+    color: theme.colors.textSecondary,
+    fontSize: 11,
+    fontWeight: 'bold',
+  },
+  optionLetterTextCorrect: {
+    color: theme.colors.background,
+  },
+  optionText: {
+    flex: 1,
+    color: theme.colors.textPrimary,
+    fontSize: 13,
+    writingDirection: 'rtl',
+    textAlign: 'right',
+  },
+  optionTextCorrect: {
+    color: theme.colors.gold,
+    fontWeight: 'bold',
+  },
+  correctCheckIcon: {
+    marginLeft: 4,
   },
   answerContainer: {
     marginTop: theme.spacing.xs,

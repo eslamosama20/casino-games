@@ -7,6 +7,7 @@ export interface Question {
   answer: string;
   difficulty?: DifficultyLevel; // سهل، متوسط، صعب
   hint?: string;               // تلميح اختياري للـ Host
+  options?: string[];          // اختيارات متعددة مساعدة للمتسابقين
 }
 
 export interface Category {
