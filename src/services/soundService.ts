@@ -1,8 +1,13 @@
-import { Audio } from 'expo-av';
+let AudioModule: any = null;
+try {
+  AudioModule = require('expo-av').Audio;
+} catch (e) {
+  // expo-av not available in current runtime
+}
 
 let soundMuted = false;
 
-// Preload or dynamic sound playback
+// Safe audio manager that never crashes if native module is absent
 export const soundManager = {
   isMuted: () => soundMuted,
 
@@ -16,53 +21,53 @@ export const soundManager = {
   },
 
   async playPoint() {
-    if (soundMuted) return;
+    if (soundMuted || !AudioModule) return;
     try {
-      const { sound } = await Audio.Sound.createAsync(
+      const { sound } = await AudioModule.Sound.createAsync(
         require('../../assets/sounds/point.wav')
       );
       await sound.playAsync();
-      sound.setOnPlaybackStatusUpdate((status) => {
+      sound.setOnPlaybackStatusUpdate((status: any) => {
         if (status.isLoaded && status.didJustFinish) {
           sound.unloadAsync();
         }
       });
     } catch (e) {
-      // Audio playback fails silently in environments without audio support
+      // Ignore audio error silently
     }
   },
 
   async playBuzzer() {
-    if (soundMuted) return;
+    if (soundMuted || !AudioModule) return;
     try {
-      const { sound } = await Audio.Sound.createAsync(
+      const { sound } = await AudioModule.Sound.createAsync(
         require('../../assets/sounds/buzzer.wav')
       );
       await sound.playAsync();
-      sound.setOnPlaybackStatusUpdate((status) => {
+      sound.setOnPlaybackStatusUpdate((status: any) => {
         if (status.isLoaded && status.didJustFinish) {
           sound.unloadAsync();
         }
       });
     } catch (e) {
-      // Ignore audio error
+      // Ignore audio error silently
     }
   },
 
   async playWinner() {
-    if (soundMuted) return;
+    if (soundMuted || !AudioModule) return;
     try {
-      const { sound } = await Audio.Sound.createAsync(
+      const { sound } = await AudioModule.Sound.createAsync(
         require('../../assets/sounds/winner.wav')
       );
       await sound.playAsync();
-      sound.setOnPlaybackStatusUpdate((status) => {
+      sound.setOnPlaybackStatusUpdate((status: any) => {
         if (status.isLoaded && status.didJustFinish) {
           sound.unloadAsync();
         }
       });
     } catch (e) {
-      // Ignore audio error
+      // Ignore audio error silently
     }
   },
 };
