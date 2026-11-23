@@ -369,7 +369,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: 'transparent',
   },
   scrollContent: {
     padding: theme.spacing.lg,
@@ -599,7 +599,7 @@ const styles = StyleSheet.create({
     writingDirection: 'rtl',
   },
   footer: {
-    backgroundColor: theme.colors.background,
+    backgroundColor: 'rgba(11, 15, 25, 0.82)',
     paddingHorizontal: theme.spacing.lg,
     paddingTop: theme.spacing.md,
     borderTopWidth: 1,

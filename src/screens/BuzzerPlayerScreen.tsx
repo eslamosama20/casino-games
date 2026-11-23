@@ -313,7 +313,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: 'transparent',
   },
   topBar: {
     flexDirection: 'row',
