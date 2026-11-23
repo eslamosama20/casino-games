@@ -29,7 +29,8 @@
         {
           "android": {
             "enableProguardInReleaseBuilds": false,
-            "newArchEnabled": false
+            "newArchEnabled": false,
+            "enableMinifyInReleaseBuilds": false
           }
         }
       ]
@@ -38,6 +39,12 @@
       "eas": {
         "projectId": "fd068985-dac8-4604-9582-3bd09cb6627a"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fd068985-dac8-4604-9582-3bd09cb6627a"
     }
   }
 }

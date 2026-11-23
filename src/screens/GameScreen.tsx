@@ -845,7 +845,9 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   bottomBar: {
-    padding: theme.spacing.lg,
+    paddingHorizontal: theme.spacing.lg,
+    paddingTop: theme.spacing.md,
+    paddingBottom: Platform.OS === 'android' ? 36 : theme.spacing.lg,
     backgroundColor: theme.colors.background,
     borderTopWidth: 1,
     borderTopColor: theme.colors.surfaceBorder,
