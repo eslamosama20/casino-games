@@ -1,15 +1,20 @@
+export type DifficultyLevel = 'easy' | 'medium' | 'hard';
+
 export interface Question {
   id: string;
   categoryId: string;
   question: string;
   answer: string;
+  difficulty?: DifficultyLevel; // سهل، متوسط، صعب
+  hint?: string;               // تلميح اختياري للـ Host
 }
 
 export interface Category {
   id: string;
   name: string;
-  icon: string; // MaterialCommunityIcons or Ionicons name
+  icon: string;
   color: string;
+  description?: string;
 }
 
 export interface Player {
@@ -27,4 +32,5 @@ export interface GameSettings {
   targetScore: number;
   players: Player[];
   selectedCategoryIds: string[];
+  selectedDifficulty?: DifficultyLevel | 'all';
 }

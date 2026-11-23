@@ -12,6 +12,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
 import { questionService } from '../services/questionService';
+import { CategoryRouletteModal } from '../components/CategoryRouletteModal';
 
 interface CategoryScreenProps {
   onBack: () => void;
@@ -26,6 +27,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
   const [remainingCounts, setRemainingCounts] = useState<Record<string, number>>({});
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showRoulette, setShowRoulette] = useState(false);
 
   const loadData = async () => {
     setLoading(true);
@@ -73,16 +75,29 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
         <TouchableOpacity style={styles.backBtn} onPress={onBack} activeOpacity={0.7}>
           <MaterialCommunityIcons name="arrow-right" size={24} color={theme.colors.textPrimary} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>اختيار الفئات</Text>
-        <TouchableOpacity
-          style={styles.selectAllBtn}
-          onPress={handleToggleSelectAll}
-          activeOpacity={0.7}
-        >
-          <Text style={styles.selectAllText}>
-            {isAllSelected ? 'إلغاء الكل' : 'تحديد الكل'}
-          </Text>
-        </TouchableOpacity>
+
+        <Text style={styles.headerTitle}>اختيار الفئات ({categories.length})</Text>
+
+        <View style={styles.headerActions}>
+          <TouchableOpacity
+            style={styles.rouletteTriggerBtn}
+            onPress={() => setShowRoulette(true)}
+            activeOpacity={0.7}
+          >
+            <MaterialCommunityIcons name="slot-machine" size={18} color={theme.colors.gold} />
+            <Text style={styles.rouletteTriggerText}>عجلة الحظ</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.selectAllBtn}
+            onPress={handleToggleSelectAll}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.selectAllText}>
+              {isAllSelected ? 'إلغاء الكل' : 'تحديد الكل'}
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {loading ? (
@@ -96,7 +111,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
           showsVerticalScrollIndicator={false}
         >
           <Text style={styles.subTitle}>
-            اختر الفئات اللي حابب تسأل منها في الجيم ده:
+            اختر الفئات اللي حابب تسأل منها في الجيم (أو العب بعجلة الحظ):
           </Text>
 
           <View style={styles.grid}>
@@ -123,7 +138,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                     >
                       <MaterialCommunityIcons
                         name={(cat.icon as any) || 'help-circle-outline'}
-                        size={28}
+                        size={26}
                         color={cat.color || theme.colors.gold}
                       />
                     </View>
@@ -139,12 +154,15 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                     </View>
                   </View>
 
-                  <Text style={styles.categoryName}>{cat.name}</Text>
+                  <Text style={styles.categoryName} numberOfLines={1}>{cat.name}</Text>
+                  {cat.description ? (
+                    <Text style={styles.categoryDesc} numberOfLines={2}>{cat.description}</Text>
+                  ) : null}
 
                   <View style={styles.badge}>
                     <MaterialCommunityIcons
                       name="file-question-outline"
-                      size={13}
+                      size={12}
                       color={remaining > 0 ? theme.colors.gold : theme.colors.danger}
                     />
                     <Text
@@ -153,7 +171,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                         remaining === 0 && styles.badgeTextEmpty,
                       ]}
                     >
-                      {remaining > 0 ? `متبقي ${remaining} سؤال` : 'خلصت الأسئلة'}
+                      {remaining > 0 ? `${remaining} سؤال جاهز` : 'خلصت الأسئلة'}
                     </Text>
                   </View>
                 </TouchableOpacity>
@@ -189,6 +207,16 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
           />
         </TouchableOpacity>
       </View>
+
+      {/* Category Roulette Wheel Modal */}
+      <CategoryRouletteModal
+        visible={showRoulette}
+        categories={categories}
+        onSelectCategory={(chosenCat) => {
+          setSelectedIds([chosenCat.id]);
+        }}
+        onClose={() => setShowRoulette(false)}
+      />
     </View>
   );
 };
@@ -202,7 +230,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: theme.spacing.lg,
+    paddingHorizontal: theme.spacing.md,
     paddingTop: theme.spacing.lg,
     paddingBottom: theme.spacing.md,
     borderBottomWidth: 1,
@@ -212,22 +240,46 @@ const styles = StyleSheet.create({
     padding: 6,
   },
   headerTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     color: theme.colors.textPrimary,
+    writingDirection: 'rtl',
+  },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  rouletteTriggerBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: theme.colors.surfaceElevated,
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+    borderRadius: theme.borderRadius.sm,
+    borderWidth: 1,
+    borderColor: theme.colors.gold,
+  },
+  rouletteTriggerText: {
+    color: theme.colors.gold,
+    fontSize: 12,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   selectAllBtn: {
     paddingVertical: 6,
-    paddingHorizontal: 10,
+    paddingHorizontal: 8,
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: theme.borderRadius.sm,
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
   },
   selectAllText: {
-    color: theme.colors.gold,
-    fontSize: 13,
+    color: theme.colors.textSecondary,
+    fontSize: 12,
     fontWeight: '600',
+    writingDirection: 'rtl',
   },
   loaderContainer: {
     flex: 1,
@@ -238,31 +290,34 @@ const styles = StyleSheet.create({
   loadingText: {
     color: theme.colors.textSecondary,
     fontSize: 15,
+    writingDirection: 'rtl',
   },
   scrollContent: {
-    padding: theme.spacing.lg,
+    padding: theme.spacing.md,
     paddingBottom: 110,
   },
   subTitle: {
     color: theme.colors.textSecondary,
-    fontSize: 14,
+    fontSize: 13,
     textAlign: 'right',
     marginBottom: theme.spacing.md,
+    writingDirection: 'rtl',
   },
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
+    gap: 10,
     justifyContent: 'space-between',
   },
   card: {
-    width: '48%',
+    width: '48.5%',
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.lg,
-    padding: theme.spacing.md,
+    padding: 12,
     borderWidth: 2,
     borderColor: theme.colors.surfaceBorder,
     alignItems: 'flex-end',
+    marginBottom: 6,
   },
   cardSelected: {
     borderColor: theme.colors.gold,
@@ -273,11 +328,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: 8,
   },
   checkbox: {
-    width: 22,
-    height: 22,
+    width: 20,
+    height: 20,
     borderRadius: 6,
     borderWidth: 1.5,
     borderColor: theme.colors.textMuted,
@@ -289,32 +344,44 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.gold,
   },
   iconCircle: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   categoryName: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
     color: theme.colors.textPrimary,
     textAlign: 'right',
+    marginBottom: 4,
+    writingDirection: 'rtl',
+  },
+  categoryDesc: {
+    fontSize: 11,
+    color: theme.colors.textMuted,
+    textAlign: 'right',
     marginBottom: 8,
+    writingDirection: 'rtl',
+    height: 28,
   },
   badge: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: theme.colors.surfaceBorder,
-    paddingHorizontal: 8,
-    paddingVertical: 4,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
     borderRadius: theme.borderRadius.sm,
     gap: 4,
+    alignSelf: 'stretch',
+    justifyContent: 'center',
   },
   badgeText: {
     color: theme.colors.gold,
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '700',
+    writingDirection: 'rtl',
   },
   badgeTextEmpty: {
     color: theme.colors.danger,
@@ -345,6 +412,7 @@ const styles = StyleSheet.create({
     color: theme.colors.background,
     fontSize: 16,
     fontWeight: 'bold',
+    writingDirection: 'rtl',
   },
   primaryBtnTextDisabled: {
     color: theme.colors.textMuted,

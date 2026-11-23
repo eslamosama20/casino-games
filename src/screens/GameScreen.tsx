@@ -11,7 +11,7 @@ import {
 import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
-import { Category, Player, Question } from '../types';
+import { Category, Player, Question, DifficultyLevel } from '../types';
 import { questionService } from '../services/questionService';
 import { soundManager } from '../services/soundService';
 
@@ -35,11 +35,13 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [categories, setCategories] = useState<Category[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
+  const [showHint, setShowHint] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
 
-  // Timer states (30 seconds)
+  // Timer states (customizable)
+  const [timerDuration, setTimerDuration] = useState<number>(30);
   const [timerRunning, setTimerRunning] = useState<boolean>(false);
   const [timeLeft, setTimeLeft] = useState<number>(30);
   const timerIntervalRef = useRef<any>(null);
@@ -60,6 +62,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setQuestions(eligibleQuestions);
     setCurrentIndex(0);
     setIsAnswerVisible(false);
+    setShowHint(false);
 
     // Immediately mark the first question as seen
     await questionService.markQuestionAsSeen(eligibleQuestions[0].id);
@@ -102,15 +105,22 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     if (timerRunning) {
       setTimerRunning(false);
     } else {
-      if (timeLeft === 0) setTimeLeft(30);
+      if (timeLeft === 0) setTimeLeft(timerDuration);
       setTimerRunning(true);
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
   };
 
-  const handleResetTimer = () => {
+  const handleResetTimer = (newDuration?: number) => {
     setTimerRunning(false);
-    setTimeLeft(30);
+    const duration = newDuration ?? timerDuration;
+    setTimeLeft(duration);
+  };
+
+  const handleCycleTimerDuration = () => {
+    const next = timerDuration === 15 ? 30 : timerDuration === 30 ? 60 : 15;
+    setTimerDuration(next);
+    handleResetTimer(next);
   };
 
   const handleToggleMute = () => {
@@ -149,6 +159,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     handleResetTimer();
     setIsAnswerVisible(false);
+    setShowHint(false);
 
     const nextIndex = currentIndex + 1;
     if (nextIndex < questions.length) {
@@ -176,6 +187,22 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
   const currentQuestion = questions[currentIndex];
   const currentCategory = categories.find((c) => c.id === currentQuestion?.categoryId);
+
+  // Difficulty label helper
+  const getDifficultyBadge = (diff?: DifficultyLevel) => {
+    switch (diff) {
+      case 'easy':
+        return { label: 'سهل ⭐', color: '#10B981', bg: 'rgba(16, 185, 129, 0.15)' };
+      case 'medium':
+        return { label: 'متوسط ⭐⭐', color: '#F59E0B', bg: 'rgba(245, 158, 11, 0.15)' };
+      case 'hard':
+        return { label: 'صعب 🔥', color: '#EF4444', bg: 'rgba(239, 68, 68, 0.15)' };
+      default:
+        return { label: 'عادي', color: theme.colors.gold, bg: theme.colors.amberGlow };
+    }
+  };
+
+  const diffBadge = getDifficultyBadge(currentQuestion?.difficulty);
 
   return (
     <View style={styles.container}>
@@ -270,7 +297,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </View>
         ) : currentQuestion ? (
           <View style={styles.questionCard}>
-            {/* Category tag */}
+            {/* Category tag & Difficulty badge */}
             <View style={styles.categoryRow}>
               <View
                 style={[
@@ -288,13 +315,39 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 </Text>
               </View>
 
+              <View style={[styles.diffBadge, { backgroundColor: diffBadge.bg }]}>
+                <Text style={[styles.diffBadgeText, { color: diffBadge.color }]}>
+                  {diffBadge.label}
+                </Text>
+              </View>
+
               <Text style={styles.questionCounter}>
-                سؤال رقم {currentIndex + 1}
+                #{currentIndex + 1}
               </Text>
             </View>
 
             {/* Question Text */}
             <Text style={styles.questionText}>{currentQuestion.question}</Text>
+
+            {/* Hint Box (if exists) */}
+            {currentQuestion.hint && (
+              <View style={styles.hintWrapper}>
+                <TouchableOpacity
+                  style={styles.hintToggleBtn}
+                  onPress={() => setShowHint(!showHint)}
+                >
+                  <MaterialCommunityIcons name="lightbulb-outline" size={16} color={theme.colors.gold} />
+                  <Text style={styles.hintToggleText}>
+                    {showHint ? 'إخفاء التلميح' : 'تلميح للمتسابق؟ 💡'}
+                  </Text>
+                </TouchableOpacity>
+                {showHint && (
+                  <View style={styles.hintContentBox}>
+                    <Text style={styles.hintContentText}>{currentQuestion.hint}</Text>
+                  </View>
+                )}
+              </View>
+            )}
 
             {/* Hidden Answer Box */}
             <View style={styles.answerContainer}>
@@ -305,7 +358,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 </View>
               ) : (
                 <View style={styles.answerHiddenBox}>
-                  <MaterialCommunityIcons name="eye-off-outline" size={26} color={theme.colors.textMuted} />
+                  <MaterialCommunityIcons name="eye-off-outline" size={24} color={theme.colors.textMuted} />
                   <Text style={styles.answerHiddenText}>الإجابة مخفية لتجنب التلصص</Text>
                 </View>
               )}
@@ -334,12 +387,18 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               </TouchableOpacity>
             </View>
 
-            {/* 30-sec Timer Widget */}
+            {/* Timer Widget with cycle 15s / 30s / 60s */}
             <View style={styles.timerWidget}>
               <View style={styles.timerHeader}>
-                <TouchableOpacity onPress={handleResetTimer} style={styles.timerResetBtn}>
-                  <MaterialCommunityIcons name="restart" size={18} color={theme.colors.textSecondary} />
-                </TouchableOpacity>
+                <View style={styles.timerControlsLeft}>
+                  <TouchableOpacity onPress={() => handleResetTimer()} style={styles.timerResetBtn}>
+                    <MaterialCommunityIcons name="restart" size={18} color={theme.colors.textSecondary} />
+                  </TouchableOpacity>
+
+                  <TouchableOpacity onPress={handleCycleTimerDuration} style={styles.timerDurationBtn}>
+                    <Text style={styles.timerDurationText}>{timerDuration}ث</Text>
+                  </TouchableOpacity>
+                </View>
 
                 <TouchableOpacity
                   style={[styles.timerButton, timerRunning && styles.timerButtonActive]}
@@ -352,7 +411,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     color={timerRunning ? theme.colors.danger : theme.colors.gold}
                   />
                   <Text style={[styles.timerButtonText, timerRunning && styles.timerButtonTextActive]}>
-                    {timerRunning ? `متبقي ${timeLeft} ث` : timeLeft === 0 ? 'انتهى الوقت!' : 'تايمر 30 ثانية'}
+                    {timerRunning ? `متبقي ${timeLeft} ث` : timeLeft === 0 ? 'انتهى الوقت!' : `تايمر ${timerDuration} ثانية`}
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -363,7 +422,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   style={[
                     styles.progressBar,
                     {
-                      width: `${(timeLeft / 30) * 100}%`,
+                      width: `${(timeLeft / timerDuration) * 100}%`,
                       backgroundColor: timeLeft <= 5 ? theme.colors.danger : theme.colors.gold,
                     },
                   ]}
@@ -542,7 +601,7 @@ const styles = StyleSheet.create({
   },
   centerSection: {
     flex: 1,
-    padding: theme.spacing.lg,
+    padding: theme.spacing.md,
     justifyContent: 'center',
   },
   centerCard: {
@@ -559,7 +618,7 @@ const styles = StyleSheet.create({
   questionCard: {
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.xl,
-    padding: theme.spacing.lg,
+    padding: theme.spacing.md,
     borderWidth: 1.5,
     borderColor: theme.colors.surfaceBorder,
     shadowColor: theme.colors.gold,
@@ -572,18 +631,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: theme.spacing.md,
+    marginBottom: theme.spacing.sm,
   },
   categoryTag: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 12,
-    gap: 6,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 10,
+    gap: 5,
   },
   categoryTagText: {
     fontSize: 12,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  diffBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+  },
+  diffBadgeText: {
+    fontSize: 11,
     fontWeight: 'bold',
     writingDirection: 'rtl',
   },
@@ -594,17 +663,48 @@ const styles = StyleSheet.create({
   },
   questionText: {
     color: theme.colors.textPrimary,
-    fontSize: 19,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    lineHeight: 29,
-    minHeight: 75,
-    marginVertical: theme.spacing.md,
+    lineHeight: 28,
+    minHeight: 70,
+    marginVertical: theme.spacing.sm,
+    writingDirection: 'rtl',
+  },
+  hintWrapper: {
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  hintToggleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+  },
+  hintToggleText: {
+    color: theme.colors.gold,
+    fontSize: 12,
+    fontWeight: '600',
+    writingDirection: 'rtl',
+  },
+  hintContentBox: {
+    backgroundColor: 'rgba(245, 158, 11, 0.1)',
+    borderRadius: 8,
+    padding: 8,
+    marginTop: 4,
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.3)',
+  },
+  hintContentText: {
+    color: theme.colors.goldLight,
+    fontSize: 12,
+    textAlign: 'center',
     writingDirection: 'rtl',
   },
   answerContainer: {
-    marginTop: theme.spacing.sm,
-    gap: 10,
+    marginTop: theme.spacing.xs,
+    gap: 8,
   },
   answerRevealedBox: {
     backgroundColor: theme.colors.successBg,
@@ -631,16 +731,16 @@ const styles = StyleSheet.create({
   answerHiddenBox: {
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: theme.borderRadius.md,
-    padding: theme.spacing.md,
+    padding: theme.spacing.sm,
     alignItems: 'center',
-    gap: 6,
+    gap: 4,
     borderWidth: 1,
     borderStyle: 'dashed',
     borderColor: theme.colors.surfaceBorder,
   },
   answerHiddenText: {
     color: theme.colors.textMuted,
-    fontSize: 13,
+    fontSize: 12,
     writingDirection: 'rtl',
   },
   toggleAnswerBtn: {
@@ -667,8 +767,8 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
   },
   timerWidget: {
-    marginTop: theme.spacing.lg,
-    paddingTop: theme.spacing.md,
+    marginTop: theme.spacing.md,
+    paddingTop: theme.spacing.sm,
     borderTopWidth: 1,
     borderTopColor: theme.colors.surfaceBorder,
   },
@@ -676,20 +776,38 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 6,
+  },
+  timerControlsLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
   },
   timerResetBtn: {
     padding: 6,
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: 8,
   },
+  timerDurationBtn: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    backgroundColor: theme.colors.surfaceElevated,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+  },
+  timerDurationText: {
+    color: theme.colors.textSecondary,
+    fontSize: 11,
+    fontWeight: 'bold',
+  },
   timerButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 14,
     backgroundColor: theme.colors.amberGlow,
   },
   timerButtonActive: {
@@ -697,7 +815,7 @@ const styles = StyleSheet.create({
   },
   timerButtonText: {
     color: theme.colors.gold,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: 'bold',
     writingDirection: 'rtl',
   },
