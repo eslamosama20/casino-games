@@ -41,11 +41,15 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     color: string;
   } | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [categories, setCategories] = useState<Category[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
+  const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
+  const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
+  const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState<boolean>(true);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
 
@@ -61,6 +65,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     const cats = await questionService.getCategories();
     setCategories(cats);
 
+    const counts = await questionService.getRemainingCountsByCategory();
+    setCategoryCounts(counts);
+
     const eligibleQuestions = await questionService.getGameQuestions(selectedCategoryIds);
     if (eligibleQuestions.length === 0) {
       setShowExhaustedModal(true);
@@ -70,6 +77,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
     setQuestions(eligibleQuestions);
     setCurrentIndex(0);
+    setCurrentQuestion(eligibleQuestions[0]);
     setIsAnswerVisible(false);
     setShowHint(false);
 
@@ -177,8 +185,8 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     }
   };
 
-  // Move to next question with auto-advancing turn
-  const handleNextQuestion = async () => {
+  // Move to next question with auto-advancing turn & category support
+  const handleNextQuestion = async (specificCatId?: string | null) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     handleResetTimer();
     setIsAnswerVisible(false);
@@ -191,21 +199,45 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       setActivePlayerId(players[nextActiveIdx].id);
     }
 
-    const nextIndex = currentIndex + 1;
-    if (nextIndex < questions.length) {
-      setCurrentIndex(nextIndex);
-      await questionService.markQuestionAsSeen(questions[nextIndex].id);
+    const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
+    const catsToFetch = filterToUse ? [filterToUse] : selectedCategoryIds;
+
+    const available = await questionService.getGameQuestions(catsToFetch);
+    if (available.length > 0) {
+      setCurrentQuestion(available[0]);
+      setCurrentIndex((prev) => prev + 1);
+      await questionService.markQuestionAsSeen(available[0].id);
+
+      // Refresh counts
+      const counts = await questionService.getRemainingCountsByCategory();
+      setCategoryCounts(counts);
     } else {
-      // Reached the end of fetched pool -> check if more are available or exhausted
-      const moreQuestions = await questionService.getGameQuestions(selectedCategoryIds);
-      if (moreQuestions.length > 0) {
-        setQuestions(moreQuestions);
-        setCurrentIndex(0);
-        await questionService.markQuestionAsSeen(moreQuestions[0].id);
+      if (filterToUse) {
+        Alert.alert(
+          'فئة مكتملة',
+          'تم استهلاك كل أسئلة هذه الفئة! تم الرجوع للوضع العشوائي.',
+          [
+            {
+              text: 'حسناً',
+              onPress: () => {
+                setChosenCategoryFilter(null);
+                handleNextQuestion(null);
+              },
+            },
+          ]
+        );
       } else {
         setShowExhaustedModal(true);
       }
     }
+  };
+
+  // Host picks a specific category from inside the game
+  const handleSelectCategoryFromModal = async (catId: string | null) => {
+    setChosenCategoryFilter(catId);
+    setShowCategoryPicker(false);
+    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await handleNextQuestion(catId);
   };
 
   // Handle exhausted questions modal confirm
@@ -215,7 +247,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     await initializeQuestions();
   };
 
-  const currentQuestion = questions[currentIndex];
   const currentCategory = categories.find((c) => c.id === currentQuestion?.categoryId);
 
   // Difficulty label helper
@@ -372,13 +403,15 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </View>
         ) : currentQuestion ? (
           <View style={styles.questionCard}>
-            {/* Category tag & Difficulty badge */}
+            {/* Category tag & Switcher Button */}
             <View style={styles.categoryRow}>
-              <View
+              <TouchableOpacity
                 style={[
                   styles.categoryTag,
                   { backgroundColor: currentCategory?.color ? `${currentCategory.color}25` : theme.colors.amberGlow },
                 ]}
+                onPress={() => setShowCategoryPicker(true)}
+                activeOpacity={0.75}
               >
                 <MaterialCommunityIcons
                   name={(currentCategory?.icon as any) || 'help-circle-outline'}
@@ -388,7 +421,17 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 <Text style={[styles.categoryTagText, { color: currentCategory?.color || theme.colors.gold }]}>
                   {currentCategory?.name || 'سؤال'}
                 </Text>
-              </View>
+                <MaterialCommunityIcons name="chevron-down" size={14} color={currentCategory?.color || theme.colors.gold} />
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.chooseCatBtn}
+                onPress={() => setShowCategoryPicker(true)}
+                activeOpacity={0.75}
+              >
+                <MaterialCommunityIcons name="swap-horizontal" size={14} color={theme.colors.gold} />
+                <Text style={styles.chooseCatBtnText}>اختر الفئة</Text>
+              </TouchableOpacity>
 
               <View style={[styles.diffBadge, { backgroundColor: diffBadge.bg }]}>
                 <Text style={[styles.diffBadgeText, { color: diffBadge.color }]}>
@@ -522,7 +565,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       >
         <TouchableOpacity
           style={styles.nextBtn}
-          onPress={handleNextQuestion}
+          onPress={() => handleNextQuestion()}
           activeOpacity={0.85}
         >
           <Text style={styles.nextBtnText}>السؤال التالي / تخطي</Text>
@@ -561,6 +604,97 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 <Text style={styles.modalConfirmText}>إعادة الأسئلة والمتابعة</Text>
               </TouchableOpacity>
             </View>
+          </View>
+        </View>
+      </Modal>
+
+      {/* In-Game Category Switcher Modal */}
+      <Modal
+        visible={showCategoryPicker}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowCategoryPicker(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.catPickerCard}>
+            <View style={styles.catPickerHeader}>
+              <TouchableOpacity
+                style={styles.closeBtn}
+                onPress={() => setShowCategoryPicker(false)}
+                activeOpacity={0.7}
+              >
+                <MaterialCommunityIcons name="close" size={24} color={theme.colors.textMuted} />
+              </TouchableOpacity>
+              <Text style={styles.catPickerTitle}>اختيار فئة السؤال 🎯</Text>
+            </View>
+
+            <Text style={styles.catPickerSubtitle}>
+              اختر الفئة اللي حابب تسأل منها فوراً:
+            </Text>
+
+            <ScrollView style={styles.catListScroll} showsVerticalScrollIndicator={false}>
+              {/* Option: Random / All Categories */}
+              <TouchableOpacity
+                style={[
+                  styles.catOptionItem,
+                  chosenCategoryFilter === null && styles.catOptionItemActive,
+                ]}
+                onPress={() => handleSelectCategoryFromModal(null)}
+                activeOpacity={0.8}
+              >
+                <View style={[styles.catOptionIcon, { backgroundColor: theme.colors.amberGlow }]}>
+                  <MaterialCommunityIcons name="dice-multiple" size={22} color={theme.colors.gold} />
+                </View>
+                <View style={styles.catOptionInfo}>
+                  <Text style={styles.catOptionName}>🎲 عشوائي (من كل الفئات)</Text>
+                  <Text style={styles.catOptionDesc}>يختار تلقائياً من الفئات المفعلة</Text>
+                </View>
+                {chosenCategoryFilter === null && (
+                  <MaterialCommunityIcons name="check-circle" size={20} color={theme.colors.gold} />
+                )}
+              </TouchableOpacity>
+
+              {/* All categories */}
+              {categories.map((cat) => {
+                const isSelected = chosenCategoryFilter === cat.id;
+                const remaining = categoryCounts[cat.id] ?? 0;
+                return (
+                  <TouchableOpacity
+                    key={cat.id}
+                    style={[
+                      styles.catOptionItem,
+                      isSelected && styles.catOptionItemActive,
+                    ]}
+                    onPress={() => handleSelectCategoryFromModal(cat.id)}
+                    activeOpacity={0.8}
+                  >
+                    <View
+                      style={[
+                        styles.catOptionIcon,
+                        { backgroundColor: cat.color ? `${cat.color}25` : theme.colors.amberGlow },
+                      ]}
+                    >
+                      <MaterialCommunityIcons
+                        name={(cat.icon as any) || 'help-circle-outline'}
+                        size={22}
+                        color={cat.color || theme.colors.gold}
+                      />
+                    </View>
+
+                    <View style={styles.catOptionInfo}>
+                      <Text style={styles.catOptionName}>{cat.name}</Text>
+                      <Text style={styles.catOptionDesc}>
+                        {remaining > 0 ? `${remaining} سؤال جاهز` : 'خلصت الأسئلة'}
+                      </Text>
+                    </View>
+
+                    {isSelected && (
+                      <MaterialCommunityIcons name="check-circle" size={20} color={theme.colors.gold} />
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
           </View>
         </View>
       </Modal>
@@ -799,6 +933,23 @@ const styles = StyleSheet.create({
   },
   categoryTagText: {
     fontSize: 12,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  chooseCatBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: theme.colors.surfaceElevated,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+  },
+  chooseCatBtnText: {
+    color: theme.colors.gold,
+    fontSize: 11,
     fontWeight: 'bold',
     writingDirection: 'rtl',
   },
@@ -1068,6 +1219,80 @@ const styles = StyleSheet.create({
     color: theme.colors.textSecondary,
     fontWeight: '600',
     fontSize: 14,
+    writingDirection: 'rtl',
+  },
+  catPickerCard: {
+    width: '100%',
+    maxHeight: '80%',
+    backgroundColor: theme.colors.surface,
+    borderRadius: theme.borderRadius.xl,
+    padding: theme.spacing.lg,
+    borderWidth: 1.5,
+    borderColor: theme.colors.gold,
+  },
+  catPickerHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  closeBtn: {
+    padding: 4,
+  },
+  catPickerTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: theme.colors.gold,
+    writingDirection: 'rtl',
+  },
+  catPickerSubtitle: {
+    fontSize: 13,
+    color: theme.colors.textSecondary,
+    marginBottom: 12,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+  },
+  catListScroll: {
+    maxHeight: 380,
+  },
+  catOptionItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: theme.colors.surfaceElevated,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderRadius: theme.borderRadius.md,
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+    gap: 10,
+  },
+  catOptionItemActive: {
+    borderColor: theme.colors.gold,
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
+  },
+  catOptionIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  catOptionInfo: {
+    flex: 1,
+    alignItems: 'flex-start',
+  },
+  catOptionName: {
+    color: theme.colors.textPrimary,
+    fontSize: 14,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+    textAlign: 'right',
+  },
+  catOptionDesc: {
+    color: theme.colors.textMuted,
+    fontSize: 11,
+    marginTop: 2,
     writingDirection: 'rtl',
   },
 });
