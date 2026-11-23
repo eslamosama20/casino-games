@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 7,
   "categories": [
     {
       "id": "football",
@@ -1971,13 +1971,6 @@
       "categoryId": "movies",
       "question": "مين المخرج العالمي اللي أخرج فيلم 'باب الحديد' و'الأرض' و'المصير'؟",
       "answer": "يوسف شاهين",
-      "difficulty": "medium"
-    },
-    {
-      "id": "mov_018",
-      "categoryId": "movies",
-      "question": "في فيلم 'إتش دبور'، إيه كان اسم والد دبور رجل الأعمال الثري؟",
-      "answer": "سري بك (حسن حسني)",
       "difficulty": "medium"
     },
     {
