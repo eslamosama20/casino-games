@@ -144,89 +144,113 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ErrorBoundary>
-        <ImageBackground source={activeBg} style={styles.bgImage} resizeMode="cover">
-          <View style={styles.bgOverlayLight}>
-            <SafeAreaView style={styles.safeArea} edges={['top', 'bottom', 'left', 'right']}>
-              <StatusBar style="light" />
-              {currentScreen === 'setup' && (
-                <SetupScreen
-                  onNext={handleSetupComplete}
-                  onOpenBuzzerLobby={() => setCurrentScreen('buzzer_lobby')}
-                />
-              )}
-              {currentScreen === 'buzzer_lobby' && (
-                <BuzzerLobbyScreen
-                  onBack={() => setCurrentScreen('setup')}
-                  onHostProceedToCategories={handleHostProceedToCategories}
-                  onPlayerJoined={handlePlayerJoined}
-                />
-              )}
-              {currentScreen === 'buzzer_player' && liveRoom && livePlayerId && (
-                <BuzzerPlayerScreen
-                  initialRoom={liveRoom}
-                  playerId={livePlayerId}
-                  playerName={livePlayerName}
-                  onExit={() => {
-                    setLiveRoom(null);
-                    setLivePlayerId(null);
-                    setCurrentScreen('setup');
-                  }}
-                />
-              )}
-              {currentScreen === 'categories' && (
-                <CategoryScreen
-                  onBack={() => setCurrentScreen(liveRoom ? 'buzzer_lobby' : 'setup')}
-                  onStartGame={handleStartGame}
-                />
-              )}
-              {currentScreen === 'game' && (
-                <GameScreen
-                  players={players}
-                  targetScore={targetScore}
-                  selectedCategoryIds={selectedCategoryIds}
-                  liveRoomCode={liveRoom?.code}
-                  onPlayerWon={handlePlayerWon}
-                  onQuitGame={handleChangePlayers}
-                />
-              )}
-              {currentScreen === 'winner' && winner && (
-                <WinnerScreen
-                  winner={winner}
-                  allPlayers={players}
-                  targetScore={targetScore}
-                  onNewGameSamePlayers={handleNewGameSamePlayers}
-                  onChangePlayers={handleChangePlayers}
-                />
-              )}
-            </SafeAreaView>
-          </View>
+        <View style={styles.webOuterBackdrop}>
+          <ImageBackground
+            source={activeBg}
+            style={styles.bgImage}
+            imageStyle={styles.bgImageFill}
+            resizeMode="cover"
+          >
+            <View style={styles.bgOverlayLight}>
+              <SafeAreaView style={styles.safeArea} edges={['top', 'bottom', 'left', 'right']}>
+                <StatusBar style="light" />
+                {currentScreen === 'setup' && (
+                  <SetupScreen
+                    onNext={handleSetupComplete}
+                    onOpenBuzzerLobby={() => setCurrentScreen('buzzer_lobby')}
+                  />
+                )}
+                {currentScreen === 'buzzer_lobby' && (
+                  <BuzzerLobbyScreen
+                    onBack={() => setCurrentScreen('setup')}
+                    onHostProceedToCategories={handleHostProceedToCategories}
+                    onPlayerJoined={handlePlayerJoined}
+                  />
+                )}
+                {currentScreen === 'buzzer_player' && liveRoom && livePlayerId && (
+                  <BuzzerPlayerScreen
+                    initialRoom={liveRoom}
+                    playerId={livePlayerId}
+                    playerName={livePlayerName}
+                    onExit={() => {
+                      setLiveRoom(null);
+                      setLivePlayerId(null);
+                      setCurrentScreen('setup');
+                    }}
+                  />
+                )}
+                {currentScreen === 'categories' && (
+                  <CategoryScreen
+                    onBack={() => setCurrentScreen(liveRoom ? 'buzzer_lobby' : 'setup')}
+                    onStartGame={handleStartGame}
+                  />
+                )}
+                {currentScreen === 'game' && (
+                  <GameScreen
+                    players={players}
+                    targetScore={targetScore}
+                    selectedCategoryIds={selectedCategoryIds}
+                    liveRoomCode={liveRoom?.code}
+                    onPlayerWon={handlePlayerWon}
+                    onQuitGame={handleChangePlayers}
+                  />
+                )}
+                {currentScreen === 'winner' && winner && (
+                  <WinnerScreen
+                    winner={winner}
+                    allPlayers={players}
+                    targetScore={targetScore}
+                    onNewGameSamePlayers={handleNewGameSamePlayers}
+                    onChangePlayers={handleChangePlayers}
+                  />
+                )}
+              </SafeAreaView>
+            </View>
 
-          {/* Animated Casino Launch Splash Screen */}
-          {showIntroSplash && (
-            <Animated.View style={[styles.splashOverlay, { opacity: splashOpacity }]}>
-              <ImageBackground source={BG_SPLASH} style={styles.splashBg} resizeMode="cover">
-                <View style={styles.splashDim}>
-                  <Animated.View
-                    style={[styles.splashLogoWrap, { transform: [{ scale: logoScale }] }]}
-                  >
-                    <Image source={APP_LOGO} style={styles.splashLogo} />
-                    <Text style={styles.splashTitle}>كازينو الألعاب</Text>
-                    <Text style={styles.splashSubtitle}>استعد للتحدي والسرعة ⚡</Text>
-                  </Animated.View>
-                </View>
-              </ImageBackground>
-            </Animated.View>
-          )}
-        </ImageBackground>
+            {/* Animated Casino Launch Splash Screen */}
+            {showIntroSplash && (
+              <Animated.View style={[styles.splashOverlay, { opacity: splashOpacity }]}>
+                <ImageBackground
+                  source={BG_SPLASH}
+                  style={styles.splashBg}
+                  imageStyle={styles.bgImageFill}
+                  resizeMode="cover"
+                >
+                  <View style={styles.splashDim}>
+                    <Animated.View
+                      style={[styles.splashLogoWrap, { transform: [{ scale: logoScale }] }]}
+                    >
+                      <Image source={APP_LOGO} style={styles.splashLogo} />
+                      <Text style={styles.splashTitle}>كازينو الألعاب</Text>
+                      <Text style={styles.splashSubtitle}>استعد للتحدي والسرعة ⚡</Text>
+                    </Animated.View>
+                  </View>
+                </ImageBackground>
+              </Animated.View>
+            )}
+          </ImageBackground>
+        </View>
       </ErrorBoundary>
     </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
+  webOuterBackdrop: {
+    flex: 1,
+    backgroundColor: '#050814',
+    alignItems: 'center',
+  },
   bgImage: {
     flex: 1,
+    width: '100%',
+    maxWidth: Platform.OS === 'web' ? 500 : undefined,
     backgroundColor: theme.colors.background,
+    overflow: 'hidden',
+  },
+  bgImageFill: {
+    width: '100%',
+    height: '100%',
   },
   bgOverlay: {
     flex: 1,
