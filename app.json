@@ -31,6 +31,18 @@
     "plugins": [
       "expo-font",
       [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B0F19",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#0B0F19"
+          }
+        }
+      ],
+      [
         "expo-build-properties",
         {
           "android": {
