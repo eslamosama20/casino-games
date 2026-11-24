@@ -80,6 +80,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     }).start();
   };
 
+  // Track questions already shown in this session so skipping doesn't immediately repeat them
+  const sessionShownRef = useRef<Set<string>>(new Set());
+
   // Load questions and categories
   const initializeQuestions = async () => {
     setLoading(true);
@@ -99,12 +102,11 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setQuestions(eligibleQuestions);
     setCurrentIndex(0);
     setCurrentQuestion(eligibleQuestions[0]);
+    sessionShownRef.current.add(eligibleQuestions[0].id);
     setIsAnswerVisible(false);
     setShowHint(false);
     setShowOptions(false);
 
-    // Immediately mark the first question as seen
-    await questionService.markQuestionAsSeen(eligibleQuestions[0].id);
     setLoading(false);
     triggerCardAnimation();
   };
@@ -259,10 +261,14 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     const catsToFetch = filterToUse ? [filterToUse] : selectedCategoryIds;
 
     const available = await questionService.getGameQuestions(catsToFetch);
-    if (available.length > 0) {
-      setCurrentQuestion(available[0]);
+    // Prefer a question not yet shown in this session (if skipped without revealing answer)
+    const fresh = available.filter((q) => !sessionShownRef.current.has(q.id));
+    const nextQ = fresh.length > 0 ? fresh[0] : available[0];
+
+    if (nextQ) {
+      setCurrentQuestion(nextQ);
+      sessionShownRef.current.add(nextQ.id);
       setCurrentIndex((prev) => prev + 1);
-      await questionService.markQuestionAsSeen(available[0].id);
       triggerCardAnimation();
 
       // Refresh counts
@@ -743,12 +749,20 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
               <TouchableOpacity
                 style={[styles.toggleAnswerBtn, isAnswerVisible && styles.toggleAnswerBtnActive]}
-                onPress={() => {
+                onPress={async () => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                  if (!isAnswerVisible) {
+                  const willReveal = !isAnswerVisible;
+                  setIsAnswerVisible(willReveal);
+                  if (willReveal && currentQuestion) {
                     soundManager.playReveal();
+                    // Mark question as seen for Host AND broadcast to all contestants in Live Buzzer Room!
+                    await questionService.markQuestionAsSeen(currentQuestion.id);
+                    if (liveRoomCode) {
+                      buzzerService.markSeenForRoom(liveRoomCode, currentQuestion.id);
+                    }
+                    const counts = await questionService.getRemainingCountsByCategory();
+                    setCategoryCounts(counts);
                   }
-                  setIsAnswerVisible(!isAnswerVisible);
                 }}
                 activeOpacity={0.8}
               >

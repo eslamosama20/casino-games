@@ -35,6 +35,7 @@ interface FirebaseRoomData {
     newScore: number;
     timestamp: number;
   } | null;
+  seenQuestionIds?: Record<string, boolean>;
   createdAt?: number;
   lastActivity?: number;
 }
@@ -69,6 +70,9 @@ function normalizeRoom(raw: FirebaseRoomData): LiveBuzzerRoom {
     currentOptions: Array.isArray(raw.currentOptions) ? raw.currentOptions : null,
     winner: raw.winner || null,
     lastScoreEvent: raw.lastScoreEvent || null,
+    seenQuestionIds: raw.seenQuestionIds
+      ? Object.keys(raw.seenQuestionIds).filter((k) => raw.seenQuestionIds?.[k])
+      : [],
   };
 }
 
@@ -386,6 +390,14 @@ class BuzzerService {
         currentOptions: options,
         lastActivity: Date.now(),
       });
+    } catch {}
+  }
+
+  // Broadcast revealed question ID so every contestant marks it seen locally too!
+  async markSeenForRoom(code: string, questionId: string) {
+    try {
+      const db = getDb();
+      await set(ref(db, `rooms/${code}/seenQuestionIds/${questionId}`), true);
     } catch {}
   }
 

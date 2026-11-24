@@ -15,6 +15,7 @@ import { theme } from '../constants/theme';
 import { LiveBuzzerRoom } from '../types';
 import { buzzerService } from '../services/buzzerService';
 import { soundManager } from '../services/soundService';
+import { questionService } from '../services/questionService';
 
 interface BuzzerPlayerScreenProps {
   initialRoom: LiveBuzzerRoom;
@@ -130,6 +131,20 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
       unsubKicked();
     };
   }, [playerId, onExit]);
+
+  const syncedSeenIdsRef = useRef<Set<string>>(new Set());
+
+  // Sync revealed questions from Host into this contestant's local seen history (works on APK & Web localStorage!)
+  useEffect(() => {
+    const ids = room.seenQuestionIds || [];
+    if (ids.length === 0) return;
+    ids.forEach((qid) => {
+      if (!syncedSeenIdsRef.current.has(qid)) {
+        syncedSeenIdsRef.current.add(qid);
+        questionService.markQuestionAsSeen(qid).catch(() => {});
+      }
+    });
+  }, [room.seenQuestionIds]);
 
   const lastEventTsRef = useRef<number>(initialRoom.lastScoreEvent?.timestamp || 0);
 

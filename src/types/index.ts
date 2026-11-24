@@ -57,6 +57,7 @@ export interface LiveBuzzerRoom {
     newScore: number;
     timestamp: number;
   } | null;
+  seenQuestionIds?: string[];
 }
 
 export interface GameSettings {
