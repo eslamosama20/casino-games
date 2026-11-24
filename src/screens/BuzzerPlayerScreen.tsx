@@ -61,13 +61,21 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 }) => {
   const [room, setRoom] = useState<LiveBuzzerRoom>(initialRoom);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
-  const [scoreToast, setScoreToast] = useState<{
+  const [scoreBubble, setScoreBubble] = useState<{
+    id: number;
     delta: number;
     text: string;
+    startTopPct: number;
+    startLeftPct: number;
+    driftX: number;
+    tiltDeg: number;
   } | null>(null);
   const pulseAnim = useRef(new Animated.Value(1)).current;
   const pressScale = useRef(new Animated.Value(1)).current;
-  const toastAnim = useRef(new Animated.Value(0)).current;
+  const bubbleScale = useRef(new Animated.Value(0)).current;
+  const bubbleOpacity = useRef(new Animated.Value(0)).current;
+  const bubbleFloatY = useRef(new Animated.Value(0)).current;
+  const bubbleDriftX = useRef(new Animated.Value(0)).current;
   const toastTimerRef = useRef<any>(null);
   const prevMyScoreRef = useRef<number | null>(
     initialRoom.players.find((p) => p.id === playerId)?.score ?? 0
@@ -156,24 +164,69 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 
     if (!phrase) return;
 
-    setScoreToast({ delta, text: phrase });
-    toastAnim.setValue(0);
-    Animated.spring(toastAnim, {
-      toValue: 1,
-      friction: 5,
-      tension: 80,
-      useNativeDriver: true,
-    }).start();
+    // Pick a random screen spot & floating path every single time!
+    const startTopPct = 24 + Math.floor(Math.random() * 44); // 24% .. 68% from top
+    const startLeftPct = 6 + Math.floor(Math.random() * 24); // 6% .. 30% from left (bubble is ~66% wide)
+    const driftX = (Math.random() > 0.5 ? 1 : -1) * (14 + Math.floor(Math.random() * 22));
+    const tiltDeg = (Math.random() > 0.5 ? 1 : -1) * (2 + Math.floor(Math.random() * 5));
 
+    setScoreBubble({
+      id: ev.timestamp,
+      delta,
+      text: phrase,
+      startTopPct,
+      startLeftPct,
+      driftX,
+      tiltDeg,
+    });
+
+    bubbleScale.setValue(0.2);
+    bubbleOpacity.setValue(0);
+    bubbleFloatY.setValue(0);
+    bubbleDriftX.setValue(0);
+
+    // Phase 1: Inflate bubble + float upward smoothly
+    Animated.parallel([
+      Animated.spring(bubbleScale, {
+        toValue: 1,
+        friction: 5,
+        tension: 90,
+        useNativeDriver: true,
+      }),
+      Animated.timing(bubbleOpacity, {
+        toValue: 1,
+        duration: 180,
+        useNativeDriver: true,
+      }),
+      Animated.timing(bubbleFloatY, {
+        toValue: -115,
+        duration: 2450,
+        useNativeDriver: true,
+      }),
+      Animated.timing(bubbleDriftX, {
+        toValue: driftX,
+        duration: 2450,
+        useNativeDriver: true,
+      }),
+    ]).start();
+
+    // Phase 2: POP! Rapidly swell and burst into nothing
     if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
     toastTimerRef.current = setTimeout(() => {
-      Animated.timing(toastAnim, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }).start(() => setScoreToast(null));
-    }, 2800);
-  }, [room.lastScoreEvent, room.targetScore, playerId, toastAnim]);
+      Animated.parallel([
+        Animated.timing(bubbleScale, {
+          toValue: 1.48,
+          duration: 190,
+          useNativeDriver: true,
+        }),
+        Animated.timing(bubbleOpacity, {
+          toValue: 0,
+          duration: 190,
+          useNativeDriver: true,
+        }),
+      ]).start(() => setScoreBubble(null));
+    }, 2250);
+  }, [room.lastScoreEvent, room.targetScore, playerId, bubbleScale, bubbleOpacity, bubbleFloatY, bubbleDriftX]);
 
   useEffect(() => {
     return () => {
@@ -337,10 +390,12 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
                     {p.name} {isMe ? '(أنت)' : ''}
                   </Text>
                 </View>
-                <Text style={styles.scoreNum}>
-                  {p.score}
+                <View style={styles.scoreNumRow}>
+                  <Text style={[styles.scoreNum, p.score < 0 && styles.scoreNumNegative]}>
+                    {'\u2066'}{p.score}{'\u2069'}
+                  </Text>
                   <Text style={styles.scoreTarget}>/{room.targetScore}</Text>
-                </Text>
+                </View>
               </View>
             );
           })}
@@ -353,45 +408,6 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         showsVerticalScrollIndicator={false}
       >
         <Text style={styles.playerGreeting}>مرحباً {playerName} 👋</Text>
-
-        {/* Animated Egyptian Slang Score Reaction Banner */}
-        {scoreToast && (
-          <Animated.View
-            style={[
-              styles.scoreToastBox,
-              scoreToast.delta > 0 ? styles.scoreToastPlus : styles.scoreToastMinus,
-              {
-                opacity: toastAnim,
-                transform: [
-                  {
-                    scale: toastAnim.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [0.65, 1],
-                    }),
-                  },
-                  {
-                    translateY: toastAnim.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [-16, 0],
-                    }),
-                  },
-                ],
-              },
-            ]}
-          >
-            <View
-              style={[
-                styles.scoreToastDeltaPill,
-                scoreToast.delta > 0 ? styles.deltaPillPlus : styles.deltaPillMinus,
-              ]}
-            >
-              <Text style={styles.scoreToastDeltaText}>
-                {scoreToast.delta > 0 ? `+${scoreToast.delta}` : `${scoreToast.delta}`}
-              </Text>
-            </View>
-            <Text style={styles.scoreToastText}>{scoreToast.text}</Text>
-          </Animated.View>
-        )}
 
         <Animated.View
           style={{
@@ -443,6 +459,45 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
           </View>
         )}
       </ScrollView>
+
+      {/* Floating & Popping Reaction Bubble Overlay (random spot every time, never blocks taps!) */}
+      {scoreBubble && (
+        <View style={styles.bubbleOverlay} pointerEvents="none">
+          <Animated.View
+            style={[
+              styles.floatingBubble,
+              scoreBubble.delta > 0 ? styles.bubblePlus : styles.bubbleMinus,
+              {
+                top: `${scoreBubble.startTopPct}%`,
+                left: `${scoreBubble.startLeftPct}%`,
+                opacity: bubbleOpacity,
+                transform: [
+                  { translateY: bubbleFloatY },
+                  { translateX: bubbleDriftX },
+                  { rotate: `${scoreBubble.tiltDeg}deg` },
+                  { scale: bubbleScale },
+                ],
+              },
+            ]}
+          >
+            {/* Glossy bubble highlight shine */}
+            <View style={styles.bubbleShine} />
+            <View
+              style={[
+                styles.scoreToastDeltaPill,
+                scoreBubble.delta > 0 ? styles.deltaPillPlus : styles.deltaPillMinus,
+              ]}
+            >
+              <Text style={styles.scoreToastDeltaText}>
+                {'\u2066'}
+                {scoreBubble.delta > 0 ? `+${scoreBubble.delta}` : `${scoreBubble.delta}`}
+                {'\u2069'}
+              </Text>
+            </View>
+            <Text style={styles.scoreToastText}>{scoreBubble.text}</Text>
+          </Animated.View>
+        </View>
+      )}
     </View>
   );
 };
@@ -539,10 +594,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
     maxWidth: 90,
   },
+  scoreNumRow: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'center',
+  },
   scoreNum: {
     color: theme.colors.gold,
     fontWeight: '900',
     fontSize: 20,
+    writingDirection: 'ltr',
+  },
+  scoreNumNegative: {
+    color: '#EF4444',
   },
   scoreTarget: {
     color: theme.colors.textMuted,
@@ -643,29 +707,48 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     fontSize: 13,
   },
-  scoreToastBox: {
-    width: '100%',
+  bubbleOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 50,
+  },
+  floatingBubble: {
+    position: 'absolute',
+    maxWidth: '72%',
+    minWidth: 190,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
-    paddingHorizontal: 16,
+    gap: 8,
+    paddingHorizontal: 18,
     paddingVertical: 14,
-    borderRadius: 18,
-    borderWidth: 2,
+    borderRadius: 999,
+    borderWidth: 2.5,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 8,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.45,
+    shadowRadius: 16,
+    elevation: 10,
   },
-  scoreToastPlus: {
-    backgroundColor: 'rgba(16, 185, 129, 0.24)',
-    borderColor: '#34D399',
+  bubblePlus: {
+    backgroundColor: 'rgba(16, 185, 129, 0.88)',
+    borderColor: '#A7F3D0',
   },
-  scoreToastMinus: {
-    backgroundColor: 'rgba(239, 68, 68, 0.26)',
-    borderColor: '#F87171',
+  bubbleMinus: {
+    backgroundColor: 'rgba(220, 38, 38, 0.9)',
+    borderColor: '#FECACA',
+  },
+  bubbleShine: {
+    position: 'absolute',
+    top: 5,
+    left: 18,
+    width: 28,
+    height: 7,
+    borderRadius: 999,
+    backgroundColor: 'rgba(255, 255, 255, 0.35)',
   },
   scoreToastDeltaPill: {
     paddingHorizontal: 10,
@@ -673,19 +756,20 @@ const styles = StyleSheet.create({
     borderRadius: 999,
   },
   deltaPillPlus: {
-    backgroundColor: '#10B981',
+    backgroundColor: '#065F46',
   },
   deltaPillMinus: {
-    backgroundColor: '#EF4444',
+    backgroundColor: '#7F1D1D',
   },
   scoreToastDeltaText: {
     color: '#FFFFFF',
     fontWeight: '900',
     fontSize: 15,
+    writingDirection: 'ltr',
   },
   scoreToastText: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '900',
     textAlign: 'center',
     flexShrink: 1,
