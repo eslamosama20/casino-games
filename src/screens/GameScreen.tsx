@@ -533,7 +533,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
-                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح للباقي 🔄</Text>
+                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح للكل 🔄</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

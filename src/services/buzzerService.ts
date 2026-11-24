@@ -369,16 +369,10 @@ class BuzzerService {
             current.winner = { id: player.id, name: player.name, score: player.score };
           }
         } else if (delta < 0) {
-          if (!current.lockedOutPlayerIds) current.lockedOutPlayerIds = {};
-          current.lockedOutPlayerIds[playerId] = true;
-
-          if (reopenOnWrong) {
-            current.buzzerState = 'open';
-            current.buzzedBy = null;
-          } else if (current.buzzedBy?.playerId === playerId) {
-            current.buzzerState = 'locked';
-            current.buzzedBy = null;
-          }
+          // Wrong answer (-1): automatically reopen buzzer for EVERYONE!
+          current.lockedOutPlayerIds = {};
+          current.buzzerState = 'open';
+          current.buzzedBy = null;
         }
         return current;
       });
