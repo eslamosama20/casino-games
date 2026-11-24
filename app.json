@@ -18,7 +18,7 @@
     },
     "android": {
       "package": "com.eslamosama.casinogames",
-      "versionCode": 3,
+      "versionCode": 4,
       "adaptiveIcon": {
         "backgroundColor": "#0B0F19",
         "foregroundImage": "./assets/android-icon-foreground.png"
