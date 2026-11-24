@@ -29,6 +29,12 @@ interface FirebaseRoomData {
   lockedOutPlayerIds?: Record<string, boolean>;
   currentOptions?: string[] | null;
   winner?: Player | null;
+  lastScoreEvent?: {
+    playerId: string;
+    delta: number;
+    newScore: number;
+    timestamp: number;
+  } | null;
   createdAt?: number;
   lastActivity?: number;
 }
@@ -62,6 +68,7 @@ function normalizeRoom(raw: FirebaseRoomData): LiveBuzzerRoom {
     lockedOutPlayerIds: lockedOut,
     currentOptions: Array.isArray(raw.currentOptions) ? raw.currentOptions : null,
     winner: raw.winner || null,
+    lastScoreEvent: raw.lastScoreEvent || null,
   };
 }
 
@@ -347,6 +354,12 @@ class BuzzerService {
         const player = current.players[playerId];
         player.score = (player.score || 0) + delta;
         current.lastActivity = Date.now();
+        current.lastScoreEvent = {
+          playerId,
+          delta,
+          newScore: player.score,
+          timestamp: Date.now(),
+        };
 
         if (delta > 0) {
           current.buzzerState = 'locked';

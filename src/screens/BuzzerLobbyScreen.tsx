@@ -258,7 +258,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
             <Text style={styles.lobbySubtitle}>ادّي الكود ده للمتسابقين عشان يدخلوا معاك:</Text>
 
             <TouchableOpacity style={styles.codeBox} onPress={handleCopyCode} activeOpacity={0.8}>
-              <Text style={styles.codeDigits}>{hostedRoom.code.split('').join(' ')}</Text>
+              <Text style={styles.codeDigits}>{'\u2066'}{hostedRoom.code}{'\u2069'}</Text>
               <View style={styles.copyBadge}>
                 <MaterialCommunityIcons
                   name={copied ? 'check' : 'content-copy'}
@@ -580,9 +580,11 @@ const styles = StyleSheet.create({
   },
   codeDigits: {
     color: theme.colors.gold,
-    fontSize: 42,
+    fontSize: 44,
     fontWeight: '900',
-    letterSpacing: 6,
+    letterSpacing: 12,
+    writingDirection: 'ltr',
+    textAlign: 'center',
   },
   copyBadge: {
     flexDirection: 'row',

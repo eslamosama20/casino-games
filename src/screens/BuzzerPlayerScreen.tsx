@@ -123,62 +123,57 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     };
   }, [playerId, onExit]);
 
-  // Detect score changes for THIS player and trigger funny Egyptian reaction pop-up!
+  const lastEventTsRef = useRef<number>(initialRoom.lastScoreEvent?.timestamp || 0);
+
+  // Trigger funny Egyptian reaction pop-up reliably via Firebase lastScoreEvent!
   useEffect(() => {
-    const me = room.players.find((p) => p.id === playerId);
-    const currentScore = me?.score ?? 0;
+    const ev = room.lastScoreEvent;
+    if (!ev || ev.playerId !== playerId) return;
+    if (ev.timestamp === lastEventTsRef.current) return;
+    lastEventTsRef.current = ev.timestamp;
 
-    // If game just restarted from lobby/finished to playing, reset baseline silently
-    if (prevStatusRef.current !== 'playing' && room.status === 'playing') {
-      prevStatusRef.current = room.status;
-      prevMyScoreRef.current = currentScore;
-      return;
-    }
-    prevStatusRef.current = room.status;
+    const delta = ev.delta;
+    const currentScore = ev.newScore;
+    let phrase = '';
 
-    const prevScore = prevMyScoreRef.current;
-    if (prevScore !== null && currentScore !== prevScore) {
-      const delta = currentScore - prevScore;
-      let phrase = '';
-      if (delta > 0) {
-        soundManager.playPoint();
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-        if (currentScore === room.targetScore - 1) {
-          phrase = 'نقطة واحدة وتكسب الكل! 👑🔥';
-        } else {
-          phrase = PLUS_REACTIONS[Math.floor(Math.random() * PLUS_REACTIONS.length)];
-        }
+    if (delta > 0) {
+      soundManager.playPoint();
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+      if (currentScore === room.targetScore - 1) {
+        phrase = 'نقطة واحدة وتكسب الكل! 👑🔥';
       } else {
-        soundManager.playBuzzer();
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => {});
-        if (currentScore <= -3 && Math.random() < 0.5) {
-          phrase = 'إنت غرقان في السالب يا صاحبي! 🌊😂';
-        } else {
-          phrase = MINUS_REACTIONS[Math.floor(Math.random() * MINUS_REACTIONS.length)];
-        }
+        phrase = PLUS_REACTIONS[Math.floor(Math.random() * PLUS_REACTIONS.length)];
       }
-
-      setScoreToast({ delta, text: phrase });
-      toastAnim.setValue(0);
-      Animated.spring(toastAnim, {
-        toValue: 1,
-        friction: 5,
-        tension: 80,
-        useNativeDriver: true,
-      }).start();
-
-      if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
-      toastTimerRef.current = setTimeout(() => {
-        Animated.timing(toastAnim, {
-          toValue: 0,
-          duration: 300,
-          useNativeDriver: true,
-        }).start(() => setScoreToast(null));
-      }, 2600);
+    } else if (delta < 0) {
+      soundManager.playBuzzer();
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => {});
+      if (currentScore <= -3 && Math.random() < 0.5) {
+        phrase = 'إنت غرقان في السالب يا صاحبي! 🌊😂';
+      } else {
+        phrase = MINUS_REACTIONS[Math.floor(Math.random() * MINUS_REACTIONS.length)];
+      }
     }
 
-    prevMyScoreRef.current = currentScore;
-  }, [room.players, room.status, room.targetScore, playerId, toastAnim]);
+    if (!phrase) return;
+
+    setScoreToast({ delta, text: phrase });
+    toastAnim.setValue(0);
+    Animated.spring(toastAnim, {
+      toValue: 1,
+      friction: 5,
+      tension: 80,
+      useNativeDriver: true,
+    }).start();
+
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    toastTimerRef.current = setTimeout(() => {
+      Animated.timing(toastAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }).start(() => setScoreToast(null));
+    }, 2800);
+  }, [room.lastScoreEvent, room.targetScore, playerId, toastAnim]);
 
   useEffect(() => {
     return () => {
@@ -306,7 +301,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         </View>
 
         <View style={styles.roomBadge}>
-          <Text style={styles.roomBadgeText}>غرفة #{room.code}</Text>
+          <Text style={styles.roomBadgeText}>غرفة {'\u2066'}#{room.code}{'\u2069'}</Text>
         </View>
 
         <View style={styles.targetBadge}>

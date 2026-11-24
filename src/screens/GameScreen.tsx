@@ -464,7 +464,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           <View style={styles.liveBuzzerHeader}>
             <View style={styles.liveRoomPill}>
               <View style={styles.livePulseDot} />
-              <Text style={styles.liveRoomPillText}>غرفة الجرس #{liveRoomCode}</Text>
+              <Text style={styles.liveRoomPillText}>غرفة الجرس {'\u2066'}#{liveRoomCode}{'\u2069'}</Text>
             </View>
             <Text style={styles.liveBuzzerHintText}>
               {buzzerState === 'locked'

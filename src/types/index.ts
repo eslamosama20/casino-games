@@ -51,6 +51,12 @@ export interface LiveBuzzerRoom {
   lockedOutPlayerIds: string[];
   currentOptions: string[] | null;
   winner: Player | null;
+  lastScoreEvent?: {
+    playerId: string;
+    delta: number;
+    newScore: number;
+    timestamp: number;
+  } | null;
 }
 
 export interface GameSettings {
