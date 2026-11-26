@@ -98,10 +98,11 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
     ? revealDuration
     : buzzedSecond ?? secondsElapsed;
 
-  // Blur radius: starts at 28, drops to 0 at 10 seconds
+  // Blur radius: starts at 14px (clearer silhouette & jersey colors), eases down smoothly to 0
   const blurFraction = Math.max(0, 1 - currentSec / revealDuration);
-  const blurRadius = revealed ? 0 : Math.round(blurFraction * 26);
-  const overlayOpacity = revealed ? 0 : Math.max(0.08, blurFraction * 0.45);
+  const easedFraction = Math.pow(blurFraction, 1.25);
+  const blurRadius = revealed ? 0 : Math.round(easedFraction * 14);
+  const overlayOpacity = revealed ? 0 : Math.max(0, easedFraction * 0.15);
 
   // Points tier:
   // sec 0-3: 3 pts, sec 4-7: 2 pts, sec 8+: 1 pt
