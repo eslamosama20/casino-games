@@ -70,6 +70,7 @@ export interface PowerCard {
   title: string;
   subtitle: string;
   description: string;
+  example: string;
   icon: string;
   color: string;
   badge: string;

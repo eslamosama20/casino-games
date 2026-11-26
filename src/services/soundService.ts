@@ -257,4 +257,86 @@ export const soundManager = {
       }
     } catch {}
   },
+
+  // 7. Power Card Swoosh Entrance
+  playCardWhoosh() {
+    if (soundMuted) return;
+    try {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    } catch {}
+
+    const ctx = getWebAudioContext();
+    if (ctx) {
+      try {
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(320, now);
+        osc.frequency.exponentialRampToValueAtTime(740, now + 0.18);
+        osc.frequency.exponentialRampToValueAtTime(120, now + 0.38);
+
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.42);
+        return;
+      } catch {}
+    }
+
+    try {
+      const p = getPointPlayer();
+      if (p && typeof p.play === 'function') {
+        if (typeof p.seekTo === 'function') p.seekTo(0);
+        p.play();
+      }
+    } catch {}
+  },
+
+  // 8. Power Card Magic 3D Flip & Reveal Chime
+  playCardMagicReveal() {
+    if (soundMuted) return;
+    try {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    } catch {}
+
+    const ctx = getWebAudioContext();
+    if (ctx) {
+      try {
+        // Shimmering mystical harp arpeggio: F#4 -> A#4 -> C#5 -> F#5 -> G#5 -> C#6
+        const freqs = [369.99, 466.16, 554.37, 739.99, 830.61, 1108.73];
+        freqs.forEach((freq, idx) => {
+          const now = ctx.currentTime + idx * 0.055;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now);
+
+          gain.gain.setValueAtTime(0.28, now);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.45);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(now);
+          osc.stop(now + 0.5);
+        });
+        return;
+      } catch {}
+    }
+
+    try {
+      const p = getWinnerPlayer();
+      if (p && typeof p.play === 'function') {
+        if (typeof p.seekTo === 'function') p.seekTo(0);
+        p.play();
+      }
+    } catch {}
+  },
 };
