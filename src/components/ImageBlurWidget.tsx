@@ -8,7 +8,6 @@ import {
   Animated,
   Platform,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { soundManager } from '../services/soundService';
 
@@ -107,7 +106,7 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
       {/* Top Points Tier Badge */}
       <View style={styles.headerRow}>
         <View style={styles.timerBadge}>
-          <MaterialCommunityIcons name="clock-outline" size={14} color="#F59E0B" />
+          <Text style={{ fontSize: 13, marginRight: 4 }}>⏱️</Text>
           <Text style={styles.timerBadgeText}>
             {revealed ? 'تم الكشف' : `${Math.max(0, revealDuration - currentSec)} ثواني`}
           </Text>
@@ -142,7 +141,7 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
         <Image
           source={{ uri: imageUrl }}
           style={styles.image}
-          resizeMode="cover"
+          resizeMode="contain"
           blurRadius={Platform.OS === 'web' ? blurRadius : Math.max(1, blurRadius)}
         />
 
@@ -158,9 +157,9 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
         {/* Frozen Alert Banner */}
         {frozenAt && !revealed && (
           <Animated.View style={[styles.frozenBanner, { transform: [{ scale: pulseAnim }] }]}>
-            <MaterialCommunityIcons name="pause-circle" size={18} color="#0F172A" />
+            <Text style={{ fontSize: 16, marginRight: 4 }}>⏸️</Text>
             <Text style={styles.frozenBannerText}>
-              ⏸️ تم التجميد! {buzzedByName ? `${buzzedByName} داس في ثانية ${currentSec}` : `في الثانية ${currentSec}`}
+              تم التجميد! {buzzedByName ? `${buzzedByName} داس في ثانية ${currentSec}` : `في الثانية ${currentSec}`}
             </Text>
           </Animated.View>
         )}
@@ -168,7 +167,7 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
         {/* Revealed Name Banner */}
         {revealed && (
           <View style={styles.revealedBanner}>
-            <MaterialCommunityIcons name="check-decagram" size={20} color="#F59E0B" />
+            <Text style={{ fontSize: 18, marginRight: 6 }}>🏆</Text>
             <Text style={styles.revealedBannerText}>
               {mediaTitle || 'إجابة صحيحة!'}
             </Text>
@@ -200,8 +199,8 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
             }}
             activeOpacity={0.8}
           >
-            <MaterialCommunityIcons name="eye" size={14} color="#0F172A" />
-            <Text style={styles.manualRevealBtnText}>كشف الصورة بالكامل 👁️</Text>
+            <Text style={{ fontSize: 14, marginLeft: 4 }}>👁️</Text>
+            <Text style={styles.manualRevealBtnText}>كشف الصورة بالكامل</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -266,11 +265,11 @@ const styles = StyleSheet.create({
   },
   imageWrapper: {
     width: '100%',
-    height: 190,
+    height: 240,
     borderRadius: 16,
     overflow: 'hidden',
     position: 'relative',
-    backgroundColor: '#070C18',
+    backgroundColor: '#050811',
     borderWidth: 2,
     borderColor: 'rgba(255, 255, 255, 0.15)',
     alignItems: 'center',

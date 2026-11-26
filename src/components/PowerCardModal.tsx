@@ -8,11 +8,11 @@ import {
   Animated,
   ImageBackground,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { PowerCard } from '../types';
 import { getPowerCardById } from '../data/powerCards';
 import { soundManager } from '../services/soundService';
+import { getPowerCardEmoji } from '../constants/emojis';
 
 const bgNeon = require('../../assets/bg-neon.jpg');
 
@@ -139,7 +139,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
           }}
           activeOpacity={0.8}
         >
-          <MaterialCommunityIcons name="close" size={24} color="#F8FAFC" />
+          <Text style={{ fontSize: 20, color: '#F8FAFC' }}>✕</Text>
         </TouchableOpacity>
 
         {/* Animated 3D Card Container */}
@@ -184,7 +184,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                     <Text style={styles.suitSymbolGold}>♠</Text>
                   </View>
                   <View style={styles.topCasinoPill}>
-                    <MaterialCommunityIcons name="poker-chip" size={14} color="#F59E0B" />
+                    <Text style={{ fontSize: 13, marginRight: 4 }}>🎲</Text>
                     <Text style={styles.topCasinoPillText}>VIP CASINO CLUB</Text>
                   </View>
                   <View style={styles.suitBadge}>
@@ -196,7 +196,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                 <View style={styles.backCenterMedallion}>
                   <View style={styles.backInnerRing}>
                     <View style={styles.chipGlowWrapper}>
-                      <MaterialCommunityIcons name="cards-playing" size={56} color="#F59E0B" />
+                      <Text style={{ fontSize: 52, textAlign: 'center' }}>🃏</Text>
                     </View>
                     <Text style={styles.backTitleMain}>كازينو الألعاب</Text>
                     <View style={styles.backGoldDividerRow}>
@@ -263,7 +263,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
               <View style={styles.frontContent}>
                 {/* Who activated banner */}
                 <View style={[styles.playerBanner, { backgroundColor: `${card.color}25`, borderColor: card.color }]}>
-                  <MaterialCommunityIcons name={isInspect ? 'eye-outline' : 'lightning-bolt'} size={16} color={card.color} />
+                  <Text style={{ fontSize: 15, marginLeft: 4 }}>{isInspect ? '👁️' : '⚡'}</Text>
                   <Text style={[styles.playerBannerText, { color: card.color }]}>
                     {isSelf
                       ? 'أنت سحبت كارت الحظ! 🎲'
@@ -286,7 +286,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                     ]}
                   />
                   <View style={[styles.iconInnerCircle, { backgroundColor: '#070C18', borderColor: card.color }]}>
-                    <MaterialCommunityIcons name={card.icon as any} size={46} color={card.color} />
+                    <Text style={{ fontSize: 44, textAlign: 'center' }}>{getPowerCardEmoji(card.id)}</Text>
                   </View>
                 </View>
 
@@ -307,7 +307,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                 {/* Practical Example Box (💡 مثال) */}
                 <View style={styles.exampleBox}>
                   <View style={styles.exampleHeader}>
-                    <MaterialCommunityIcons name="lightbulb-on" size={14} color="#F59E0B" />
+                    <Text style={{ fontSize: 13, marginRight: 4 }}>💡</Text>
                     <Text style={styles.exampleHeaderText}>توضيح بمثال عملي:</Text>
                   </View>
                   <Text style={styles.exampleText}>{card.example}</Text>

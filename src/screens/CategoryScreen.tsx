@@ -11,11 +11,11 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
 import { questionService } from '../services/questionService';
 import { CategoryRouletteModal } from '../components/CategoryRouletteModal';
+import { getCategoryEmoji } from '../constants/emojis';
 
 interface CategoryScreenProps {
   onBack: () => void;
@@ -79,7 +79,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backBtn} onPress={onBack} activeOpacity={0.7}>
-          <MaterialCommunityIcons name="arrow-right" size={24} color={theme.colors.textPrimary} />
+          <Text style={{ fontSize: 20, color: theme.colors.textPrimary }}>→</Text>
         </TouchableOpacity>
 
         <Text style={styles.headerTitle}>اختيار الفئات ({categories.length})</Text>
@@ -90,7 +90,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
             onPress={() => setShowRoulette(true)}
             activeOpacity={0.7}
           >
-            <MaterialCommunityIcons name="slot-machine" size={18} color={theme.colors.gold} />
+            <Text style={{ fontSize: 16 }}>🎰</Text>
             <Text style={styles.rouletteTriggerText}>عجلة الحظ</Text>
           </TouchableOpacity>
 
@@ -142,11 +142,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                         { backgroundColor: cat.color ? `${cat.color}25` : theme.colors.amberGlow },
                       ]}
                     >
-                      <MaterialCommunityIcons
-                        name={(cat.icon as any) || 'help-circle-outline'}
-                        size={26}
-                        color={cat.color || theme.colors.gold}
-                      />
+                      <Text style={{ fontSize: 24 }}>{getCategoryEmoji(cat.id)}</Text>
                     </View>
                     <View
                       style={[
@@ -155,7 +151,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                       ]}
                     >
                       {isSelected && (
-                        <MaterialCommunityIcons name="check" size={16} color={theme.colors.background} />
+                        <Text style={{ fontSize: 13, fontWeight: '900', color: theme.colors.background }}>✓</Text>
                       )}
                     </View>
                   </View>
@@ -166,11 +162,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
                   ) : null}
 
                   <View style={styles.badge}>
-                    <MaterialCommunityIcons
-                      name="file-question-outline"
-                      size={12}
-                      color={remaining > 0 ? theme.colors.gold : theme.colors.danger}
-                    />
+                    <Text style={{ fontSize: 11, marginRight: 3 }}>❓</Text>
                     <Text
                       style={[
                         styles.badgeText,
@@ -216,11 +208,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
           >
             ابدأ اللعب ({selectedIds.length} فئات مختارة)
           </Text>
-          <MaterialCommunityIcons
-            name="play-circle-outline"
-            size={24}
-            color={selectedIds.length === 0 ? theme.colors.textMuted : theme.colors.background}
-          />
+          <Text style={{ fontSize: 20, color: selectedIds.length === 0 ? theme.colors.textMuted : theme.colors.background, marginLeft: 6 }}>▶</Text>
         </TouchableOpacity>
       </View>
 

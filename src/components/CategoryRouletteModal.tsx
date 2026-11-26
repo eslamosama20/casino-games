@@ -8,7 +8,6 @@ import {
   Easing,
   Modal,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
@@ -64,7 +63,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
       <View style={styles.overlay}>
         <View style={styles.card}>
           <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={spinning}>
-            <MaterialCommunityIcons name="close" size={24} color={theme.colors.textMuted} />
+            <Text style={{ fontSize: 20, color: theme.colors.textMuted }}>✕</Text>
           </TouchableOpacity>
 
           <Text style={styles.title}>عجلة الحظ للفئات 🎡</Text>
@@ -74,7 +73,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
           <View style={styles.wheelContainer}>
             {/* Pointer */}
             <View style={styles.pointer}>
-              <MaterialCommunityIcons name="menu-down" size={42} color={theme.colors.gold} />
+              <Text style={{ fontSize: 28, textAlign: 'center', color: theme.colors.gold }}>▼</Text>
             </View>
 
             <Animated.View
@@ -84,7 +83,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
               ]}
             >
               <View style={styles.wheelInner}>
-                <MaterialCommunityIcons name="slot-machine" size={60} color={theme.colors.gold} />
+                <Text style={{ fontSize: 56, textAlign: 'center' }}>🎰</Text>
               </View>
             </Animated.View>
           </View>

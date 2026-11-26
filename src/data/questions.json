@@ -26074,366 +26074,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "blur_01",
-      "categoryId": "image_blur",
-      "question": "خمن مين صاحب الصورة المشوشة دي؟ (أسطورة كرة القدم المصرية)",
-      "answer": "محمد صلاح",
-      "difficulty": "easy",
-      "hint": "فخر العرب ونجم ليفربول",
-      "options": [
-        "محمد صلاح",
-        "محمد النني",
-        "محمود تريزيجيه",
-        "عمر مرموش"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "محمد صلاح (Mo Salah)",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_02",
-      "categoryId": "image_blur",
-      "question": "خمن مين الفنان الأسطوري صاحب الصورة دي؟",
-      "answer": "عادل إمام",
-      "difficulty": "easy",
-      "hint": "الزعيم وصاحب مدرسة المشاغبين والواد محروس",
-      "options": [
-        "عادل إمام",
-        "سعيد صالح",
-        "سمير غانم",
-        "محمود عبد العزيز"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الزعيم عادل إمام",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_03",
-      "categoryId": "image_blur",
-      "question": "خمن مين الأسطورة التاريخية دي؟ (سيدة الغناء العربي)",
-      "answer": "أم كلثوم",
-      "difficulty": "easy",
-      "hint": "كوكب الشرق وصاحبة أنت عمري",
-      "options": [
-        "أم كلثوم",
-        "أسمهان",
-        "شادية",
-        "نجاة الصغيرة"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "كوكب الشرق أم كلثوم",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_04",
-      "categoryId": "image_blur",
-      "question": "خمن مين اللاعب العالمي صاحب الصورة؟",
-      "answer": "ليونيل ميسي",
-      "difficulty": "easy",
-      "hint": "البرغوث بطل كأس العالم 2022",
-      "options": [
-        "ليونيل ميسي",
-        "كريستيانو رونالدو",
-        "نيمار",
-        "لوكا مودريتش"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "ليونيل ميسي (Leo Messi)",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_05",
-      "categoryId": "image_blur",
-      "question": "خمن مين الممثل القدير العبقري صاحب النظرة دي؟",
-      "answer": "أحمد زكي",
-      "difficulty": "easy",
-      "hint": "النمر الأسود وجسد عبد الناصر والسادات",
-      "options": [
-        "أحمد زكي",
-        "نور الشريف",
-        "محمود ياسين",
-        "يحيى الفخراني"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الإمبراطور أحمد زكي",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_06",
-      "categoryId": "image_blur",
-      "question": "خمن المعلم السياحي التاريخي المشهور في الصورة؟",
-      "answer": "الأهرامات وأبو الهول",
-      "difficulty": "easy",
-      "hint": "إحدى عجائب الدنيا السبع في الجيزة",
-      "options": [
-        "الأهرامات وأبو الهول",
-        "برج إيفل",
-        "تاج محل",
-        "قلعة قايتباي"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "أهرامات الجيزة وأبو الهول",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_07",
-      "categoryId": "image_blur",
-      "question": "خمن مين النجم الكروي المشهور بالصورة؟",
-      "answer": "كريستيانو رونالدو",
-      "difficulty": "easy",
-      "hint": "الدون وصاحب احتفال SIUUU",
-      "options": [
-        "كريستيانو رونالدو",
-        "كريم بنزيما",
-        "كيليان مبابي",
-        "هالاند"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "كريستيانو رونالدو (CR7)",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_08",
-      "categoryId": "image_blur",
-      "question": "خمن مين المطرب المصري العالمي صاحب اللقب \"الهضبة\"؟",
-      "answer": "عمرو دياب",
-      "difficulty": "easy",
-      "hint": "صاحب أغنية نور العين وتملي معاك",
-      "options": [
-        "عمرو دياب",
-        "محمد منير",
-        "إيهاب توفيق",
-        "تامر حسني"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الهضبة عمرو دياب",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_09",
-      "categoryId": "image_blur",
-      "question": "خمن مين النجم الكوميدي المحبوب صاحب الصورة؟",
-      "answer": "أحمد حلمي",
-      "difficulty": "easy",
-      "hint": "بطل فيلم كدة رضا وعسل أسود وإكس لارج",
-      "options": [
-        "أحمد حلمي",
-        "محمد هنيدي",
-        "أحمد مكي",
-        "كريم عبد العزيز"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "البرنس أحمد حلمي",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_10",
-      "categoryId": "image_blur",
-      "question": "خمن مين أسطورة الكورة المصرية صاحب الرقم 22؟",
-      "answer": "محمد أبو تريكة",
-      "difficulty": "easy",
-      "hint": "أمير القلوب وساحر الكرة المصرية في الأهلي ومنتخب مصر",
-      "options": [
-        "محمد أبو تريكة",
-        "محمد بركات",
-        "عماد متعب",
-        "حسني عبد ربه"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الماجيكو محمد أبو تريكة",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_11",
-      "categoryId": "image_blur",
-      "question": "خمن مين الأديب المصري العالمي الحاصل على جائزة نوبل في الأدب؟",
-      "answer": "نجيب محفوظ",
-      "difficulty": "medium",
-      "hint": "صاحب الثلاثية وأولاد حارتنا والحرافيش",
-      "options": [
-        "نجيب محفوظ",
-        "طه حسين",
-        "يوسف إدريس",
-        "توفيق الحكيم"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الأديب العالمي نجيب محفوظ",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_12",
-      "categoryId": "image_blur",
-      "question": "خمن مين أسطورة الكوميديا وصاحب أشهر ضحكة في السينما المصرية؟",
-      "answer": "إسماعيل ياسين",
-      "difficulty": "easy",
-      "hint": "أبو ضحكة جنان وبطل سلسلة أفلام في الجيش والبوليس",
-      "options": [
-        "إسماعيل ياسين",
-        "عبد الفتاح القصري",
-        "زينات صدقي",
-        "شكوكو"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "أبو ضحكة جنان إسماعيل ياسين",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_13",
-      "categoryId": "image_blur",
-      "question": "خمن مين المعشوق الجماهيري وقائد نادي الزمالك التاريخي؟",
-      "answer": "شيكابالا",
-      "difficulty": "easy",
-      "hint": "الأباتشي والساحر الأسمر صاحب القدم اليسرى الصاروخية",
-      "options": [
-        "شيكابالا",
-        "حازم إمام",
-        "أحمد سيد زيزو",
-        "أشرف بن شرقي"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الأباتشي محمود شيكابالا",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_14",
-      "categoryId": "image_blur",
-      "question": "خمن مين العندليب الأسمر صاحب الصورة؟",
-      "answer": "عبد الحليم حافظ",
-      "difficulty": "easy",
-      "hint": "صاحب أغنية سواح وقارئة الفنجان وموعود",
-      "options": [
-        "عبد الحليم حافظ",
-        "فريد الأطرش",
-        "محمد فوزي",
-        "محمد عبد الوهاب"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "العندليب الأسمر عبد الحليم حافظ",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_15",
-      "categoryId": "image_blur",
-      "question": "خمن مين الفنان صاحب الإفيهات الأيقونية \"صعيدي في الجامعة الأمريكية\"؟",
-      "answer": "محمد هنيدي",
-      "difficulty": "easy",
-      "hint": "بطل همام في أمستردام وفول الصين العظيم",
-      "options": [
-        "محمد هنيدي",
-        "أحمد آدم",
-        "هاني رمزي",
-        "أشرف عبد الباقي"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الكوميديان محمد هنيدي",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_16",
-      "categoryId": "image_blur",
-      "question": "خمن المعلم المصري الحديث الشهير الواقع في قلب جزيرة الزمالك؟",
-      "answer": "برج القاهرة",
-      "difficulty": "easy",
-      "hint": "زهرة اللوتس الشهيرة التي يبلغ ارتفاعها 187 متراً",
-      "options": [
-        "برج القاهرة",
-        "مسجد محمد علي",
-        "قلعة صلاح الدين",
-        "السد العالي"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "برج القاهرة (Cairo Tower)",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_17",
-      "categoryId": "image_blur",
-      "question": "خمن مين النجم المحبوب صاحب لقب \"الكينج\"؟",
-      "answer": "محمد منير",
-      "difficulty": "easy",
-      "hint": "ابن النوبة وصاحب صوت الليلة يا سمرا ويونس وشجر الليمون",
-      "options": [
-        "محمد منير",
-        "علي الحجار",
-        "مدحت صالح",
-        "محمد حماقي"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الكينج محمد منير",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_18",
-      "categoryId": "image_blur",
-      "question": "خمن مين النجم الكوميدي والدرامي المتألق صاحب شخصية \"الكبير أوي\"؟",
-      "answer": "أحمد مكي",
-      "difficulty": "easy",
-      "hint": "بطل الكبير وجوني وحزلقوم وفيلم طير إنت",
-      "options": [
-        "أحمد مكي",
-        "بيومي فؤاد",
-        "محمد سلام",
-        "شيكو"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الكبير أوي أحمد مكي",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_19",
-      "categoryId": "image_blur",
-      "question": "خمن مين المهاجم الفرنسي السريع نجم ريال مدريد الحالي؟",
-      "answer": "كيليان مبابي",
-      "difficulty": "easy",
-      "hint": "بطل مونديال 2018 وصاحب الهاتريك في نهائي 2022",
-      "options": [
-        "كيليان مبابي",
-        "كريم بنزيما",
-        "عثمان ديمبيلي",
-        "فينيسيوس جونيور"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "كيليان مبابي (Kylian Mbappé)",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_20",
-      "categoryId": "image_blur",
-      "question": "خمن مين الأستاذ ورائد المسرح الكوميدي صاحب \"سيدتي الجميلة\"؟",
-      "answer": "فؤاد المهندس",
-      "difficulty": "medium",
-      "hint": "مستر إكس الذي لا يموت وعمو فؤاد",
-      "options": [
-        "فؤاد المهندس",
-        "عبد المنعم مدبولي",
-        "نجيب الريحاني",
-        "توفيق الدقن"
-      ],
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
-      "mediaTitle": "الأستاذ فؤاد المهندس",
-      "revealDuration": 10
-    },
-    {
       "id": "audio_01",
       "categoryId": "audio_mystery",
       "question": "مين صاحب الإفيه الشهير: \"أنا لا بكذب ولا بتجمل.. أنا إنسان واضح\"؟",
@@ -26686,226 +26326,6 @@
       ],
       "mediaType": "audio_clip",
       "mediaTitle": "إفيه كركر - محمد سعد",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_001",
-      "categoryId": "image_blur",
-      "question": "من صاحب هذه الصورة المشوشة؟ ركز في التفاصيل قبل ما توضح بالكامل!",
-      "answer": "محمد صلاح (Mo Salah)",
-      "hint": "فخر العرب وهداف ليفربول ومنتخب مصر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_002",
-      "categoryId": "image_blur",
-      "question": "من هو هذا الزعيم والأسطورة السينمائية المصرية صاحب الصورة؟",
-      "answer": "عادل إمام (الزعيم)",
-      "hint": "أشهر ممثل كوميدي وزعيم الفن المصري!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_003",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة النمر الأسود والبريء والإمبراطور في الصورة المشوشة؟",
-      "answer": "أحمد زكي",
-      "hint": "عبقري التمثيل المصري وتقمص الشخصيات (السادات وعبد الحليم وطه حسين)",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_004",
-      "categoryId": "image_blur",
-      "question": "خمن صاحبة الصورة المشوشة: كوكب الشرق وسيدة الغناء العربي!",
-      "answer": "أم كلثوم (ست الكل)",
-      "hint": "صوت مصر الأشهر والمنديل والنظارة السوداء الشهيرة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_005",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المعلم التاريخي العالمي المشوش في الصورة؟",
-      "answer": "أهرامات الجيزة وأبو الهول",
-      "hint": "إحدى عجائب الدنيا السبع في مصر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_006",
-      "categoryId": "image_blur",
-      "question": "من هو العالم المصري الحاصل على جائزة نوبل في الكيمياء في الصورة؟",
-      "answer": "د. أحمد زويل",
-      "hint": "رائد كيمياء الفيمتو ثانية (Femtochemistry)!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_007",
-      "categoryId": "image_blur",
-      "question": "من هو جراح القلوب العالمي الملقب بملك القلوب في الصورة المشوشة؟",
-      "answer": "د. مجدي يعقوب",
-      "hint": "مؤسس مركز أسوان للقلب ورائد زراعة الأعضاء في العالم!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_008",
-      "categoryId": "image_blur",
-      "question": "خمن صاحب الصورة: رائد الرواية العربية والحائز على نوبل للآداب!",
-      "answer": "نجيب محفوظ",
-      "hint": "صاحب الثلاثية (بين القصرين، قصر الشوق، السكرية) وأولاد حارتنا!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_009",
-      "categoryId": "image_blur",
-      "question": "من هو نجم هوليوود والسينما المصرية ولورنس العرب في الصورة المشوشة؟",
-      "answer": "عمر الشريف",
-      "hint": "بطل فيلم دكتور زيفاجو وصراع في الوادي!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_010",
-      "categoryId": "image_blur",
-      "question": "من هو نجم الكوميديا صاحب أفلام (صعيدي في الجامعة الأمريكية وفول الصين العظيم)؟",
-      "answer": "محمد هنيدي",
-      "hint": "قصير القامة وصاحب أكبر إيرادات في تاريخ السينما الشبابية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_011",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة النادي الأهلي ورئيسه الحالي وبيبو الكرة المصرية؟",
-      "answer": "محمود الخطيب (بيبو)",
-      "hint": "اللاعب المصري الوحيد الفائز بالكرة الذهبية الإفريقية عام 1983!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_012",
-      "categoryId": "image_blur",
-      "question": "من هو نجم نادي الزمالك والأباتشي وساحر الكرة المصرية في الصورة؟",
-      "answer": "محمود عبد الرازق (شيكابالا)",
-      "hint": "صاحب القدم اليسرى الساحرة وقائد القلعة البيضاء!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_013",
-      "categoryId": "image_blur",
-      "question": "من هو أمير القلوب وأسطورة النادي الأهلي ومنتخب مصر صاحب القميص 22؟",
-      "answer": "محمد أبو تريكة (أمير القلوب)",
-      "hint": "صاحب قذيفة الصفاقسي 2006 وهدف حسم أمم إفريقيا 2008!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_014",
-      "categoryId": "image_blur",
-      "question": "من هو العميد والهداف التاريخي لمنتخب مصر ومديره الفني الحالي في الصورة؟",
-      "answer": "حسام حسن (العميد)",
-      "hint": "سجل هدف التأهل لكأس العالم 1990 أمام الجزائر وقاد الفراعنة لبطولات إفريقية تاريخية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_015",
-      "categoryId": "image_blur",
-      "question": "من هو أستاذ الكوميديا والمسرح وصاحب مسرحية (مدرسة المشاغبين وسك على بناتك)؟",
-      "answer": "فؤاد المهندس (الأستاذ)",
-      "hint": "رفيق درب شويكار وكلمته الشهيرة: كلمني شكراً ولا إف إم؟",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_016",
-      "categoryId": "image_blur",
-      "question": "خمن صاحب الصورة المشوشة: العندليب الأسمر وأسطورة الغناء العاطفي والوطني!",
-      "answer": "عبد الحليم حافظ (العندليب الأسمر)",
-      "hint": "غنى قارئة الفنجان وموعود وسواح وأحضان القنال!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_017",
-      "categoryId": "image_blur",
-      "question": "من هي دلوعة السينما المصرية وصاحبة أغنية (يا حبيبتي يا مصر) ومعبودة الجماهير؟",
-      "answer": "شادية (فاطمة كمال شاكر)",
-      "hint": "بطلة فيلم الزوجة 13 ومسرحية ريا وسكينة!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_018",
-      "categoryId": "image_blur",
-      "question": "من هو أشهر كوميديان صاحب الفم والضحكة الأشهر وسلسلة أفلام باسمه في الجيش والأسطول؟",
-      "answer": "إسماعيل ياسين (أبو ضحكة جنان)",
-      "hint": "إسماعيل يس في الجيش والبوليس الحربي والطيران ومستشفى المجانين!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_019",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة فرقة ثلاثي أضواء المسرح وبطوطة وفطوطة في الصورة؟",
-      "answer": "سمير غانم (فطوطة وسفروت)",
-      "hint": "بطل مسرحية المتزوجون وجحا يحكم المدينة وأهلا يا دكتور!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_020",
-      "categoryId": "image_blur",
-      "question": "من هو نجم السينما صاحب أفلام (الفيل الأزرق، ولاد العم، كيرة والجن، الباشا تلميذ)؟",
-      "answer": "كريم عبد العزيز",
-      "hint": "ابن المخرج الكبير محمد عبد العزيز وأعلى ممثل تحقيقاً للإيرادات حالياً!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
       "revealDuration": 10
     },
     {
@@ -27162,886 +26582,6 @@
       "mediaType": "audio_clip",
       "mediaTitle": "تتر بوابة الحلواني الخالد 🎶",
       "revealDuration": 8
-    },
-    {
-      "id": "blur_021",
-      "categoryId": "image_blur",
-      "question": "من هي سندريلا الشاشة العربية ونجمة فيلم (خلي بالك من زوزو و صغيرة على الحب)؟",
-      "answer": "سعاد حسني (السندريلا)",
-      "hint": "أيقونة الأنوثة والبهجة في السينما المصرية مع أحمد زكي وحسين فهمي!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_022",
-      "categoryId": "image_blur",
-      "question": "من هو فتى الشاشة الأول ونجم أفلام (الرجل الثاني، الزوجة 13، صراع في النيل)؟",
-      "answer": "رشدي أباظة",
-      "hint": "دنجوان السينما المصرية والأكثر وسامة وجاذبية في السينما الكلاسيكية!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_023",
-      "categoryId": "image_blur",
-      "question": "من هو عملاق الدراما والسينما ونجم (لن أعيش في جلباب أبي و عائلة الحاج متولي)؟",
-      "answer": "نور الشريف",
-      "hint": "عبد الغفور البرعي وكمال في الثلاثية وبطل فيلم حبيبي دائماً والهروب إلى القمة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_024",
-      "categoryId": "image_blur",
-      "question": "من هو دكتور الفن المصري ونجم مسلسلات (ليالي الحلمية، يتربى في عزو، الليل وآخره)؟",
-      "answer": "يحيى الفخراني",
-      "hint": "سليم البدري ورحيم المنشاوي وبابا نويل الدراما الرمضانية وطبيب بشري في الأصل!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_025",
-      "categoryId": "image_blur",
-      "question": "من هو نجم الأكشن والسينما المصرية صاحب أفلام (ولاد رزق، الممر، كيرة والجن، ملاكي إسكندرية)؟",
-      "answer": "أحمد عز (رضا رزق)",
-      "hint": "قائد تشكيل ولاد رزق ومحبوب الجماهير في أفلام الحركة والإثارة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_026",
-      "categoryId": "image_blur",
-      "question": "من هي نجمة مصر الأولى وبطلة أفلام (سهر الليالي، تيمور وشفيقة، أفراح القبة، لعبة نيوتن)؟",
-      "answer": "منى زكي",
-      "hint": "زوجة النجم أحمد حلمي وإحدى أهم ممثلات جيلها سينمائياً وتلفزيونياً!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_027",
-      "categoryId": "image_blur",
-      "question": "من هو نجم الكوميديا صاحب أفلام (كده رضا، عسل أسود، إكس لارج، ظرف طارق)؟",
-      "answer": "أحمد حلمي",
-      "hint": "مقدم برنامج لعب عيال وبطل أفلام السينما الكوميدية الهادفة الأكثر شعبية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_028",
-      "categoryId": "image_blur",
-      "question": "من هي مارلين مونرو الشرق ونجمة أفلام (باب الحديد، إشاعة حب، صراع في النيل)؟",
-      "answer": "هند رستم",
-      "hint": "هنومة في محطة مصر وبطلة روائع المخرج يوسف شاهين وفطين عبد الوهاب!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_029",
-      "categoryId": "image_blur",
-      "question": "من هو المخرج العالمي صاحب جائزة اليوبيل الذهبي لمهرجان كان وأفلام (باب الحديد، المصير، الأرض)؟",
-      "answer": "يوسف شاهين (جو)",
-      "hint": "صاحب النظارة الشهيرة الذي اكتشف عمر الشريف وقدم سيرته الذاتية في إسكندرية ليه!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_030",
-      "categoryId": "image_blur",
-      "question": "من هو النجم الكوميدي والسينمائي صاحب شخصيات (اللمبي، بوحة، عوكل، كركر، تتح)؟",
-      "answer": "محمد سعد (اللمبي)",
-      "hint": "صاحب أعلى إيرادات في بداية الألفية وصاحب لغة الجسد الكوميدية الفريدة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_031",
-      "categoryId": "image_blur",
-      "question": "من هو نجم هوليوود الحائز على الأوسكار وبطل أفلام (تيتانيك، إنسبشن، العائد The Revenant)؟",
-      "answer": "ليوناردو دي كابريو (Leonardo DiCaprio)",
-      "hint": "بطل فيلم ذئب وول ستريت وشاتر آيلاند وتيتانيك مع كيت وينسلت!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_032",
-      "categoryId": "image_blur",
-      "question": "من هو بطل سلسلة أفلام المهمة المستحيلة (Mission Impossible) و توب جن (Top Gun)؟",
-      "answer": "توم كروز (Tom Cruise)",
-      "hint": "الممثل الذي يؤدي أخطر المشاهد والحركات الانتحارية بنفسه بدون دوبلير!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_033",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة السينما وبطل فيلم العراب (The Godfather) والوجه ذو الندبة (Scarface)؟",
-      "answer": "آل باتشينو (Al Pacino)",
-      "hint": "مايكل كورليوني وتوني مونتانا في أفلام العصابات الأكثر شهرة في التاريخ!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_034",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة السينما وبطل أفلام (سائق التاكسي Taxi Driver، الثور الهائج، الأيرلندي)؟",
-      "answer": "روبرت دي نيرو (Robert De Niro)",
-      "hint": "شريك المخرج مارتن سكورسيزي التاريخي وأحد أعظم ممثلي هوليوود!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_035",
-      "categoryId": "image_blur",
-      "question": "من هو بطل ثلاثية أفلام ماتريكس (The Matrix) وسلسلة جون ويك (John Wick)؟",
-      "answer": "كيانو ريفز (Keanu Reeves)",
-      "hint": "المقاتل نيو الذي يرتدي المعطف الأسود ويتفادى الرصاص بحركات بطيئة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_036",
-      "categoryId": "image_blur",
-      "question": "من هو الممثل صاحب الصوت الرخيم الأشهر وبطل فيلم الخلاص من شوشانك (Shawshank Redemption)؟",
-      "answer": "مورجان فريمان (Morgan Freeman)",
-      "hint": "الراوي الصوتي الأيقوني لأفلام الوثائقيات وأحد أساطير السينما الأمريكية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_037",
-      "categoryId": "image_blur",
-      "question": "من هو نجم هوليوود وبطل أفلام (نادي القتال Fight Club، تروي Troy، ذات مرة في هوليوود)؟",
-      "answer": "براد بيت (Brad Pitt)",
-      "hint": "أحد أشهر نجوم السينما العالمية والزوج السابق للنجمة أنجلينا جولي!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_038",
-      "categoryId": "image_blur",
-      "question": "من هو بطل فيلم أوبنهايمر (Oppenheimer) ومسلسل بيكي بلاندرز (Peaky Blinders)؟",
-      "answer": "كيليان مورفي (Cillian Murphy - توماس شيلبي)",
-      "hint": "صاحب العيون الزرقاء وقبعة العصابات الشهيرة في شوارع برمنغهام!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_039",
-      "categoryId": "image_blur",
-      "question": "من هو المخرج العبقري صاحب أفلام (فارس الظلام The Dark Knight، إنسبشن، بين النجوم Interstellar)؟",
-      "answer": "كريستوفر نولان (Christopher Nolan)",
-      "hint": "أستاذ ألاعيب الزمن والتأثيرات العملية الحقيقية بدون مبالغة في المؤثرات الرقمية!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_040",
-      "categoryId": "image_blur",
-      "question": "من هو بطل سلسلة أفلام قراصنة الكاريبي بشخصية الكابتن جاك سبارو؟",
-      "answer": "جوني ديب (Johnny Depp)",
-      "hint": "بطل أفلام إدوارد ذو الأيدي المقصات وسويني تود وتشارلي ومصنع الشوكولاتة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_041",
-      "categoryId": "image_blur",
-      "question": "من هو نجم السينما وبطل أفلام الحركة والترمينيتور (Terminator) وحاكم كاليفورنيا السابق؟",
-      "answer": "أرنولد شوارزنيجر (Arnold Schwarzenegger)",
-      "hint": "بطل كمال الأجسام مستر أولمبيا 7 مرات وصاحب جملة I will be back!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_042",
-      "categoryId": "image_blur",
-      "question": "من هو نجم أفلام رامبو (Rambo) وسلسلة الملاكمة الشهيرة روكي بالبوا (Rocky)؟",
-      "answer": "سيلفستر ستالوني (Sylvester Stallone)",
-      "hint": "الملاكم الإيطالي الذي صعد درجات فيلادلفيا وسلسلة مرتزقة The Expendables!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_043",
-      "categoryId": "image_blur",
-      "question": "من هي بطلة أفلام تومب رايدر (Lara Croft) ومستر آند مسز سميث الحائزة على الأوسكار؟",
-      "answer": "أنجلينا جولي (Angelina Jolie)",
-      "hint": "سفيرة النوايا الحسنة للأمم المتحدة وإحدى أشهر نجمات هوليوود في الألفية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_044",
-      "categoryId": "image_blur",
-      "question": "من هو بطل سلسلة أفلام فاست آند فيوريوس (Fast & Furious) بشخصية دومينيك توريتو؟",
-      "answer": "فين ديزل (Vin Diesel)",
-      "hint": "صاحب العضلات المفتولة والرأس الحليق وشعار العائلة Family فوق كل شيء!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_045",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة فنون القتال الآسيوية وبطل أفلام (ساعة الذروة Rush Hour والشرطي الفوضوي)؟",
-      "answer": "جاكي شان (Jackie Chan)",
-      "hint": "نجم الكونغ فو الكوميدي الذي يقفز بين المباني دون الاستعانة ببديل!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_046",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة كرة القدم الأرجنتينية وبطل كأس العالم 2022 والفائز بالكرة الذهبية 8 مرات؟",
-      "answer": "ليونيل ميسي (Lionel Messi)",
-      "hint": "البرغوث أسطورة برشلونة وإنتر ميامي وقائد التانجو المتوج في قطر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_047",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة البرتغال والهداف التاريخي لكرة القدم وريال مدريد والنصر السعودي؟",
-      "answer": "كريستيانو رونالدو (Cristiano Ronaldo - CR7)",
-      "hint": "الدون صاحب قفزة الهيد التاريخية واحتفال السيووو الشهير!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_048",
-      "categoryId": "image_blur",
-      "question": "من هو الأسطورة الأرجنتيني صاحب هدف يد الله في مونديال 1986 وبطل نابولي التاريخي؟",
-      "answer": "دييجو أرماندو مارادونا (Diego Maradona)",
-      "hint": "الرقم 10 الأشهر في تاريخ كأس العالم وساحر كرة القدم الأبدي!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_049",
-      "categoryId": "image_blur",
-      "question": "من هو الجوهرة السوداء البرازيلية واللاعب الوحيد المتوج بكأس العالم 3 مرات؟",
-      "answer": "بيليه (Pelé)",
-      "hint": "ملك كرة القدم وهداف نادي سانتوس والمنتخب البرازيلي في 1958 و1962 و1970!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_050",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة فرنسا وريال مدريد صاحب الهدف التاريخي في نهائي الأبطال 2002؟",
-      "answer": "زين الدين زيدان (Zinedine Zidane - زيزو)",
-      "hint": "بطل مونديال 1998 والمدرب التاريخي الذي قاد الملكي لثلاثية الأبطال المتتالية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_051",
-      "categoryId": "image_blur",
-      "question": "من هو ساحر السامبا البرازيلية وصاحب الابتسامة الكروية الأشهر في برشلونة وميلان؟",
-      "answer": "رونالدينيو (Ronaldinho Gaúcho)",
-      "hint": "صاحب المهارات الاستعراضية التي صفقت لها جماهير سانتياغو برنابيو!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_052",
-      "categoryId": "image_blur",
-      "question": "من هو الظاهرة البرازيلية وهداف مونديال 2002 ونجم إنتر وميلان والريال والبارسا؟",
-      "answer": "رونالدو نازاريو (Ronaldo - الظاهرة)",
-      "hint": "صاحب القصة الشهيرة في نهائي كأس العالم 2002 وأسرع مهاجم في التاريخ بمراوغة الحراس!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_053",
-      "categoryId": "image_blur",
-      "question": "من هو النجم الفرنسي السريع وبطل مونديال 2018 وهداف ريال مدريد وباريس؟",
-      "answer": "كيليان مبابي (Kylian Mbappé)",
-      "hint": "سجل هاتريك في نهائي كأس العالم 2022 بقطر أمام الأرجنتين!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_054",
-      "categoryId": "image_blur",
-      "question": "من هو المهاجم النرويجي العملاق والماكينة التهديفية لنادي مانشستر سيتي؟",
-      "answer": "إيرلينج هالاند (Erling Haaland)",
-      "hint": "حطم الرقم القياسي للأهداف في موسم واحد بالدوري الإنجليزي الممتاز!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_055",
-      "categoryId": "image_blur",
-      "question": "من هو السد العالي وأسطورة حراسة مرمى منتخب مصر والأهلي والفائز بأمم إفريقيا 4 مرات؟",
-      "answer": "عصام الحضري (السد العالي)",
-      "hint": "أكبر لاعب سناً يشارك في تاريخ كأس العالم (مونديال روسيا 2018 ضد السعودية)!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_056",
-      "categoryId": "image_blur",
-      "question": "من هو حارس عرين النادي الأهلي ومنتخب مصر وبطل إفريقيا التاريخي في الصورة المشوشة؟",
-      "answer": "محمد الشناوي (الأخطبوط)",
-      "hint": "رجل مباراة مصر وأوروجواي في كأس العالم 2018 وقائد بطولات القلعة الحمراء!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_057",
-      "categoryId": "image_blur",
-      "question": "من هو صخرة دفاع منتخب مصر والنادي الأهلي الملقب بقلب الأسد؟",
-      "answer": "وائل جمعة (الصخرة)",
-      "hint": "أحد أقوى المدافعين في تاريخ قارة إفريقيا وأوقف دروجبا وإيتو في أوج تألقهم!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_058",
-      "categoryId": "image_blur",
-      "question": "من هو الزئبقي ونجم خط وسط الأهلي ومنتخب مصر صاحب المهارة والسرعة الفائقة؟",
-      "answer": "محمد بركات (الزئبقي)",
-      "hint": "صاحب هدف الفوز بالدوري 2009 ضد الإسماعيلي ومفتاح الجيل الذهبي لمانويل جوزيه!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_059",
-      "categoryId": "image_blur",
-      "question": "من هو العالمي ونجم هجوم توتنهام ومارسيليا وروما وسيلتا فيجو ومدرب الزمالك السابق؟",
-      "answer": "أحمد حسام (ميدو)",
-      "hint": "أصغر محترف مصري في أوروبا وصاحب التجربة الاحترافية الأكبر في إنجلترا وإيطاليا!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_060",
-      "categoryId": "image_blur",
-      "question": "من هو نجم هجوم منتخب مصر وآينتراخت فرانكفورت الألماني المتألق في البوندسليجا؟",
-      "answer": "عمر مرموش",
-      "hint": "هداف الدوري الألماني وأفضل مسدد للكرات الثابتة في أوروبا حالياً!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_061",
-      "categoryId": "image_blur",
-      "question": "من هو الجناح الطائر لنادي الزمالك ومنتخب مصر وأفضل صانع ألعاب في الدوري المصري؟",
-      "answer": "أحمد مصطفى (زيزو)",
-      "hint": "رجل ركلات الجزاء الحاسمة وقائد انتصارات الفارس الأبيض الإفريقية والمحلية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_062",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة الملاكمة للوزن الثقيل الملقب برياضي القرن وصاحب مقولة (يطير كالفراشة ويلدغ كالنحلة)؟",
-      "answer": "محمد علي كلاي (Muhammad Ali)",
-      "hint": "بطل معركة كينشاسا التاريخية ضد جورج فورمان وأشهر رياضي في التاريخ الحديث!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_063",
-      "categoryId": "image_blur",
-      "question": "من هو أسرع إنسان في التاريخ وصاحب الرقم القياسي العالمي لسباق 100 متر (9.58 ثانية)؟",
-      "answer": "يوسين بولت (Usain Bolt)",
-      "hint": "العداء الجامايكي صاحب الاحتفال الشهير بوضعية البرق وسهم الصاعقة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_064",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة التنس السويسري وكوكب التنس الحائز على 20 لقباً في البطولات الكبرى (جراند سلام)؟",
-      "answer": "روجيه فيدرير (Roger Federer)",
-      "hint": "سيد الملاعب العشبية في ويمبلدون وأنيق لعبة التنس العالمية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_065",
-      "categoryId": "image_blur",
-      "question": "من هو ماتادور التنس الإسباني وملك الملاعب الترابية الحائز على بطولة رولان جاروس 14 مرة؟",
-      "answer": "رافائيل نادال (Rafael Nadal)",
-      "hint": "المقاتل الإسباني الأعسر ورمز العزيمة الحديدية والقتال حتى آخر نقطة!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_066",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المعلم المعماري الشهير في العاصمة الفرنسية باريس في الصورة المشوشة؟",
-      "answer": "برج إيفل (Eiffel Tower)",
-      "hint": "البرج الحديدي الأشهر المطل على نهر السين ورمز مدينة النور والجمال!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_067",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المسرح الروماني الأثري التاريخي في قلب العاصمة الإيطالية روما؟",
-      "answer": "الكولوسيوم (Colosseum)",
-      "hint": "حلبة قتال المصارعين الرومان وأحد أهم معالم عصر الإمبراطورية الرومانية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_068",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا الضريح الرخامي الأبيض الفخم في مدينة أغرا بالهند وأحد عجائب الدنيا؟",
-      "answer": "تاج محل (Taj Mahal)",
-      "hint": "شيده الإمبراطور شاه جهان تخليداً لذكرى زوجته ممتاز محل!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_069",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا التمثال العملاق الشهير الذي يحمل شعلة الحرية في ميناء نيويورك؟",
-      "answer": "تمثال الحرية (Statue of Liberty)",
-      "hint": "أهدته فرنسا للولايات المتحدة في أواخر القرن التاسع عشر كرمز للصداقة والحرية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_070",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا البرج ذو الساعة الشهيرة فوق مبنى البرلمان البريطاني في لندن؟",
-      "answer": "برج ساعة بيج بن (Big Ben)",
-      "hint": "رمز لندن الأشهر المطل على نهر التايمز وأدق دقات ساعة في العالم!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_071",
-      "categoryId": "image_blur",
-      "question": "ما هي هذه الأعجوبة العسكرية والهندسية الأطول في العالم وتمتد لآلاف الكيلومترات؟",
-      "answer": "سور الصين العظيم (Great Wall of China)",
-      "hint": "شيدته الأسر الإمبراطورية لحماية حدودها الشمالية من هجمات المغول والبدو!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_072",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا البرج الأبيض الإيطالي المائل الشهير الذي تحداه الجاذبية لقرون؟",
-      "answer": "برج بيزا المائل (Leaning Tower of Pisa)",
-      "hint": "برج جرس كاتدرائية بيزا الذي أجرى عليه جاليليو تجارب السقوط الحر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_073",
-      "categoryId": "image_blur",
-      "question": "ما هي هذه المدينة الوردية المنحوتة في الصخر الأردني وإحدى عجائب الدنيا السبع؟",
-      "answer": "البتراء (Petra - الأردن)",
-      "hint": "عاصمة الأنباط التاريخية وموقع الخزنة والسيق الأثري الساحر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1579606032834-deaff84138e3?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_074",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا البرج الذي يعد أعلى ناطحة سحاب شيدها الإنسان في العالم ويقع في دبي؟",
-      "answer": "برج خليفة (Burj Khalifa)",
-      "hint": "بارتفاع 828 متراً ويضم أكثر من 160 طابقاً ونافورة دبي الراقصة عند قدميه!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_075",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المبنى الأيقوني بتصميمه الذي يشبه الأشرعة البيضاء في ميناء أستراليا الشهير؟",
-      "answer": "دار أوبرا سيدني (Sydney Opera House)",
-      "hint": "إحدى أعظم التحف المعمارية للقرن العشرين وتقع بجوار جسر الميناء!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_076",
-      "categoryId": "image_blur",
-      "question": "ما هي هذه القلعة التاريخية الشامخة فوق جبل المقطم في القاهرة التي بناها القائد الكردي؟",
-      "answer": "قلعة صلاح الدين الأيوبي (قلعة الجبل)",
-      "hint": "تضم مسجد محمد علي ذو القباب الرخامية ومتحف الشرطة والأسلحة الحربية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_077",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المعبد المصري العملاق المنحوت في جبل النوبة بأربعة تماثيل للملك رمسيس الثاني؟",
-      "answer": "معبد أبو سمبل (Abu Simbel)",
-      "hint": "تتعامد عليه الشمس مرتين سنوياً في يوم مولد الملك ويوم تتويجه على العرش!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_078",
-      "categoryId": "image_blur",
-      "question": "ما هي هذه المدينة الأثرية الغامضة لحضارة الإنكا وتقع فوق قمم جبال الأنديز في بيرو؟",
-      "answer": "ماتشو بيتشو (Machu Picchu - القلعة الضائعة)",
-      "hint": "مدينة الشمس المعلقة وسط الضباب والغيوم وإحدى عجائب الدنيا السبع الجديدة!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_079",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا البرج الخرساني المميز بتصميم زهرة اللوتس في قلب جزيرة الزمالك بالقاهرة؟",
-      "answer": "برج القاهرة (Cairo Tower)",
-      "hint": "بارتفاع 187 متراً وصممه المهندس نعوم شبيب ومطل على نهر النيل بالكامل!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_080",
-      "categoryId": "image_blur",
-      "question": "ما هو هذا المعبد الفرعوني ذو الصروح والأعمدة الضخمة الأكبر في العالم بمدينة الأقصر؟",
-      "answer": "معبد الكرنك (Karnak Temple)",
-      "hint": "يضم صالة الأعمدة الكبرى المكونة من 134 عموداً عملاقاً وطريق الكباش الموصل لمعبد الأقصر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_081",
-      "categoryId": "image_blur",
-      "question": "من هو صاحب النظرية النسبية وأشهر فيزيائي في القرن العشرين في الصورة المشوشة؟",
-      "answer": "ألبرت أينشتاين (Albert Einstein)",
-      "hint": "صاحب معادلة الطاقة والكتلة الشهيرة E=mc² وصاحب قصة الشعر البيضاء الفوضوية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_082",
-      "categoryId": "image_blur",
-      "question": "من هو العالم الإنجليزي صاحب قانون الجاذبية وقوانين الحركة وسقوط التفاحة الشهيرة؟",
-      "answer": "إسحاق نيوتن (Sir Isaac Newton)",
-      "hint": "مؤسس علم الميكانيكا الكلاسيكية ومكتشف تحلل الضوء الأبيض لألوان الطيف!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_083",
-      "categoryId": "image_blur",
-      "question": "من هو المخترع العبقري رائد التيار المتردد (AC) ومبتكر ملفات الراديو في الصورة؟",
-      "answer": "نيكولا تسلا (Nikola Tesla)",
-      "hint": "العالم الصربي الأمريكي الذي سميت على اسمه وحدة قياس المجال المغناطيسي وشركة السيارات الكهربائية!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_084",
-      "categoryId": "image_blur",
-      "question": "من هو مؤسس شركة آبل (Apple) وصاحب الرؤية الثورية لأجهزة الآيفون والماك في الصورة؟",
-      "answer": "ستيف جوبز (Steve Jobs)",
-      "hint": "صاحب الياقة السوداء والنظارة المستديرة ومؤتمرات تقديم الآيفون والآيباد التاريخية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_085",
-      "categoryId": "image_blur",
-      "question": "من هو أغنى رجل في العالم ورئيس تسلا وسبيس إكس ومنصة X (تويتر سابقاً) في الصورة؟",
-      "answer": "إيلون ماسك (Elon Musk)",
-      "hint": "رائد إطلاق صواريخ الفضاء القابلة لإعادة الهبوط ومشروع استعمار كوكب المريخ!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_086",
-      "categoryId": "image_blur",
-      "question": "من هو مؤسس شركة مايكروسوفت (Microsoft) ونظام تشغيل ويندوز في الصورة المشوشة؟",
-      "answer": "بيل جيتس (Bill Gates)",
-      "hint": "رائد ثورة الحواسيب الشخصية وأحد أكبر رجال الأعمال وأعمال الخير في العالم!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_087",
-      "categoryId": "image_blur",
-      "question": "من هو الفرعون الذهبي صاحب المقبرة السليمة والكنوز والتابوت الذهبي الأسطوري في وادي الملوك؟",
-      "answer": "الملك توت عنخ آمون (Tutankhamun)",
-      "hint": "اكتشف مقبرته هوارد كارتر عام 1922 وقناعه الذهبي هو أشهر رمز للحضارة الفرعونية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_088",
-      "categoryId": "image_blur",
-      "question": "من هي الملكة المصرية الفرعونية صاحبة التمثال النصفي الملون الأشهر المعروض بمتحف برلين؟",
-      "answer": "الملكة نفرتيتي (Nefertiti)",
-      "hint": "زوجة الملك إخناتون واسمها يعني \"الجميلة أتت\" ورمز الجمال الفرعوني الخالد!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_089",
-      "categoryId": "image_blur",
-      "question": "من هي آخر ملكات مصر البطلمية وصاحبة قصة الحب الشهيرة مع مارك أنطوني ويوليوس قيصر؟",
-      "answer": "كليوباترا السابعة (Cleopatra)",
-      "hint": "حكمت الإسكندرية ودافعت عن استقلال مصر حتى معركة أكتيوم البحرية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_090",
-      "categoryId": "image_blur",
-      "question": "من هو العالمة البولندية الفرنسية التي فازت بنوبل مرتين في الفيزياء والكيمياء واكتشفت الراديوم؟",
-      "answer": "ماري كوري (Marie Curie)",
-      "hint": "رائدة أبحاث النشاط الإشعاعي وأول امرأة تفوز بجائزة نوبل في التاريخ!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_091",
-      "categoryId": "image_blur",
-      "question": "من هو الفنان والمخترع الإيطالي العبقري صاحب لوحة الموناليزا والعشاء الأخير؟",
-      "answer": "ليوناردو دا فينشي (Leonardo da Vinci)",
-      "hint": "عبقري عصر النهضة ورسام الموناليزا ذات الابتسامة الغامضة في متحف اللوفر!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_092",
-      "categoryId": "image_blur",
-      "question": "من هو الرسام الهولندي العبقري صاحب لوحة (ليلة النجوم The Starry Night) ودوار الشمس؟",
-      "answer": "فينسنت فان جوخ (Vincent van Gogh)",
-      "hint": "رائد المدرسة ما بعد الانطباعية وصاحب ضربات الفرشاة الحلزونية المضيئة الملونة!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_093",
-      "categoryId": "image_blur",
-      "question": "من هو الموسيقار الألماني العبقري صاحب السيمفونية التاسعة الذي ألف روائعه بعد أن أصيب بالصمم؟",
-      "answer": "لودفيج فان بيتهوفن (Ludwig van Beethoven)",
-      "hint": "صاحب دقات القدر الشهيرة في السيمفونية الخامسة ونشيد الفرح الأيقوني!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_094",
-      "categoryId": "image_blur",
-      "question": "من هو ملك البوب العالمي صاحب ألبوم (Thriller) ورقصة مشية القمر الشهيرة (Moonwalk)؟",
-      "answer": "مايكل جاكسون (Michael Jackson)",
-      "hint": "صاحب القفاز اللامع والقبعة السوداء وأكثر فنان مبيعاً للتسجيلات الموسيقية في العالم!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_095",
-      "categoryId": "image_blur",
-      "question": "من هو ملك الروك أند رول الأمريكي وأيقونة الموسيقى في الخمسينيات صاحب أغنية (Jailhouse Rock)؟",
-      "answer": "إلفيس بريسلي (Elvis Presley)",
-      "hint": "صاحب قصر جريسلاند والشعر الأسود الكثيف والحركات الاستعراضية الجريئة!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_096",
-      "categoryId": "image_blur",
-      "question": "من هو أول رائد فضاء هبط وسار على سطح القمر عام 1969 وقال مقولته الشهيرة؟",
-      "answer": "نيل أرمسترونج (Neil Armstrong)",
-      "hint": "قائد رحلة أبولو 11: \"خطوة صغيرة لإنسان، ولكنها قفزة عملاقة للبشرية\"!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_097",
-      "categoryId": "image_blur",
-      "question": "من هو الزعيم الجنوب إفريقي المناضل ضد الأبارتهايد (الفصل العنصري) وسجين جزيرة روبن آيلاند لـ 27 عاماً؟",
-      "answer": "نيلسون مانديلا (Nelson Mandela)",
-      "hint": "أول رئيس أسود لجنوب إفريقيا وفائز بنوبل للسلام ورمز التسامح والمصالحة العالمية!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_098",
-      "categoryId": "image_blur",
-      "question": "من هو المهندس المعماري العراقي البريطاني الشهير بتصاميمها المستقبلية الانسيابية حول العالم؟",
-      "answer": "زاها حديد (Zaha Hadid)",
-      "hint": "ملكة المنحنيات وأول امرأة تفوز بجائزة بريتزكر العالمية للهندسة المعمارية!",
-      "difficulty": "medium",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_099",
-      "categoryId": "image_blur",
-      "question": "من هو الملاكم الأمريكي الأسطوري الملقب بـ (مايك الحديدي) وأصغر بطل للوزن الثقيل في التاريخ؟",
-      "answer": "مايك تايسون (Mike Tyson)",
-      "hint": "صاحب اللكمات القاضية الكاسحة في الجولة الأولى ووشم الوجه الشهير!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
-    },
-    {
-      "id": "blur_100",
-      "categoryId": "image_blur",
-      "question": "من هو أسطورة كرة السلة الأمريكية والرقم 23 التاريخي لفريق شيكاغو بولز؟",
-      "answer": "مايكل جوردان (Michael Jordan)",
-      "hint": "صاحب شعار الحذاء الرياضي الأشهر Air Jordan وبطل الـ NBA ست مرات!",
-      "difficulty": "easy",
-      "mediaType": "image_blur",
-      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
-      "revealDuration": 10
     },
     {
       "id": "audio_016",
@@ -29487,6 +28027,1806 @@
       "mediaType": "audio_clip",
       "mediaTitle": "يا ليلة العيد آنستينا لكوكب الشرق 🌙",
       "revealDuration": 8
+    },
+    {
+      "id": "blur_football_001",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح الطائر وهداف البريميرليج ونجم منتخب مصر وليفربول)",
+      "answer": "محمد صلاح",
+      "difficulty": "سهل",
+      "hint": "فخر العرب وهداف ليفربول التاريخي بالدوري الإنجليزي",
+      "options": [
+        "محمد صلاح",
+        "عمر مرموش",
+        "محمود تريزيجيه",
+        "مصطفى محمد"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد صلاح",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_002",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (صانع الألعاب الأسطوري وبطل أفريقيا 2006 و2008)",
+      "answer": "محمد أبو تريكة",
+      "difficulty": "سهل",
+      "hint": "أمير القلوب والماجيكو ورقم 22 التاريخي للأهلي ومنتخب مصر",
+      "options": [
+        "محمد أبو تريكة",
+        "محمد بركات",
+        "حازم إمام",
+        "حسني عبد ربه"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد أبو تريكة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_003",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الأسطورة رقم 10 وصاحب الأهداف الإعجازية في تاريخ الكرة المصرية)",
+      "answer": "محمود الخطيب",
+      "difficulty": "سهل",
+      "hint": "بيبو رئيس النادي الأهلي وأول لاعب مصري يتوج بالكرة الذهبية الأفريقية 1983",
+      "options": [
+        "محمود الخطيب",
+        "حسن شحاتة",
+        "طاهر أبو زيد",
+        "فاروق جعفر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمود الخطيب",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_004",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (محمود عبد الرازق شيكابالا أسطورة مهارات الكرة المصرية)",
+      "answer": "شيكابالا",
+      "difficulty": "سهل",
+      "hint": "الفهد الأسمر والأباتشي وقائد نادي الزمالك التاريخي صاحب القدم اليسرى الساحرة",
+      "options": [
+        "شيكابالا",
+        "أحمد سيد زيزو",
+        "إمام عاشور",
+        "يوسف أوباما"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "شيكابالا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_005",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم التاريخي للأهلي والزمالك ومنتخب مصر وصاحب هدف التأهل لمونديال 90)",
+      "answer": "حسام حسن",
+      "difficulty": "سهل",
+      "hint": "العميد والهداف التاريخي لمنتخب مصر والمدير الفني الحالي للفراعنة",
+      "options": [
+        "حسام حسن",
+        "إبراهيم حسن",
+        "عماد متعب",
+        "أحمد حسام ميدو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حسام حسن",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_006",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (حارس القرن وبطل أمم أفريقيا 4 مرات تاريخية مع الفراعنة)",
+      "answer": "عصام الحضري",
+      "difficulty": "سهل",
+      "hint": "السد العالي وأكبر لاعب سناً شارك في تاريخ كأس العالم (مونديال روسيا 2018)",
+      "options": [
+        "عصام الحضري",
+        "نادر السيد",
+        "محمد الشناوي",
+        "شريف إكرامي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عصام الحضري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_007",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الأخطبوط وقائد القلعة الحمراء وبطل دوري أبطال أفريقيا عدة مرات)",
+      "answer": "محمد الشناوي",
+      "difficulty": "سهل",
+      "hint": "حارس الأهلي ومنتخب مصر ورجل مباراة أوروجواي في كأس العالم 2018",
+      "options": [
+        "محمد الشناوي",
+        "مصطفى شوبير",
+        "محمد عواد",
+        "محمد أبو جبل"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد الشناوي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_008",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحد أكثر المدافعين تتويجاً بالبطولات في تاريخ القارة الأفريقية)",
+      "answer": "وائل جمعة",
+      "difficulty": "سهل",
+      "hint": "الصخرة ومدافع الأهلي ومنتخب مصر التاريخي الذي أوقف كبار مهاجمي العالم",
+      "options": [
+        "وائل جمعة",
+        "أحمد حجازي",
+        "محمد عبد المنعم",
+        "محمود الونش"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "وائل جمعة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_009",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحسن لاعب في أفريقيا 2005 من بي بي سي وأسرع جناح في مصر)",
+      "answer": "محمد بركات",
+      "difficulty": "سهل",
+      "hint": "الزئبقي ونجم الأهلي والإسماعيلي والمنتخب صاحب الانطلاقات والضحكات الشهيرة",
+      "options": [
+        "محمد بركات",
+        "محمد أبو تريكة",
+        "سيد معوض",
+        "إسلام الشاطر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد بركات",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_010",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (مهاجم الزمالك ومنتخب مصر الأسبق وأصغر مدرب يتوج بكأس مصر)",
+      "answer": "أحمد حسام ميدو",
+      "difficulty": "سهل",
+      "hint": "العالمي الذي احترف في أياكس وسيلتا فيجو وروما وتوتنهام ومارسيليا",
+      "options": [
+        "أحمد حسام ميدو",
+        "عمرو زكي",
+        "محمد زيدان",
+        "حسام حسن"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أحمد حسام ميدو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_011",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح المصري المتألق في البوندسليجا ومحط أنظار كبار أندية أوروبا)",
+      "answer": "عمر مرموش",
+      "difficulty": "سهل",
+      "hint": "هداف آينتراخت فرانكفورت الألماني الحالي ونجم منتخب مصر صاحب الركلات الحرة العالمية",
+      "options": [
+        "عمر مرموش",
+        "محمد صلاح",
+        "مصطفى محمد",
+        "محمود تريزيجيه"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عمر مرموش",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_012",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المتخصص في ضربات الجزاء والعرضيات المتقنة مع القلعة البيضاء والمنتخب)",
+      "answer": "أحمد سيد زيزو",
+      "difficulty": "سهل",
+      "hint": "نجم نادي الزمالك وهداف الدوري المصري وصانع الألعاب الأبرز في مصر",
+      "options": [
+        "أحمد سيد زيزو",
+        "شيكابالا",
+        "رمضان صبحي",
+        "مصطفى فتحي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أحمد سيد زيزو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_013",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب الوسط الديناميكي الأبرز في الكرة المصرية حالياً)",
+      "answer": "إمام عاشور",
+      "difficulty": "سهل",
+      "hint": "نجم وسط الأهلي ومنتخب مصر وصاحب التسديدات الصاروخية وميتلاند الدنماركي سابقاً",
+      "options": [
+        "إمام عاشور",
+        "عمرو السولية",
+        "مروان عطية",
+        "محمد مجدي قفشة"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إمام عاشور",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_014",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (جناح منتخب مصر وأستون فيلا وطرابزون سبور والريان الحالي)",
+      "answer": "محمود حسن تريزيجيه",
+      "difficulty": "سهل",
+      "hint": "صاحب ركلة الجزاء التاريخية ضد الكونغو التي صعدت بمصر لكأس العالم 2018",
+      "options": [
+        "محمود حسن تريزيجيه",
+        "عمر مرموش",
+        "رمضان صبحي",
+        "طاهر محمد طاهر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمود حسن تريزيجيه",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_015",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم رقم 9 الأساسي للفراعنة والمتميز في الضربات الرأسية القوية)",
+      "answer": "مصطفى محمد",
+      "difficulty": "سهل",
+      "hint": "البلدوزر ومهاجم نانت الفرنسي ومنتخب مصر والزمالك وجالاتا سراي الأسبق",
+      "options": [
+        "مصطفى محمد",
+        "عمر مرموش",
+        "حسام حسن",
+        "أحمد حسن كوكا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "مصطفى محمد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_016",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب وسط الفراعنة المتوج بكأس إنجلترا مع الجانرز)",
+      "answer": "محمد النني",
+      "difficulty": "سهل",
+      "hint": "نجم أرسنال الإنجليزي السابق والجزيرة الإماراتي حالياً وقائد المنتخب الأولمبي في باريس 2024",
+      "options": [
+        "محمد النني",
+        "طارق حامد",
+        "حمدي فتحي",
+        "عمرو السولية"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد النني",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_017",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحد أفضل صناع اللعب في تاريخ الدوري المصري الممتاز)",
+      "answer": "عبد الله السعيد",
+      "difficulty": "سهل",
+      "hint": "عضو نادي المئة هدف بالدوري المصري وصانع ألعاب الزمالك وبيراميدز والأهلي والإسماعيلي سابقاً",
+      "options": [
+        "عبد الله السعيد",
+        "محمد مجدي قفشة",
+        "وليد سليمان",
+        "أحمد الشيخ"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عبد الله السعيد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_018",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم المهارات الكروية الأنيقة ورقم 14 التاريخي للزمالك)",
+      "answer": "حازم إمام",
+      "difficulty": "سهل",
+      "hint": "الثعلب الصغير وإمبراطور الزمالك وأودينيزي الإيطالي ومنتخب مصر 1998",
+      "options": [
+        "حازم إمام",
+        "شيكابالا",
+        "وليد صلاح الدين",
+        "جمال حمزة"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حازم إمام",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_019",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد خط وسط الفراعنة وصاحب الصواريخ والضربات الثابتة القاتلة)",
+      "answer": "حسني عبد ربه",
+      "difficulty": "سهل",
+      "hint": "القيصر وأفضل لاعب في كأس الأمم الأفريقية 2008 بغانا ونجم الإسماعيلي",
+      "options": [
+        "حسني عبد ربه",
+        "محمد شوقي",
+        "أحمد حسن",
+        "حسام غالي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حسني عبد ربه",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_020",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (زيزو المهاجم المهاري السريع ونجم ماينز ودورتموند وفيردر بريمن الأسبق)",
+      "answer": "محمد زيدان",
+      "difficulty": "سهل",
+      "hint": "بطل البوندسليجا مع بوروسيا دورتموند وصاحب أسيست هدف الفوز على الكاميرون 2008",
+      "options": [
+        "محمد زيدان",
+        "عمرو زكي",
+        "عماد متعب",
+        "أحمد حسام ميدو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد زيدان",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_021",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد منتخب مصر الأسطوري ولاعب أندرلخت وبشكتاش والأهلي والزمالك)",
+      "answer": "أحمد حسن",
+      "difficulty": "سهل",
+      "hint": "الصقر وعميد لاعبي العالم سابقاً وبطل أمم أفريقيا 4 مرات تاريخية (1998, 2006, 2008, 2010)",
+      "options": [
+        "أحمد حسن",
+        "حسام حسن",
+        "عصام الحضري",
+        "وائل جمعة"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أحمد حسن",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_022",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب وسط الفراعنة وصاحب التمريرات الطولية الساحرة)",
+      "answer": "حسام غالي",
+      "difficulty": "سهل",
+      "hint": "الكابيتانو وقائد الأهلي وتوتنهام وفاينورد الأسبق وصاحب الشخصية القيادية الفريدة",
+      "options": [
+        "حسام غالي",
+        "عمرو السولية",
+        "حسني عبد ربه",
+        "طارق حامد"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حسام غالي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_023",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم منتخب تونس والنادي الأهلي وبطل دوري أبطال أفريقيا عدة مرات)",
+      "answer": "علي معلول",
+      "difficulty": "سهل",
+      "hint": "ملك الحلول وأفضل ظهير أيسر في تاريخ النادي الأهلي والهداف التاريخي من المدافعين",
+      "options": [
+        "علي معلول",
+        "سيد معوض",
+        "طارق السعيد",
+        "أحمد فتوح"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "علي معلول",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_024",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (صخرة دفاع منتخب مصر والأهلي السابق وأحد أبرز مدافعي أفريقيا)",
+      "answer": "محمد عبد المنعم",
+      "difficulty": "سهل",
+      "hint": "صاحب رأسية الوداد القاتلة في نهائي أفريقيا 2023 ومدافع نيس الفرنسي الحالي",
+      "options": [
+        "محمد عبد المنعم",
+        "أحمد حجازي",
+        "محمود الونش",
+        "ياسر إبراهيم"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد عبد المنعم",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_025",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد دفاع الفراعنة وصاحب الصلابة الدفاعية في كبرى البطولات القارية)",
+      "answer": "أحمد حجازي",
+      "difficulty": "سهل",
+      "hint": "البرج ومدافع فيورنتينا ووست بروميتش والاتحاد السعودي ومنتخب مصر ونيوم حالياً",
+      "options": [
+        "أحمد حجازي",
+        "وائل جمعة",
+        "محمد عبد المنعم",
+        "علي جبر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أحمد حجازي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_026",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب وسط القلعة الحمراء المتوج ببطولات أفريقيا والدوري والسوبر)",
+      "answer": "عمرو السولية",
+      "difficulty": "سهل",
+      "hint": "صاحب رابونا القمة الشهيرة وعمود خط وسط الأهلي والمنتخب لسنوات طويلة",
+      "options": [
+        "عمرو السولية",
+        "حمدي فتحي",
+        "أليو ديانج",
+        "مروان عطية"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عمرو السولية",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_027",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم القلعة الحمراء ومنتخب مصر المتخصص في الأهداف الحاسمة والنهائيات)",
+      "answer": "محمد مجدي قفشة",
+      "difficulty": "سهل",
+      "hint": "صاحب القاضية ممكن في نهائي القرن 2020 وصانع ألعاب النادي الأهلي",
+      "options": [
+        "محمد مجدي قفشة",
+        "عبد الله السعيد",
+        "إمام عاشور",
+        "ناصر ماهر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد مجدي قفشة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_028",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (جناح ومهاجم الأهلي المتوج بأفريقيا وهداف دوري الأبطال)",
+      "answer": "محمود كهربا",
+      "difficulty": "سهل",
+      "hint": "الفولت العالي ومهاجم الأهلي والزمالك السابق واتحاد جدة وجراسهوبرز",
+      "options": [
+        "محمود كهربا",
+        "حسين الشحات",
+        "طاهر محمد طاهر",
+        "وسام أبو علي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمود كهربا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_029",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم الأهلي ومنتخب مصر ووزير الرياضة الأسبق)",
+      "answer": "طاهر أبو زيد",
+      "difficulty": "سهل",
+      "hint": "مارادونا النيل وهداف أمم أفريقيا 1984 وصاحب الصاروخ الشهير في مرمى المغرب 1986",
+      "options": [
+        "طاهر أبو زيد",
+        "محمود الخطيب",
+        "مجدي عبد الغني",
+        "مصطفى عبده"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "طاهر أبو زيد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_030",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم باوك ونيوشاتل والأهلي والزمالك ومنتخب مصر في كأس العالم 1990)",
+      "answer": "إبراهيم حسن",
+      "difficulty": "سهل",
+      "hint": "أفضل ظهير أيمن في تاريخ الكرة المصرية وتوأم حسام حسن ومدير منتخب مصر الحالي",
+      "options": [
+        "إبراهيم حسن",
+        "أحمد فتحي",
+        "ياسر رضوان",
+        "محمد هاني"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إبراهيم حسن",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_031",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (مدافع الأهلي والإسماعيلي والزمالك وبيراميدز ومنتخب مصر التاريخي)",
+      "answer": "أحمد فتحي",
+      "difficulty": "سهل",
+      "hint": "الجوكر ورجل المهام المستحيلة وبطل أمم أفريقيا 3 مرات والبريميرليج مع شيفيلد",
+      "options": [
+        "أحمد فتحي",
+        "إبراهيم حسن",
+        "عمر جابر",
+        "أحمد المحمدي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أحمد فتحي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_032",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (بلدوزر خط الوسط في الأهلي والمنتخب ومحترف بيرامار البرتغالي)",
+      "answer": "مجدي عبد الغني",
+      "difficulty": "سهل",
+      "hint": "صاحب أشهر هدف لمصر في كأس العالم (هدفه في مرمى هولندا مونديال إيطاليا 1990)",
+      "options": [
+        "مجدي عبد الغني",
+        "طاهر أبو زيد",
+        "شوقي غريب",
+        "إسماعيل يوسف"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "مجدي عبد الغني",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_033",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الحارس الأفضل في أمم أفريقيا 1998 و1996 وتصدياته لركلات الجزاء الشهيرة)",
+      "answer": "نادر السيد",
+      "difficulty": "سهل",
+      "hint": "حارس منتخب مصر والزمالك وكلوب بروج وكلوب باوك وبطل أمم أفريقيا 1998 ببوركينا فاسو",
+      "options": [
+        "نادر السيد",
+        "عصام الحضري",
+        "طارق عبد العليم",
+        "أحمد الشناوي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "نادر السيد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_034",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجل إكرامي الشحات وحارس عرين الفراعنة في كأس العالم 2018)",
+      "answer": "شريف إكرامي",
+      "difficulty": "سهل",
+      "hint": "وحش حراسة المرمى بالنادي الأهلي وفينورد الهولندي وبيراميدز ومنتخب مصر",
+      "options": [
+        "شريف إكرامي",
+        "محمد الشناوي",
+        "عصام الحضري",
+        "أحمد عادل عبد المنعم"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "شريف إكرامي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_035",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (حارس الأهلي والمنتخب التاريخي وبطل كؤوس أفريقيا الذهبية)",
+      "answer": "إكرامي الشحات",
+      "difficulty": "سهل",
+      "hint": "وحش أفريقيا وحارس مرمى الأهلي التاريخي في السبعينات والثمانينات ونجم فيلم رجل فقد عقله",
+      "options": [
+        "إكرامي الشحات",
+        "ثابت البطل",
+        "عادل المأمور",
+        "حسن علي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إكرامي الشحات",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_036",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة الزمالك وهدافه التاريخي في السبعينات وصاحب الأسلوب التكتيكي العبقري)",
+      "answer": "حسن شحاتة",
+      "difficulty": "متوسط",
+      "hint": "المعلم وأعظم مدرب في تاريخ أفريقيا بالتتويج بثلاثية الكان المتتالية 2006, 2008, 2010",
+      "options": [
+        "حسن شحاتة",
+        "محمود الجوهري",
+        "فاروق جعفر",
+        "طه بصري"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حسن شحاتة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_037",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم التاريخي للأهلي ومنتخب مصر وهداف الدوري والبطولات القارية)",
+      "answer": "عماد متعب",
+      "difficulty": "متوسط",
+      "hint": "القناص وهداف الدقيقة 90+ التاريخي وصاحب رأسية التأهل لمونديال الأندية 2014 وكأس أفريقيا",
+      "options": [
+        "عماد متعب",
+        "محمد ناجي جدو",
+        "عمرو زكي",
+        "حسام حسن"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عماد متعب",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_038",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (مهاجم الاتحاد والأهلي ومنتخب مصر وهال سيتي الإنجليزي الأسبق)",
+      "answer": "محمد ناجي جدو",
+      "difficulty": "متوسط",
+      "hint": "هداف كأس الأمم الأفريقية 2010 بأنجولا كبديل ذهبي (سجل 5 أهداف منها هدف النهائي)",
+      "options": [
+        "محمد ناجي جدو",
+        "عماد متعب",
+        "محمد زيدان",
+        "أحمد حسن مكي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد ناجي جدو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_039",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم الأهلي السعودي والمنتخب الجزائري وصاحب القدم اليسرى الحريرية)",
+      "answer": "رياض محرز",
+      "difficulty": "متوسط",
+      "hint": "ساحر الجزائر وبطل البريميرليج مع ليستر سيتي ومانشستر سيتي وبطل أفريقيا 2019",
+      "options": [
+        "رياض محرز",
+        "سفيان فيغولي",
+        "ياسين براهيمي",
+        "إسلام سليماني"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "رياض محرز",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_040",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل ظهير أيمن في العالم وصاحب البانينكا التاريخية ضد إسبانيا)",
+      "answer": "أشرف حكيمي",
+      "difficulty": "متوسط",
+      "hint": "نجم باريس سان جيرمان وريال مدريد والإنتر ودورتموند وقائد ملحمة المغرب في مونديال 2022",
+      "options": [
+        "أشرف حكيمي",
+        "نصير مزراوي",
+        "نايف أكرد",
+        "عز الدين أوناحي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أشرف حكيمي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_041",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحد أفضل حراس العالم وبطل الدوري الأوروبي وبطل دوري روشن)",
+      "answer": "ياسين بونو",
+      "difficulty": "متوسط",
+      "hint": "حارس عرين الهلال السعودي ومنتخب المغرب وإشبيلية وصاحب القفاز الذهبي بمونديال قطر 2022",
+      "options": [
+        "ياسين بونو",
+        "منير المحمدي",
+        "محمد الشناوي",
+        "إدوارد ميندي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ياسين بونو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_042",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (صانع الألعاب المغربي صاحب العرضيات والتسديدات اللولبية الخطيرة)",
+      "answer": "حكيم زياش",
+      "difficulty": "متوسط",
+      "hint": "الساحر المغربي ونجم جالاتا سراي وتشيلسي وأياكس الأسبق وبطل دوري أبطال أوروبا 2021",
+      "options": [
+        "حكيم زياش",
+        "سفيان بوفال",
+        "أشرف حكيمي",
+        "عبد الرزاق حمد الله"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "حكيم زياش",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_043",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (محارب خط الوسط وصاحب أقوى التدخلات وقطع الكرات في المونديال)",
+      "answer": "سفيان أمرابط",
+      "difficulty": "متوسط",
+      "hint": "دينامو خط وسط المغرب وفنربخشة ومانشستر يونايتد وفيورنتينا وبطل مونديال قطر 2022",
+      "options": [
+        "سفيان أمرابط",
+        "عز الدين أوناحي",
+        "سليم أملاح",
+        "إسماعيل بن ناصر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "سفيان أمرابط",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_044",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (مهندس خط الوسط المغربي وصاحب المراوغات الفردية الفذة)",
+      "answer": "عز الدين أوناحي",
+      "difficulty": "متوسط",
+      "hint": "جوهرة وسط المغرب الذي أبهر لويس إنريكي في مونديال 2022 ونجم باناثينايكوس ومارسيليا",
+      "options": [
+        "عز الدين أوناحي",
+        "سفيان أمرابط",
+        "إبراهيم دياز",
+        "بلال الخنوس"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "عز الدين أوناحي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_045",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الهداف التاريخي لمنتخب المغرب في المونديال وهداف إشبيلية السابق)",
+      "answer": "يوسف النصيري",
+      "difficulty": "متوسط",
+      "hint": "صاحب أعلى ارتقاء ورأسية الفوز التاريخية على البرتغال بمونديال 2022 ومهاجم فنربخشة",
+      "options": [
+        "يوسف النصيري",
+        "أيوب الكعبي",
+        "عبد الرزاق حمد الله",
+        "مروان الشماخ"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "يوسف النصيري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_046",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب وسط الروسونيري المتوج بالدوري الإيطالي والكأس القارية)",
+      "answer": "إسماعيل بن ناصر",
+      "difficulty": "متوسط",
+      "hint": "أفضل لاعب في كأس الأمم الأفريقية 2019 بمصر ونجم خط وسط ميلان الإيطالي والجزائر",
+      "options": [
+        "إسماعيل بن ناصر",
+        "حسام عوار",
+        "رامي بن سبعيني",
+        "سفيان فيغولي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إسماعيل بن ناصر",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_047",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم القناص التاريخي لمحاربي الصحراء)",
+      "answer": "بغداد بونجاح",
+      "difficulty": "متوسط",
+      "hint": "صاحب هدف الفوز بكأس الأمم الأفريقية 2019 ضد السنغال وهداف السد والشمال القطري والجزائر",
+      "options": [
+        "بغداد بونجاح",
+        "إسلام سليماني",
+        "يوسف بلايلي",
+        "أندي ديلور"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "بغداد بونجاح",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_048",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة الكرة السعودية والزعيم وصاحب الأهداف العالمية في كأس العالم للأندية)",
+      "answer": "سالم الدوسري",
+      "difficulty": "متوسط",
+      "hint": "التورنيدو وأفضل لاعب في آسيا 2023 ونجم الهلال وصاحب هدف الفوز على الأرجنتين بمونديال 2022",
+      "options": [
+        "سالم الدوسري",
+        "ياسر القحطاني",
+        "سامي الجابر",
+        "نواف العابد"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "سالم الدوسري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_049",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم التاريخي للأخضر السعودي في كأس العالم 2006 وبطولات الخليج)",
+      "answer": "ياسر القحطاني",
+      "difficulty": "متوسط",
+      "hint": "القناص وأفضل لاعب في آسيا 2007 وقائد الهلال والمنتخب السعودي التاريخي",
+      "options": [
+        "ياسر القحطاني",
+        "سامي الجابر",
+        "سالم الدوسري",
+        "ماجد عبد الله"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ياسر القحطاني",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_050",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحد أقوى قاطعي الكرات في تاريخ الكرة المصرية والأفريقية)",
+      "answer": "طارق حامد",
+      "difficulty": "متوسط",
+      "hint": "قلب الأسد ورجل المعارك في خط وسط الزمالك والاتحاد وضمك ومنتخب مصر وبطل الدوري السعودي",
+      "options": [
+        "طارق حامد",
+        "محمد النني",
+        "حسام عاشور",
+        "عمرو السولية"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "طارق حامد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_051",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة برشلونة وإنتر ميامي والأرجنتين وأعظم من لمس كرة القدم)",
+      "answer": "ليونيل ميسي",
+      "difficulty": "متوسط",
+      "hint": "البرغوث الأرجنتيني وبطل كأس العالم 2022 وصاحب الرقم القياسي بـ 8 كرات ذهبية",
+      "options": [
+        "ليونيل ميسي",
+        "كريستيانو رونالدو",
+        "نيمار",
+        "دييغو مارادونا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ليونيل ميسي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_052",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد النصر والبرتغال وأسطورة ريال مدريد ومانشستر يونايتد ويوفنتوس)",
+      "answer": "كريستيانو رونالدو",
+      "difficulty": "متوسط",
+      "hint": "الدون وصاروخ ماديرا والهداف التاريخي لكرة القدم بـ 900+ هدف و5 كرات ذهبية",
+      "options": [
+        "كريستيانو رونالدو",
+        "ليونيل ميسي",
+        "كريم بنزيما",
+        "لويس فيجو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كريستيانو رونالدو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_053",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الساحر الذي قاد نابولي لأمجاده التاريخية والأرجنتين لعرش المونديال)",
+      "answer": "دييجو مارادونا",
+      "difficulty": "متوسط",
+      "hint": "أسطورة الأرجنتين ونابولي وبطل كأس العالم 1986 وصاحب هدف القرن واليد الشهيرة",
+      "options": [
+        "دييجو مارادونا",
+        "بيليه",
+        "ليونيل ميسي",
+        "جابرييل باتيستوتا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "دييجو مارادونا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_054",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة سانتوس والبرازيل وهداف المونديال التاريخي للأجيال الأولى)",
+      "answer": "بيليه",
+      "difficulty": "متوسط",
+      "hint": "الجوهرة السوداء والملك والوحيد في التاريخ المتوج بكأس العالم 3 مرات (1958, 1962, 1970)",
+      "options": [
+        "بيليه",
+        "جارينشيا",
+        "رونالدو البرازيلي",
+        "روماريو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "بيليه",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_055",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة يوفنتوس وريال مدريد وفرنسا وصاحب هدف الفولي التاريخي في جلاسكو)",
+      "answer": "زين الدين زيدان",
+      "difficulty": "متوسط",
+      "hint": "زيزو وبطل مونديال 1998 ويورو 2000 والمدرب التاريخي لثلاثية الأبطال مع ريال مدريد",
+      "options": [
+        "زين الدين زيدان",
+        "ميشيل بلاتيني",
+        "تييري هنري",
+        "ديدييه ديشامب"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "زين الدين زيدان",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_056",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة باريس وبرشلونة وميلان الذي صفق له جمهور سانتياجو برنابيو)",
+      "answer": "رونالدينيو",
+      "difficulty": "متوسط",
+      "hint": "ساحر السامبا وابتسامة كرة القدم وبطل مونديال 2002 والكرة الذهبية 2005 مع برشلونة",
+      "options": [
+        "رونالدينيو",
+        "نيمار",
+        "رونالدو الظاهرة",
+        "ريفالدو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "رونالدينيو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_057",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة إنتر وميلان وريال مدريد وبرشلونة وبطل العالم مرتين)",
+      "answer": "رونالدو الظاهرة",
+      "difficulty": "متوسط",
+      "hint": "R9 والظاهرة البرازيلية وهداف مونديال 2002 وأفضل رأس حربة في تاريخ الكرة",
+      "options": [
+        "رونالدو الظاهرة",
+        "روماريو",
+        "أدريانو",
+        "كريستيانو رونالدو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "رونالدو الظاهرة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_058",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسرع مهاجم في العالم وهداف باريس سان جيرمان التاريخي)",
+      "answer": "كيليان مبابي",
+      "difficulty": "متوسط",
+      "hint": "الفتى الذهبي لريال مدريد ومنتخب فرنسا وبطل مونديال 2018 وصاحب الهاتريك في نهائي 2022",
+      "options": [
+        "كيليان مبابي",
+        "إيرلينج هالاند",
+        "فينيسيوس جونيور",
+        "عثمان ديمبيلي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كيليان مبابي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_059",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أقوى رأس حربة ومحطم الأرقام القياسية التهديفية في أوروبا)",
+      "answer": "إيرلينج هالاند",
+      "difficulty": "متوسط",
+      "hint": "الغول النرويجي وماكينة أهداف مانشستر سيتي وبطل الثلاثية التاريخية وهداف البريميرليج",
+      "options": [
+        "إيرلينج هالاند",
+        "كيليان مبابي",
+        "هاري كين",
+        "روبرت ليفاندوفسكي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إيرلينج هالاند",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_060",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (ساحر المراوغات وأحد أفضل لاعبي السامبا في العصر الحديث)",
+      "answer": "نيمار دا سيلفا",
+      "difficulty": "متوسط",
+      "hint": "الهداف التاريخي للبرازيل وبطل دوري أبطال أوروبا 2015 مع برشلونة ونجم الهلال حالياً",
+      "options": [
+        "نيمار دا سيلفا",
+        "رونالدينيو",
+        "فينيسيوس جونيور",
+        "رودريجو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "نيمار دا سيلفا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_061",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم الفرنسي الأسطوري الفائز بـ 5 دوري أبطال أوروبا مع الميرينجي)",
+      "answer": "كريم بنزيما",
+      "difficulty": "متوسط",
+      "hint": "الحكومة والكرة الذهبية 2022 وخامس هدافي ريال مدريد التاريخيين وقائد الاتحاد السعودي",
+      "options": [
+        "كريم بنزيما",
+        "تييري هنري",
+        "أوليفييه جيرو",
+        "كيليان مبابي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كريم بنزيما",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_062",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الساحر الذي قاد كرواتيا لنهائي مونديال 2018 وعميد خط وسط الملكي)",
+      "answer": "لوكا مودريتش",
+      "difficulty": "متوسط",
+      "hint": "مايسترو كرواتيا وريال مدريد والفائز بالكرة الذهبية 2018 وصاحب الـ 6 دوري أبطال أوروبا",
+      "options": [
+        "لوكا مودريتش",
+        "توني كروس",
+        "إيفان راكيتيتش",
+        "أندريس إنييستا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "لوكا مودريتش",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_063",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل ممرر كرات في الدوري الإنجليزي وبطل السداسية مع السيتي)",
+      "answer": "كيفين دي بروين",
+      "difficulty": "متوسط",
+      "hint": "المهندس والمايسترو البلجيكي وصانع ألعاب مانشستر سيتي الأول وملك الأسيست في العالم",
+      "options": [
+        "كيفين دي بروين",
+        "إيدين هازارد",
+        "برونو فيرنانديز",
+        "لوكا مودريتش"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كيفين دي بروين",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_064",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل لاعب في العالم من فيفا مرتين والحذاء الذهبي الأوروبي)",
+      "answer": "روبرت ليفاندوفسكي",
+      "difficulty": "متوسط",
+      "hint": "ليفانغولدسكي والهداف البولندي التاريخي لبايرن ميونخ وبرشلونة وصاحب الـ 5 أهداف في 9 دقائق",
+      "options": [
+        "روبرت ليفاندوفسكي",
+        "كريم بنزيما",
+        "هاري كين",
+        "لويس سواريز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "روبرت ليفاندوفسكي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_065",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (مهندس خط الوسط العبقري صاحب النظرة الإبداعية بدون أخطاء)",
+      "answer": "أندريس إنييستا",
+      "difficulty": "متوسط",
+      "hint": "الرسام وصاحب هدف تتويج إسبانيا بكأس العالم 2010 وأسطورة سداسية برشلونة",
+      "options": [
+        "أندريس إنييستا",
+        "تشافي هيرنانديز",
+        "سيرجيو بوسكيتس",
+        "دافيد سيلفا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أندريس إنييستا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_066",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل موزع كرات في تاريخ خط الوسط ومدرب البارسا الأسبق)",
+      "answer": "تشافي هيرنانديز",
+      "difficulty": "متوسط",
+      "hint": "المايسترو وبوصلة التيكي تاكا في برشلونة وإسبانيا وبطل كأس العالم 2010 ويورو مرتين",
+      "options": [
+        "تشافي هيرنانديز",
+        "أندريس إنييستا",
+        "سيسك فابريجاس",
+        "تشابي ألونسو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "تشافي هيرنانديز",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_067",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة البريميرليج الذي أمتع جماهير هايبري وبرشلونة)",
+      "answer": "تييري هنري",
+      "difficulty": "متوسط",
+      "hint": "الغزال الأسمر والهداف التاريخي لأرسنال وفرنسا وبطل مونديال 1998 ودوري اللاهزيمة 2004",
+      "options": [
+        "تييري هنري",
+        "ديدييه دروجبا",
+        "نيكولا أنيلكا",
+        "كيليان مبابي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "تييري هنري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_068",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الأنيق صاحب الانطلاقات الصاروخية وبطل دوري أبطال أوروبا ومونديال 2002)",
+      "answer": "ريكاردو كاكا",
+      "difficulty": "متوسط",
+      "hint": "آخر بشري فاز بالكرة الذهبية (2007) قبل حقبة ميسي ورونالدو وأسطورة ميلان والبرازيل",
+      "options": [
+        "ريكاردو كاكا",
+        "رونالدينيو",
+        "ريفالدو",
+        "كلارنس سيدورف"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ريكاردو كاكا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_069",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة الضربات الحرة المتقنة وصاحب الرؤية الكروية الملكية)",
+      "answer": "أندريا بيرلو",
+      "difficulty": "متوسط",
+      "hint": "المايسترو والمهندس الإيطالي وبطل مونديال 2006 ودوري أبطال أوروبا مع ميلان ويوفنتوس",
+      "options": [
+        "أندريا بيرلو",
+        "فرانشيسكو توتي",
+        "جينارو جاتوزو",
+        "أليساندرو ديل بييرو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أندريا بيرلو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_070",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (حارس يوفنتوس وبارما التاريخي الذي لعب لأكثر من 28 عاماً في أعلى المستويات)",
+      "answer": "جانلويجي بوفون",
+      "difficulty": "متوسط",
+      "hint": "العنكبوت وجيجل وأعظم حارس مرمى في القرن الـ 21 وبطل كأس العالم 2006 مع إيطاليا",
+      "options": [
+        "جانلويجي بوفون",
+        "إيكر كاسياس",
+        "مانويل نوير",
+        "دينو زوف"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "جانلويجي بوفون",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_071",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الحارس التاريخي للملكي وللفيورنتينا وتصدياته الخرافية أمام روبن في النهائي)",
+      "answer": "إيكر كاسياس",
+      "difficulty": "متوسط",
+      "hint": "القديس وكابتن إسبانيا المتوج بكأس العالم 2010 ويورو مرتين وريال مدريد التاريخي",
+      "options": [
+        "إيكر كاسياس",
+        "جانلويجي بوفون",
+        "فيكتور فالديز",
+        "دافيد دي خيا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إيكر كاسياس",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_072",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الحارس الذي أعاد تعريف مركز حراسة المرمى باللعب كليبرو متقدم)",
+      "answer": "مانويل نوير",
+      "difficulty": "متوسط",
+      "hint": "الحارس القشاش وبطل مونديال 2014 مع ألمانيا وسداسية بايرن ميونخ التاريخية",
+      "options": [
+        "مانويل نوير",
+        "مارك أندريه تير شتيجن",
+        "أوليفر كان",
+        "يان أوبلاك"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "مانويل نوير",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_073",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المدافع الهداف وبطل كأس العالم ويورو مرتين و4 دوري أبطال أوروبا)",
+      "answer": "سيرجيو راموس",
+      "difficulty": "متوسط",
+      "hint": "رأسية 92:48 الشهيرة وقائد ريال مدريد ومنتخب إسبانيا وأشرس مدافع في القرن الـ 21",
+      "options": [
+        "سيرجيو راموس",
+        "كارليس بويول",
+        "جيرارد بيكيه",
+        "بيبي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "سيرجيو راموس",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_074",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (رمز الروح الرياضية والقتالية ودفاع البارسا الصلب في الجيل الذهبي)",
+      "answer": "كارليس بويول",
+      "difficulty": "متوسط",
+      "hint": "قلب الأسد وقائد برشلونة التاريخي وصاحب رأسية التأهل لنهائي مونديال 2010 ضد ألمانيا",
+      "options": [
+        "كارليس بويول",
+        "سيرجيو راموس",
+        "جيرارد بيكيه",
+        "باولو مالديني"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كارليس بويول",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_075",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (القائد الهولندي الصلب الذي لم تتمكن أي مهاجم من مراوغته لموسم كامل)",
+      "answer": "فيرجيل فان دايك",
+      "difficulty": "متوسط",
+      "hint": "صخرة دفاع ليفربول وهولندا وأفضل لاعب في أوروبا 2019 وبطل البريميرليج والأبطال",
+      "options": [
+        "فيرجيل فان دايك",
+        "سيرجيو راموس",
+        "روبن دياز",
+        "تياجو سيلفا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "فيرجيل فان دايك",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_076",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الأسطورة السويدية صاحب الحزام الأسود في التايكوندو وأكثر من 570 هدفاً)",
+      "answer": "زلاتان إبراهيموفيتش",
+      "difficulty": "صعب",
+      "hint": "السلطان إبرا وصاحب الأكروبات والأهداف المستحيلة وأسطورة ميلان وباريس واليونايتد",
+      "options": [
+        "زلاتان إبراهيموفيتش",
+        "إدينسون كافاني",
+        "إيرلينج هالاند",
+        "روميلو لوكاكو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "زلاتان إبراهيموفيتش",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_077",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (ضلع ثلاثي الـ MSN التاريخي وأحد أكثر المهاجمين شراسة ومهارة)",
+      "answer": "لويس سواريز",
+      "difficulty": "صعب",
+      "hint": "المسدس وهداف الأوروجواي التاريخي والحذاء الذهبي مع ليفربول وبرشلونة وأتلتيكو مدريد",
+      "options": [
+        "لويس سواريز",
+        "إدينسون كافاني",
+        "دييجو فورلان",
+        "سيرجيو أجويرو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "لويس سواريز",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_078",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم الإنجليزي المقاتل وصاحب الدبل كيك الأسطوري في ديربي مانشستر)",
+      "answer": "واين روني",
+      "difficulty": "صعب",
+      "hint": "الجولدن بوي والهداف التاريخي لمانشستر يونايتد وإنجلترا وبطل دوري أبطال أوروبا 2008",
+      "options": [
+        "واين روني",
+        "هاري كين",
+        "مايكل أوين",
+        "آلان شيرار"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "واين روني",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_079",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد إنجلترا التاريخي وصاحب الرقم 7 الأيقوني في أولد ترافورد)",
+      "answer": "ديفيد بيكهام",
+      "difficulty": "صعب",
+      "hint": "ملك الضربات الثابتة والعرضيات الساحرة ونجم مانشستر يونايتد وريال مدريد ومالك إنتر ميامي",
+      "options": [
+        "ديفيد بيكهام",
+        "ستيفن جيرارد",
+        "فرانك لامبارد",
+        "بول سكولز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ديفيد بيكهام",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_080",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أيقونة خط الوسط في إنجلترا والريدز وأحد أعظم القادة في تاريخ كرة القدم)",
+      "answer": "ستيفن جيرارد",
+      "difficulty": "صعب",
+      "hint": "كابتن ليفربول الأسطوري ورجل ملحمة إسطنبول 2005 وصاحب الصواريخ المدوية",
+      "options": [
+        "ستيفن جيرارد",
+        "فرانك لامبارد",
+        "بول سكولز",
+        "ديفيد بيكهام"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ستيفن جيرارد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_081",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل لاعب وسط هداف في تاريخ الدوري الإنجليزي الممتاز)",
+      "answer": "فرانك لامبارد",
+      "difficulty": "صعب",
+      "hint": "الهداف التاريخي لنادي تشيلسي بـ 211 هدفاً من مركز خط الوسط وبطل دوري أبطال أوروبا 2012",
+      "options": [
+        "فرانك لامبارد",
+        "ستيفن جيرارد",
+        "بول سكولز",
+        "مايكل بالاك"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "فرانك لامبارد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_082",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح البلجيكي المهاري الذي قاد بلجيكا للمركز الثالث بمونديال 2018)",
+      "answer": "إيدين هازارد",
+      "difficulty": "صعب",
+      "hint": "ساحر بلجيكا ونجم تشيلسي الأسبق وأفضل لاعب في الدوري الإنجليزي وصاحب المراوغات الساحرة",
+      "options": [
+        "إيدين هازارد",
+        "كيفين دي بروين",
+        "روميلو لوكاكو",
+        "دريس ميرتنز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "إيدين هازارد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_083",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (نجم توتنهام وريال مدريد وبطل أوروبا 5 مرات والهدف الشهير ضد بارترا)",
+      "answer": "جاريث بيل",
+      "difficulty": "صعب",
+      "hint": "القطار الويلزي وصاحب الأهداف الإعجازية في نهائيات دوري أبطال أوروبا (دبل كيك ليفربول 2018)",
+      "options": [
+        "جاريث بيل",
+        "كريستيانو رونالدو",
+        "كريم بنزيما",
+        "آنخل دي ماريا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "جاريث بيل",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_084",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح البرازيلي الحاسم وأحد أفضل نجوم الكرة في العالم حالياً)",
+      "answer": "فينيسيوس جونيور",
+      "difficulty": "صعب",
+      "hint": "نجم ريال مدريد والبرازيل وصاحب هدف الفوز بنهائي دوري أبطال أوروبا 2022 و2024",
+      "options": [
+        "فينيسيوس جونيور",
+        "رودريجو",
+        "نيمار",
+        "رافينيا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "فينيسيوس جونيور",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_085",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (لاعب الوسط الشاب الهداف ورقم 5 في الميرينجي)",
+      "answer": "جود بيلينجهام",
+      "difficulty": "صعب",
+      "hint": "جوهرة إنجلترا وريال مدريد وبطل دوري أبطال أوروبا والليجا في موسمه الأول واحتفاله الشهير",
+      "options": [
+        "جود بيلينجهام",
+        "بوكايو ساكا",
+        "فيل فودين",
+        "كول بالمر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "جود بيلينجهام",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_086",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح الموهوب صاحب القدم اليسرى والمراوغات الاستثنائية في عمر 17 عاماً)",
+      "answer": "لامين يامال",
+      "difficulty": "صعب",
+      "hint": "الفتى المعجزة لبرشلونة وإسبانيا وبطل يورو 2024 وأصغر مسجل في تاريخ اليورو",
+      "options": [
+        "لامين يامال",
+        "أنسو فاتي",
+        "نيكو ويليامز",
+        "بيدري"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "لامين يامال",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_087",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أفضل لاعب ارتكاز في العالم وصاحب هدف نهائي الأبطال 2023 التاريخي)",
+      "answer": "رودري",
+      "difficulty": "صعب",
+      "hint": "الفائز بجائزة الكرة الذهبية 2024 (Ballon d'Or) ومايسترو مانشستر سيتي وإسبانيا وبطل اليورو",
+      "options": [
+        "رودري",
+        "سيرجيو بوسكيتس",
+        "كاسيميرو",
+        "توني كروس"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "رودري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_088",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (صاحب الـ 6 دوري أبطال أوروبا والأناقة المطلقة في خط الوسط حتى اعتزاله)",
+      "answer": "توني كروس",
+      "difficulty": "صعب",
+      "hint": "المهندس الألماني وقاطرة التمريرات الدقيقة لـ ريال مدريد وبايرن ميونخ وبطل العالم 2014",
+      "options": [
+        "توني كروس",
+        "لوكا مودريتش",
+        "باستيان شفاينشتايجر",
+        "مسعود أوزيل"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "توني كروس",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_089",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الظهير الأيسر الأكثر مهارة وصانع أهداف كبار النهائيات الأوروبية)",
+      "answer": "مارسيلو",
+      "difficulty": "صعب",
+      "hint": "ساحر الجبهة اليسرى لريال مدريد والبرازيل وأكثر لاعب تتويجاً في تاريخ النادي الملكي سابقاً",
+      "options": [
+        "مارسيلو",
+        "روبرتو كارلوس",
+        "داني ألفيس",
+        "جوردي ألبا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "مارسيلو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_090",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الظهير الأيمن التاريخي للجيل الذهبي للبارسا والسامبا)",
+      "answer": "داني ألفيس",
+      "difficulty": "صعب",
+      "hint": "اللاعب الأكثر تتويجاً بالبطولات في تاريخ كرة القدم (43 بطولة) وأسطورة برشلونة والبرازيل",
+      "options": [
+        "داني ألفيس",
+        "كافو",
+        "مايكون",
+        "مارسيلو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "داني ألفيس",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_091",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أحد أفضل وأخطر رؤوس الحربة في تاريخ البريميرليج)",
+      "answer": "سيرجيو أجويرو",
+      "difficulty": "صعب",
+      "hint": "كون أجويرو والهدف التاريخي 93:20 لمانشستر سيتي وهدافه التاريخي ونجم الأرجنتين وأتلتيكو",
+      "options": [
+        "سيرجيو أجويرو",
+        "كارلوس تيفيز",
+        "جونزالو هيجواين",
+        "لويس سواريز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "سيرجيو أجويرو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_092",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (قائد إنجلترا وأحد أكمل المهاجمين وصناع اللعب في العالم)",
+      "answer": "هاري كين",
+      "difficulty": "صعب",
+      "hint": "الهداف التاريخي لمنتخب إنجلترا وتوتنهام والحذاء الذهبي لبايرن ميونخ والدوريات الأوروبية",
+      "options": [
+        "هاري كين",
+        "إيرلينج هالاند",
+        "واين روني",
+        "روبرت ليفاندوفسكي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "هاري كين",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_093",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح الأرجنتيني الساحر صاحب اللمسات الحاسمة في كل المباريات التاريخية)",
+      "answer": "أنخيل دي ماريا",
+      "difficulty": "صعب",
+      "hint": "رجل النهائيات الكبرى للأرجنتين وهدفه في نهائي مونديال 2022 وكوبا أمريكا 2021 والعاشرة لمدريد",
+      "options": [
+        "أنخيل دي ماريا",
+        "باولو ديبالا",
+        "ليونيل ميسي",
+        "لاوتارو مارتينيز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أنخيل دي ماريا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_094",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (صانع الألعاب الأرجنتيني المهاري صاحب القدم اليسرى المميزة)",
+      "answer": "باولو ديبالا",
+      "difficulty": "صعب",
+      "hint": "لا خويا (الجوهرة) وقناع ديبالا الشهير ونجم روما ويوفنتوس وبطل كأس العالم 2022 مع التانجو",
+      "options": [
+        "باولو ديبالا",
+        "أنخيل دي ماريا",
+        "أنطوان جريزمان",
+        "خواكين كوريا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "باولو ديبالا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_095",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (المهاجم المرعب الذي أوقف حرباً أهلية وسجل في كل النهائيات الإنجليزية)",
+      "answer": "ديدييه دروجبا",
+      "difficulty": "صعب",
+      "hint": "الفيل الإيفواري وبطل ملحمة ميونخ 2012 مع تشيلسي وقائد ساحل العاج التاريخي",
+      "options": [
+        "ديدييه دروجبا",
+        "صامويل إيتو",
+        "يايا توريه",
+        "مايكل إيسيان"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ديدييه دروجبا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_096",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (هداف الكاميرون وأمم أفريقيا التاريخي ورئيس الاتحاد الكاميروني الحالي)",
+      "answer": "صامويل إيتو",
+      "difficulty": "صعب",
+      "hint": "الأسد الكاميروني والوحيد المتوج بالثلاثية التاريخية مع فريقين مختلفين متتاليين (برشلونة والإنتر)",
+      "options": [
+        "صامويل إيتو",
+        "ديدييه دروجبا",
+        "جورج وياه",
+        "روجيه ميلا"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "صامويل إيتو",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_097",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (الجناح الفرنسي الناري وثالث الكرة الذهبية 2013)",
+      "answer": "فرانك ريبيري",
+      "difficulty": "صعب",
+      "hint": "سكارفيس ونجم بايرن ميونخ وفرنسا وبطل خماسية 2013 وشريك روبن في ثنائية روبيري التاريخية",
+      "options": [
+        "فرانك ريبيري",
+        "آريين روبن",
+        "زين الدين زيدان",
+        "كينجسلي كومان"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "فرانك ريبيري",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_098",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أسطورة هولندا وبايرن وتشيلسي وريال مدريد الأسبق وصاحب أسرع انطلاقة في المونديال)",
+      "answer": "آريين روبن",
+      "difficulty": "صعب",
+      "hint": "الجناح الطائر الهولندي وصاحب القطع للداخل والتسديد باليسار وهدف نهائي ويمبلي 2013 للبايرن",
+      "options": [
+        "آريين روبن",
+        "فرانك ريبيري",
+        "روبن فان بيرسي",
+        "ويسلي شنايدر"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "آريين روبن",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_099",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (وصيف الكرة الذهبية 2022 وهداف البريميرليج وبطل دوري أبطال أوروبا)",
+      "answer": "ساديو ماني",
+      "difficulty": "صعب",
+      "hint": "أسد التيرانجا وقائد السنغال للتتويج بأمم أفريقيا 2021 ونجم ليفربول والنصر السعودي الحالي",
+      "options": [
+        "ساديو ماني",
+        "محمد صلاح",
+        "كاليدو كوليبالي",
+        "إسماعيلا سار"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ساديو ماني",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_football_100",
+      "category": "image_blur",
+      "question": "خمن مين اللاعب صاحب الصورة المشوشة دي؟ ⚽ (أعظم لاعب في تاريخ الكرة الآسيوية وصاحب التسديدات بكلتا القدمين)",
+      "answer": "سون هيونج مين",
+      "difficulty": "صعب",
+      "hint": "النفاثة الكورية وقائد توتنهام هوتسبير وهداف الدوري الإنجليزي الممتاز والفائز بجائزة بوشكاش",
+      "options": [
+        "سون هيونج مين",
+        "بارك جي سونج",
+        "كاورو ميتوما",
+        "تاكيهيرو تومياسو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "سون هيونج مين",
+      "revealDuration": 10
     }
   ]
 }

@@ -9,7 +9,6 @@ import {
   Platform,
   Alert,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { LiveBuzzerRoom, ActiveCardEvent } from '../types';
@@ -348,44 +347,44 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   let buzzerBorder = '#334155';
   let buzzerLabel = 'استنى الحكم...';
   let buzzerSub = 'الجرس مقفول حالياً';
-  let buzzerIcon: any = 'lock-outline';
+  let buzzerEmoji = '🔒';
 
   if (room.status === 'lobby') {
     buzzerBg = '#1E293B';
     buzzerBorder = theme.colors.gold;
     buzzerLabel = 'جاهز للعب!';
     buzzerSub = 'في انتظار الحكم يبدأ اللعبة...';
-    buzzerIcon = 'clock-outline';
+    buzzerEmoji = '⏳';
   } else if (room.status === 'finished') {
     buzzerBg = 'rgba(251, 191, 36, 0.2)';
     buzzerBorder = theme.colors.gold;
     buzzerLabel = room.winner?.id === playerId ? 'أنت الفائز! 🏆' : `فاز ${room.winner?.name || ''}`;
     buzzerSub = 'انتهت الجولة!';
-    buzzerIcon = 'trophy';
+    buzzerEmoji = '🏆';
   } else if (isMyBuzz) {
     buzzerBg = '#16A34A';
     buzzerBorder = '#4ADE80';
     buzzerLabel = 'أنت الأول! 🥇';
     buzzerSub = 'جاوب بصوتك الآن 🎤🔥';
-    buzzerIcon = 'microphone';
+    buzzerEmoji = '🎤';
   } else if (room.buzzerState === 'buzzed' && room.buzzedBy) {
     buzzerBg = '#334155';
     buzzerBorder = '#F59E0B';
     buzzerLabel = `${room.buzzedBy.name} سبقك!`;
     buzzerSub = 'الإجابة عنده الآن...';
-    buzzerIcon = 'account-voice';
+    buzzerEmoji = '👀';
   } else if (isLockedOut) {
     buzzerBg = '#3F1D24';
     buzzerBorder = '#EF4444';
     buzzerLabel = 'مقفول عليك';
     buzzerSub = 'استنى السؤال الجاي ⏳';
-    buzzerIcon = 'cancel';
+    buzzerEmoji = '⛔';
   } else if (canBuzz) {
     buzzerBg = '#DC2626';
     buzzerBorder = '#FBBF24';
     buzzerLabel = 'دوس الآن!';
     buzzerSub = 'أسرع واحد يجاوب 🚨';
-    buzzerIcon = 'bell-ring';
+    buzzerEmoji = '🚨';
   }
 
   return (
@@ -394,17 +393,13 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
       <View style={styles.topBar}>
         <View style={styles.topLeftBtns}>
           <TouchableOpacity style={styles.iconBtn} onPress={handleLeave}>
-            <MaterialCommunityIcons name="close" size={20} color={theme.colors.textSecondary} />
+            <Text style={{ color: theme.colors.textSecondary, fontSize: 16, fontWeight: 'bold' }}>✕</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.iconBtn}
             onPress={() => setIsMuted(soundManager.toggleMute())}
           >
-            <MaterialCommunityIcons
-              name={isMuted ? 'volume-off' : 'volume-high'}
-              size={20}
-              color={isMuted ? theme.colors.textMuted : theme.colors.gold}
-            />
+            <Text style={{ fontSize: 16 }}>{isMuted ? '🔇' : '🔊'}</Text>
           </TouchableOpacity>
         </View>
 
@@ -439,7 +434,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
               >
                 <View style={styles.scoreNameRow}>
                   {isLeader && (
-                    <MaterialCommunityIcons name="crown" size={13} color={theme.colors.gold} />
+                    <Text style={{ fontSize: 13, marginRight: 4 }}>👑</Text>
                   )}
                   <Text style={styles.scoreName} numberOfLines={1}>
                     {p.name} {isMe ? '(أنت)' : ''}
@@ -484,6 +479,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
           <AudioMysteryWidget
             audioUrl={room.currentMedia.url}
             mediaTitle={room.currentMedia.title}
+            spokenText={room.currentMedia.title}
             duration={room.currentMedia.revealDuration || 8}
             startedAt={room.currentMedia.startedAt}
             frozenAt={room.currentMedia.frozenAt}
@@ -513,11 +509,9 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
               },
             ]}
           >
-            <MaterialCommunityIcons
-              name={buzzerIcon}
-              size={64}
-              color={canBuzz || isMyBuzz ? '#FFFFFF' : theme.colors.gold}
-            />
+            <Text style={{ fontSize: 58, textAlign: 'center', marginBottom: 4 }}>
+              {buzzerEmoji}
+            </Text>
             <Text style={styles.buzzerLabel}>{buzzerLabel}</Text>
             <Text style={styles.buzzerSub}>{buzzerSub}</Text>
           </TouchableOpacity>
@@ -534,11 +528,9 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
             disabled={hasUsedCard || isDrawingCard}
             activeOpacity={0.8}
           >
-            <MaterialCommunityIcons
-              name={hasUsedCard ? 'cards-playing-outline' : 'cards-playing'}
-              size={22}
-              color={hasUsedCard ? '#64748B' : '#F59E0B'}
-            />
+            <Text style={{ fontSize: 22, marginRight: 6 }}>
+              {hasUsedCard ? '🔒' : '🃏'}
+            </Text>
             <Text
               style={[
                 styles.powerCardBtnText,
@@ -558,7 +550,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         {room.currentOptions && room.currentOptions.length > 0 && room.status === 'playing' && (
           <View style={styles.optionsCard}>
             <View style={styles.optionsHeader}>
-              <MaterialCommunityIcons name="format-list-bulleted" size={18} color={theme.colors.gold} />
+              <Text style={{ fontSize: 16, marginRight: 6 }}>🔠</Text>
               <Text style={styles.optionsHeaderText}>الاختيارات المساعدة من الحكم 🔠</Text>
             </View>
             <View style={styles.optionsList}>

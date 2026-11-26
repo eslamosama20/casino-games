@@ -11,7 +11,6 @@ import {
   Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { GameMode, Player } from '../types';
@@ -135,12 +134,12 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
             onPress={handleResetQuestionsHistory}
             activeOpacity={0.7}
           >
-            <MaterialCommunityIcons name="refresh" size={18} color={theme.colors.textSecondary} />
+            <Text style={{ fontSize: 15, marginLeft: 4 }}>🔄</Text>
             <Text style={styles.resetButtonText}>تصفير السجل</Text>
           </TouchableOpacity>
 
           <View style={styles.titleContainer}>
-            <MaterialCommunityIcons name="cards-playing-outline" size={28} color={theme.colors.gold} />
+            <Text style={{ fontSize: 26, marginLeft: 6 }}>🃏</Text>
             <Text style={styles.title}>كازينو الألعاب</Text>
           </View>
         </View>
@@ -154,11 +153,9 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
                 syncStatus.isOnline ? styles.syncBadgeOnline : styles.syncBadgeOffline,
               ]}
             >
-              <MaterialCommunityIcons
-                name={syncStatus.isOnline ? 'cloud-check' : 'cloud-off-outline'}
-                size={14}
-                color={syncStatus.isOnline ? theme.colors.success : theme.colors.textMuted}
-              />
+              <Text style={{ fontSize: 13, marginLeft: 4 }}>
+                {syncStatus.isOnline ? '☁️' : '⚠️'}
+              </Text>
               <Text
                 style={[
                   styles.syncBadgeText,
@@ -179,7 +176,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
             activeOpacity={0.85}
           >
             <View style={styles.buzzerEntryLeft}>
-              <MaterialCommunityIcons name="chevron-left" size={24} color={theme.colors.gold} />
+              <Text style={{ color: theme.colors.gold, fontSize: 26, fontWeight: '900' }}>‹</Text>
             </View>
             <View style={styles.buzzerEntryTextWrap}>
               <View style={styles.buzzerEntryTitleRow}>
@@ -193,7 +190,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               </Text>
             </View>
             <View style={styles.buzzerEntryIconCircle}>
-              <MaterialCommunityIcons name="bell-ring" size={26} color="#0F172A" />
+              <Text style={{ fontSize: 26, textAlign: 'center' }}>🔔</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -210,11 +207,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               onPress={() => setMode('individuals')}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons
-                name="account-group-outline"
-                size={22}
-                color={mode === 'individuals' ? theme.colors.background : theme.colors.textSecondary}
-              />
+              <Text style={{ fontSize: 18, marginLeft: 6 }}>👤</Text>
               <Text
                 style={[
                   styles.modeOptionText,
@@ -233,11 +226,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               onPress={() => setMode('teams')}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons
-                name="shield-account-outline"
-                size={22}
-                color={mode === 'teams' ? theme.colors.background : theme.colors.textSecondary}
-              />
+              <Text style={{ fontSize: 18, marginLeft: 6 }}>👥</Text>
               <Text
                 style={[
                   styles.modeOptionText,
@@ -263,7 +252,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               }}
               activeOpacity={0.7}
             >
-              <Text style={styles.counterSymbolMinus}>−</Text>
+              <Text style={styles.counterSymbolMinus}>-</Text>
             </TouchableOpacity>
 
             <View style={styles.scoreDisplay}>
@@ -302,11 +291,9 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
                 style={styles.removeBtn}
                 activeOpacity={0.6}
               >
-                <MaterialCommunityIcons
-                  name="trash-can-outline"
-                  size={22}
-                  color={playerNames.length <= 2 ? theme.colors.textMuted : theme.colors.danger}
-                />
+                <Text style={{ fontSize: 18, color: playerNames.length <= 2 ? theme.colors.textMuted : theme.colors.danger, fontWeight: 'bold' }}>
+                  🗑️
+                </Text>
               </TouchableOpacity>
 
               {/* Editable Name Input directly in place! */}
@@ -334,7 +321,9 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               onPress={handleAddPlayer}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons name="plus" size={20} color={theme.colors.background} />
+              <Text style={{ fontSize: 18, color: theme.colors.background, fontWeight: 'bold', marginLeft: 4 }}>
+                ➕
+              </Text>
               <Text style={styles.addPlayerBtnText}>إضافة</Text>
             </TouchableOpacity>
             <TextInput
@@ -369,7 +358,9 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
           activeOpacity={0.85}
         >
           <Text style={styles.primaryBtnText}>التالي: اختيار الفئات</Text>
-          <MaterialCommunityIcons name="arrow-left" size={22} color={theme.colors.background} />
+          <Text style={{ fontSize: 20, color: theme.colors.background, fontWeight: 'bold', marginRight: 6 }}>
+            ←
+          </Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -528,25 +519,23 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   scoreCounterMinus: {
-    backgroundColor: 'rgba(239, 68, 68, 0.15)',
-    borderColor: 'rgba(239, 68, 68, 0.6)',
+    backgroundColor: '#3B1822',
+    borderColor: '#EF4444',
   },
   scoreCounterPlus: {
-    backgroundColor: 'rgba(34, 197, 94, 0.15)',
-    borderColor: 'rgba(34, 197, 94, 0.6)',
+    backgroundColor: '#133526',
+    borderColor: '#22C55E',
   },
   counterSymbolMinus: {
     color: '#EF4444',
     fontSize: 28,
     fontWeight: '900',
-    lineHeight: 32,
     textAlign: 'center',
   },
   counterSymbolPlus: {
     color: '#22C55E',
     fontSize: 28,
     fontWeight: '900',
-    lineHeight: 32,
     textAlign: 'center',
   },
   scoreDisplay: {

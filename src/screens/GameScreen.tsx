@@ -13,7 +13,6 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Category, Player, Question, DifficultyLevel, BuzzerState, ActiveCardEvent, RoomMediaState } from '../types';
 import { questionService } from '../services/questionService';
@@ -23,6 +22,7 @@ import { PowerCardModal } from '../components/PowerCardModal';
 import { ImageBlurWidget } from '../components/ImageBlurWidget';
 import { AudioMysteryWidget } from '../components/AudioMysteryWidget';
 import { getPowerCardById, POWER_CARDS } from '../data/powerCards';
+import { getCategoryEmoji, getPowerCardEmoji } from '../constants/emojis';
 
 interface GameScreenProps {
   players: Player[];
@@ -517,7 +517,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
                 <View style={styles.playerNameContainer}>
                   {isLeading && (
-                    <MaterialCommunityIcons name="crown" size={14} color={theme.colors.gold} />
+                    <Text style={{ fontSize: 13, marginRight: 4 }}>👑</Text>
                   )}
                   <Text
                     style={styles.playerCardName}
@@ -606,7 +606,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               }}
               activeOpacity={0.85}
             >
-              <MaterialCommunityIcons name="bell-ring" size={20} color="#0F172A" />
+              <Text style={{ fontSize: 18, marginLeft: 6 }}>🔔</Text>
               <Text style={styles.openBuzzerBtnText}>افتح الجرس للمتسابقين 🟢 (دوسوا!)</Text>
             </TouchableOpacity>
           )}
@@ -618,11 +618,11 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 onPress={() => buzzerService.lockBuzzer(liveRoomCode, false)}
                 activeOpacity={0.8}
               >
-                <MaterialCommunityIcons name="lock" size={16} color={theme.colors.textPrimary} />
+                <Text style={{ fontSize: 14, marginLeft: 4 }}>🔒</Text>
                 <Text style={styles.lockBuzzerSmallText}>قفل</Text>
               </TouchableOpacity>
               <View style={styles.buzzerOpenIndicator}>
-                <MaterialCommunityIcons name="broadcast" size={18} color="#4ADE80" />
+                <Text style={{ fontSize: 16, marginLeft: 6 }}>📡</Text>
                 <Text style={styles.buzzerOpenIndicatorText}>
                   الجرس مفتوح الآن — منتظر أول واحد يدوس 🚨
                 </Text>
@@ -633,7 +633,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           {buzzerState === 'buzzed' && buzzedBy && (
             <View style={styles.buzzerWinnerBox}>
               <View style={styles.buzzerWinnerTop}>
-                <MaterialCommunityIcons name="alarm-light" size={22} color={theme.colors.gold} />
+                <Text style={{ fontSize: 18, marginLeft: 6 }}>🚨</Text>
                 <Text style={styles.buzzerWinnerText}>
                   🥇 {buzzedBy.name} داس الأول! الإجابة عنده الآن 🎤
                 </Text>
@@ -655,7 +655,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     style={styles.customMsgClearBtn}
                     onPress={() => setCustomReactionMsg('')}
                   >
-                    <MaterialCommunityIcons name="close-circle" size={16} color="#94A3B8" />
+                    <Text style={{ fontSize: 14, color: '#94A3B8' }}>✕</Text>
                   </TouchableOpacity>
                 )}
               </View>
@@ -673,7 +673,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                         }}
                         activeOpacity={0.85}
                       >
-                        <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
+                        <Text style={{ fontSize: 16, marginLeft: 4 }}>✓</Text>
                         <Text style={styles.buzzerCorrectBtnText}>صح (+{awardPoints}) وافتح 🔔</Text>
                       </TouchableOpacity>
 
@@ -685,7 +685,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                         }}
                         activeOpacity={0.85}
                       >
-                        <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
+                        <Text style={{ fontSize: 16, marginLeft: 4 }}>✕</Text>
                         <Text style={styles.buzzerWrongReopenText}>غلط (-{awardPoints}) وافتح 🔄</Text>
                       </TouchableOpacity>
                     </>
@@ -700,7 +700,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   }}
                   activeOpacity={0.85}
                 >
-                  <MaterialCommunityIcons name="refresh" size={16} color={theme.colors.gold} />
+                  <Text style={{ fontSize: 16, textAlign: 'center' }}>🔄</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -752,15 +752,11 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 onPress={() => setShowCategoryPicker(true)}
                 activeOpacity={0.75}
               >
-                <MaterialCommunityIcons
-                  name={(currentCategory?.icon as any) || 'help-circle-outline'}
-                  size={16}
-                  color={currentCategory?.color || theme.colors.gold}
-                />
+                <Text style={{ fontSize: 16 }}>{getCategoryEmoji(currentCategory?.id)}</Text>
                 <Text style={[styles.categoryTagText, { color: currentCategory?.color || theme.colors.gold }]}>
                   {currentCategory?.name || 'سؤال'}
                 </Text>
-                <MaterialCommunityIcons name="chevron-down" size={14} color={currentCategory?.color || theme.colors.gold} />
+                <Text style={{ fontSize: 11, color: currentCategory?.color || theme.colors.gold }}>▼</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -768,7 +764,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 onPress={() => setShowCategoryPicker(true)}
                 activeOpacity={0.75}
               >
-                <MaterialCommunityIcons name="swap-horizontal" size={14} color={theme.colors.gold} />
+                <Text style={{ fontSize: 13, marginRight: 4 }}>🔄</Text>
                 <Text style={styles.chooseCatBtnText}>اختر الفئة</Text>
               </TouchableOpacity>
 
@@ -814,6 +810,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               <AudioMysteryWidget
                 audioUrl={currentQuestion.mediaUrl}
                 mediaTitle={currentQuestion.mediaTitle || 'مقطع صوتي / إفيه غامض'}
+                spokenText={currentQuestion.question}
                 duration={currentQuestion.revealDuration || 8}
                 startedAt={roomMedia?.startedAt}
                 frozenAt={roomMedia?.frozenAt}
@@ -839,7 +836,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   style={styles.hintToggleBtn}
                   onPress={() => setShowHint(!showHint)}
                 >
-                  <MaterialCommunityIcons name="lightbulb-outline" size={16} color={theme.colors.gold} />
+                  <Text style={{ fontSize: 15, marginRight: 4 }}>💡</Text>
                   <Text style={styles.hintToggleText}>
                     {showHint ? 'إخفاء التلميح' : 'تلميح للمتسابق؟ 💡'}
                   </Text>
@@ -871,15 +868,11 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   }}
                   activeOpacity={0.75}
                 >
-                  <MaterialCommunityIcons name="format-list-bulleted" size={16} color={theme.colors.gold} />
+                  <Text style={{ fontSize: 15, marginRight: 4 }}>🔠</Text>
                   <Text style={styles.optionsToggleText}>
                     {showOptions ? 'إخفاء الاختيارات' : 'خيارات للمتسابقين لو مش عارفين؟ 🔠'}
                   </Text>
-                  <MaterialCommunityIcons
-                    name={showOptions ? 'chevron-up' : 'chevron-down'}
-                    size={16}
-                    color={theme.colors.gold}
-                  />
+                  <Text style={{ fontSize: 12, color: theme.colors.gold }}>{showOptions ? '▲' : '▼'}</Text>
                 </TouchableOpacity>
 
                 {showOptions && (
@@ -922,12 +915,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                             {opt}
                           </Text>
                           {isCorrect && (
-                            <MaterialCommunityIcons
-                              name="check-circle"
-                              size={15}
-                              color={theme.colors.gold}
-                              style={styles.correctCheckIcon}
-                            />
+                            <Text style={{ fontSize: 14, color: theme.colors.gold, marginRight: 6 }}>✓</Text>
                           )}
                         </View>
                       );
@@ -946,7 +934,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 </View>
               ) : (
                 <View style={styles.answerHiddenBox}>
-                  <MaterialCommunityIcons name="eye-off-outline" size={24} color={theme.colors.textMuted} />
+                  <Text style={{ fontSize: 24, textAlign: 'center' }}>🔒</Text>
                   <Text style={styles.answerHiddenText}>الإجابة مخفية لتجنب التلصص</Text>
                 </View>
               )}
@@ -972,11 +960,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 }}
                 activeOpacity={0.8}
               >
-                <MaterialCommunityIcons
-                  name={isAnswerVisible ? 'eye-off' : 'eye'}
-                  size={18}
-                  color={isAnswerVisible ? theme.colors.gold : theme.colors.background}
-                />
+                <Text style={{ fontSize: 16, marginRight: 6 }}>{isAnswerVisible ? '🔒' : '👁️'}</Text>
                 <Text
                   style={[
                     styles.toggleAnswerBtnText,
@@ -993,7 +977,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               <View style={styles.timerHeader}>
                 <View style={styles.timerControlsLeft}>
                   <TouchableOpacity onPress={() => handleResetTimer()} style={styles.timerResetBtn}>
-                    <MaterialCommunityIcons name="restart" size={18} color={theme.colors.textSecondary} />
+                    <Text style={{ fontSize: 16 }}>🔄</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity onPress={handleCycleTimerDuration} style={styles.timerDurationBtn}>
@@ -1006,11 +990,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   onPress={handleToggleTimer}
                   activeOpacity={0.8}
                 >
-                  <MaterialCommunityIcons
-                    name={timerRunning ? 'pause' : 'timer-outline'}
-                    size={20}
-                    color={timerRunning ? theme.colors.danger : theme.colors.gold}
-                  />
+                  <Text style={{ fontSize: 16, marginRight: 6 }}>{timerRunning ? '⏸️' : '⏱️'}</Text>
                   <Text style={[styles.timerButtonText, timerRunning && styles.timerButtonTextActive]}>
                     {timerRunning ? `متبقي ${timeLeft} ث` : timeLeft === 0 ? 'انتهى الوقت!' : `تايمر ${timerDuration} ثانية`}
                   </Text>
@@ -1052,7 +1032,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           activeOpacity={0.85}
         >
           <Text style={styles.nextBtnText}>السؤال التالي / تخطي</Text>
-          <MaterialCommunityIcons name="skip-next" size={24} color={theme.colors.background} />
+          <Text style={{ fontSize: 20, color: theme.colors.background, marginLeft: 6 }}>⏭</Text>
         </TouchableOpacity>
       </View>
 
@@ -1064,7 +1044,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalCard}>
-            <MaterialCommunityIcons name="alert-decagram" size={48} color={theme.colors.gold} />
+            <Text style={{ fontSize: 44, textAlign: 'center' }}>⚠️</Text>
             <Text style={styles.modalTitle}>خلصت الأسئلة!</Text>
             <Text style={styles.modalMessage}>
               خلصت كل الأسئلة في الفئات المختارة! تحب نعيد الأسئلة من الأول لنفس الفئات؟
@@ -1106,7 +1086,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 onPress={() => setShowCategoryPicker(false)}
                 activeOpacity={0.7}
               >
-                <MaterialCommunityIcons name="close" size={24} color={theme.colors.textMuted} />
+                <Text style={{ fontSize: 20, color: theme.colors.textMuted }}>✕</Text>
               </TouchableOpacity>
               <Text style={styles.catPickerTitle}>اختيار فئة السؤال 🎯</Text>
             </View>
@@ -1126,14 +1106,14 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 activeOpacity={0.8}
               >
                 <View style={[styles.catOptionIcon, { backgroundColor: theme.colors.amberGlow }]}>
-                  <MaterialCommunityIcons name="dice-multiple" size={22} color={theme.colors.gold} />
+                  <Text style={{ fontSize: 20 }}>🎲</Text>
                 </View>
                 <View style={styles.catOptionInfo}>
                   <Text style={styles.catOptionName}>🎲 عشوائي (من كل الفئات)</Text>
                   <Text style={styles.catOptionDesc}>يختار تلقائياً من الفئات المفعلة</Text>
                 </View>
                 {chosenCategoryFilter === null && (
-                  <MaterialCommunityIcons name="check-circle" size={20} color={theme.colors.gold} />
+                  <Text style={{ fontSize: 16, color: theme.colors.gold }}>✓</Text>
                 )}
               </TouchableOpacity>
 
@@ -1157,11 +1137,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                         { backgroundColor: cat.color ? `${cat.color}25` : theme.colors.amberGlow },
                       ]}
                     >
-                      <MaterialCommunityIcons
-                        name={(cat.icon as any) || 'help-circle-outline'}
-                        size={22}
-                        color={cat.color || theme.colors.gold}
-                      />
+                      <Text style={{ fontSize: 20 }}>{getCategoryEmoji(cat.id)}</Text>
                     </View>
 
                     <View style={styles.catOptionInfo}>
@@ -1172,7 +1148,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     </View>
 
                     {isSelected && (
-                      <MaterialCommunityIcons name="check-circle" size={20} color={theme.colors.gold} />
+                      <Text style={{ fontSize: 16, color: theme.colors.gold }}>✓</Text>
                     )}
                   </TouchableOpacity>
                 );
@@ -1196,7 +1172,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 onPress={() => setShowContestantCardsModal(false)}
                 style={styles.closeBtn}
               >
-                <MaterialCommunityIcons name="close" size={24} color={theme.colors.textMuted} />
+                <Text style={{ fontSize: 20, color: theme.colors.textMuted }}>✕</Text>
               </TouchableOpacity>
               <Text style={styles.catPickerTitle}>كروت المتسابقين 🃏</Text>
             </View>
@@ -1213,7 +1189,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                       <Text style={styles.playerCardRowName}>{p.name}</Text>
                       {pCard ? (
                         <View style={[styles.cardTagSmall, { backgroundColor: `${pCard.color}25`, borderColor: pCard.color }]}>
-                          <MaterialCommunityIcons name={pCard.icon as any} size={13} color={pCard.color} />
+                          <Text style={{ fontSize: 12, marginRight: 4 }}>{getPowerCardEmoji(pCard.id)}</Text>
                           <Text style={[styles.cardTagSmallText, { color: pCard.color }]}>
                             {pCard.title}
                           </Text>
@@ -1232,8 +1208,8 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                         }}
                         activeOpacity={0.8}
                       >
-                        <MaterialCommunityIcons name="eye" size={13} color="#0F172A" />
-                        <Text style={styles.inspectBtnText}>فتح الكارت 👁️</Text>
+                        <Text style={{ fontSize: 12, marginLeft: 4 }}>👁️</Text>
+                        <Text style={styles.inspectBtnText}>فتح الكارت</Text>
                       </TouchableOpacity>
                     ) : (
                       <View style={styles.disabledBtnPlaceholder}>
@@ -1259,7 +1235,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     }}
                     activeOpacity={0.8}
                   >
-                    <MaterialCommunityIcons name={c.icon as any} size={20} color={c.color} />
+                    <Text style={{ fontSize: 20, textAlign: 'center' }}>{getPowerCardEmoji(c.id)}</Text>
                     <Text style={[styles.miniCardPreviewTitle, { color: c.color }]} numberOfLines={1}>
                       {c.title}
                     </Text>

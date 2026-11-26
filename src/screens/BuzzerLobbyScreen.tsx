@@ -11,7 +11,6 @@ import {
   Alert,
   KeyboardAvoidingView,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { LiveBuzzerRoom } from '../types';
@@ -148,11 +147,13 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backBtn} onPress={handleBackPress} activeOpacity={0.75}>
-            <MaterialCommunityIcons name="arrow-right" size={22} color={theme.colors.textPrimary} />
+            <Text style={{ fontSize: 20, color: theme.colors.textPrimary, fontWeight: 'bold', marginLeft: 4 }}>
+              →
+            </Text>
             <Text style={styles.backText}>رجوع</Text>
           </TouchableOpacity>
           <View style={styles.headerTitleRow}>
-            <MaterialCommunityIcons name="bell-ring" size={24} color={theme.colors.gold} />
+            <Text style={{ fontSize: 24, marginLeft: 6 }}>🔔</Text>
             <Text style={styles.headerTitle}>غرفة الجرس المباشر</Text>
           </View>
         </View>
@@ -168,11 +169,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               }}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons
-                name="crown"
-                size={20}
-                color={tab === 'host' ? '#0F172A' : theme.colors.gold}
-              />
+              <Text style={{ fontSize: 18, marginLeft: 6 }}>👑</Text>
               <Text style={[styles.tabText, tab === 'host' && styles.tabTextActive]}>
                 أنا الحكم (إنشاء غرفة)
               </Text>
@@ -186,11 +183,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               }}
               activeOpacity={0.8}
             >
-              <MaterialCommunityIcons
-                name="hand-pointing-up"
-                size={20}
-                color={tab === 'player' ? '#0F172A' : theme.colors.gold}
-              />
+              <Text style={{ fontSize: 18, marginLeft: 6 }}>✋</Text>
               <Text style={[styles.tabText, tab === 'player' && styles.tabTextActive]}>
                 أنا متسابق (دخول بكود)
               </Text>
@@ -201,7 +194,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
         {/* Error Banner */}
         {errorMsg && (
           <View style={styles.errorBox}>
-            <MaterialCommunityIcons name="alert-circle" size={18} color={theme.colors.danger} />
+            <Text style={{ fontSize: 16, marginLeft: 6 }}>⚠️</Text>
             <Text style={styles.errorText}>{errorMsg}</Text>
           </View>
         )}
@@ -244,7 +237,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
                 <ActivityIndicator color="#0F172A" />
               ) : (
                 <>
-                  <MaterialCommunityIcons name="bell-plus" size={22} color="#0F172A" />
+                  <Text style={{ fontSize: 20, marginLeft: 6 }}>🔔</Text>
                   <Text style={styles.primaryBtnText}>إنشاء الغرفة وإظهار الكود</Text>
                 </>
               )}
@@ -260,11 +253,9 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
             <TouchableOpacity style={styles.codeBox} onPress={handleCopyCode} activeOpacity={0.8}>
               <Text style={styles.codeDigits}>{'\u2066'}{hostedRoom.code}{'\u2069'}</Text>
               <View style={styles.copyBadge}>
-                <MaterialCommunityIcons
-                  name={copied ? 'check' : 'content-copy'}
-                  size={15}
-                  color={theme.colors.gold}
-                />
+                <Text style={{ fontSize: 13, marginLeft: 4 }}>
+                  {copied ? '✓' : '📋'}
+                </Text>
                 <Text style={styles.copyText}>{copied ? 'تم النسخ ✓' : 'اضغط للنسخ'}</Text>
               </View>
             </TouchableOpacity>
@@ -294,7 +285,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
                       onPress={() => buzzerService.kickPlayer(hostedRoom.code, p.id)}
                       style={styles.kickBtn}
                     >
-                      <MaterialCommunityIcons name="close" size={16} color={theme.colors.danger} />
+                      <Text style={{ color: theme.colors.danger, fontSize: 16, fontWeight: 'bold' }}>✕</Text>
                     </TouchableOpacity>
                     <View style={styles.playerInfoRight}>
                       <Text style={styles.playerName}>{p.name}</Text>
@@ -319,7 +310,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               onPress={handleStartCategories}
               activeOpacity={0.85}
             >
-              <MaterialCommunityIcons name="play-circle" size={22} color="#0F172A" />
+              <Text style={{ fontSize: 20, marginLeft: 6 }}>▶</Text>
               <Text style={styles.primaryBtnText}>
                 اختيار الفئات وبدء المسابقة ({hostedRoom.players.length})
               </Text>
@@ -368,7 +359,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
                 <ActivityIndicator color="#0F172A" />
               ) : (
                 <>
-                  <MaterialCommunityIcons name="login" size={22} color="#0F172A" />
+                  <Text style={{ fontSize: 20, marginLeft: 6 }}>🚀</Text>
                   <Text style={styles.primaryBtnText}>دخول الغرفة الآن</Text>
                 </>
               )}

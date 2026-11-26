@@ -7,13 +7,12 @@ import {
   Animated,
   Platform,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { theme } from '../constants/theme';
 import { soundManager } from '../services/soundService';
 
 interface AudioMysteryWidgetProps {
   audioUrl?: string;
   mediaTitle?: string;
+  spokenText?: string;
   duration?: number;       // Duration in seconds, default 8
   startedAt?: number;      // Epoch ms when audio playback began
   frozenAt?: number | null; // Epoch ms when buzzer was pressed (freezes audio)
@@ -28,6 +27,7 @@ interface AudioMysteryWidgetProps {
 export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
   audioUrl,
   mediaTitle = 'مقطع صوتي غامض',
+  spokenText,
   duration = 8,
   startedAt,
   frozenAt,
@@ -39,8 +39,9 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
   onManualReveal,
 }) => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [currentProgress, setCurrentProgress] = useState<number>(0);
   const audioRef = useRef<any>(null);
+  const suspenseTimerRef = useRef<any>(null);
+  const synthNodesRef = useRef<any[]>([]);
 
   // Equalizer bar animations (5 bars)
   const barAnims = useRef([
@@ -51,17 +52,17 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
     new Animated.Value(0.5),
   ]).current;
 
-  // Handle buzzer freeze: immediately stop playback
+  // Stop everything when frozen by buzzer or revealed
   useEffect(() => {
     if (frozenAt || revealed) {
-      pauseAudio();
+      stopAllAudio();
     }
   }, [frozenAt, revealed]);
 
-  // Clean up audio on unmount
+  // Clean up on unmount
   useEffect(() => {
     return () => {
-      pauseAudio();
+      stopAllAudio();
     };
   }, []);
 
@@ -79,7 +80,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
       };
 
       const loops = barAnims.map((val, idx) =>
-        createBarLoop(val, 0.2 + (idx % 3) * 0.1, 0.9 + (idx % 2) * 0.1, 220 + idx * 70)
+        createBarLoop(val, 0.2 + (idx % 3) * 0.1, 0.95, 200 + idx * 60)
       );
 
       animLoop = Animated.parallel(loops);
@@ -93,61 +94,151 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
     };
   }, [isPlaying]);
 
+  // Web Audio Suspense Mystery Beat Synthesizer
+  const startSuspenseSynth = () => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+    try {
+      const AudioContextClass = (window as any).AudioContext || (window as any).webkitAudioContext;
+      if (!AudioContextClass) return;
+      const ctx = new AudioContextClass();
+      if (ctx.state === 'suspended') ctx.resume();
+
+      // Play rhythmic suspense clock & tension beats
+      let beatCount = 0;
+      const playBeat = () => {
+        if (!ctx || ctx.state === 'closed') return;
+        const now = ctx.currentTime;
+
+        // Sub bass heartbeat
+        const bassOsc = ctx.createOscillator();
+        const bassGain = ctx.createGain();
+        bassOsc.type = 'triangle';
+        bassOsc.frequency.setValueAtTime(110 + (beatCount % 4) * 15, now);
+        bassGain.gain.setValueAtTime(0.3, now);
+        bassGain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        bassOsc.connect(bassGain);
+        bassGain.connect(ctx.destination);
+        bassOsc.start(now);
+        bassOsc.stop(now + 0.4);
+
+        // Tension click
+        const clickOsc = ctx.createOscillator();
+        const clickGain = ctx.createGain();
+        clickOsc.type = 'sine';
+        clickOsc.frequency.setValueAtTime(800 + (beatCount % 2) * 200, now);
+        clickGain.gain.setValueAtTime(0.12, now);
+        clickGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.08);
+        clickOsc.connect(clickGain);
+        clickGain.connect(ctx.destination);
+        clickOsc.start(now);
+        clickOsc.stop(now + 0.1);
+
+        beatCount++;
+      };
+
+      playBeat();
+      suspenseTimerRef.current = setInterval(playBeat, 750);
+      synthNodesRef.current.push(ctx);
+    } catch {}
+  };
+
+  const stopSuspenseSynth = () => {
+    if (suspenseTimerRef.current) {
+      clearInterval(suspenseTimerRef.current);
+      suspenseTimerRef.current = null;
+    }
+    synthNodesRef.current.forEach((ctx) => {
+      try {
+        ctx.close();
+      } catch {}
+    });
+    synthNodesRef.current = [];
+  };
+
   const playAudio = () => {
     if (frozenAt || revealed) return;
     setIsPlaying(true);
     soundManager.playChipClick();
 
-    if (Platform.OS === 'web' && typeof window !== 'undefined') {
+    // 1. Play Suspense Game Show Sound Effects
+    startSuspenseSynth();
+
+    // 2. Play Speech Synthesis (reads the Egyptian line out loud in Arabic!)
+    if (Platform.OS === 'web' && typeof window !== 'undefined' && 'speechSynthesis' in window) {
       try {
-        if (!audioRef.current && audioUrl) {
-          audioRef.current = new Audio(audioUrl);
-          audioRef.current.onended = () => {
-            setIsPlaying(false);
-            setCurrentProgress(1);
+        window.speechSynthesis.cancel();
+        const rawText = spokenText || mediaTitle || '';
+        const matchQuote = rawText.match(/["“]([^"”]+)["”]/);
+        const textToSay = matchQuote
+          ? matchQuote[1]
+          : rawText.replace(/خمن الإفيه:|خمن مطلع الأغنية:|خمن التتر:/g, '').trim();
+
+        if (textToSay) {
+          const utter = new SpeechSynthesisUtterance(textToSay);
+          utter.lang = 'ar-EG';
+          utter.rate = 0.95;
+          utter.pitch = 1.0;
+          utter.onend = () => {
+            // Keep tension going for 2 seconds then stop
+            setTimeout(() => {
+              if (isPlaying) {
+                stopAllAudio();
+              }
+            }, 2000);
           };
-          audioRef.current.ontimeupdate = () => {
-            if (audioRef.current && audioRef.current.duration) {
-              setCurrentProgress(audioRef.current.currentTime / audioRef.current.duration);
-            }
-          };
-        }
-        if (audioRef.current) {
-          audioRef.current.play().catch(() => {});
-        } else {
-          // Fallback synthesizer audio tone if no external URL
-          soundManager.playPoint();
+          window.speechSynthesis.speak(utter);
         }
       } catch {}
-    } else {
-      soundManager.playPoint();
+    }
+
+    // 3. Play audioUrl if provided
+    if (Platform.OS === 'web' && typeof window !== 'undefined' && audioUrl) {
+      try {
+        if (!audioRef.current) {
+          audioRef.current = new Audio(audioUrl);
+          audioRef.current.onended = () => {
+            stopAllAudio();
+          };
+        }
+        audioRef.current.play().catch(() => {});
+      } catch {}
     }
   };
 
-  const pauseAudio = () => {
+  const stopAllAudio = () => {
     setIsPlaying(false);
-    if (Platform.OS === 'web' && audioRef.current) {
+    stopSuspenseSynth();
+
+    if (Platform.OS === 'web' && typeof window !== 'undefined') {
       try {
-        audioRef.current.pause();
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+        if (audioRef.current) {
+          audioRef.current.pause();
+        }
       } catch {}
     }
   };
 
   const handleTogglePlay = () => {
     if (isPlaying) {
-      pauseAudio();
+      stopAllAudio();
     } else {
       playAudio();
     }
   };
 
   const handleReplay = () => {
+    stopAllAudio();
     if (Platform.OS === 'web' && audioRef.current) {
       try {
         audioRef.current.currentTime = 0;
       } catch {}
     }
-    playAudio();
+    setTimeout(() => {
+      playAudio();
+    }, 150);
   };
 
   return (
@@ -155,7 +246,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
       {/* Header Banner */}
       <View style={styles.headerRow}>
         <View style={styles.categoryPill}>
-          <MaterialCommunityIcons name="headphones" size={16} color="#F43F5E" />
+          <Text style={{ fontSize: 15, marginLeft: 4 }}>🎧</Text>
           <Text style={styles.categoryPillText}>احزر بالصوت والإفيه</Text>
         </View>
 
@@ -190,7 +281,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
         {/* Status Indicators */}
         {frozenAt ? (
           <View style={styles.frozenBanner}>
-            <MaterialCommunityIcons name="hand-back-right" size={20} color="#F59E0B" />
+            <Text style={{ fontSize: 16, marginLeft: 6 }}>✋</Text>
             <Text style={styles.frozenText}>
               وقف المقطع! {buzzedByName ? `${buzzedByName} ضغط الجرس` : 'تم ضغط الجرس!'}
               {buzzedSecond ? ` (ثانية ${buzzedSecond})` : ''}
@@ -198,8 +289,8 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
           </View>
         ) : revealed ? (
           <View style={styles.revealedBanner}>
-            <MaterialCommunityIcons name="check-circle" size={20} color="#10B981" />
-            <Text style={styles.revealedText}>إجابة صحيحة! أحسنت 🎉</Text>
+            <Text style={{ fontSize: 16, marginLeft: 6 }}>🎉</Text>
+            <Text style={styles.revealedText}>إجابة صحيحة! أحسنت 👏</Text>
           </View>
         ) : null}
 
@@ -211,13 +302,11 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
             activeOpacity={0.8}
             disabled={revealed}
           >
-            <MaterialCommunityIcons
-              name={isPlaying ? 'pause' : 'play'}
-              size={28}
-              color="#FFFFFF"
-            />
+            <Text style={{ fontSize: 18, color: '#FFFFFF', marginLeft: 6 }}>
+              {isPlaying ? '⏸️' : '▶️'}
+            </Text>
             <Text style={styles.playBtnText}>
-              {isPlaying ? 'إيقاف مؤقت' : 'شغّل المقطع'}
+              {isPlaying ? 'إيقاف مؤقت' : 'شغّل الإفيه 🔊'}
             </Text>
           </TouchableOpacity>
 
@@ -226,7 +315,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
             onPress={handleReplay}
             activeOpacity={0.7}
           >
-            <MaterialCommunityIcons name="replay" size={20} color="#E2E8F0" />
+            <Text style={{ fontSize: 15, color: '#E2E8F0', marginLeft: 4 }}>🔄</Text>
             <Text style={styles.replayBtnText}>إعادة</Text>
           </TouchableOpacity>
 
@@ -236,8 +325,8 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
               onPress={onManualReveal}
               activeOpacity={0.7}
             >
-              <MaterialCommunityIcons name="eye" size={18} color="#F59E0B" />
-              <Text style={styles.hostRevealBtnText}>كشف 👁️</Text>
+              <Text style={{ fontSize: 15, color: '#F59E0B', marginLeft: 4 }}>👁️</Text>
+              <Text style={styles.hostRevealBtnText}>كشف</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -248,7 +337,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 12,
+    marginVertical: 10,
     width: '100%',
     alignSelf: 'center',
     maxWidth: 440,
@@ -267,9 +356,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(244, 63, 94, 0.4)',
     paddingHorizontal: 12,
-    paddingVertical: 4,
+    paddingVertical: 5,
     borderRadius: 20,
-    gap: 6,
   },
   categoryPillText: {
     color: '#FDA4AF',
@@ -278,7 +366,7 @@ const styles = StyleSheet.create({
   },
   pointsBadge: {
     paddingHorizontal: 10,
-    paddingVertical: 3,
+    paddingVertical: 4,
     borderRadius: 12,
     borderWidth: 1,
   },
@@ -302,12 +390,12 @@ const styles = StyleSheet.create({
   playerCard: {
     backgroundColor: '#0F172A',
     borderRadius: 16,
-    padding: 16,
+    padding: 18,
     alignItems: 'center',
     borderWidth: 1.5,
-    borderColor: 'rgba(244, 63, 94, 0.3)',
+    borderColor: 'rgba(244, 63, 94, 0.35)',
     shadowColor: '#F43F5E',
-    shadowOpacity: 0.18,
+    shadowOpacity: 0.25,
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 12,
     elevation: 4,
@@ -318,7 +406,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 52,
     gap: 8,
-    marginVertical: 10,
+    marginVertical: 8,
   },
   waveformBar: {
     width: 8,
@@ -339,11 +427,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(245, 158, 11, 0.15)',
     borderWidth: 1,
     borderColor: '#F59E0B',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: 10,
     marginBottom: 12,
-    gap: 8,
   },
   frozenText: {
     color: '#FDE68A',
@@ -356,11 +443,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(16, 185, 129, 0.15)',
     borderWidth: 1,
     borderColor: '#10B981',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: 10,
     marginBottom: 12,
-    gap: 8,
   },
   revealedText: {
     color: '#6EE7B7',
@@ -371,16 +457,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    marginTop: 4,
+    marginTop: 6,
   },
   playBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#F43F5E',
-    paddingHorizontal: 18,
-    paddingVertical: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 11,
     borderRadius: 24,
-    gap: 8,
   },
   pauseBtn: {
     backgroundColor: '#E11D48',
@@ -394,10 +479,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#334155',
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 11,
     borderRadius: 24,
-    gap: 6,
   },
   replayBtnText: {
     color: '#E2E8F0',
@@ -410,10 +494,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(245, 158, 11, 0.15)',
     borderWidth: 1,
     borderColor: '#F59E0B',
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 11,
     borderRadius: 24,
-    gap: 6,
   },
   hostRevealBtnText: {
     color: '#FDE68A',

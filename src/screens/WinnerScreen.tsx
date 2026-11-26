@@ -8,7 +8,6 @@ import {
   Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
 import { Player } from '../types';
 import { ConfettiEffect } from '../components/ConfettiEffect';
@@ -49,7 +48,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
         {/* Trophy & Celebration Badge */}
         <View style={styles.trophyContainer}>
           <View style={styles.trophyCircle}>
-            <MaterialCommunityIcons name="trophy-award" size={72} color={theme.colors.gold} />
+            <Text style={{ fontSize: 60, textAlign: 'center' }}>🏆</Text>
           </View>
           <Text style={styles.congratsText}>ألف مبروك الفوز!</Text>
           <Text style={styles.winnerName}>{winner.name}</Text>
@@ -63,7 +62,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
         {/* Leaderboard Table */}
         <View style={styles.leaderboardCard}>
           <View style={styles.leaderboardHeader}>
-            <MaterialCommunityIcons name="podium-gold" size={20} color={theme.colors.gold} />
+            <Text style={{ fontSize: 20, marginRight: 6 }}>🥇</Text>
             <Text style={styles.leaderboardTitle}>لوحة شرف المنافسين</Text>
           </View>
 
@@ -79,7 +78,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
               >
                 <View style={styles.rankContainer}>
                   {index === 0 ? (
-                    <MaterialCommunityIcons name="crown" size={20} color={theme.colors.gold} />
+                    <Text style={{ fontSize: 18 }}>👑</Text>
                   ) : (
                     <Text style={styles.rankNumber}>#{index + 1}</Text>
                   )}
@@ -116,7 +115,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
           onPress={onNewGameSamePlayers}
           activeOpacity={0.85}
         >
-          <MaterialCommunityIcons name="play-outline" size={22} color={theme.colors.background} />
+          <Text style={{ fontSize: 18, marginRight: 6 }}>🔄</Text>
           <Text style={styles.primaryBtnText}>جيم جديد بنفس الأسماء</Text>
         </TouchableOpacity>
 
@@ -125,7 +124,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
           onPress={onChangePlayers}
           activeOpacity={0.8}
         >
-          <MaterialCommunityIcons name="account-edit-outline" size={20} color={theme.colors.textSecondary} />
+          <Text style={{ fontSize: 18, marginRight: 6 }}>⚙️</Text>
           <Text style={styles.secondaryBtnText}>تغيير اللاعبين</Text>
         </TouchableOpacity>
       </View>
