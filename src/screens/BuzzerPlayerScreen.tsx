@@ -17,7 +17,6 @@ import { soundManager } from '../services/soundService';
 import { questionService } from '../services/questionService';
 import { PowerCardModal } from '../components/PowerCardModal';
 import { ImageBlurWidget } from '../components/ImageBlurWidget';
-import { AudioMysteryWidget } from '../components/AudioMysteryWidget';
 
 interface BuzzerPlayerScreenProps {
   initialRoom: LiveBuzzerRoom;
@@ -471,22 +470,6 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
             buzzedSecond={room.currentMedia.buzzedSecond}
             pointsValue={room.currentMedia.pointsValue}
             buzzedByName={room.buzzedBy?.name}
-            isHost={false}
-          />
-        )}
-
-        {room.currentMedia?.type === 'audio_clip' && (
-          <AudioMysteryWidget
-            audioUrl={room.currentMedia.url}
-            mediaTitle={room.currentMedia.title}
-            spokenText={room.currentMedia.title}
-            duration={room.currentMedia.revealDuration || 8}
-            startedAt={room.currentMedia.startedAt}
-            frozenAt={room.currentMedia.frozenAt}
-            revealed={room.currentMedia.revealed}
-            buzzedByName={room.buzzedBy?.name}
-            buzzedSecond={room.currentMedia.buzzedSecond}
-            pointsValue={room.currentMedia.pointsValue}
             isHost={false}
           />
         )}

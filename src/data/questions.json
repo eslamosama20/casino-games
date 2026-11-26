@@ -94,10 +94,10 @@
     },
     {
       "id": "audio_mystery",
-      "name": "احزر بالصوت والإفيه 🎧",
-      "icon": "headphones",
+      "name": "إفيهات وأفلام مصرية 🎭",
+      "icon": "movie-open-star",
       "color": "#F43F5E",
-      "description": "استمع للمقطع الصوتي أو الإفيه وخمن الفيلم أو الأغنية فوراً!"
+      "description": "خمن صاحب الإفيه أو الفيلم أو الأغنية المصرية الشهيرة!"
     }
   ],
   "questions": [
@@ -26086,9 +26086,7 @@
         "محمود عبد العزيز",
         "عادل إمام"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه ضد الحكومة - أحمد زكي",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_02",
@@ -26103,9 +26101,7 @@
         "سعيد صالح",
         "طلعت زكريا"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه التجربة الدنماركية",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_03",
@@ -26120,9 +26116,7 @@
         "شادية",
         "سميرة أحمد"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "أغنية يا واد يا تقيل",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_04",
@@ -26137,9 +26131,7 @@
         "محمد سعد",
         "أحمد حلمي"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه عندليب الدقي - محمد هنيدي",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_05",
@@ -26154,9 +26146,7 @@
         "فريد شوقي",
         "صلاح ذو الفقار"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "مرافعة ضد الحكومة الخالدة",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_06",
@@ -26171,9 +26161,7 @@
         "محمد رجب",
         "حسن حسني"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه اللمبي الشهير",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_07",
@@ -26188,9 +26176,7 @@
         "مصطفى قمر",
         "محمد فؤاد"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "لحن تملي معاك - عمرو دياب",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_08",
@@ -26205,9 +26191,7 @@
         "طارق لطفي",
         "هاني رمزي"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه خلف الدهشوري خلف",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_09",
@@ -26222,9 +26206,7 @@
         "محمد رجب",
         "أحمد فتحي"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه الباشا تلميذ",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_10",
@@ -26239,9 +26221,7 @@
         "الليل وآخره",
         "حدائق الشيطان"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر ذئاب الجبل الخالد",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_11",
@@ -26256,9 +26236,7 @@
         "لطفي لبيب",
         "يوسف داود"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "عسل أسود - أحمد حلمي",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_12",
@@ -26273,9 +26251,7 @@
         "حسن فايق",
         "عبد السلام النابلسي"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه المعلم حنفي",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_13",
@@ -26290,9 +26266,7 @@
         "أحمد راتب",
         "شريهان"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه سك على بناتك",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_14",
@@ -26307,9 +26281,7 @@
         "فيروز",
         "فريد الأطرش"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "مقدمة أنت عمري الخالدة",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_15",
@@ -26324,9 +26296,7 @@
         "لطفي لبيب",
         "علاء مرسي"
       ],
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه كركر - محمد سعد",
-      "revealDuration": 10
+      "category": "audio_mystery"
     },
     {
       "id": "audio_001",
@@ -26341,9 +26311,7 @@
         "محمد سعد - بوحة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه الحلزونة ياما الحلزونة 🐌",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_002",
@@ -26358,9 +26326,7 @@
         "محمود عبد العزيز - الكيف"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حوار المعلم جعفر الشهير 💼",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_003",
@@ -26375,9 +26341,7 @@
         "محمد نجم - عش المجانين"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مشهد البيض الشهير 🥚",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_004",
@@ -26392,9 +26356,7 @@
         "أحمد آدم - شجيع السيما"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "إفيه امتحانات الثانوية العامة 📚",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_005",
@@ -26409,9 +26371,7 @@
         "عادل إمام - حتى لا يطير الدخان"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "سلطان المزاجنجي في معمل الكيف 🧪",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_006",
@@ -26426,9 +26386,7 @@
         "أحمد مكي - طير انت"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تحية الصباح الأسطورية ☀️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_007",
@@ -26443,9 +26401,7 @@
         "أحمد عز - ملاكي إسكندرية"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حوار حسن مع نفسه في الكافيه ☕",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_008",
@@ -26460,9 +26416,7 @@
         "زكي رستم - الفتوة"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الباز أفندي ساقط توجيهية 🎩",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_009",
@@ -26477,9 +26431,7 @@
         "شيكو - سمير وشهير وبهير"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "دكتور بهيج والجني مارد 🧞‍♂️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_010",
@@ -26494,9 +26446,7 @@
         "محمود عبد العزيز - البريء"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أقوى مرافعة قضائية في السينما ⚖️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_011",
@@ -26511,9 +26461,7 @@
         "حسن مصطفى - العيال كبرت"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "عاطف السكري والمفتاح 🔑",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_012",
@@ -26528,9 +26476,7 @@
         "حسن حسني - الباشا تلميذ"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "نداء بسيوني الشهير 📢",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_013",
@@ -26545,9 +26491,7 @@
         "حسن حسني - الناظر"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مدرسة عاشور في فيلم الناظر 🏫",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_014",
@@ -26562,9 +26506,7 @@
         "سليمان عيد - فول الصين العظيم"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "محي الشرقاوي وعشيرة المجرمين 🥢",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_015",
@@ -26579,9 +26521,7 @@
         "مدحت صالح - زيزينيا"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر بوابة الحلواني الخالد 🎶",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_016",
@@ -26596,9 +26536,7 @@
         "محمد سلام - كابتن مصر"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "شربات شربات يا دكتور 🧞‍♂️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_017",
@@ -26613,9 +26551,7 @@
         "هاني رمزي - صعيدي رايح جاي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "خلف الدهشوري والبدلة الصفراء 🟡",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_018",
@@ -26630,9 +26566,7 @@
         "كمال الشناوي - الإرهاب والكباب"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "بلد شهادات صحيح في مجمع التحرير 🏛️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_019",
@@ -26647,9 +26581,7 @@
         "أحمد زكي - مدرسة المشاغبين"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مرسي الزناتي والناظر 🏫",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_020",
@@ -26664,9 +26596,7 @@
         "حمدي الميرغني - أحمد نوتردام"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مكالمة أحمد نوتردام 📞",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_021",
@@ -26681,9 +26611,7 @@
         "نور الشريف - غريب في بيتي"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حسن هدهد في فيلم كابوريا 🦀",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_022",
@@ -26698,9 +26626,7 @@
         "ياسر جلال - أمير البحار"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أمير البحار والشياكة ⚓",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_023",
@@ -26715,9 +26641,7 @@
         "أحمد راتب - الكيت كات"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الشيخ حسني وموتوسيكل الكيت كات 🏍️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_024",
@@ -26732,9 +26656,7 @@
         "سناء يونس - سك على بناتك"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الدكتور رأفت في سك على بناتك 🚪",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_025",
@@ -26749,9 +26671,7 @@
         "شويكار - سيدتي الجميلة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "فوزية وحنفي وعصاية الأستاذ 🦯",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_026",
@@ -26766,9 +26686,7 @@
         "كريم عبد العزيز - خارج على القانون"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أنا بابا يلا في فيلم تيتو 🔫",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_027",
@@ -26783,9 +26701,7 @@
         "لطفي لبيب - يا أنا يا خالتي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الخالة نوسة وتحضير الأرواح 🔮",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_028",
@@ -26800,9 +26716,7 @@
         "خالد سرحان - التجربة الدنماركية"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "قدري المنياوي في التجربة الدنماركية 🇩🇰",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_029",
@@ -26817,9 +26731,7 @@
         "يوسف فوزي - ظرف طارق"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "طارق في ظرف طارق ✉️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_030",
@@ -26834,9 +26746,7 @@
         "حنان ترك - حرامية في كي جي تو"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حسن الشحات وسباعي 🎒",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_031",
@@ -26851,9 +26761,7 @@
         "سليم كلاس - ولاد العم"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "صراع ولاد العم المخابراتي 🕵️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_032",
@@ -26868,9 +26776,7 @@
         "علي الشريف - المتسول"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حسنين البرطوشي في المتسول 🥖",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_033",
@@ -26885,9 +26791,7 @@
         "نيفين مندور - اللي بالي بالك"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "اللمبي مأمور السجن 👮",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_034",
@@ -26902,9 +26806,7 @@
         "أحمد بدير - عمارة يعقوبيان"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "كمال الفولي في عمارة يعقوبيان 🏢",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_035",
@@ -26919,9 +26821,7 @@
         "جلال الشرقاوي - الجوكر"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "عم أيوب الشهير في الجوكر 🃏",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_036",
@@ -26936,9 +26836,7 @@
         "محمود البزاوي - همام في أمستردام"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "همام مجاهد في أمستردام 🍟",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_037",
@@ -26953,9 +26851,7 @@
         "باسم سمرة - إبراهيم الأبيض"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "إبراهيم الأبيض وعبد الملك زرزور ⚔️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_038",
@@ -26970,9 +26866,7 @@
         "خالد صالح - ابن القنصل"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "عبد الملك زرزور والجرأة حلوة 🚬",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_039",
@@ -26987,9 +26881,7 @@
         "طارق الأمير - عسل أسود"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مصري العربي في فيلم عسل أسود 🍯",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_040",
@@ -27004,9 +26896,7 @@
         "محمد رجب - الباشا تلميذ"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "اللواء نجدت وبسيوني 🎖️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_041",
@@ -27021,9 +26911,7 @@
         "طلعت زكريا - عوكل"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "عوكل والست أطاطا في تركيا 🇹🇷",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_042",
@@ -27038,9 +26926,7 @@
         "أحمد راتب - مطب صناعي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "ميمي جلال في مطب صناعي 🚧",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_043",
@@ -27055,9 +26941,7 @@
         "كريم قاسم - ولاد رزق"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "رضا رزق والمعلم صقر 🦅",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_044",
@@ -27072,9 +26956,7 @@
         "باسم سمرة - عمارة يعقوبيان"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حاتم رشيد في عمارة يعقوبيان 📰",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_045",
@@ -27089,9 +26971,7 @@
         "محمد شاهين - إكس لارج"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مجدي في فيلم إكس لارج 🍔",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_046",
@@ -27106,9 +26986,7 @@
         "طلعت زكريا - جاءنا البيان التالي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "نادر سيف الدين في مصنع الألبان 🥛",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_047",
@@ -27123,9 +27001,7 @@
         "لبلبة - بوحة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "بوحة في المدبح والسلخانة 🥩",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_048",
@@ -27140,9 +27016,7 @@
         "حسن مصطفى - العيال كبرت"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "قطر طنطا وعاطف السكري 🚂",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_049",
@@ -27157,9 +27031,7 @@
         "هاني رمزي - صعيدي رايح جاي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "خلف الدهشوري وسكن الطلبة 🎓",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_050",
@@ -27174,9 +27046,7 @@
         "يسرا - الإرهاب والكباب"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مفاوضات مجمع التحرير الشهيرة 🏢",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_051",
@@ -27191,9 +27061,7 @@
         "خالد سرحان - ابن القنصل"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "القنصل وناصر في ابن القنصل 🛂",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_052",
@@ -27208,9 +27076,7 @@
         "هشام إسماعيل - الكبير أوي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "هجرس في دوار الكبير أوي 🌾",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_053",
@@ -27225,9 +27091,7 @@
         "حسن حسني - سمير وشهير وبهير"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "سمير وشهير وبهير في السبعينيات 🚗",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_054",
@@ -27242,9 +27106,7 @@
         "بيومي فؤاد - الحرب العالمية الثالثة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "متحف الشمع والحرب العالمية الثالثة 🗿",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_055",
@@ -27259,9 +27121,7 @@
         "محمود حميدة - سوق المتعة"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أحمد حبيب في سوق المتعة 💰",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_056",
@@ -27276,9 +27136,7 @@
         "حسين أبو حجاج - الكبير أوي"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حزلقوم وأفكاره العبقرية 🍊",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_057",
@@ -27293,9 +27151,7 @@
         "محمود الجندي - واحد من الناس"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "محمود في فيلم واحد من الناس 🚘",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_058",
@@ -27310,9 +27166,7 @@
         "ريهام عبد الغفور - جعلتني مجرماً"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "رشدي أباظة وخطة الفدية 🏦",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_059",
@@ -27327,9 +27181,7 @@
         "طارق النهري - جعفر العمدة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "جعفر العمدة في السيدة زينب 👑",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_060",
@@ -27344,9 +27196,7 @@
         "مصطفى قمر - شجيع السيما"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "شجيع السيما ومسعد الأكشن 🎬",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_061",
@@ -27361,9 +27211,7 @@
         "مصطفى قمر - سكة العاشقين"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أغنية تملي معاك الأسطورية 🎶",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_062",
@@ -27378,9 +27226,7 @@
         "المال والبنون"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر ليالي الحلمية الخالد 🏛️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_063",
@@ -27395,9 +27241,7 @@
         "إيهاب توفيق - سحراني"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الليلة يا سمرة مع الكينج 🌴",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_064",
@@ -27412,9 +27256,7 @@
         "الوتد"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر ذئاب الجبل الصعيدي 🐺",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_065",
@@ -27429,9 +27271,7 @@
         "حميد الشاعري - عيني"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "نور العين للهضبة عمرو دياب 👁️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_066",
@@ -27446,9 +27286,7 @@
         "أرابيسك"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر المال والبنون التاريخي 💵",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_067",
@@ -27463,9 +27301,7 @@
         "طارق الشيخ - دقيقة حداد"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "آه لو لعبت يا زهر 🎲",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_068",
@@ -27480,9 +27316,7 @@
         "الثعلب"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "موسيقى رأفت الهجان لعمار الشريعي 🕵️‍♂️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_069",
@@ -27497,9 +27331,7 @@
         "مصطفى قمر - السود عيونه"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أغنية سو يا سو للكينج منير 🎵",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_070",
@@ -27514,9 +27346,7 @@
         "الليل وآخره"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "موسيقى رفيع بيه في الضوء الشارد 🎻",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_071",
@@ -27531,9 +27361,7 @@
         "آمال ماهر - سكة السلامة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "شيرين عبد الوهاب وصبري قليل 🎤",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_072",
@@ -27548,9 +27376,7 @@
         "رامي صبري - كلمة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تامر حسني - كل مرة بشوفك فيها 🎸",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_073",
@@ -27565,9 +27391,7 @@
         "زيزينيا"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر أرابيسك لحسن الأسمر 🪵",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_074",
@@ -27582,9 +27406,7 @@
         "أبيوسف - باشا اعتمد"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تراك البخت لويجز 🎧",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_075",
@@ -27599,9 +27421,7 @@
         "فايزة أحمد - بحبك يا مصر"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "يا حبيبتي يا مصر لشادية 🇪🇬",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_076",
@@ -27616,9 +27436,7 @@
         "حسن الأسمر - كتاب حياتي يا عين"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أنا مش عارفني لعبد الباسط حمودة 🎭",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_077",
@@ -27633,9 +27451,7 @@
         "أهالينا"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر عمار يا إسكندرية لمحمد الحلو 🌊",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_078",
@@ -27650,9 +27466,7 @@
         "رامي جمال - أوعديني"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "ما بلاش لمحمد حماقي 🎼",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_079",
@@ -27667,9 +27481,7 @@
         "عنبة ومسلم - الملوك"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مهرجان بنت الجيران 💃",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_080",
@@ -27684,9 +27496,7 @@
         "وسط البلد - شمس النهار"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "فرقة كايروكي ومربوط بأستك 🎸",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_081",
@@ -27701,9 +27511,7 @@
         "أم كلثوم - الأطلال"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "لقاء السحاب أنت عمري لأم كلثوم 🌟",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_082",
@@ -27718,9 +27526,7 @@
         "عبد الحليم حافظ - جانا الهوى"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "العندليب الأسمر عبد الحليم حافظ - سواح 🌾",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_083",
@@ -27735,9 +27541,7 @@
         "فضل شاكر - يا غايب"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "بهاء سلطان وأغنية يا ترى 🎙️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_084",
@@ -27752,9 +27556,7 @@
         "هشام عباس"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "مصطفى قمر ونوستالجيا التسعينيات 🎸",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_085",
@@ -27769,9 +27571,7 @@
         "طارق الشيخ - شارع الحياة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "حكيم وحلاوة روح في الأفراح 🎺",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_086",
@@ -27786,9 +27586,7 @@
         "نسر الصعيد"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر مسلسل ابن حلال (حبيشة) ⛓️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_087",
@@ -27803,9 +27601,7 @@
         "عمرو دياب - ليلي نهاري"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "قمرين دول ولا عينين للهضبة 🌙",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_088",
@@ -27820,9 +27616,7 @@
         "إيهاب توفيق - ملهمش في الطيب"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "الحب الحقيقي لمحمد فؤاد ❤️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_089",
@@ -27837,9 +27631,7 @@
         "النمر والأنثى"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "موسيقى شمس الزناتي لهاني شنودة 🏜️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_090",
@@ -27854,9 +27646,7 @@
         "كارم محمود"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "يا مسافر وحدك لموسيقار الأجيال ✈️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_091",
@@ -27871,9 +27661,7 @@
         "نجاة - القريب منك بعيد"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "يا واد يا تقيل لسعاد حسني 💃",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_092",
@@ -27888,9 +27676,7 @@
         "محمد العزبي - الأقصر بلدنا"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "على حسب وداد قلبي يا بوي 🎶",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_093",
@@ -27905,9 +27691,7 @@
         "شفيق جلال - شيخ البلد"
       ],
       "difficulty": "medium",
-      "mediaType": "audio_clip",
-      "mediaTitle": "عدوية لمحمد رشدي والأبنودي 🌾",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_094",
@@ -27922,9 +27706,7 @@
         "كتكوت الأمير - سألت عنك"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "السح الدح امبو لأحمد عدوية 🍼",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_095",
@@ -27939,9 +27721,7 @@
         "محمد حماقي - ظلموني"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أنا مصمم لبهاء سلطان 💔",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_096",
@@ -27956,9 +27736,7 @@
         "بلاك تيما"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "صوت الحرية في ميدان التحرير ✌️",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_097",
@@ -27973,9 +27751,7 @@
         "اللعبة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "تتر دوار الكبير أوي في المزاريطة 🤠",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_098",
@@ -27990,9 +27766,7 @@
         "عمرو دياب - رصيف نمرة خمسة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "أغنية ميال للهضبة عمرو دياب 🕺",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_099",
@@ -28007,9 +27781,7 @@
         "حميد الشاعري - عودة"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "رصيف نمرة خمسة في آيس كريم في جليم 🍦",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "audio_100",
@@ -28024,9 +27796,7 @@
         "فايزة أحمد - تم البدر بدري"
       ],
       "difficulty": "easy",
-      "mediaType": "audio_clip",
-      "mediaTitle": "يا ليلة العيد آنستينا لكوكب الشرق 🌙",
-      "revealDuration": 8
+      "category": "audio_mystery"
     },
     {
       "id": "blur_football_001",

@@ -17,7 +17,7 @@ export const CATEGORY_EMOJIS: Record<string, string> = {
   geography: '🌍',
   egyptian_singers: '🎤',
   image_blur: '🔍',
-  audio_mystery: '🎧',
+  audio_mystery: '🎭',
 };
 
 export const POWER_CARD_EMOJIS: Record<string, string> = {

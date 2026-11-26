@@ -20,7 +20,6 @@ import { soundManager } from '../services/soundService';
 import { buzzerService } from '../services/buzzerService';
 import { PowerCardModal } from '../components/PowerCardModal';
 import { ImageBlurWidget } from '../components/ImageBlurWidget';
-import { AudioMysteryWidget } from '../components/AudioMysteryWidget';
 import { getPowerCardById, POWER_CARDS } from '../data/powerCards';
 import { getCategoryEmoji, getPowerCardEmoji } from '../constants/emojis';
 
@@ -794,30 +793,6 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 buzzedSecond={roomMedia?.buzzedSecond}
                 pointsValue={roomMedia?.pointsValue}
                 buzzedByName={buzzedBy?.name}
-                isHost={true}
-                onManualReveal={() => {
-                  setIsAnswerVisible(true);
-                  if (liveRoomCode) {
-                    buzzerService.setRoomMediaRevealed(liveRoomCode, true);
-                  }
-                  setRoomMedia((prev) => (prev ? { ...prev, revealed: true } : null));
-                }}
-              />
-            )}
-
-            {/* Interactive Audio Mystery Widget */}
-            {currentQuestion.mediaType === 'audio_clip' && (
-              <AudioMysteryWidget
-                audioUrl={currentQuestion.mediaUrl}
-                mediaTitle={currentQuestion.mediaTitle || 'مقطع صوتي / إفيه غامض'}
-                spokenText={currentQuestion.question}
-                duration={currentQuestion.revealDuration || 8}
-                startedAt={roomMedia?.startedAt}
-                frozenAt={roomMedia?.frozenAt}
-                revealed={roomMedia?.revealed || isAnswerVisible}
-                buzzedByName={buzzedBy?.name}
-                buzzedSecond={roomMedia?.buzzedSecond}
-                pointsValue={roomMedia?.pointsValue}
                 isHost={true}
                 onManualReveal={() => {
                   setIsAnswerVisible(true);
