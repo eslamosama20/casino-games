@@ -1,0 +1,19 @@
+{
+  "name": "كازينو الألعاب",
+  "short_name": "كازينو الألعاب",
+  "description": "لعبة مسابقات وجرس مباشر جماعية للأصحاب والعيلة",
+  "start_url": "/casino-games/",
+  "scope": "/casino-games/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0F19",
+  "theme_color": "#0B0F19",
+  "icons": [
+    {
+      "src": "/casino-games/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
