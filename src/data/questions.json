@@ -1,5 +1,5 @@
 {
-  "version": 19,
+  "version": 20,
   "categories": [
     {
       "id": "football",
@@ -27161,6 +27161,2331 @@
       "difficulty": "medium",
       "mediaType": "audio_clip",
       "mediaTitle": "تتر بوابة الحلواني الخالد 🎶",
+      "revealDuration": 8
+    },
+    {
+      "id": "blur_021",
+      "categoryId": "image_blur",
+      "question": "من هي سندريلا الشاشة العربية ونجمة فيلم (خلي بالك من زوزو و صغيرة على الحب)؟",
+      "answer": "سعاد حسني (السندريلا)",
+      "hint": "أيقونة الأنوثة والبهجة في السينما المصرية مع أحمد زكي وحسين فهمي!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_022",
+      "categoryId": "image_blur",
+      "question": "من هو فتى الشاشة الأول ونجم أفلام (الرجل الثاني، الزوجة 13، صراع في النيل)؟",
+      "answer": "رشدي أباظة",
+      "hint": "دنجوان السينما المصرية والأكثر وسامة وجاذبية في السينما الكلاسيكية!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_023",
+      "categoryId": "image_blur",
+      "question": "من هو عملاق الدراما والسينما ونجم (لن أعيش في جلباب أبي و عائلة الحاج متولي)؟",
+      "answer": "نور الشريف",
+      "hint": "عبد الغفور البرعي وكمال في الثلاثية وبطل فيلم حبيبي دائماً والهروب إلى القمة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_024",
+      "categoryId": "image_blur",
+      "question": "من هو دكتور الفن المصري ونجم مسلسلات (ليالي الحلمية، يتربى في عزو، الليل وآخره)؟",
+      "answer": "يحيى الفخراني",
+      "hint": "سليم البدري ورحيم المنشاوي وبابا نويل الدراما الرمضانية وطبيب بشري في الأصل!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_025",
+      "categoryId": "image_blur",
+      "question": "من هو نجم الأكشن والسينما المصرية صاحب أفلام (ولاد رزق، الممر، كيرة والجن، ملاكي إسكندرية)؟",
+      "answer": "أحمد عز (رضا رزق)",
+      "hint": "قائد تشكيل ولاد رزق ومحبوب الجماهير في أفلام الحركة والإثارة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_026",
+      "categoryId": "image_blur",
+      "question": "من هي نجمة مصر الأولى وبطلة أفلام (سهر الليالي، تيمور وشفيقة، أفراح القبة، لعبة نيوتن)؟",
+      "answer": "منى زكي",
+      "hint": "زوجة النجم أحمد حلمي وإحدى أهم ممثلات جيلها سينمائياً وتلفزيونياً!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_027",
+      "categoryId": "image_blur",
+      "question": "من هو نجم الكوميديا صاحب أفلام (كده رضا، عسل أسود، إكس لارج، ظرف طارق)؟",
+      "answer": "أحمد حلمي",
+      "hint": "مقدم برنامج لعب عيال وبطل أفلام السينما الكوميدية الهادفة الأكثر شعبية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_028",
+      "categoryId": "image_blur",
+      "question": "من هي مارلين مونرو الشرق ونجمة أفلام (باب الحديد، إشاعة حب، صراع في النيل)؟",
+      "answer": "هند رستم",
+      "hint": "هنومة في محطة مصر وبطلة روائع المخرج يوسف شاهين وفطين عبد الوهاب!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_029",
+      "categoryId": "image_blur",
+      "question": "من هو المخرج العالمي صاحب جائزة اليوبيل الذهبي لمهرجان كان وأفلام (باب الحديد، المصير، الأرض)؟",
+      "answer": "يوسف شاهين (جو)",
+      "hint": "صاحب النظارة الشهيرة الذي اكتشف عمر الشريف وقدم سيرته الذاتية في إسكندرية ليه!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_030",
+      "categoryId": "image_blur",
+      "question": "من هو النجم الكوميدي والسينمائي صاحب شخصيات (اللمبي، بوحة، عوكل، كركر، تتح)؟",
+      "answer": "محمد سعد (اللمبي)",
+      "hint": "صاحب أعلى إيرادات في بداية الألفية وصاحب لغة الجسد الكوميدية الفريدة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_031",
+      "categoryId": "image_blur",
+      "question": "من هو نجم هوليوود الحائز على الأوسكار وبطل أفلام (تيتانيك، إنسبشن، العائد The Revenant)؟",
+      "answer": "ليوناردو دي كابريو (Leonardo DiCaprio)",
+      "hint": "بطل فيلم ذئب وول ستريت وشاتر آيلاند وتيتانيك مع كيت وينسلت!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_032",
+      "categoryId": "image_blur",
+      "question": "من هو بطل سلسلة أفلام المهمة المستحيلة (Mission Impossible) و توب جن (Top Gun)؟",
+      "answer": "توم كروز (Tom Cruise)",
+      "hint": "الممثل الذي يؤدي أخطر المشاهد والحركات الانتحارية بنفسه بدون دوبلير!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_033",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة السينما وبطل فيلم العراب (The Godfather) والوجه ذو الندبة (Scarface)؟",
+      "answer": "آل باتشينو (Al Pacino)",
+      "hint": "مايكل كورليوني وتوني مونتانا في أفلام العصابات الأكثر شهرة في التاريخ!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_034",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة السينما وبطل أفلام (سائق التاكسي Taxi Driver، الثور الهائج، الأيرلندي)؟",
+      "answer": "روبرت دي نيرو (Robert De Niro)",
+      "hint": "شريك المخرج مارتن سكورسيزي التاريخي وأحد أعظم ممثلي هوليوود!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_035",
+      "categoryId": "image_blur",
+      "question": "من هو بطل ثلاثية أفلام ماتريكس (The Matrix) وسلسلة جون ويك (John Wick)؟",
+      "answer": "كيانو ريفز (Keanu Reeves)",
+      "hint": "المقاتل نيو الذي يرتدي المعطف الأسود ويتفادى الرصاص بحركات بطيئة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_036",
+      "categoryId": "image_blur",
+      "question": "من هو الممثل صاحب الصوت الرخيم الأشهر وبطل فيلم الخلاص من شوشانك (Shawshank Redemption)؟",
+      "answer": "مورجان فريمان (Morgan Freeman)",
+      "hint": "الراوي الصوتي الأيقوني لأفلام الوثائقيات وأحد أساطير السينما الأمريكية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_037",
+      "categoryId": "image_blur",
+      "question": "من هو نجم هوليوود وبطل أفلام (نادي القتال Fight Club، تروي Troy، ذات مرة في هوليوود)؟",
+      "answer": "براد بيت (Brad Pitt)",
+      "hint": "أحد أشهر نجوم السينما العالمية والزوج السابق للنجمة أنجلينا جولي!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_038",
+      "categoryId": "image_blur",
+      "question": "من هو بطل فيلم أوبنهايمر (Oppenheimer) ومسلسل بيكي بلاندرز (Peaky Blinders)؟",
+      "answer": "كيليان مورفي (Cillian Murphy - توماس شيلبي)",
+      "hint": "صاحب العيون الزرقاء وقبعة العصابات الشهيرة في شوارع برمنغهام!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_039",
+      "categoryId": "image_blur",
+      "question": "من هو المخرج العبقري صاحب أفلام (فارس الظلام The Dark Knight، إنسبشن، بين النجوم Interstellar)؟",
+      "answer": "كريستوفر نولان (Christopher Nolan)",
+      "hint": "أستاذ ألاعيب الزمن والتأثيرات العملية الحقيقية بدون مبالغة في المؤثرات الرقمية!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_040",
+      "categoryId": "image_blur",
+      "question": "من هو بطل سلسلة أفلام قراصنة الكاريبي بشخصية الكابتن جاك سبارو؟",
+      "answer": "جوني ديب (Johnny Depp)",
+      "hint": "بطل أفلام إدوارد ذو الأيدي المقصات وسويني تود وتشارلي ومصنع الشوكولاتة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_041",
+      "categoryId": "image_blur",
+      "question": "من هو نجم السينما وبطل أفلام الحركة والترمينيتور (Terminator) وحاكم كاليفورنيا السابق؟",
+      "answer": "أرنولد شوارزنيجر (Arnold Schwarzenegger)",
+      "hint": "بطل كمال الأجسام مستر أولمبيا 7 مرات وصاحب جملة I will be back!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_042",
+      "categoryId": "image_blur",
+      "question": "من هو نجم أفلام رامبو (Rambo) وسلسلة الملاكمة الشهيرة روكي بالبوا (Rocky)؟",
+      "answer": "سيلفستر ستالوني (Sylvester Stallone)",
+      "hint": "الملاكم الإيطالي الذي صعد درجات فيلادلفيا وسلسلة مرتزقة The Expendables!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_043",
+      "categoryId": "image_blur",
+      "question": "من هي بطلة أفلام تومب رايدر (Lara Croft) ومستر آند مسز سميث الحائزة على الأوسكار؟",
+      "answer": "أنجلينا جولي (Angelina Jolie)",
+      "hint": "سفيرة النوايا الحسنة للأمم المتحدة وإحدى أشهر نجمات هوليوود في الألفية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_044",
+      "categoryId": "image_blur",
+      "question": "من هو بطل سلسلة أفلام فاست آند فيوريوس (Fast & Furious) بشخصية دومينيك توريتو؟",
+      "answer": "فين ديزل (Vin Diesel)",
+      "hint": "صاحب العضلات المفتولة والرأس الحليق وشعار العائلة Family فوق كل شيء!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_045",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة فنون القتال الآسيوية وبطل أفلام (ساعة الذروة Rush Hour والشرطي الفوضوي)؟",
+      "answer": "جاكي شان (Jackie Chan)",
+      "hint": "نجم الكونغ فو الكوميدي الذي يقفز بين المباني دون الاستعانة ببديل!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_046",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة كرة القدم الأرجنتينية وبطل كأس العالم 2022 والفائز بالكرة الذهبية 8 مرات؟",
+      "answer": "ليونيل ميسي (Lionel Messi)",
+      "hint": "البرغوث أسطورة برشلونة وإنتر ميامي وقائد التانجو المتوج في قطر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_047",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة البرتغال والهداف التاريخي لكرة القدم وريال مدريد والنصر السعودي؟",
+      "answer": "كريستيانو رونالدو (Cristiano Ronaldo - CR7)",
+      "hint": "الدون صاحب قفزة الهيد التاريخية واحتفال السيووو الشهير!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_048",
+      "categoryId": "image_blur",
+      "question": "من هو الأسطورة الأرجنتيني صاحب هدف يد الله في مونديال 1986 وبطل نابولي التاريخي؟",
+      "answer": "دييجو أرماندو مارادونا (Diego Maradona)",
+      "hint": "الرقم 10 الأشهر في تاريخ كأس العالم وساحر كرة القدم الأبدي!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_049",
+      "categoryId": "image_blur",
+      "question": "من هو الجوهرة السوداء البرازيلية واللاعب الوحيد المتوج بكأس العالم 3 مرات؟",
+      "answer": "بيليه (Pelé)",
+      "hint": "ملك كرة القدم وهداف نادي سانتوس والمنتخب البرازيلي في 1958 و1962 و1970!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_050",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة فرنسا وريال مدريد صاحب الهدف التاريخي في نهائي الأبطال 2002؟",
+      "answer": "زين الدين زيدان (Zinedine Zidane - زيزو)",
+      "hint": "بطل مونديال 1998 والمدرب التاريخي الذي قاد الملكي لثلاثية الأبطال المتتالية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_051",
+      "categoryId": "image_blur",
+      "question": "من هو ساحر السامبا البرازيلية وصاحب الابتسامة الكروية الأشهر في برشلونة وميلان؟",
+      "answer": "رونالدينيو (Ronaldinho Gaúcho)",
+      "hint": "صاحب المهارات الاستعراضية التي صفقت لها جماهير سانتياغو برنابيو!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_052",
+      "categoryId": "image_blur",
+      "question": "من هو الظاهرة البرازيلية وهداف مونديال 2002 ونجم إنتر وميلان والريال والبارسا؟",
+      "answer": "رونالدو نازاريو (Ronaldo - الظاهرة)",
+      "hint": "صاحب القصة الشهيرة في نهائي كأس العالم 2002 وأسرع مهاجم في التاريخ بمراوغة الحراس!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_053",
+      "categoryId": "image_blur",
+      "question": "من هو النجم الفرنسي السريع وبطل مونديال 2018 وهداف ريال مدريد وباريس؟",
+      "answer": "كيليان مبابي (Kylian Mbappé)",
+      "hint": "سجل هاتريك في نهائي كأس العالم 2022 بقطر أمام الأرجنتين!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_054",
+      "categoryId": "image_blur",
+      "question": "من هو المهاجم النرويجي العملاق والماكينة التهديفية لنادي مانشستر سيتي؟",
+      "answer": "إيرلينج هالاند (Erling Haaland)",
+      "hint": "حطم الرقم القياسي للأهداف في موسم واحد بالدوري الإنجليزي الممتاز!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_055",
+      "categoryId": "image_blur",
+      "question": "من هو السد العالي وأسطورة حراسة مرمى منتخب مصر والأهلي والفائز بأمم إفريقيا 4 مرات؟",
+      "answer": "عصام الحضري (السد العالي)",
+      "hint": "أكبر لاعب سناً يشارك في تاريخ كأس العالم (مونديال روسيا 2018 ضد السعودية)!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_056",
+      "categoryId": "image_blur",
+      "question": "من هو حارس عرين النادي الأهلي ومنتخب مصر وبطل إفريقيا التاريخي في الصورة المشوشة؟",
+      "answer": "محمد الشناوي (الأخطبوط)",
+      "hint": "رجل مباراة مصر وأوروجواي في كأس العالم 2018 وقائد بطولات القلعة الحمراء!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_057",
+      "categoryId": "image_blur",
+      "question": "من هو صخرة دفاع منتخب مصر والنادي الأهلي الملقب بقلب الأسد؟",
+      "answer": "وائل جمعة (الصخرة)",
+      "hint": "أحد أقوى المدافعين في تاريخ قارة إفريقيا وأوقف دروجبا وإيتو في أوج تألقهم!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_058",
+      "categoryId": "image_blur",
+      "question": "من هو الزئبقي ونجم خط وسط الأهلي ومنتخب مصر صاحب المهارة والسرعة الفائقة؟",
+      "answer": "محمد بركات (الزئبقي)",
+      "hint": "صاحب هدف الفوز بالدوري 2009 ضد الإسماعيلي ومفتاح الجيل الذهبي لمانويل جوزيه!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_059",
+      "categoryId": "image_blur",
+      "question": "من هو العالمي ونجم هجوم توتنهام ومارسيليا وروما وسيلتا فيجو ومدرب الزمالك السابق؟",
+      "answer": "أحمد حسام (ميدو)",
+      "hint": "أصغر محترف مصري في أوروبا وصاحب التجربة الاحترافية الأكبر في إنجلترا وإيطاليا!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_060",
+      "categoryId": "image_blur",
+      "question": "من هو نجم هجوم منتخب مصر وآينتراخت فرانكفورت الألماني المتألق في البوندسليجا؟",
+      "answer": "عمر مرموش",
+      "hint": "هداف الدوري الألماني وأفضل مسدد للكرات الثابتة في أوروبا حالياً!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_061",
+      "categoryId": "image_blur",
+      "question": "من هو الجناح الطائر لنادي الزمالك ومنتخب مصر وأفضل صانع ألعاب في الدوري المصري؟",
+      "answer": "أحمد مصطفى (زيزو)",
+      "hint": "رجل ركلات الجزاء الحاسمة وقائد انتصارات الفارس الأبيض الإفريقية والمحلية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_062",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة الملاكمة للوزن الثقيل الملقب برياضي القرن وصاحب مقولة (يطير كالفراشة ويلدغ كالنحلة)؟",
+      "answer": "محمد علي كلاي (Muhammad Ali)",
+      "hint": "بطل معركة كينشاسا التاريخية ضد جورج فورمان وأشهر رياضي في التاريخ الحديث!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_063",
+      "categoryId": "image_blur",
+      "question": "من هو أسرع إنسان في التاريخ وصاحب الرقم القياسي العالمي لسباق 100 متر (9.58 ثانية)؟",
+      "answer": "يوسين بولت (Usain Bolt)",
+      "hint": "العداء الجامايكي صاحب الاحتفال الشهير بوضعية البرق وسهم الصاعقة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_064",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة التنس السويسري وكوكب التنس الحائز على 20 لقباً في البطولات الكبرى (جراند سلام)؟",
+      "answer": "روجيه فيدرير (Roger Federer)",
+      "hint": "سيد الملاعب العشبية في ويمبلدون وأنيق لعبة التنس العالمية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_065",
+      "categoryId": "image_blur",
+      "question": "من هو ماتادور التنس الإسباني وملك الملاعب الترابية الحائز على بطولة رولان جاروس 14 مرة؟",
+      "answer": "رافائيل نادال (Rafael Nadal)",
+      "hint": "المقاتل الإسباني الأعسر ورمز العزيمة الحديدية والقتال حتى آخر نقطة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_066",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المعلم المعماري الشهير في العاصمة الفرنسية باريس في الصورة المشوشة؟",
+      "answer": "برج إيفل (Eiffel Tower)",
+      "hint": "البرج الحديدي الأشهر المطل على نهر السين ورمز مدينة النور والجمال!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_067",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المسرح الروماني الأثري التاريخي في قلب العاصمة الإيطالية روما؟",
+      "answer": "الكولوسيوم (Colosseum)",
+      "hint": "حلبة قتال المصارعين الرومان وأحد أهم معالم عصر الإمبراطورية الرومانية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_068",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا الضريح الرخامي الأبيض الفخم في مدينة أغرا بالهند وأحد عجائب الدنيا؟",
+      "answer": "تاج محل (Taj Mahal)",
+      "hint": "شيده الإمبراطور شاه جهان تخليداً لذكرى زوجته ممتاز محل!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_069",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا التمثال العملاق الشهير الذي يحمل شعلة الحرية في ميناء نيويورك؟",
+      "answer": "تمثال الحرية (Statue of Liberty)",
+      "hint": "أهدته فرنسا للولايات المتحدة في أواخر القرن التاسع عشر كرمز للصداقة والحرية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_070",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا البرج ذو الساعة الشهيرة فوق مبنى البرلمان البريطاني في لندن؟",
+      "answer": "برج ساعة بيج بن (Big Ben)",
+      "hint": "رمز لندن الأشهر المطل على نهر التايمز وأدق دقات ساعة في العالم!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_071",
+      "categoryId": "image_blur",
+      "question": "ما هي هذه الأعجوبة العسكرية والهندسية الأطول في العالم وتمتد لآلاف الكيلومترات؟",
+      "answer": "سور الصين العظيم (Great Wall of China)",
+      "hint": "شيدته الأسر الإمبراطورية لحماية حدودها الشمالية من هجمات المغول والبدو!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_072",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا البرج الأبيض الإيطالي المائل الشهير الذي تحداه الجاذبية لقرون؟",
+      "answer": "برج بيزا المائل (Leaning Tower of Pisa)",
+      "hint": "برج جرس كاتدرائية بيزا الذي أجرى عليه جاليليو تجارب السقوط الحر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1543429776-2782fc8e1acd?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_073",
+      "categoryId": "image_blur",
+      "question": "ما هي هذه المدينة الوردية المنحوتة في الصخر الأردني وإحدى عجائب الدنيا السبع؟",
+      "answer": "البتراء (Petra - الأردن)",
+      "hint": "عاصمة الأنباط التاريخية وموقع الخزنة والسيق الأثري الساحر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579606032834-deaff84138e3?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_074",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا البرج الذي يعد أعلى ناطحة سحاب شيدها الإنسان في العالم ويقع في دبي؟",
+      "answer": "برج خليفة (Burj Khalifa)",
+      "hint": "بارتفاع 828 متراً ويضم أكثر من 160 طابقاً ونافورة دبي الراقصة عند قدميه!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_075",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المبنى الأيقوني بتصميمه الذي يشبه الأشرعة البيضاء في ميناء أستراليا الشهير؟",
+      "answer": "دار أوبرا سيدني (Sydney Opera House)",
+      "hint": "إحدى أعظم التحف المعمارية للقرن العشرين وتقع بجوار جسر الميناء!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_076",
+      "categoryId": "image_blur",
+      "question": "ما هي هذه القلعة التاريخية الشامخة فوق جبل المقطم في القاهرة التي بناها القائد الكردي؟",
+      "answer": "قلعة صلاح الدين الأيوبي (قلعة الجبل)",
+      "hint": "تضم مسجد محمد علي ذو القباب الرخامية ومتحف الشرطة والأسلحة الحربية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_077",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المعبد المصري العملاق المنحوت في جبل النوبة بأربعة تماثيل للملك رمسيس الثاني؟",
+      "answer": "معبد أبو سمبل (Abu Simbel)",
+      "hint": "تتعامد عليه الشمس مرتين سنوياً في يوم مولد الملك ويوم تتويجه على العرش!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_078",
+      "categoryId": "image_blur",
+      "question": "ما هي هذه المدينة الأثرية الغامضة لحضارة الإنكا وتقع فوق قمم جبال الأنديز في بيرو؟",
+      "answer": "ماتشو بيتشو (Machu Picchu - القلعة الضائعة)",
+      "hint": "مدينة الشمس المعلقة وسط الضباب والغيوم وإحدى عجائب الدنيا السبع الجديدة!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1526392060635-9d6019884377?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_079",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا البرج الخرساني المميز بتصميم زهرة اللوتس في قلب جزيرة الزمالك بالقاهرة؟",
+      "answer": "برج القاهرة (Cairo Tower)",
+      "hint": "بارتفاع 187 متراً وصممه المهندس نعوم شبيب ومطل على نهر النيل بالكامل!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_080",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المعبد الفرعوني ذو الصروح والأعمدة الضخمة الأكبر في العالم بمدينة الأقصر؟",
+      "answer": "معبد الكرنك (Karnak Temple)",
+      "hint": "يضم صالة الأعمدة الكبرى المكونة من 134 عموداً عملاقاً وطريق الكباش الموصل لمعبد الأقصر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_081",
+      "categoryId": "image_blur",
+      "question": "من هو صاحب النظرية النسبية وأشهر فيزيائي في القرن العشرين في الصورة المشوشة؟",
+      "answer": "ألبرت أينشتاين (Albert Einstein)",
+      "hint": "صاحب معادلة الطاقة والكتلة الشهيرة E=mc² وصاحب قصة الشعر البيضاء الفوضوية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_082",
+      "categoryId": "image_blur",
+      "question": "من هو العالم الإنجليزي صاحب قانون الجاذبية وقوانين الحركة وسقوط التفاحة الشهيرة؟",
+      "answer": "إسحاق نيوتن (Sir Isaac Newton)",
+      "hint": "مؤسس علم الميكانيكا الكلاسيكية ومكتشف تحلل الضوء الأبيض لألوان الطيف!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_083",
+      "categoryId": "image_blur",
+      "question": "من هو المخترع العبقري رائد التيار المتردد (AC) ومبتكر ملفات الراديو في الصورة؟",
+      "answer": "نيكولا تسلا (Nikola Tesla)",
+      "hint": "العالم الصربي الأمريكي الذي سميت على اسمه وحدة قياس المجال المغناطيسي وشركة السيارات الكهربائية!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_084",
+      "categoryId": "image_blur",
+      "question": "من هو مؤسس شركة آبل (Apple) وصاحب الرؤية الثورية لأجهزة الآيفون والماك في الصورة؟",
+      "answer": "ستيف جوبز (Steve Jobs)",
+      "hint": "صاحب الياقة السوداء والنظارة المستديرة ومؤتمرات تقديم الآيفون والآيباد التاريخية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_085",
+      "categoryId": "image_blur",
+      "question": "من هو أغنى رجل في العالم ورئيس تسلا وسبيس إكس ومنصة X (تويتر سابقاً) في الصورة؟",
+      "answer": "إيلون ماسك (Elon Musk)",
+      "hint": "رائد إطلاق صواريخ الفضاء القابلة لإعادة الهبوط ومشروع استعمار كوكب المريخ!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_086",
+      "categoryId": "image_blur",
+      "question": "من هو مؤسس شركة مايكروسوفت (Microsoft) ونظام تشغيل ويندوز في الصورة المشوشة؟",
+      "answer": "بيل جيتس (Bill Gates)",
+      "hint": "رائد ثورة الحواسيب الشخصية وأحد أكبر رجال الأعمال وأعمال الخير في العالم!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_087",
+      "categoryId": "image_blur",
+      "question": "من هو الفرعون الذهبي صاحب المقبرة السليمة والكنوز والتابوت الذهبي الأسطوري في وادي الملوك؟",
+      "answer": "الملك توت عنخ آمون (Tutankhamun)",
+      "hint": "اكتشف مقبرته هوارد كارتر عام 1922 وقناعه الذهبي هو أشهر رمز للحضارة الفرعونية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_088",
+      "categoryId": "image_blur",
+      "question": "من هي الملكة المصرية الفرعونية صاحبة التمثال النصفي الملون الأشهر المعروض بمتحف برلين؟",
+      "answer": "الملكة نفرتيتي (Nefertiti)",
+      "hint": "زوجة الملك إخناتون واسمها يعني \"الجميلة أتت\" ورمز الجمال الفرعوني الخالد!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_089",
+      "categoryId": "image_blur",
+      "question": "من هي آخر ملكات مصر البطلمية وصاحبة قصة الحب الشهيرة مع مارك أنطوني ويوليوس قيصر؟",
+      "answer": "كليوباترا السابعة (Cleopatra)",
+      "hint": "حكمت الإسكندرية ودافعت عن استقلال مصر حتى معركة أكتيوم البحرية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_090",
+      "categoryId": "image_blur",
+      "question": "من هو العالمة البولندية الفرنسية التي فازت بنوبل مرتين في الفيزياء والكيمياء واكتشفت الراديوم؟",
+      "answer": "ماري كوري (Marie Curie)",
+      "hint": "رائدة أبحاث النشاط الإشعاعي وأول امرأة تفوز بجائزة نوبل في التاريخ!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_091",
+      "categoryId": "image_blur",
+      "question": "من هو الفنان والمخترع الإيطالي العبقري صاحب لوحة الموناليزا والعشاء الأخير؟",
+      "answer": "ليوناردو دا فينشي (Leonardo da Vinci)",
+      "hint": "عبقري عصر النهضة ورسام الموناليزا ذات الابتسامة الغامضة في متحف اللوفر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_092",
+      "categoryId": "image_blur",
+      "question": "من هو الرسام الهولندي العبقري صاحب لوحة (ليلة النجوم The Starry Night) ودوار الشمس؟",
+      "answer": "فينسنت فان جوخ (Vincent van Gogh)",
+      "hint": "رائد المدرسة ما بعد الانطباعية وصاحب ضربات الفرشاة الحلزونية المضيئة الملونة!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_093",
+      "categoryId": "image_blur",
+      "question": "من هو الموسيقار الألماني العبقري صاحب السيمفونية التاسعة الذي ألف روائعه بعد أن أصيب بالصمم؟",
+      "answer": "لودفيج فان بيتهوفن (Ludwig van Beethoven)",
+      "hint": "صاحب دقات القدر الشهيرة في السيمفونية الخامسة ونشيد الفرح الأيقوني!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_094",
+      "categoryId": "image_blur",
+      "question": "من هو ملك البوب العالمي صاحب ألبوم (Thriller) ورقصة مشية القمر الشهيرة (Moonwalk)؟",
+      "answer": "مايكل جاكسون (Michael Jackson)",
+      "hint": "صاحب القفاز اللامع والقبعة السوداء وأكثر فنان مبيعاً للتسجيلات الموسيقية في العالم!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_095",
+      "categoryId": "image_blur",
+      "question": "من هو ملك الروك أند رول الأمريكي وأيقونة الموسيقى في الخمسينيات صاحب أغنية (Jailhouse Rock)؟",
+      "answer": "إلفيس بريسلي (Elvis Presley)",
+      "hint": "صاحب قصر جريسلاند والشعر الأسود الكثيف والحركات الاستعراضية الجريئة!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_096",
+      "categoryId": "image_blur",
+      "question": "من هو أول رائد فضاء هبط وسار على سطح القمر عام 1969 وقال مقولته الشهيرة؟",
+      "answer": "نيل أرمسترونج (Neil Armstrong)",
+      "hint": "قائد رحلة أبولو 11: \"خطوة صغيرة لإنسان، ولكنها قفزة عملاقة للبشرية\"!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_097",
+      "categoryId": "image_blur",
+      "question": "من هو الزعيم الجنوب إفريقي المناضل ضد الأبارتهايد (الفصل العنصري) وسجين جزيرة روبن آيلاند لـ 27 عاماً؟",
+      "answer": "نيلسون مانديلا (Nelson Mandela)",
+      "hint": "أول رئيس أسود لجنوب إفريقيا وفائز بنوبل للسلام ورمز التسامح والمصالحة العالمية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_098",
+      "categoryId": "image_blur",
+      "question": "من هو المهندس المعماري العراقي البريطاني الشهير بتصاميمها المستقبلية الانسيابية حول العالم؟",
+      "answer": "زاها حديد (Zaha Hadid)",
+      "hint": "ملكة المنحنيات وأول امرأة تفوز بجائزة بريتزكر العالمية للهندسة المعمارية!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_099",
+      "categoryId": "image_blur",
+      "question": "من هو الملاكم الأمريكي الأسطوري الملقب بـ (مايك الحديدي) وأصغر بطل للوزن الثقيل في التاريخ؟",
+      "answer": "مايك تايسون (Mike Tyson)",
+      "hint": "صاحب اللكمات القاضية الكاسحة في الجولة الأولى ووشم الوجه الشهير!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_100",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة كرة السلة الأمريكية والرقم 23 التاريخي لفريق شيكاغو بولز؟",
+      "answer": "مايكل جوردان (Michael Jordan)",
+      "hint": "صاحب شعار الحذاء الرياضي الأشهر Air Jordan وبطل الـ NBA ست مرات!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_016",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأسطوري: \"شربات.. شربات يا دكتور! أنت اللي فيهم يا برنس!\" - مين القائل وفيلم إيه؟",
+      "answer": "ماجد الكدواني - مارد (طير انت)",
+      "hint": "الجني مارد وهو يشجع دكتور بهيج في كل محاولاته الفاشلة!",
+      "options": [
+        "ماجد الكدواني - طير انت",
+        "أحمد مكي - طير انت",
+        "لطفي لبيب - طير انت",
+        "محمد سلام - كابتن مصر"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "شربات شربات يا دكتور 🧞‍♂️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_017",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"أنا جاي في سيارات.. أنا مش بتاع عيال!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (صعيدي في الجامعة الأمريكية)",
+      "hint": "خلف الدهشوري خلف والبدلة الصفراء الشهيرة في شوارع الزمالك!",
+      "options": [
+        "محمد هنيدي - صعيدي في الجامعة",
+        "أحمد السقا - صعيدي في الجامعة",
+        "طارق لطفي - صعيدي في الجامعة",
+        "هاني رمزي - صعيدي رايح جاي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "خلف الدهشوري والبدلة الصفراء 🟡",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_018",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"بلد شهادات صحيح! ده أنا معايا دبلوم صنايع!\" - مين القائل وفيلم إيه؟",
+      "answer": "عادل إمام (الإرهاب والكباب)",
+      "hint": "أحمد فتح الباب وأزمة مجمع التحرير وطرد كباب وخدمة المواطنين!",
+      "options": [
+        "عادل إمام - الإرهاب والكباب",
+        "أحمد راتب - الإرهاب والكباب",
+        "أشرف عبد الباقي - الإرهاب والكباب",
+        "كمال الشناوي - الإرهاب والكباب"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "بلد شهادات صحيح في مجمع التحرير 🏛️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_019",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الخالد: \"مرسي الزناتي اتهزم يا رجالة! اقف عوج واتكلم عدل!\" - مين القائل ومسرحية إيه؟",
+      "answer": "سعيد صالح (مدرسة المشاغبين)",
+      "hint": "زعيم المشاغبين في مواجهة أبلة عفت والناظر عبد المعطي!",
+      "options": [
+        "سعيد صالح - مدرسة المشاغبين",
+        "عادل إمام - مدرسة المشاغبين",
+        "يونس شلبي - مدرسة المشاغبين",
+        "أحمد زكي - مدرسة المشاغبين"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مرسي الزناتي والناظر 🏫",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_020",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"ألو.. مين معايا؟ مدام رشا؟ لا يا فندم أنا أحمد نوتردام!\" - مين القائل وفيلم إيه؟",
+      "answer": "رامز جلال (أحمد نوتردام)",
+      "hint": "صحفي تحقيقات يطارد سفاح النساء في قالب كوميدي مرعب!",
+      "options": [
+        "رامز جلال - أحمد نوتردام",
+        "محمد ثروت - أحمد نوتردام",
+        "بيومي فؤاد - أحمد نوتردام",
+        "حمدي الميرغني - أحمد نوتردام"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مكالمة أحمد نوتردام 📞",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_021",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الشهير: \"أنا راجل لعيب.. بس الحظ معاندني! العب يا سمك!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد زكي (كابوريا)",
+      "hint": "حسن هدهد الملاكم الشعبي وقصة الشعر الأيقونية في أوائل التسعينيات!",
+      "options": [
+        "أحمد زكي - كابوريا",
+        "محمود عبد العزيز - الكيت كات",
+        "عادل إمام - الحريف",
+        "نور الشريف - غريب في بيتي"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حسن هدهد في فيلم كابوريا 🦀",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_022",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"يا خرابي على الشياكة.. يا لهوي على الأناقة!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (أمير البحار)",
+      "hint": "أمير نور الدين وخطوبة سلوى وسفينة القراصنة!",
+      "options": [
+        "محمد هنيدي - أمير البحار",
+        "لطفي لبيب - أمير البحار",
+        "شيري عادل - أمير البحار",
+        "ياسر جلال - أمير البحار"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أمير البحار والشياكة ⚓",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_023",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"ساعة تروح وساعة تيجي.. وأنت ملكش فيها خالص!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمود عبد العزيز - الشيخ حسني (الكيت كات)",
+      "hint": "الشيخ الكفيف الذي يقود الموتوسيكل في شوارع حي الكيت كات الشعبي!",
+      "options": [
+        "محمود عبد العزيز - الكيت كات",
+        "شريف منير - الكيت كات",
+        "نجاح الموجي - الكيت كات",
+        "أحمد راتب - الكيت كات"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الشيخ حسني وموتوسيكل الكيت كات 🏍️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_024",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا عيني عليك يا حبة عيني.. ده أنت هتشوف أيام سودة!\" - مين القائل ومسرحية إيه؟",
+      "answer": "فؤاد المهندس (سك على بناتك)",
+      "hint": "الدكتور رأفت وبناته سوسو وفوزية ونادية وسامح الشجيع!",
+      "options": [
+        "فؤاد المهندس - سك على بناتك",
+        "أحمد راتب - سك على بناتك",
+        "محمد أبو الحسن - سك على بناتك",
+        "سناء يونس - سك على بناتك"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الدكتور رأفت في سك على بناتك 🚪",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_025",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأيقوني: \"كنت فين يا علي لما الدنيا كانت حر؟!\" - مين القائل ومسرحية إيه؟",
+      "answer": "سناء يونس - فوزية (سك على بناتك)",
+      "hint": "مشهد الضرب الشهير مع فؤاد المهندس والزواج من حنفي!",
+      "options": [
+        "سناء يونس - سك على بناتك",
+        "شريهان - سك على بناتك",
+        "إجلال زكي - سك على بناتك",
+        "شويكار - سيدتي الجميلة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "فوزية وحنفي وعصاية الأستاذ 🦯",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_026",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا بابا يلا! أنا اللي عملت البحر طحينة!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد السقا (تيتو)",
+      "hint": "طاهر حسيب والضابط رفعت السكري في صراع المصلحة والماضي!",
+      "options": [
+        "أحمد السقا - تيتو",
+        "خالد صالح - تيتو",
+        "عمرو واكد - تيتو",
+        "كريم عبد العزيز - خارج على القانون"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أنا بابا يلا في فيلم تيتو 🔫",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_027",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"تصدق وتآمن بالله يا هدهد؟ أنت كائن رخو!\" - مين القائل وفيلم إيه؟",
+      "answer": "علاء ولي الدين (يا أنا يا خالتي)",
+      "hint": "الخالة نوسة وتيمور وسحر الدجل والشعوذة!",
+      "options": [
+        "محمد هنيدي - يا أنا يا خالتي",
+        "حسن حسني - يا أنا يا خالتي",
+        "فادية عبد الغني - يا أنا يا خالتي",
+        "لطفي لبيب - يا أنا يا خالتي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الخالة نوسة وتحضير الأرواح 🔮",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_028",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الجواز ده عامل زي البطيخة.. يا تطلع قرعة يا تطلع حمرا!\" - مين القائل وفيلم إيه؟",
+      "answer": "عادل إمام (التجربة الدنماركية)",
+      "hint": "قدري المنياوي وزير الشباب والرياضة وأولاده الأربعة مع أنيتا!",
+      "options": [
+        "عادل إمام - التجربة الدنماركية",
+        "مجدي كامل - التجربة الدنماركية",
+        "تامر هجرس - التجربة الدنماركية",
+        "خالد سرحان - التجربة الدنماركية"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "قدري المنياوي في التجربة الدنماركية 🇩🇰",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_029",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"أنا لما بحب.. بدلق! ولما بكره.. بفركش!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (ظرف طارق)",
+      "hint": "طارق وعمرو ومعتز وعصام ومحاولة الوصول لسارة محمد المهدي!",
+      "options": [
+        "أحمد حلمي - ظرف طارق",
+        "مجدي كامل - ظرف طارق",
+        "خالد الصاوي - ظرف طارق",
+        "يوسف فوزي - ظرف طارق"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "طارق في ظرف طارق ✉️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_030",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"حد يندهلي البوليس.. ده أنا اتسرقت في وضح النهار!\" - مين القائل وفيلم إيه؟",
+      "answer": "كريم عبد العزيز (حرامية في كي جي تو)",
+      "hint": "حسن الشحات ونسمة ومحاولة سرقة خزنة القلعة وحضانة الأطفال!",
+      "options": [
+        "كريم عبد العزيز - حرامية في كي جي تو",
+        "طلعت زكريا - حرامية في كي جي تو",
+        "نشوى مصطفى - حرامية في كي جي تو",
+        "حنان ترك - حرامية في كي جي تو"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حسن الشحات وسباعي 🎒",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_031",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"المجرم لازم ينال عقابه.. ولو بعد حين يا فندم!\" - مين القائل وفيلم إيه؟",
+      "answer": "شريف منير (ولاد العم)",
+      "hint": "دانيال عزت ضابط الموساد المتخفي في القاهرة وضابط المخابرات مصطفى!",
+      "options": [
+        "شريف منير - ولاد العم",
+        "كريم عبد العزيز - ولاد العم",
+        "منى زكي - ولاد العم",
+        "سليم كلاس - ولاد العم"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "صراع ولاد العم المخابراتي 🕵️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_032",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا عم صلي على النبي في قلبك.. ده أنا غلبان وعلى باب الله!\" - مين القائل وفيلم إيه؟",
+      "answer": "عادل إمام (المتسول)",
+      "hint": "حسنين البرطوشي وعصابة التسول المنظمة في القاهرة!",
+      "options": [
+        "عادل إمام - المتسول",
+        "وحيد سيف - المتسول",
+        "إسعاد يونس - المتسول",
+        "علي الشريف - المتسول"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حسنين البرطوشي في المتسول 🥖",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_033",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا اللي قولت للغراب يا فتان.. وللثعلب يا مكار!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد سعد (اللي بالي بالك)",
+      "hint": "اللمبي ورياض المنفلوطي مأمور السجن وتبادل الشخصيات!",
+      "options": [
+        "محمد سعد - اللي بالي بالك",
+        "حسن حسني - اللي بالي بالك",
+        "عبلة كامل - اللي بالي بالك",
+        "نيفين مندور - اللي بالي بالك"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "اللمبي مأمور السجن 👮",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_034",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأيقوني: \"كله رايح.. مفيش حاجة دايمة يا صاحبي!\" - مين القائل وفيلم إيه؟",
+      "answer": "خالد صالح (تيد تيد - عمارة يعقوبيان)",
+      "hint": "كمال الفولي ودوره الفلسفي العميق في إدارة اللعبة السياسية!",
+      "options": [
+        "خالد صالح - عمارة يعقوبيان",
+        "عادل إمام - عمارة يعقوبيان",
+        "نور الشريف - عمارة يعقوبيان",
+        "أحمد بدير - عمارة يعقوبيان"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "كمال الفولي في عمارة يعقوبيان 🏢",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_035",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"انزل يا سيسي.. ده اليوم باين من أوله!\" - مين القائل ومسرحية إيه؟",
+      "answer": "محمد صبحي (الجوكر)",
+      "hint": "شخصية عم أيوب العجوز وشوكت بيه وزكي الدسوقي!",
+      "options": [
+        "محمد صبحي - الجوكر",
+        "هناء الشوربجي - الجوكر",
+        "محمود القلعاوي - الجوكر",
+        "جلال الشرقاوي - الجوكر"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "عم أيوب الشهير في الجوكر 🃏",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_036",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"ده أنا متخرج من هارفارد بدرجة امتياز مع مرتبة الشرف!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (همام في أمستردام)",
+      "hint": "همام مجاهد شعبان ورحلة الكفاح ومحل البطاطس والبيض المقلي في هولندا!",
+      "options": [
+        "محمد هنيدي - همام في أمستردام",
+        "أحمد السقا - همام في أمستردام",
+        "طارق عبد العزيز - همام في أمستردام",
+        "محمود البزاوي - همام في أمستردام"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "همام مجاهد في أمستردام 🍟",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_037",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا مبخفش من حد.. أنا بخاف من اللي خلقني بس!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد السقا (إبراهيم الأبيض)",
+      "hint": "إبراهيم الأبيض والمعلم عبد الملك زرزور في حي القلعة والمطواة قرن الغزال!",
+      "options": [
+        "أحمد السقا - إبراهيم الأبيض",
+        "محمود عبد العزيز - إبراهيم الأبيض",
+        "عمرو واكد - إبراهيم الأبيض",
+        "باسم سمرة - إبراهيم الأبيض"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "إبراهيم الأبيض وعبد الملك زرزور ⚔️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_038",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الإنسان ضعيف.. وأنا أضعف خلق الله!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمود عبد العزيز (إبراهيم الأبيض - عبد الملك زرزور)",
+      "hint": "المعلم عبد الملك زرزور وحبه لحورية وجملة: الجرأة حلوة مفيش كلام!",
+      "options": [
+        "محمود عبد العزيز - إبراهيم الأبيض",
+        "أحمد السقا - إبراهيم الأبيض",
+        "هند صبري - إبراهيم الأبيض",
+        "خالد صالح - ابن القنصل"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "عبد الملك زرزور والجرأة حلوة 🚬",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_039",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا بني أنت في مصر.. يعني القانون هنا زي الإشارة الحمرا!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (عسل أسود)",
+      "hint": "مصري سيد العربي العائد من أمريكا وجواز السفر الأمريكي!",
+      "options": [
+        "أحمد حلمي - عسل أسود",
+        "لطفي لبيب - عسل أسود",
+        "إدوارد - عسل أسود",
+        "طارق الأمير - عسل أسود"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مصري العربي في فيلم عسل أسود 🍯",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_040",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الباشا تلميذ.. والعيال بتشرب بيبسي في الفصل!\" - مين القائل وفيلم إيه؟",
+      "answer": "حسن حسني (الباشا تلميذ)",
+      "hint": "اللواء نجدت وهو يوبخ الضابط بسيوني في مكتب الشرطة!",
+      "options": [
+        "حسن حسني - الباشا تلميذ",
+        "كريم عبد العزيز - الباشا تلميذ",
+        "رامز جلال - الباشا تلميذ",
+        "محمد رجب - الباشا تلميذ"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "اللواء نجدت وبسيوني 🎖️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_041",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"أنت بتضرب مين ياض؟ ده أنا بطل الجمهورية في الكونغ فو!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد سعد (عوكل)",
+      "hint": "عوكل في تركيا مع جدته أطاطا وسوق الخضار!",
+      "options": [
+        "محمد سعد - عوكل",
+        "حسن حسني - عوكل",
+        "نور - عوكل",
+        "طلعت زكريا - عوكل"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "عوكل والست أطاطا في تركيا 🇹🇷",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_042",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا مش مصدق عينيا.. الملايين دي كلها بتاعتي أنا؟!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (مطب صناعي)",
+      "hint": "ميمي جلال القادم من الإسماعيلية للقاهرة ورعاية بنت رجل الأعمال!",
+      "options": [
+        "أحمد حلمي - مطب صناعي",
+        "نور - مطب صناعي",
+        "عزت أبو عوف - مطب صناعي",
+        "أحمد راتب - مطب صناعي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "ميمي جلال في مطب صناعي 🚧",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_043",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا عم فكك مني.. ده أنا دماغي سحلت ومبقتش عارف راسي من رجلي!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد عز (ولاد رزق)",
+      "hint": "رضا رزق وإخوته في الكباريه والهروب من المعلم صقر!",
+      "options": [
+        "أحمد عز - ولاد رزق",
+        "عمرو يوسف - ولاد رزق",
+        "أحمد الفيشاوي - ولاد رزق",
+        "كريم قاسم - ولاد رزق"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "رضا رزق والمعلم صقر 🦅",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_044",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأيقوني: \"الشغلانة دي محتاجة قلب ميت وضمير في إجازة!\" - مين القائل وفيلم إيه؟",
+      "answer": "خالد الصاوي (عمارة يعقوبيان)",
+      "hint": "حاتم رشيد رئيس تحرير الجريدة الأجنبية وعالمه الخفي!",
+      "options": [
+        "خالد الصاوي - عمارة يعقوبيان",
+        "عادل إمام - عمارة يعقوبيان",
+        "خالد صالح - عمارة يعقوبيان",
+        "باسم سمرة - عمارة يعقوبيان"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حاتم رشيد في عمارة يعقوبيان 📰",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_045",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا عندي فوبيا من الأماكن المقفولة ومن الناس الرخمة!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (إكس لارج)",
+      "hint": "مجدي سمير وعشقه للأكل والحلويات ومحاولة إنقاص وزنه من أجل دينا!",
+      "options": [
+        "أحمد حلمي - إكس لارج",
+        "دنيا سمير غانم - إكس لارج",
+        "إبراهيم نصر - إكس لارج",
+        "محمد شاهين - إكس لارج"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مجدي في فيلم إكس لارج 🍔",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_046",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنت مين يابني ودخلت هنا إزاي؟ أنا عزرائيل وجاي أقبض روحك!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (جاءنا البيان التالي)",
+      "hint": "نادر سيف الدين المذيع الفاشل في تقرير مصنع الألبان الفاسدة والباور رينجرز!",
+      "options": [
+        "محمد هنيدي - جاءنا البيان التالي",
+        "حنان ترك - جاءنا البيان التالي",
+        "أحمد خليل - جاءنا البيان التالي",
+        "طلعت زكريا - جاءنا البيان التالي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "نادر سيف الدين في مصنع الألبان 🥛",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_047",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الميت لما يموت.. نسيبه يرتاح في تربته ولا نطلعه يرقص؟!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد سعد (بوحة)",
+      "hint": "بوحة الصباح في المدبح مع المعلم محروس الضبع ومشاكل ورث الوالد!",
+      "options": [
+        "محمد سعد - بوحة",
+        "حسن حسني - بوحة",
+        "مجدي كامل - بوحة",
+        "لبلبة - بوحة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "بوحة في المدبح والسلخانة 🥩",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_048",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"هو القطر رايح طنطا ولا جاي من طنطا؟\" - مين القائل ومسرحية إيه؟",
+      "answer": "يونس شلبي (العيال كبرت)",
+      "hint": "عاطف السكري وهو يختبر ذكاء أخته سحر وأخوه سلطان!",
+      "options": [
+        "يونس شلبي - العيال كبرت",
+        "سعيد صالح - العيال كبرت",
+        "أحمد زكي - العيال كبرت",
+        "حسن مصطفى - العيال كبرت"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "قطر طنطا وعاطف السكري 🚂",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_049",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الشهير: \"أنا مش قصير.. أنا أوزعة بس مكار!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (صعيدي في الجامعة الأمريكية)",
+      "hint": "خلف وهو يبرر قصر قامته قدام زملائه في سكن الطلبة!",
+      "options": [
+        "محمد هنيدي - صعيدي في الجامعة",
+        "أحمد السقا - صعيدي في الجامعة",
+        "فتحي عبد الوهاب - صعيدي في الجامعة",
+        "هاني رمزي - صعيدي رايح جاي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "خلف الدهشوري وسكن الطلبة 🎓",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_050",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"طظ فيك وفي حكومتك.. ده أنا هفرقعلكوا المجمع كله!\" - مين القائل وفيلم إيه؟",
+      "answer": "عادل إمام (الإرهاب والكباب)",
+      "hint": "مشهد محاصرة قوات الأمن للمجمع ومفاوضات وزير الداخلية كمال الشناوي!",
+      "options": [
+        "عادل إمام - الإرهاب والكباب",
+        "أحمد راتب - الإرهاب والكباب",
+        "علاء ولي الدين - الإرهاب والكباب",
+        "يسرا - الإرهاب والكباب"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مفاوضات مجمع التحرير الشهيرة 🏢",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_051",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا باشا أنا راجل سوابق.. بس عمري ما أكلت نكران جميل!\" - مين القائل وفيلم إيه؟",
+      "answer": "خالد صالح (ابن القنصل)",
+      "hint": "القنصل عادل الرشيدي وتزوير جوازات السفر مع ناصر فتحي سكر!",
+      "options": [
+        "خالد صالح - ابن القنصل",
+        "أحمد السقا - ابن القنصل",
+        "غادة عادل - ابن القنصل",
+        "خالد سرحان - ابن القنصل"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "القنصل وناصر في ابن القنصل 🛂",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_052",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"أنا الدكتور بتاع المزاريطة.. واللي مش عاجبه ياخد حقنة!\" - مين القائل ومسلسل إيه؟",
+      "answer": "محمد سلام - هجرس (الكبير أوي)",
+      "hint": "هجرس رفيق جوني في تصوير فيديوهات التيك توك وقناة اليوتيوب في المزاريطة!",
+      "options": [
+        "محمد سلام - الكبير أوي",
+        "أحمد مكي - الكبير أوي",
+        "بيومي فؤاد - الكبير أوي",
+        "هشام إسماعيل - الكبير أوي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "هجرس في دوار الكبير أوي 🌾",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_053",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا حلاوة.. يا ولاد الإيه! ده انتوا طلعتوا عصابة بجد!\" - مين القائل وفيلم إيه؟",
+      "answer": "شيكو - شهير (سمير وشهير وبهير)",
+      "hint": "العودة لزمن السبعينيات وسيارة د. بصير ومقابلة والديهم وهم شباب!",
+      "options": [
+        "شيكو - سمير وشهير وبهير",
+        "أحمد فهمي - سمير وشهير وبهير",
+        "هشام ماجد - سمير وشهير وبهير",
+        "حسن حسني - سمير وشهير وبهير"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "سمير وشهير وبهير في السبعينيات 🚗",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_054",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الحرب خدعة يا توفيق.. بس الغباء موهبة ربانية!\" - مين القائل وفيلم إيه؟",
+      "answer": "هشام ماجد (الحرب العالمية الثالثة)",
+      "hint": "خميس في متحف الشمع واستيقاظ تماثيل هتلر وتوت عنخ آمون وعلاء الدين!",
+      "options": [
+        "هشام ماجد - الحرب العالمية الثالثة",
+        "شيكو - الحرب العالمية الثالثة",
+        "أحمد فهمي - الحرب العالمية الثالثة",
+        "بيومي فؤاد - الحرب العالمية الثالثة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "متحف الشمع والحرب العالمية الثالثة 🗿",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_055",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأيقوني: \"أنا جيت يا لبلب.. جيت وجايب معايا الفرحة!\" - مين القائل وفيلم إيه؟",
+      "answer": "محمود عبد العزيز (سوق المتعة)",
+      "hint": "أحمد حبيب الخارج من السجن بعد 20 عاماً ومعه حقيبة ملايين الجنيهات تعويضاً!",
+      "options": [
+        "محمود عبد العزيز - سوق المتعة",
+        "فاروق الفيشاوي - سوق المتعة",
+        "سامي العدل - سوق المتعة",
+        "محمود حميدة - سوق المتعة"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أحمد حبيب في سوق المتعة 💰",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_056",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"الشعب يريد إسقاط النظام.. بس النظام مش فاضي النهاردة!\" - مين القائل ومسلسل إيه؟",
+      "answer": "أحمد مكي - حزلقوم (الكبير أوي)",
+      "hint": "حزلقوم بشعره البرتقالي المميز وبدلته المنقوشة وتجربته في رئاسة العصابة!",
+      "options": [
+        "أحمد مكي - الكبير أوي",
+        "محمد سلام - الكبير أوي",
+        "بيومي فؤاد - الكبير أوي",
+        "حسين أبو حجاج - الكبير أوي"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حزلقوم وأفكاره العبقرية 🍊",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_057",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا مش هسيب حقي.. ده أنا واكل عيش وملح مع الداخلية!\" - مين القائل وفيلم إيه؟",
+      "answer": "كريم عبد العزيز (واحد من الناس)",
+      "hint": "محمود حارس الجراج والانتقام من رجل الأعمال الفاسد بعد مقتل زوجته!",
+      "options": [
+        "كريم عبد العزيز - واحد من الناس",
+        "أحمد راتب - واحد من الناس",
+        "عزت أبو عوف - واحد من الناس",
+        "محمود الجندي - واحد من الناس"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "محمود في فيلم واحد من الناس 🚘",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_058",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الكوميدي: \"يا نهار أبيض.. ده البنك اتقفل والفلوس طارت!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (جعلتني مجرماً)",
+      "hint": "رشدي أباظة الشاب الفاشل وخطف ملك للشحاتة من والدها الثري أدهم بيه!",
+      "options": [
+        "أحمد حلمي - جعلتني مجرماً",
+        "حسن حسني - جعلتني مجرماً",
+        "غادة عادل - جعلتني مجرماً",
+        "ريهام عبد الغفور - جعلتني مجرماً"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "رشدي أباظة وخطة الفدية 🏦",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_059",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"كله بيمثل على كله.. والجدع اللي يخرج كسبان!\" - مين القائل ومسلسل إيه؟",
+      "answer": "محمد رمضان (جعفر العمدة)",
+      "hint": "معلم السيدة زينب المتزوج من أربع نساء والبحث عن ابنه المفقود منذ 19 عاماً!",
+      "options": [
+        "محمد رمضان - جعفر العمدة",
+        "أحمد داش - جعفر العمدة",
+        "منذر رياحنة - جعفر العمدة",
+        "طارق النهري - جعفر العمدة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "جعفر العمدة في السيدة زينب 👑",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_060",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنت فاكر نفسك شجيع السيما؟ ده أنا هعلمك الأدب من أول وجديد!\" - مين القائل وفيلم إيه؟",
+      "answer": "أحمد آدم (شجيع السيما)",
+      "hint": "شخصية مسعد ومحاولته تقليد أبطال الأكشن في الحارة الشعبية!",
+      "options": [
+        "أحمد آدم - شجيع السيما",
+        "ياسر جلال - شجيع السيما",
+        "ممدوح وافي - شجيع السيما",
+        "مصطفى قمر - شجيع السيما"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "شجيع السيما ومسعد الأكشن 🎬",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_061",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"تملي معاك.. ولو حتى بعيد عني في قلبي هواك!\" مين المطرب؟",
+      "answer": "عمرو دياب (الهضبة)",
+      "hint": "الأغنية العالمية الأشهر للهضبة عام 2000 وصاحبة البلوفر الصوف الأيقوني!",
+      "options": [
+        "عمرو دياب - تملي معاك",
+        "محمد حماقي - مابلاش",
+        "تامر حسني - كل مرة",
+        "مصطفى قمر - سكة العاشقين"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أغنية تملي معاك الأسطورية 🎶",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_062",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر التاريخي: \"منين بيجي الشجن.. من اختلاف الزمن، ومنين بيجي الهوى.. من ائتلاف النوى!\" تتر مسلسل إيه؟",
+      "answer": "محمد الحلو (ليالي الحلمية)",
+      "hint": "روائع أسامة أنور عكاشة وألحان ميشيل المصري وتاريخ حي الحلمية العريق!",
+      "options": [
+        "ليالي الحلمية",
+        "زيزينيا",
+        "الشهد والدموع",
+        "المال والبنون"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر ليالي الحلمية الخالد 🏛️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_063",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"الليلة يا سمرة.. يا سمارة، الليلة يا سمرة حبيبي يا سمارة!\" مين المطرب الكينج؟",
+      "answer": "محمد منير (الكينج)",
+      "hint": "صوت النوبة والأغنية التي لا تخلو منها أي حفلة غنائية في مصر!",
+      "options": [
+        "محمد منير - الليلة يا سمرة",
+        "علي الحجار - يا سمرة",
+        "محمد فؤاد - كمننا",
+        "إيهاب توفيق - سحراني"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الليلة يا سمرة مع الكينج 🌴",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_064",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الصعيدي الأيقوني: \"قالوا الزمان كذاب.. قولت الزمان صادق، لو الزمان غلاب.. العشق هو الغالب!\" تتر مسلسل إيه؟",
+      "answer": "علي الحجار (ذئاب الجبل)",
+      "hint": "قصة البدري بدار ومهجة ودبور في صعيد مصر وكلمات عبد الرحمن الأبنودي!",
+      "options": [
+        "ذئاب الجبل",
+        "الضوء الشارد",
+        "حدائق الشيطان",
+        "الوتد"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر ذئاب الجبل الصعيدي 🐺",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_065",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"حبيبي يا نور العين.. يا ساكن خيالي، عاشق بقالي سنين ولا غيرك في بالي!\" مين المطرب؟",
+      "answer": "عمرو دياب (نور العين)",
+      "hint": "الأغنية التي نال عنها جائزة وورلد ميوزك أورد لأول مرة عام 1996 وحققت نجاحاً عالمياً!",
+      "options": [
+        "عمرو دياب - نور العين",
+        "راغب علامة - قلبي عشقها",
+        "إيهاب توفيق - داني",
+        "حميد الشاعري - عيني"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "نور العين للهضبة عمرو دياب 👁️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_066",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الشهير: \"قالوا زمان دنيا دنية غرورة.. وقلنا معونة ربنا مستورة!\" تتر مسلسل إيه؟",
+      "answer": "علي الحجار وحنان ماضي (المال والبنون)",
+      "hint": "سلامة فراويلة وعباس الضو: عباس الضو بيقول لا! وألحان ياسر عبد الرحمن!",
+      "options": [
+        "المال والبنون",
+        "سوق العصر",
+        "لن أعيش في جلباب أبي",
+        "أرابيسك"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر المال والبنون التاريخي 💵",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_067",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"آه لو لعبت يا زهر.. واتبدلت الأحوال، وركبت أول موجة في سكة الأموال!\" مين المطرب الشعبي؟",
+      "answer": "أحمد شيبة (آه لو لعبت يا زهر)",
+      "hint": "الأغنية الشعبية الأشهر لفيلم أوشن 14 وحققت مئات الملايين من المشاهدات!",
+      "options": [
+        "أحمد شيبة - آه لو لعبت يا زهر",
+        "عبد الباسط حمودة - أنا مش عارفني",
+        "محمود الليثي - بونبوناية",
+        "طارق الشيخ - دقيقة حداد"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "آه لو لعبت يا زهر 🎲",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_068",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر العبقري: \"ويرجع الإنسان لنفسه تاني.. يفتش في دفاتره القديمة!\" موسيقى تتر مسلسل المخابرات الأيقوني إيه؟",
+      "answer": "عمار الشريعي (رأفت الهجان)",
+      "hint": "الموسيقى الوطنية الأشهر لرفعت الجمال ومحمود عبد العزيز في صراع الجاسوسية!",
+      "options": [
+        "رأفت الهجان",
+        "دموع في عيون وقحة",
+        "السقوط في بئر سبع",
+        "الثعلب"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "موسيقى رأفت الهجان لعمار الشريعي 🕵️‍♂️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_069",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"سو يا سو.. حبيبي حبسوه! حبسوه في قفص من دهب ومقفلين عليه!\" مين المطرب؟",
+      "answer": "محمد منير (الكينج - سو يا سو)",
+      "hint": "من أشهر أغاني ألبوم في عشق البنات للمطرب محمد منير!",
+      "options": [
+        "محمد منير - سو يا سو",
+        "محمد فؤاد - فاكرك يا ناسيني",
+        "حكيم - حلاوة روح",
+        "مصطفى قمر - السود عيونه"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أغنية سو يا سو للكينج منير 🎵",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_070",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الصعيدي الأسطوري بآلة الربابة والناي الشهيرة: تتر مسلسل إيه الموسيقي الخالد؟",
+      "answer": "ياسر عبد الرحمن (الضوء الشارد)",
+      "hint": "عائلة العزايزة ورفيع بيه وفرحة وصراع الصعيد في التسعينيات!",
+      "options": [
+        "الضوء الشارد",
+        "ذئاب الجبل",
+        "خالتي صفية والدير",
+        "الليل وآخره"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "موسيقى رفيع بيه في الضوء الشارد 🎻",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_071",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"سيبت كل الدنيا وجيتلك.. عشت عمري كله ليك!\" مين المطربة صاحبة الصوت الإحساس؟",
+      "answer": "شيرين عبد الوهاب (صبري قليل)",
+      "hint": "بنت النيل وصاحبة ألبوم جرح تاني وخاصمت النوم!",
+      "options": [
+        "شيرين عبد الوهاب - صبري قليل",
+        "أنغام - سيدي وصالك",
+        "أصالة - سامحتك كتير",
+        "آمال ماهر - سكة السلامة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "شيرين عبد الوهاب وصبري قليل 🎤",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_072",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"كل مرة بشوفك فيها.. ببقى نفسي أجيلك أقولك!\" مين المطرب نجم الجيل؟",
+      "answer": "تامر حسني (نجم الجيل)",
+      "hint": "بطل أفلام عمر وسلمى وكابتن هيما والبدلة!",
+      "options": [
+        "تامر حسني - كل مرة",
+        "عمرو دياب - قمرين",
+        "محمد حماقي - ناويها",
+        "رامي صبري - كلمة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تامر حسني - كل مرة بشوفك فيها 🎸",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_073",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الخالد: \"ويلي يا ويلي من الأيام.. ويلي يا ويلي من الأحلام!\" تتر مسلسل إيه لحسن الأسمر؟",
+      "answer": "حسن الأسمر (أرابيسك - أيام حسن النعماني)",
+      "hint": "صلاح السعدني في دور الأسطى حسن أرابيسك وفلسفة الهوية المصرية الأصيلة!",
+      "options": [
+        "أرابيسك",
+        "الشارع الجديد",
+        "أهالينا",
+        "زيزينيا"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر أرابيسك لحسن الأسمر 🪵",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_074",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التراك: \"عيني منها بشكل جدي.. وتقيلة مش بتبان! البخت مال والمكتوب مقري!\" مين الرابر؟",
+      "answer": "ويجز (Wegz - البخت)",
+      "hint": "التراك الرومانسي الأشهر لمغني الراب المصري ابن الورديان بالإسكندرية!",
+      "options": [
+        "ويجز - البخت",
+        "مروان بابلو - الغابة",
+        "مروان موسى - تيسلا",
+        "أبيوسف - باشا اعتمد"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تراك البخت لويجز 🎧",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_075",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الوطنية الكلاسيكية: \"يا حبيبتي يا مصر.. يا مصر، يا أمه يا بهية يا أم الصابرين!\" مين المطربة دلوعة الشاشة؟",
+      "answer": "شادية (يا حبيبتي يا مصر)",
+      "hint": "كلمات الشاعر محمد حمزة وألحان الموسيقار بليغ حمدي والأغنية الرسمية لكل المناسبات الوطنية!",
+      "options": [
+        "شادية - يا حبيبتي يا مصر",
+        "أم كلثوم - مصر تتحدث عن نفسها",
+        "نجاة الصغيرة - وطني وصبايا",
+        "فايزة أحمد - بحبك يا مصر"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "يا حبيبتي يا مصر لشادية 🇪🇬",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_076",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"أنا مش عارفني.. أنا تهت مني، أنا مش أنا.. لا دي ملامحي ولا ده صوتي!\" مين عميد الأغنية الشعبية؟",
+      "answer": "عبد الباسط حمودة (الحكمدار)",
+      "hint": "المطرب الشعبي صاحب البدلات اللامعة وصوت الحزن والشجن الطربي!",
+      "options": [
+        "عبد الباسط حمودة - أنا مش عارفني",
+        "أحمد شيبة - يعلم ربنا",
+        "طارق الشيخ - حالياً بالأسواق",
+        "حسن الأسمر - كتاب حياتي يا عين"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أنا مش عارفني لعبد الباسط حمودة 🎭",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_077",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الإسكندراني الجميل: \"وعمار يا إسكندرية.. يا جميلة يا مارية، بحرك هوا وطراوة!\" تتر مسلسل إيه بصوت محمد الحلو؟",
+      "answer": "محمد الحلو (زيزينيا)",
+      "hint": "بشر عامر عبد الظاهر والخواجة والحارة الشعبية في أربعينيات القرن الماضي!",
+      "options": [
+        "زيزينيا",
+        "الراية البيضا",
+        "ليالي الحلمية",
+        "أهالينا"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر عمار يا إسكندرية لمحمد الحلو 🌊",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_078",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الرومانسية: \"ما بلاش تغيب عنا تاني.. ما بلاش تدوقني قسوتك وتنساني!\" مين المطرب؟",
+      "answer": "محمد حماقي",
+      "hint": "أحد أشهر مطربي البوب المصري الحائز على جوائز الميوزك أورد وأغنية ألبوم عمره ما يغيب!",
+      "options": [
+        "محمد حماقي - ما بلاش",
+        "تامر حسني - بعيد عن عيني",
+        "عمرو دياب - بعد الليالي",
+        "رامي جمال - أوعديني"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "ما بلاش لمحمد حماقي 🎼",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_079",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الصيفية: \"سكر محلي محطوط على كريمة.. كعبك محني والعود عليه القيمة!\" دويتو المهرجانات الأشهر لمين ومين؟",
+      "answer": "حسن شاكوش وعمر كمال (بنت الجيران)",
+      "hint": "المهرجان الذي اجتاح العالم العربي والتريند العالمي عام 2020 بحوالي مليار استماع!",
+      "options": [
+        "حسن شاكوش وعمر كمال - بنت الجيران",
+        "حمو بيكا وعمر كمال - وداع يا دنيا",
+        "عصام صاصا ومسلم - يا قلبي",
+        "عنبة ومسلم - الملوك"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مهرجان بنت الجيران 💃",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_080",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع النشيد الغنائي: \"مربوط بأستك في مكاني.. بلف وارجع للأول تاني!\" فرقة الروك المصرية إيه؟",
+      "answer": "كايروكي (Cairokee - أمير عيد)",
+      "hint": "أغنية ألبوم أبناء البطة السوداء لفرقة كايروكي وصوت أمير عيد!",
+      "options": [
+        "كايروكي - مربوط بأستك",
+        "مسار إجباري - شيروفوبيا",
+        "شارموفرز - خمسة سنتي",
+        "وسط البلد - شمس النهار"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "فرقة كايروكي ومربوط بأستك 🎸",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_081",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الطربية: \"أنت عمري اللي ابتدي بنورك صباحه.. قد إيه من عمري قبلك راح وعدّى!\" كوكب الشرق مين؟",
+      "answer": "أم كلثوم (أنت عمري - لقاء السحاب)",
+      "hint": "لقاء السحاب الأول والفريد بين كوكب الشرق أم كلثوم وموسيقار الأجيال محمد عبد الوهاب عام 1964!",
+      "options": [
+        "أم كلثوم - أنت عمري",
+        "أم كلثوم - فكروني",
+        "أم كلثوم - سيرة الحب",
+        "أم كلثوم - الأطلال"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "لقاء السحاب أنت عمري لأم كلثوم 🌟",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_082",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"سواح.. وماشي في البلاد سواح، والخطوة بيني وبين حبيبي براح!\" مين العندليب الأسمر؟",
+      "answer": "عبد الحليم حافظ (سواح)",
+      "hint": "روائع العندليب من كلمات محمد حمزة وألحان بليغ حمدي والصفارة الشهيرة في المطلع!",
+      "options": [
+        "عبد الحليم حافظ - سواح",
+        "عبد الحليم حافظ - زي الهوا",
+        "عبد الحليم حافظ - موعود",
+        "عبد الحليم حافظ - جانا الهوى"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "العندليب الأسمر عبد الحليم حافظ - سواح 🌾",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_083",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"يا ترى يا حبيبي.. يا ترى بتفكر فيا زي ما بفكر فيك؟!\" مين صاحب الحنجرة الذهبية؟",
+      "answer": "بهاء سلطان (يا ترى)",
+      "hint": "الأغنية التي أطلقت نجومية بهاء سلطان تحت رعاية المنتج نصر محروس وألبوم ياللي بايع!",
+      "options": [
+        "بهاء سلطان - يا ترى",
+        "محمد محيي - أعاتبك",
+        "تامر حسني - يا بنت الإيه",
+        "فضل شاكر - يا غايب"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "بهاء سلطان وأغنية يا ترى 🎙️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_084",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الشبابية: \"حبيبي قالي بحبك.. قولتله أهلاً وسهلاً، قالي دايب في غرامك.. قولتله ميت فل وعشرة!\" مين المطرب؟",
+      "answer": "مصطفى قمر",
+      "hint": "نجم التسعينيات وصاحب الجيتار والعيون الملونة وأفلام حريم كريم ودبدوبة التخينة!",
+      "options": [
+        "مصطفى قمر",
+        "محمد فؤاد",
+        "إيهاب توفيق",
+        "هشام عباس"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مصطفى قمر ونوستالجيا التسعينيات 🎸",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_085",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الشعبية الراقصة: \"حلاوة روح.. يا حلاوة روح، الجرح يطيب لكن العشم عمره ما يروح!\" مين المطرب العالمي حكيم؟",
+      "answer": "حكيم (حلاوة روح)",
+      "hint": "الأغنية الدعائية لفيلم هيفاء وهبي وأشهر أغاني الأفراح والمناسبات المصرية!",
+      "options": [
+        "حكيم - حلاوة روح",
+        "محمود الليثي - زلزال",
+        "أحمد شيبة - 100 وش",
+        "طارق الشيخ - شارع الحياة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حكيم وحلاوة روح في الأفراح 🎺",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_086",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الدرامي: \"أنا ابن الحلال ماليش في الشمال.. ولو الزمان مال أنا عمري ما أميل!\" تتر مسلسل إيه؟",
+      "answer": "آدم (ابن حلال)",
+      "hint": "مسلسل حبيشة (محمد رمضان) وصراعه مع طبقة الأثرياء في قصر النيل!",
+      "options": [
+        "ابن حلال",
+        "الأسطورة",
+        "البرنس",
+        "نسر الصعيد"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر مسلسل ابن حلال (حبيشة) ⛓️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_087",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الإيقاعية: \"حبيبي ده.. حبيبي ولا حد غيره قمر الزمان، ده جماله خطف عيني في ثواني!\" مين الهضبة؟",
+      "answer": "عمرو دياب (قمرين)",
+      "hint": "ألبوم قمرين عام 1999 والدويتو الشهير مع الشاب خالد وأنجيلا ديميتريو!",
+      "options": [
+        "عمرو دياب - قمرين",
+        "عمرو دياب - عودوني",
+        "عمرو دياب - العالم الله",
+        "عمرو دياب - ليلي نهاري"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "قمرين دول ولا عينين للهضبة 🌙",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_088",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"الحب الحقيقي بيعيش يا حبيبي.. بيعلمنا نسامح، بينسينا إمبارح!\" مين فؤش السينما المصرية؟",
+      "answer": "محمد فؤاد (فؤش)",
+      "hint": "الأغنية والكليب الذي جمع أطفال مصر في التسعينيات وحقق نجاحاً تاريخياً!",
+      "options": [
+        "محمد فؤاد - الحب الحقيقي",
+        "مدحت صالح - كوكب تاني",
+        "علي الحجار - لما الشتا يدق البيبان",
+        "إيهاب توفيق - ملهمش في الطيب"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الحب الحقيقي لمحمد فؤاد ❤️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_089",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الشهير: \"شمس الزناتي.. طالع من قلب الصحرا ينادي، الحق له أصحاب يحموه!\" موسيقى فيلم مين الأسطورية؟",
+      "answer": "هاني شنودة (شمس الزناتي)",
+      "hint": "الموسيقى التصويرية الأيقونية للمخرج سمير سيف وفيلم عادل إمام ومحمود حميدة ورجاله السبعة!",
+      "options": [
+        "شمس الزناتي",
+        "المشبوه",
+        "الحريف",
+        "النمر والأنثى"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "موسيقى شمس الزناتي لهاني شنودة 🏜️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_090",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الطربية: \"يا مسافر وحدك وفايتني.. ليه تبعد عني وتشغلني؟!\" مين موسيقار الأجيال؟",
+      "answer": "محمد عبد الوهاب",
+      "hint": "موسيقار الأجيال ورائد التطوير الموسيقي العربي وبطل فيلم ممنوع الحب ورصاصة في القلب!",
+      "options": [
+        "محمد عبد الوهاب",
+        "فريد الأطرش",
+        "عبد الحليم حافظ",
+        "كارم محمود"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "يا مسافر وحدك لموسيقار الأجيال ✈️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_091",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"يا واد يا تقيل.. يا مجنني، كل البنات بتموت فيك.. وأنت ولا داري بيا!\" مين سندريلا الشاشة؟",
+      "answer": "سعاد حسني (خلي بالك من زوزو)",
+      "hint": "أشعار صلاح جاهين وألحان كمال الطويل في الفيلم الذي استمر عرضه أكثر من عام كامل في السينما!",
+      "options": [
+        "سعاد حسني - خلي بالك من زوزو",
+        "شادية - أضواء المدينة",
+        "صباح - سيبوني أحب",
+        "نجاة - القريب منك بعيد"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "يا واد يا تقيل لسعاد حسني 💃",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_092",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الفلكلورية: \"على حسب وداد قلبي يا بوي.. راح أقول للزين سلامات!\" مين العندليب؟",
+      "answer": "عبد الحليم حافظ (على حسب وداد)",
+      "hint": "أشعار الخال عبد الرحمن الأبنودي وألحان بليغ حمدي في التراث الشعبي الصعيدي الجميل!",
+      "options": [
+        "عبد الحليم حافظ - على حسب وداد",
+        "محمد رشدي - عدوية",
+        "محمد قنديل - جميل وأسمر",
+        "محمد العزبي - الأقصر بلدنا"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "على حسب وداد قلبي يا بوي 🎶",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_093",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الشعبية الخالدة: \"عدوية.. يا ليل يا عين يا عدوية، حني على قلبي شوية!\" مين رائد الأغنية الشعبية؟",
+      "answer": "محمد رشدي (عدوية)",
+      "hint": "الثلاثي الأسطوري عبد الرحمن الأبنودي وبليغ حمدي ومحمد رشدي وصراع القمة مع عبد الحليم حافظ!",
+      "options": [
+        "محمد رشدي - عدوية",
+        "أحمد عدوية - السح الدح امبو",
+        "محمد العزبي - بهية",
+        "شفيق جلال - شيخ البلد"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "عدوية لمحمد رشدي والأبنودي 🌾",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_094",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"السح الدح امبو.. إيدي الواد لأبوه، يا عيني الواد بيعيط.. الواد عطشان اسقوه!\" مين أسطورة الأغنية الشعبية؟",
+      "answer": "أحمد عدوية (السح الدح امبو)",
+      "hint": "مؤسس الأغنية الشعبية الحديثة في السبعينيات وصاحب حبة فوق وحبة تحت وزحمة يا دنيا زحمة!",
+      "options": [
+        "أحمد عدوية - السح الدح امبو",
+        "حسن الأسمر - كتاب حياتي",
+        "رمضان البرنس - ارجع يا زمان",
+        "كتكوت الأمير - سألت عنك"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "السح الدح امبو لأحمد عدوية 🍼",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_095",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الرومانسية: \"أنا مصمم مش ماشي إلا وأنت مسامحني.. حبيبك من زمان حبك ولا يوم جرحك!\" مين المطرب؟",
+      "answer": "بهاء سلطان (أنا مصمم)",
+      "hint": "الأغنية الدرامية التي أحدثت ضجة كبيرة من ألبوم ومحلفنيش للمطرب بهاء سلطان!",
+      "options": [
+        "بهاء سلطان - أنا مصمم",
+        "تامر عاشور - كلموها عني",
+        "رامي صبري - مش فارق",
+        "محمد حماقي - ظلموني"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أنا مصمم لبهاء سلطان 💔",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_096",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الحماسية: \"صوت الحرية بيتنادى.. أنا مش همشي أنا صاحب البيت!\" الفرقة الغنائية إيه؟",
+      "answer": "كايروكي (Cairokee و هاني عادل)",
+      "hint": "أغنية ميدان التحرير التي تم تصويرها في شوارع وسط البلد عام 2011 وكانت شرارة انطلاق الفرقة!",
+      "options": [
+        "كايروكي وهاني عادل",
+        "وسط البلد",
+        "مسار إجباري",
+        "بلاك تيما"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "صوت الحرية في ميدان التحرير ✌️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_097",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع التتر الكوميدي الأيقوني: \"دوار الكبير دوار العمدة.. في المزاريطة بلد الرجالة!\" تتر مسلسل مين الأسطوري؟",
+      "answer": "أحمد مكي (الكبير أوي)",
+      "hint": "تتر أجزاء الكبير أوي وجوني وحزلقوم وهدية ومربوحة على مدار 8 مواسم رمضانية!",
+      "options": [
+        "الكبير أوي",
+        "طير انت",
+        "خلصانة بشياكة",
+        "اللعبة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر دوار الكبير أوي في المزاريطة 🤠",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_098",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية: \"ميال ميال.. في خطوتك ميال، رمشك سباني وشوقي نداني!\" مين أسطورة الأغنية العربية؟",
+      "answer": "عمرو دياب (الهضبة - ميال)",
+      "hint": "الألبوم الذي نقل الموسيقى المصرية للأفق المتوسطي واللاتيني عام 1988 وأشعل مبيعات الكاسيت!",
+      "options": [
+        "عمرو دياب - ميال",
+        "عمرو دياب - شوقنا",
+        "عمرو دياب - خالصين",
+        "عمرو دياب - رصيف نمرة خمسة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أغنية ميال للهضبة عمرو دياب 🕺",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_099",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الإسكندرانية الجميلة: \"رصيف نمرة خمسة.. وجدع بلا جاه، وبحر ومراكب ومينا ورواه!\" مين صاحب الأغنية؟",
+      "answer": "عمرو دياب (رصيف نمرة 5)",
+      "hint": "أغنية فيلم آيس كريم في جليم وبطولة عمرو دياب وسيمون وأشرف عبد الباقي!",
+      "options": [
+        "عمرو دياب - رصيف نمرة 5",
+        "محمد منير - برة الشبابيك",
+        "علي الحجار - يا بحر يا ترعة فايتة",
+        "حميد الشاعري - عودة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "رصيف نمرة خمسة في آيس كريم في جليم 🍦",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_100",
+      "categoryId": "audio_mystery",
+      "question": "خمن مطلع الأغنية الختامية الخالدة: \"يا ليلة العيد آنستينا.. وجددتي الأمل فينا!\" كوكب الشرق مين التي تشدو بها في كل عيد؟",
+      "answer": "أم كلثوم (يا ليلة العيد)",
+      "hint": "الأغنية المصرية الرسمية لاستقبال عيدي الفطر والأضحى المبارك بصوت سيدة الغناء العربي!",
+      "options": [
+        "أم كلثوم - يا ليلة العيد",
+        "شادية - مصر اليوم في عيد",
+        "صفاء أبو السعود - أهلاً بالعيد",
+        "فايزة أحمد - تم البدر بدري"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "يا ليلة العيد آنستينا لكوكب الشرق 🌙",
       "revealDuration": 8
     }
   ]
