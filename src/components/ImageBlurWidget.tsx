@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Animated,
   Platform,
+  ActivityIndicator,
 } from 'react-native';
 import { theme } from '../constants/theme';
 import { soundManager } from '../services/soundService';
@@ -39,7 +40,12 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
   onManualReveal,
 }) => {
   const [secondsElapsed, setSecondsElapsed] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const pulseAnim = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [imageUrl]);
 
   // Track real-time seconds elapsed with sync
   useEffect(() => {
@@ -138,11 +144,24 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
           revealed ? styles.imageWrapperRevealed : null,
         ]}
       >
+        {isLoading && (
+          <View style={[StyleSheet.absoluteFill, { alignItems: 'center', justifyContent: 'center', zIndex: 2 }]}>
+            <ActivityIndicator size="large" color={theme.colors.gold} />
+          </View>
+        )}
+
         <Image
           source={{ uri: imageUrl }}
-          style={styles.image}
+          style={[
+            styles.image,
+            Platform.OS === 'web'
+              ? ({ filter: `blur(${blurRadius}px)`, transition: 'filter 0.35s ease' } as any)
+              : null,
+          ]}
           resizeMode="contain"
-          blurRadius={Platform.OS === 'web' ? blurRadius : Math.max(1, blurRadius)}
+          blurRadius={Platform.OS === 'web' ? 0 : Math.max(1, blurRadius)}
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
         />
 
         {/* Dynamic Dark Vignette & Frosted Tint Overlay */}
