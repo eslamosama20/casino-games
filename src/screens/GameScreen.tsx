@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  TextInput,
   Modal,
   Alert,
   Platform,
@@ -52,6 +53,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [isAnswerVisible, setIsAnswerVisible] = useState<boolean>(false);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [showOptions, setShowOptions] = useState<boolean>(false);
+  const [customReactionMsg, setCustomReactionMsg] = useState<string>('');
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
@@ -196,7 +198,12 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   }, [liveRoomCode]);
 
   // Adjust score (supports negative scores / التسليب!)
-  const updateScore = (playerId: string, delta: number, reopenOnWrong = false) => {
+  const updateScore = (
+    playerId: string,
+    delta: number,
+    reopenOnWrong = false,
+    customMsg?: string
+  ) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     if (delta > 0) {
       soundManager.playPoint();
@@ -206,7 +213,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     }
 
     if (liveRoomCode) {
-      buzzerService.updateScore(liveRoomCode, playerId, delta, reopenOnWrong);
+      buzzerService.updateScore(liveRoomCode, playerId, delta, reopenOnWrong, customMsg);
     }
 
     // Trigger visual floating badge on player card
@@ -523,10 +530,35 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   🥇 {buzzedBy.name} داس الأول! الإجابة عنده الآن 🎤
                 </Text>
               </View>
+
+              {/* Optional custom reaction message in floating bubble */}
+              <View style={styles.customMsgContainer}>
+                <TextInput
+                  style={styles.customMsgInput}
+                  placeholder={`رسالة لـ ${buzzedBy.name} في البالونة (اختياري)... 💬`}
+                  placeholderTextColor="#94A3B8"
+                  value={customReactionMsg}
+                  onChangeText={setCustomReactionMsg}
+                  maxLength={40}
+                  returnKeyType="done"
+                />
+                {customReactionMsg.length > 0 && (
+                  <TouchableOpacity
+                    style={styles.customMsgClearBtn}
+                    onPress={() => setCustomReactionMsg('')}
+                  >
+                    <MaterialCommunityIcons name="close-circle" size={16} color="#94A3B8" />
+                  </TouchableOpacity>
+                )}
+              </View>
+
               <View style={styles.buzzerWinnerActions}>
                 <TouchableOpacity
                   style={styles.buzzerCorrectBtn}
-                  onPress={() => updateScore(buzzedBy.playerId, 1, false)}
+                  onPress={() => {
+                    updateScore(buzzedBy.playerId, 1, false, customReactionMsg);
+                    setCustomReactionMsg('');
+                  }}
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
@@ -535,7 +567,10 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
                 <TouchableOpacity
                   style={styles.buzzerWrongReopenBtn}
-                  onPress={() => updateScore(buzzedBy.playerId, -1, true)}
+                  onPress={() => {
+                    updateScore(buzzedBy.playerId, -1, true, customReactionMsg);
+                    setCustomReactionMsg('');
+                  }}
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
@@ -544,7 +579,10 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
                 <TouchableOpacity
                   style={styles.buzzerReopenAllBtn}
-                  onPress={() => buzzerService.openBuzzer(liveRoomCode, true)}
+                  onPress={() => {
+                    setCustomReactionMsg('');
+                    buzzerService.openBuzzer(liveRoomCode, true);
+                  }}
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="refresh" size={16} color={theme.colors.gold} />
@@ -556,7 +594,12 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       )}
 
       {/* Main Question Section */}
-      <View style={styles.centerSection}>
+      <ScrollView
+        style={styles.centerSectionScroll}
+        contentContainerStyle={styles.centerSectionContent}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+      >
         {loading ? (
           <View style={styles.centerCard}>
             <Text style={styles.loadingText}>جاري تحضير السؤال...</Text>
@@ -826,7 +869,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             </View>
           </Animated.View>
         ) : null}
-      </View>
+      </ScrollView>
 
       {/* Bottom Controls */}
       <View
@@ -1157,8 +1200,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
   },
-  centerSection: {
+  centerSectionScroll: {
     flex: 1,
+  },
+  centerSectionContent: {
+    flexGrow: 1,
     padding: theme.spacing.md,
     justifyContent: 'center',
   },
@@ -1302,18 +1348,22 @@ const styles = StyleSheet.create({
   optionsGrid: {
     width: '100%',
     marginTop: 8,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
     gap: 6,
   },
   optionCard: {
+    width: '48.8%',
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: theme.colors.surfaceElevated,
     borderRadius: 8,
-    paddingVertical: 7,
-    paddingHorizontal: 10,
+    paddingVertical: 6,
+    paddingHorizontal: 8,
     borderWidth: 1,
     borderColor: theme.colors.surfaceBorder,
-    gap: 8,
+    gap: 6,
   },
   optionCardCorrect: {
     borderColor: theme.colors.gold,
@@ -1744,6 +1794,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
+  },
+  customMsgContainer: {
+    width: '100%',
+    position: 'relative',
+    marginVertical: 2,
+  },
+  customMsgInput: {
+    backgroundColor: 'rgba(15, 23, 42, 0.75)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 215, 0, 0.35)',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    paddingLeft: 30,
+    color: '#FFFFFF',
+    fontSize: 12,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+  },
+  customMsgClearBtn: {
+    position: 'absolute',
+    left: 8,
+    top: 7,
+    padding: 2,
   },
   buzzerWinnerText: {
     color: theme.colors.gold,

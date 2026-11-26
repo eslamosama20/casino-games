@@ -34,6 +34,7 @@ interface FirebaseRoomData {
     delta: number;
     newScore: number;
     timestamp: number;
+    customMessage?: string | null;
   } | null;
   seenQuestionIds?: Record<string, boolean>;
   createdAt?: number;
@@ -347,7 +348,13 @@ class BuzzerService {
     } catch {}
   }
 
-  async updateScore(code: string, playerId: string, delta: number, reopenOnWrong = false) {
+  async updateScore(
+    code: string,
+    playerId: string,
+    delta: number,
+    reopenOnWrong = false,
+    customMessage?: string
+  ) {
     try {
       const db = getDb();
       const roomRef = ref(db, `rooms/${code}`);
@@ -363,6 +370,7 @@ class BuzzerService {
           delta,
           newScore: player.score,
           timestamp: Date.now(),
+          customMessage: customMessage?.trim() || null,
         };
 
         if (delta > 0) {

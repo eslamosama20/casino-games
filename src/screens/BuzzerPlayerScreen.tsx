@@ -162,7 +162,9 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     if (delta > 0) {
       soundManager.playPoint();
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-      if (currentScore === room.targetScore - 1) {
+      if (ev.customMessage) {
+        phrase = ev.customMessage;
+      } else if (currentScore === room.targetScore - 1) {
         phrase = 'نقطة واحدة وتكسب الكل! 👑🔥';
       } else {
         phrase = PLUS_REACTIONS[Math.floor(Math.random() * PLUS_REACTIONS.length)];
@@ -170,7 +172,9 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     } else if (delta < 0) {
       soundManager.playBuzzer();
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error).catch(() => {});
-      if (currentScore <= -3 && Math.random() < 0.5) {
+      if (ev.customMessage) {
+        phrase = ev.customMessage;
+      } else if (currentScore <= -3 && Math.random() < 0.5) {
         phrase = 'إنت غرقان في السالب يا صاحبي! 🌊😂';
       } else {
         phrase = MINUS_REACTIONS[Math.floor(Math.random() * MINUS_REACTIONS.length)];

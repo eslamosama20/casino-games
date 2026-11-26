@@ -56,6 +56,7 @@ export interface LiveBuzzerRoom {
     delta: number;
     newScore: number;
     timestamp: number;
+    customMessage?: string | null;
   } | null;
   seenQuestionIds?: string[];
 }
