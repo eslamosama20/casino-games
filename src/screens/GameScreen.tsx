@@ -254,7 +254,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setShowHint(false);
     setShowOptions(false);
     if (liveRoomCode) {
-      buzzerService.lockBuzzer(liveRoomCode, true);
+      buzzerService.openBuzzer(liveRoomCode, true);
     }
 
     const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
@@ -530,7 +530,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
-                  <Text style={styles.buzzerCorrectBtnText}>صح (+1)</Text>
+                  <Text style={styles.buzzerCorrectBtnText}>صح (+1) وافتح 🔔</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -539,7 +539,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   activeOpacity={0.85}
                 >
                   <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
-                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح للكل 🔄</Text>
+                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح 🔄</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

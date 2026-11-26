@@ -180,7 +180,7 @@ class BuzzerService {
         code,
         targetScore: Number(targetScore) || 10,
         status: 'lobby',
-        buzzerState: 'locked',
+        buzzerState: 'open',
         buzzedBy: null,
         currentOptions: null,
         winner: null,
@@ -274,7 +274,7 @@ class BuzzerService {
 
       const updates: Record<string, any> = {
         status: 'playing',
-        buzzerState: 'locked',
+        buzzerState: 'open',
         buzzedBy: null,
         lockedOutPlayerIds: null,
         currentOptions: null,
@@ -366,14 +366,18 @@ class BuzzerService {
         };
 
         if (delta > 0) {
-          current.buzzerState = 'locked';
-          current.buzzedBy = null;
           if (player.score >= (current.targetScore || 10)) {
             current.status = 'finished';
+            current.buzzerState = 'locked';
             current.winner = { id: player.id, name: player.name, score: player.score };
+          } else {
+            // Point awarded (+1): automatically reopen buzzer for everyone!
+            current.lockedOutPlayerIds = {};
+            current.buzzerState = 'open';
+            current.buzzedBy = null;
           }
         } else if (delta < 0) {
-          // Wrong answer (-1): automatically reopen buzzer for EVERYONE!
+          // Penalty (-1): automatically reopen buzzer for everyone!
           current.lockedOutPlayerIds = {};
           current.buzzerState = 'open';
           current.buzzedBy = null;
