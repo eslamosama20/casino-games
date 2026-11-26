@@ -6,13 +6,15 @@ import {
   Modal,
   TouchableOpacity,
   Animated,
-  Platform,
+  ImageBackground,
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { PowerCard } from '../types';
 import { getPowerCardById } from '../data/powerCards';
 import { soundManager } from '../services/soundService';
+
+const bgNeon = require('../../assets/bg-neon.jpg');
 
 interface PowerCardModalProps {
   visible: boolean;
@@ -55,8 +57,8 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
       // Pulsing glow animation
       const glowLoop = Animated.loop(
         Animated.sequence([
-          Animated.timing(glowAnim, { toValue: 1.2, duration: 600, useNativeDriver: true }),
-          Animated.timing(glowAnim, { toValue: 0.8, duration: 600, useNativeDriver: true }),
+          Animated.timing(glowAnim, { toValue: 1.25, duration: 650, useNativeDriver: true }),
+          Animated.timing(glowAnim, { toValue: 0.8, duration: 650, useNativeDriver: true }),
         ])
       );
       glowLoop.start();
@@ -71,7 +73,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
           duration: 800,
           useNativeDriver: true,
         }).start();
-      }, 750);
+      }, 800);
 
       return () => {
         clearTimeout(flipTimer);
@@ -109,7 +111,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
         {/* Animated 3D Card Container */}
         <Animated.View style={[styles.cardContainer, { transform: [{ scale: scaleAnim }] }]}>
 
-          {/* ============ BACK OF CARD (Luxury Casino Seal) ============ */}
+          {/* ============ BACK OF CARD (Luxury Casino Gold Seal & Neon) ============ */}
           <Animated.View
             style={[
               styles.cardFace,
@@ -120,39 +122,80 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
               },
             ]}
           >
-            {/* Top Corner Suits */}
-            <View style={styles.suitRow}>
-              <View style={styles.suitBadge}>
-                <Text style={styles.suitSymbolGold}>♠</Text>
-              </View>
-              <View style={styles.suitBadge}>
-                <Text style={styles.suitSymbolRed}>♥</Text>
-              </View>
-            </View>
+            <ImageBackground
+              source={bgNeon}
+              style={styles.cardImageBg}
+              imageStyle={styles.cardImageStyle}
+              resizeMode="cover"
+            >
+              {/* Overlapping Vibrant Neon Ambient Glows */}
+              <View style={[styles.ambientOrb, styles.orbMagenta]} />
+              <View style={[styles.ambientOrb, styles.orbCyan]} />
+              <View style={[styles.ambientOrb, styles.orbGold]} />
+              <View style={[styles.ambientOrb, styles.orbEmerald]} />
 
-            {/* Central Ornate Gold Medallion */}
-            <View style={styles.backCenterMedallion}>
-              <View style={styles.backInnerRing}>
-                <MaterialCommunityIcons name="cards-playing" size={54} color="#F59E0B" />
-                <Text style={styles.backTitleMain}>كازينو الألعاب</Text>
-                <View style={styles.backGoldDivider} />
-                <Text style={styles.backTitleSub}>كارت الحظ والقوة</Text>
-                <Text style={styles.backTitleTag}>MYSTERY ACTION CARD</Text>
+              {/* Casino Watermarks Layer */}
+              <View style={styles.watermarkContainer} pointerEvents="none">
+                <Text style={styles.watermarkIconTopLeft}>🎰</Text>
+                <Text style={styles.watermarkIconTopRight}>🎲</Text>
+                <Text style={styles.watermarkIconBottomLeft}>🃏</Text>
+                <Text style={styles.watermarkIconBottomRight}>👑</Text>
               </View>
-            </View>
 
-            {/* Bottom Corner Suits */}
-            <View style={styles.suitRow}>
-              <View style={styles.suitBadge}>
-                <Text style={styles.suitSymbolRed}>♦</Text>
+              {/* Back Content Container */}
+              <View style={styles.backContent}>
+                {/* Top Corner Suits */}
+                <View style={styles.suitRow}>
+                  <View style={styles.suitBadge}>
+                    <Text style={styles.suitSymbolGold}>♠</Text>
+                  </View>
+                  <View style={styles.topCasinoPill}>
+                    <MaterialCommunityIcons name="poker-chip" size={14} color="#F59E0B" />
+                    <Text style={styles.topCasinoPillText}>VIP CASINO CLUB</Text>
+                  </View>
+                  <View style={styles.suitBadge}>
+                    <Text style={styles.suitSymbolRed}>♥</Text>
+                  </View>
+                </View>
+
+                {/* Central Ornate Gold Medallion */}
+                <View style={styles.backCenterMedallion}>
+                  <View style={styles.backInnerRing}>
+                    <View style={styles.chipGlowWrapper}>
+                      <MaterialCommunityIcons name="cards-playing" size={56} color="#F59E0B" />
+                    </View>
+                    <Text style={styles.backTitleMain}>كازينو الألعاب</Text>
+                    <View style={styles.backGoldDividerRow}>
+                      <View style={styles.dividerLine} />
+                      <Text style={styles.dividerStar}>★ ★ ★</Text>
+                      <View style={styles.dividerLine} />
+                    </View>
+                    <Text style={styles.backTitleSub}>كارت الحظ والقوة الخارقة</Text>
+                    <View style={styles.tagBadge}>
+                      <Text style={styles.backTitleTag}>⚡ MYSTERY POWER CARD ⚡</Text>
+                    </View>
+                  </View>
+                </View>
+
+                {/* Bottom Corner Suits */}
+                <View style={styles.suitRow}>
+                  <View style={styles.suitBadge}>
+                    <Text style={styles.suitSymbolRed}>♦</Text>
+                  </View>
+                  <View style={styles.bottomChipsRow}>
+                    <Text style={styles.miniChip}>🪙</Text>
+                    <Text style={styles.miniChip}>🎰</Text>
+                    <Text style={styles.miniChip}>🪙</Text>
+                  </View>
+                  <View style={styles.suitBadge}>
+                    <Text style={styles.suitSymbolGold}>♣</Text>
+                  </View>
+                </View>
               </View>
-              <View style={styles.suitBadge}>
-                <Text style={styles.suitSymbolGold}>♣</Text>
-              </View>
-            </View>
+            </ImageBackground>
           </Animated.View>
 
-          {/* ============ FRONT OF CARD (Revealed Striking Power) ============ */}
+          {/* ============ FRONT OF CARD (Revealed Striking Casino Power) ============ */}
           <Animated.View
             style={[
               styles.cardFace,
@@ -165,66 +208,87 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
               },
             ]}
           >
-            {/* Who activated banner */}
-            <View style={[styles.playerBanner, { backgroundColor: `${card.color}25`, borderColor: card.color }]}>
-              <MaterialCommunityIcons name="lightning-bolt" size={16} color={card.color} />
-              <Text style={[styles.playerBannerText, { color: card.color }]}>
-                {isSelf ? 'أنت سحبت كارت الحظ! 🎲' : `قام ${playerName || 'متسابق'} بتفعيل هذا الكارت!`}
-              </Text>
-            </View>
-
-            {/* 3D Icon with Radiant Halo */}
-            <View style={styles.iconWrapper}>
-              <Animated.View
-                style={[
-                  styles.iconHalo,
-                  {
-                    borderColor: card.color,
-                    backgroundColor: `${card.color}15`,
-                    transform: [{ scale: glowAnim }],
-                  },
-                ]}
-              />
-              <View style={[styles.iconInnerCircle, { backgroundColor: '#0B1120', borderColor: card.color }]}>
-                <MaterialCommunityIcons name={card.icon as any} size={48} color={card.color} />
-              </View>
-            </View>
-
-            {/* Card Badge Tag */}
-            <View style={[styles.badgeTag, { backgroundColor: `${card.color}30`, borderColor: card.color }]}>
-              <Text style={[styles.badgeTagText, { color: card.color }]}>{card.badge}</Text>
-            </View>
-
-            {/* Card Title & Subtitle */}
-            <Text style={styles.cardTitleText}>{card.title}</Text>
-            <Text style={styles.cardSubtitleText}>{card.subtitle}</Text>
-
-            {/* Clear Description Box (1-2 lines) */}
-            <View style={[styles.descBox, { borderColor: `${card.color}45` }]}>
-              <Text style={styles.descText}>{card.description}</Text>
-            </View>
-
-            {/* Practical Example Box (💡 مثال) */}
-            <View style={styles.exampleBox}>
-              <View style={styles.exampleHeader}>
-                <MaterialCommunityIcons name="lightbulb-on" size={15} color="#F59E0B" />
-                <Text style={styles.exampleHeaderText}>توضيح بمثال عملي:</Text>
-              </View>
-              <Text style={styles.exampleText}>{card.example}</Text>
-            </View>
-
-            {/* Dismiss / Continue Button */}
-            <TouchableOpacity
-              style={[styles.continueBtn, { backgroundColor: card.color }]}
-              onPress={() => {
-                soundManager.playChipClick();
-                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
-                onDismiss();
-              }}
-              activeOpacity={0.85}
+            <ImageBackground
+              source={bgNeon}
+              style={styles.cardImageBg}
+              imageStyle={styles.cardImageStyle}
+              resizeMode="cover"
             >
-              <Text style={styles.continueBtnText}>استمرار اللعب 🎲</Text>
-            </TouchableOpacity>
+              {/* Dynamic Overlapping Neon Glows matching Card Theme */}
+              <View style={[styles.ambientOrb, styles.orbFrontPrimary, { backgroundColor: card.color }]} />
+              <View style={[styles.ambientOrb, styles.orbFrontSecondary, { backgroundColor: '#F59E0B' }]} />
+              <View style={[styles.ambientOrb, styles.orbMagenta]} />
+
+              {/* Casino Roulette & Chip Watermarks */}
+              <View style={styles.watermarkContainer} pointerEvents="none">
+                <Text style={[styles.watermarkIconTopRight, { opacity: 0.12 }]}>🎰</Text>
+                <Text style={[styles.watermarkIconBottomLeft, { opacity: 0.12 }]}>🎲</Text>
+              </View>
+
+              {/* Front Content Layer */}
+              <View style={styles.frontContent}>
+                {/* Who activated banner */}
+                <View style={[styles.playerBanner, { backgroundColor: `${card.color}25`, borderColor: card.color }]}>
+                  <MaterialCommunityIcons name="lightning-bolt" size={16} color={card.color} />
+                  <Text style={[styles.playerBannerText, { color: card.color }]}>
+                    {isSelf ? 'أنت سحبت كارت الحظ! 🎲' : `قام ${playerName || 'متسابق'} بتفعيل هذا الكارت!`}
+                  </Text>
+                </View>
+
+                {/* 3D Icon with Radiant Casino Halo */}
+                <View style={styles.iconWrapper}>
+                  <Animated.View
+                    style={[
+                      styles.iconHalo,
+                      {
+                        borderColor: card.color,
+                        backgroundColor: `${card.color}20`,
+                        transform: [{ scale: glowAnim }],
+                      },
+                    ]}
+                  />
+                  <View style={[styles.iconInnerCircle, { backgroundColor: '#070C18', borderColor: card.color }]}>
+                    <MaterialCommunityIcons name={card.icon as any} size={46} color={card.color} />
+                  </View>
+                </View>
+
+                {/* Card Badge Tag */}
+                <View style={[styles.badgeTag, { backgroundColor: `${card.color}35`, borderColor: card.color }]}>
+                  <Text style={[styles.badgeTagText, { color: card.color }]}>{card.badge}</Text>
+                </View>
+
+                {/* Card Title & Subtitle */}
+                <Text style={styles.cardTitleText}>{card.title}</Text>
+                <Text style={styles.cardSubtitleText}>{card.subtitle}</Text>
+
+                {/* Clear Frosted Glass Description Box */}
+                <View style={[styles.descBox, { borderColor: `${card.color}50` }]}>
+                  <Text style={styles.descText}>{card.description}</Text>
+                </View>
+
+                {/* Practical Example Box (💡 مثال) */}
+                <View style={styles.exampleBox}>
+                  <View style={styles.exampleHeader}>
+                    <MaterialCommunityIcons name="lightbulb-on" size={14} color="#F59E0B" />
+                    <Text style={styles.exampleHeaderText}>توضيح بمثال عملي:</Text>
+                  </View>
+                  <Text style={styles.exampleText}>{card.example}</Text>
+                </View>
+
+                {/* Dismiss / Continue Button */}
+                <TouchableOpacity
+                  style={[styles.continueBtn, { backgroundColor: card.color }]}
+                  onPress={() => {
+                    soundManager.playChipClick();
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+                    onDismiss();
+                  }}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.continueBtnText}>استمرار اللعب 🎲</Text>
+                </TouchableOpacity>
+              </View>
+            </ImageBackground>
           </Animated.View>
 
         </Animated.View>
@@ -236,16 +300,16 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(2, 6, 23, 0.92)',
+    backgroundColor: 'rgba(2, 6, 23, 0.93)',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 18,
+    padding: 16,
     zIndex: 9999,
   },
   cardContainer: {
     width: '100%',
-    maxWidth: 360,
-    height: 520,
+    maxWidth: 350,
+    height: 535,
     position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
@@ -255,11 +319,105 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 16,
+    overflow: 'hidden',
     backfaceVisibility: 'hidden',
   },
+  cardImageBg: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
+  cardImageStyle: {
+    borderRadius: 24,
+  },
+
+  // Overlapping Neon Ambient Light Orbs
+  ambientOrb: {
+    position: 'absolute',
+    borderRadius: 999,
+  },
+  orbMagenta: {
+    width: 170,
+    height: 170,
+    top: -40,
+    left: -40,
+    backgroundColor: '#EC4899',
+    opacity: 0.22,
+  },
+  orbCyan: {
+    width: 190,
+    height: 190,
+    bottom: -50,
+    right: -40,
+    backgroundColor: '#06B6D4',
+    opacity: 0.24,
+  },
+  orbGold: {
+    width: 140,
+    height: 140,
+    top: '35%',
+    left: '28%',
+    backgroundColor: '#F59E0B',
+    opacity: 0.18,
+  },
+  orbEmerald: {
+    width: 130,
+    height: 130,
+    bottom: '20%',
+    left: -20,
+    backgroundColor: '#10B981',
+    opacity: 0.16,
+  },
+  orbFrontPrimary: {
+    width: 180,
+    height: 180,
+    top: -20,
+    right: -30,
+    opacity: 0.25,
+  },
+  orbFrontSecondary: {
+    width: 150,
+    height: 150,
+    bottom: -20,
+    left: -20,
+    opacity: 0.22,
+  },
+
+  // Subtle Watermarks
+  watermarkContainer: {
+    ...StyleSheet.absoluteFill,
+    justifyContent: 'space-between',
+    padding: 16,
+  },
+  watermarkIconTopLeft: {
+    position: 'absolute',
+    top: 55,
+    left: 20,
+    fontSize: 26,
+    opacity: 0.15,
+  },
+  watermarkIconTopRight: {
+    position: 'absolute',
+    top: 55,
+    right: 20,
+    fontSize: 26,
+    opacity: 0.15,
+  },
+  watermarkIconBottomLeft: {
+    position: 'absolute',
+    bottom: 55,
+    left: 20,
+    fontSize: 26,
+    opacity: 0.15,
+  },
+  watermarkIconBottomRight: {
+    position: 'absolute',
+    bottom: 55,
+    right: 20,
+    fontSize: 26,
+    opacity: 0.15,
+  },
+
   // ================= BACK STYLES =================
   cardBack: {
     backgroundColor: '#090D1A',
@@ -267,20 +425,54 @@ const styles = StyleSheet.create({
     borderColor: '#F59E0B',
     shadowColor: '#F59E0B',
     shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.65,
-    shadowRadius: 24,
-    elevation: 16,
+    shadowOpacity: 0.75,
+    shadowRadius: 26,
+    elevation: 18,
+  },
+  backContent: {
+    flex: 1,
+    backgroundColor: 'rgba(9, 13, 26, 0.78)',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
   },
   suitRow: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 8,
+    alignItems: 'center',
+    paddingHorizontal: 4,
+  },
+  topCasinoPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.5)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 14,
+  },
+  topCasinoPillText: {
+    color: '#F59E0B',
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 1.5,
+  },
+  bottomChipsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    opacity: 0.75,
+  },
+  miniChip: {
+    fontSize: 16,
   },
   suitBadge: {
     backgroundColor: 'rgba(15, 23, 42, 0.9)',
     borderWidth: 1.5,
-    borderColor: 'rgba(245, 158, 11, 0.5)',
+    borderColor: 'rgba(245, 158, 11, 0.6)',
     borderRadius: 10,
     width: 36,
     height: 36,
@@ -298,75 +490,109 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   backCenterMedallion: {
-    width: '90%',
+    width: '94%',
     padding: 4,
-    borderRadius: 20,
+    borderRadius: 22,
     borderWidth: 2,
-    borderColor: 'rgba(245, 158, 11, 0.6)',
-    backgroundColor: 'rgba(245, 158, 11, 0.08)',
+    borderColor: 'rgba(245, 158, 11, 0.7)',
+    backgroundColor: 'rgba(245, 158, 11, 0.1)',
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: '#F59E0B',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
   },
   backInnerRing: {
     width: '100%',
-    paddingVertical: 26,
+    paddingVertical: 24,
     paddingHorizontal: 16,
-    borderRadius: 16,
+    borderRadius: 18,
     borderWidth: 1.5,
     borderStyle: 'dashed',
     borderColor: '#F59E0B',
-    backgroundColor: '#070B16',
+    backgroundColor: 'rgba(7, 11, 22, 0.88)',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  chipGlowWrapper: {
+    shadowColor: '#F59E0B',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 14,
+  },
   backTitleMain: {
     color: '#F59E0B',
-    fontSize: 26,
+    fontSize: 27,
     fontWeight: '900',
-    marginTop: 10,
+    marginTop: 8,
     textAlign: 'center',
     letterSpacing: 1,
-    textShadowColor: 'rgba(245, 158, 11, 0.5)',
+    textShadowColor: 'rgba(245, 158, 11, 0.6)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 8,
   },
-  backGoldDivider: {
-    width: 60,
-    height: 2,
-    backgroundColor: '#F59E0B',
+  backGoldDividerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
     marginVertical: 8,
-    borderRadius: 1,
+  },
+  dividerLine: {
+    width: 45,
+    height: 1.5,
+    backgroundColor: '#F59E0B',
+  },
+  dividerStar: {
+    color: '#FCD34D',
+    fontSize: 10,
+    letterSpacing: 2,
   },
   backTitleSub: {
     color: '#F8FAFC',
     fontSize: 15,
     fontWeight: '700',
   },
+  tagBadge: {
+    backgroundColor: 'rgba(245, 158, 11, 0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.4)',
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: 8,
+    marginTop: 8,
+  },
   backTitleTag: {
-    color: '#94A3B8',
+    color: '#FCD34D',
     fontSize: 10,
     fontWeight: '800',
-    letterSpacing: 2,
-    marginTop: 6,
+    letterSpacing: 1.5,
   },
+
   // ================= FRONT STYLES =================
   cardFront: {
     backgroundColor: '#0B101E',
     borderWidth: 3.5,
     shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.75,
+    shadowOpacity: 0.8,
     shadowRadius: 28,
-    elevation: 18,
+    elevation: 20,
+  },
+  frontContent: {
+    flex: 1,
+    backgroundColor: 'rgba(11, 16, 30, 0.82)',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 15,
   },
   playerBanner: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     paddingHorizontal: 12,
-    paddingVertical: 5,
+    paddingVertical: 4.5,
     borderRadius: 20,
     borderWidth: 1,
-    marginTop: 2,
   },
   playerBannerText: {
     fontSize: 12.5,
@@ -374,24 +600,24 @@ const styles = StyleSheet.create({
     writingDirection: 'rtl',
   },
   iconWrapper: {
-    width: 86,
-    height: 86,
+    width: 82,
+    height: 82,
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: 4,
+    marginVertical: 2,
     position: 'relative',
   },
   iconHalo: {
     position: 'absolute',
-    width: 86,
-    height: 86,
-    borderRadius: 43,
+    width: 82,
+    height: 82,
+    borderRadius: 41,
     borderWidth: 2,
   },
   iconInnerCircle: {
-    width: 76,
-    height: 76,
-    borderRadius: 38,
+    width: 72,
+    height: 72,
+    borderRadius: 36,
     borderWidth: 2.5,
     alignItems: 'center',
     justifyContent: 'center',
@@ -407,49 +633,52 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   badgeTagText: {
-    fontSize: 11.5,
+    fontSize: 11,
     fontWeight: '900',
   },
   cardTitleText: {
     color: '#FFFFFF',
-    fontSize: 21,
+    fontSize: 20,
     fontWeight: '900',
     textAlign: 'center',
-    marginTop: 4,
+    marginTop: 2,
     writingDirection: 'rtl',
+    textShadowColor: 'rgba(0, 0, 0, 0.7)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
   },
   cardSubtitleText: {
     color: '#94A3B8',
-    fontSize: 12,
+    fontSize: 11.5,
     fontWeight: '600',
     textAlign: 'center',
-    marginBottom: 4,
+    marginBottom: 2,
   },
   descBox: {
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
     borderRadius: 12,
     borderWidth: 1,
     paddingHorizontal: 12,
-    paddingVertical: 8,
+    paddingVertical: 7,
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   descText: {
     color: '#FFFFFF',
-    fontSize: 13,
+    fontSize: 12.5,
     fontWeight: '800',
     textAlign: 'center',
-    lineHeight: 20,
+    lineHeight: 19,
     writingDirection: 'rtl',
   },
   exampleBox: {
-    backgroundColor: 'rgba(245, 158, 11, 0.09)',
+    backgroundColor: 'rgba(245, 158, 11, 0.12)',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'rgba(245, 158, 11, 0.3)',
+    borderColor: 'rgba(245, 158, 11, 0.4)',
     paddingHorizontal: 12,
-    paddingVertical: 7,
+    paddingVertical: 6,
     width: '100%',
   },
   exampleHeader: {
@@ -461,25 +690,25 @@ const styles = StyleSheet.create({
   },
   exampleHeaderText: {
     color: '#F59E0B',
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: 'bold',
     writingDirection: 'rtl',
   },
   exampleText: {
     color: '#FCD34D',
-    fontSize: 12,
+    fontSize: 11.5,
     fontWeight: '600',
     textAlign: 'center',
-    lineHeight: 18,
+    lineHeight: 17,
     writingDirection: 'rtl',
   },
   continueBtn: {
     width: '100%',
-    paddingVertical: 12,
+    paddingVertical: 11,
     borderRadius: 14,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 4,
+    marginTop: 2,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
@@ -487,7 +716,7 @@ const styles = StyleSheet.create({
   },
   continueBtnText: {
     color: '#0F172A',
-    fontSize: 15,
+    fontSize: 14.5,
     fontWeight: '900',
   },
 });
