@@ -13,7 +13,8 @@ import {
   Unsubscribe,
 } from 'firebase/database';
 import { config } from '../constants/config';
-import { LiveBuzzerRoom, Player } from '../types';
+import { LiveBuzzerRoom, Player, ActiveCardEvent } from '../types';
+import { POWER_CARDS } from '../data/powerCards';
 
 type RoomUpdateListener = (room: LiveBuzzerRoom) => void;
 type BuzzerWinnerListener = (data: { playerId: string; name: string; room: LiveBuzzerRoom }) => void;
@@ -37,6 +38,13 @@ interface FirebaseRoomData {
     customMessage?: string | null;
   } | null;
   seenQuestionIds?: Record<string, boolean>;
+  usedCardPlayerIds?: Record<string, string>;
+  usedCardIds?: Record<string, boolean>;
+  activeCardEvent?: {
+    cardId: string;
+    playedBy: { id: string; name: string };
+    timestamp: number;
+  } | null;
   createdAt?: number;
   lastActivity?: number;
 }
@@ -74,6 +82,9 @@ function normalizeRoom(raw: FirebaseRoomData): LiveBuzzerRoom {
     seenQuestionIds: raw.seenQuestionIds
       ? Object.keys(raw.seenQuestionIds).filter((k) => raw.seenQuestionIds?.[k])
       : [],
+    usedCardPlayerIds: raw.usedCardPlayerIds || {},
+    usedCardIds: raw.usedCardIds || {},
+    activeCardEvent: raw.activeCardEvent || null,
   };
 }
 
@@ -85,12 +96,14 @@ class BuzzerService {
 
   private prevBuzzerState: 'locked' | 'open' | 'buzzed' | null = null;
   private prevBuzzedTs: number | null = null;
+  private prevCardEventTs: number | null = null;
 
   private roomListeners = new Set<RoomUpdateListener>();
   private winnerListeners = new Set<BuzzerWinnerListener>();
   private openedListeners = new Set<RoomUpdateListener>();
   private closedListeners = new Set<SimpleListener>();
   private kickedListeners = new Set<SimpleListener>();
+  private cardPlayedListeners = new Set<(event: ActiveCardEvent) => void>();
 
   private subscribeToRoom(code: string) {
     if (this.unsubRoom) {
@@ -145,6 +158,15 @@ class BuzzerService {
         );
       }
 
+      // Detect active power card played transition (Full-screen reveal for everyone!)
+      if (
+        room.activeCardEvent &&
+        room.activeCardEvent.timestamp !== this.prevCardEventTs
+      ) {
+        this.prevCardEventTs = room.activeCardEvent.timestamp;
+        this.cardPlayedListeners.forEach((cb) => cb(room.activeCardEvent!));
+      }
+
       this.prevBuzzerState = room.buzzerState;
       this.roomListeners.forEach((cb) => cb(room));
     });
@@ -160,6 +182,7 @@ class BuzzerService {
     this.activePlayerId = null;
     this.prevBuzzerState = null;
     this.prevBuzzedTs = null;
+    this.prevCardEventTs = null;
   }
 
   async createRoom(targetScore: number): Promise<{ ok: boolean; room?: LiveBuzzerRoom; error?: string }> {
@@ -438,6 +461,71 @@ class BuzzerService {
       } catch {}
     }
     this.clearSession();
+  }
+
+  async drawAndPlayPowerCard(
+    code: string,
+    playerId: string
+  ): Promise<{ ok: boolean; cardId?: string; error?: string }> {
+    try {
+      const db = getDb();
+      const roomRef = ref(db, `rooms/${code}`);
+      let chosenCardId: string | null = null;
+
+      const txResult = await runTransaction(roomRef, (current: FirebaseRoomData | null) => {
+        if (current === null) return null;
+        if (!current.players || !current.players[playerId]) return undefined;
+
+        const player = current.players[playerId];
+        // Enforce 1 card per player rule!
+        if (
+          player.usedCardId ||
+          (current.usedCardPlayerIds && current.usedCardPlayerIds[playerId])
+        ) {
+          return undefined; // Already used
+        }
+
+        const usedMap = current.usedCardIds || {};
+        const allCardIds = POWER_CARDS.map((c) => c.id);
+        const available = allCardIds.filter((id) => !usedMap[id]);
+        const pool = available.length > 0 ? available : allCardIds;
+        chosenCardId = pool[Math.floor(Math.random() * pool.length)];
+
+        current.usedCardPlayerIds = current.usedCardPlayerIds || {};
+        current.usedCardPlayerIds[playerId] = chosenCardId;
+
+        current.usedCardIds = current.usedCardIds || {};
+        current.usedCardIds[chosenCardId] = true;
+
+        player.usedCardId = chosenCardId;
+
+        current.activeCardEvent = {
+          cardId: chosenCardId,
+          playedBy: {
+            id: player.id,
+            name: player.name,
+          },
+          timestamp: Date.now(),
+        };
+        current.lastActivity = Date.now();
+        return current;
+      });
+
+      if (!txResult.committed || !chosenCardId) {
+        return { ok: false, error: 'لقد استخدمت كارتك بالفعل في هذا الجيم!' };
+      }
+
+      return { ok: true, cardId: chosenCardId };
+    } catch (e: any) {
+      return { ok: false, error: 'تعذر سحب الكارت، حاول مرة أخرى' };
+    }
+  }
+
+  onPowerCardPlayed(cb: (event: ActiveCardEvent) => void) {
+    this.cardPlayedListeners.add(cb);
+    return () => {
+      this.cardPlayedListeners.delete(cb);
+    };
   }
 
   onRoomUpdate(cb: RoomUpdateListener) {

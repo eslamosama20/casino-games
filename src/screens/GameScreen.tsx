@@ -15,10 +15,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
-import { Category, Player, Question, DifficultyLevel, BuzzerState } from '../types';
+import { Category, Player, Question, DifficultyLevel, BuzzerState, ActiveCardEvent } from '../types';
 import { questionService } from '../services/questionService';
 import { soundManager } from '../services/soundService';
 import { buzzerService } from '../services/buzzerService';
+import { PowerCardModal } from '../components/PowerCardModal';
 
 interface GameScreenProps {
   players: Player[];
@@ -54,6 +55,8 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [showHint, setShowHint] = useState<boolean>(false);
   const [showOptions, setShowOptions] = useState<boolean>(false);
   const [customReactionMsg, setCustomReactionMsg] = useState<string>('');
+  const [activeCardEvent, setActiveCardEvent] = useState<ActiveCardEvent | null>(null);
+  const [showPowerCardModal, setShowPowerCardModal] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
@@ -191,9 +194,15 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       soundManager.playReveal();
     });
 
+    const unsubCard = buzzerService.onPowerCardPlayed((event) => {
+      setActiveCardEvent(event);
+      setShowPowerCardModal(true);
+    });
+
     return () => {
       unsubRoom();
       unsubWinner();
+      unsubCard();
     };
   }, [liveRoomCode]);
 
@@ -1018,6 +1027,15 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </View>
         </View>
       </Modal>
+
+      {/* Full-screen 3D Flipping Power Card Modal for Host */}
+      <PowerCardModal
+        visible={showPowerCardModal}
+        cardId={activeCardEvent?.cardId}
+        playerName={activeCardEvent?.playedBy.name}
+        isSelf={false}
+        onDismiss={() => setShowPowerCardModal(false)}
+      />
     </View>
   );
 };

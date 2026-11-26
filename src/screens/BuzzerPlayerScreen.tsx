@@ -12,10 +12,11 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
-import { LiveBuzzerRoom } from '../types';
+import { LiveBuzzerRoom, ActiveCardEvent } from '../types';
 import { buzzerService } from '../services/buzzerService';
 import { soundManager } from '../services/soundService';
 import { questionService } from '../services/questionService';
+import { PowerCardModal } from '../components/PowerCardModal';
 
 interface BuzzerPlayerScreenProps {
   initialRoom: LiveBuzzerRoom;
@@ -83,6 +84,13 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   );
   const prevStatusRef = useRef<string>(initialRoom.status);
 
+  // Power Card State
+  const [activeCardEvent, setActiveCardEvent] = useState<ActiveCardEvent | null>(
+    initialRoom.activeCardEvent || null
+  );
+  const [cardModalVisible, setCardModalVisible] = useState(false);
+  const [isDrawingCard, setIsDrawingCard] = useState(false);
+
   useEffect(() => {
     const unsubUpdate = buzzerService.onRoomUpdate((updated) => {
       setRoom(updated);
@@ -123,12 +131,18 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
       onExit();
     });
 
+    const unsubCard = buzzerService.onPowerCardPlayed((event) => {
+      setActiveCardEvent(event);
+      setCardModalVisible(true);
+    });
+
     return () => {
       unsubUpdate();
       unsubOpened();
       unsubWinner();
       unsubClosed();
       unsubKicked();
+      unsubCard();
     };
   }, [playerId, onExit]);
 
@@ -307,6 +321,26 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   const isMyBuzz = room.buzzerState === 'buzzed' && room.buzzedBy?.playerId === playerId;
   const maxScore = Math.max(0, ...room.players.map((p) => p.score));
 
+  const hasUsedCard = Boolean(
+    room.usedCardPlayerIds?.[playerId] ||
+    room.players.find((p) => p.id === playerId)?.usedCardId
+  );
+
+  const handlePlayPowerCard = async () => {
+    if (hasUsedCard || isDrawingCard || room.status !== 'playing') return;
+    setIsDrawingCard(true);
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
+    const res = await buzzerService.drawAndPlayPowerCard(room.code, playerId);
+    setIsDrawingCard(false);
+    if (!res.ok && res.error) {
+      if (Platform.OS === 'web' && typeof window !== 'undefined') {
+        window.alert(res.error);
+      } else {
+        Alert.alert('تنبيه', res.error);
+      }
+    }
+  };
+
   // Determine buzzer visual theme
   let buzzerBg = '#1E293B';
   let buzzerBorder = '#334155';
@@ -456,6 +490,37 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
           </TouchableOpacity>
         </Animated.View>
 
+        {/* Power Card Trigger Button */}
+        {room.status === 'playing' && (
+          <TouchableOpacity
+            style={[
+              styles.powerCardBtn,
+              hasUsedCard && styles.powerCardBtnDisabled,
+            ]}
+            onPress={handlePlayPowerCard}
+            disabled={hasUsedCard || isDrawingCard}
+            activeOpacity={0.8}
+          >
+            <MaterialCommunityIcons
+              name={hasUsedCard ? 'cards-playing-outline' : 'cards-playing'}
+              size={22}
+              color={hasUsedCard ? '#64748B' : '#F59E0B'}
+            />
+            <Text
+              style={[
+                styles.powerCardBtnText,
+                hasUsedCard && styles.powerCardBtnTextDisabled,
+              ]}
+            >
+              {hasUsedCard
+                ? 'تم استخدام كارتك في هذا الجيم 🔒'
+                : isDrawingCard
+                ? 'جاري سحب كارت الحظ... ⏳'
+                : 'اسحب وفعّل كارت الحظ! 🃏 (مرة واحدة)'}
+            </Text>
+          </TouchableOpacity>
+        )}
+
         {/* Live Multiple Choice Options (when Host reveals them as lifeline!) */}
         {room.currentOptions && room.currentOptions.length > 0 && room.status === 'playing' && (
           <View style={styles.optionsCard}>
@@ -517,6 +582,15 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
           </Animated.View>
         </View>
       )}
+
+      {/* Full-screen 3D Flipping Power Card Modal */}
+      <PowerCardModal
+        visible={cardModalVisible}
+        cardId={activeCardEvent?.cardId}
+        playerName={activeCardEvent?.playedBy.name}
+        isSelf={activeCardEvent?.playedBy.id === playerId}
+        onDismiss={() => setCardModalVisible(false)}
+      />
     </View>
   );
 };
@@ -693,6 +767,40 @@ const styles = StyleSheet.create({
   },
   optionsList: {
     gap: 8,
+  },
+  powerCardBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    backgroundColor: 'rgba(245, 158, 11, 0.12)',
+    borderWidth: 1.5,
+    borderColor: '#F59E0B',
+    borderRadius: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginTop: 20,
+    width: '100%',
+    shadowColor: '#F59E0B',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  powerCardBtnDisabled: {
+    backgroundColor: 'rgba(30, 41, 59, 0.5)',
+    borderColor: '#334155',
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  powerCardBtnText: {
+    color: '#F59E0B',
+    fontSize: 14,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  powerCardBtnTextDisabled: {
+    color: '#64748B',
   },
   optionRow: {
     flexDirection: 'row',

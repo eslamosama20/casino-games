@@ -23,6 +23,7 @@ export interface Player {
   name: string;
   score: number;
   connected?: boolean;
+  usedCardId?: string;
 }
 
 export type GameMode = 'individuals' | 'teams';
@@ -59,6 +60,28 @@ export interface LiveBuzzerRoom {
     customMessage?: string | null;
   } | null;
   seenQuestionIds?: string[];
+  usedCardPlayerIds?: Record<string, string>;
+  usedCardIds?: Record<string, boolean>;
+  activeCardEvent?: ActiveCardEvent | null;
+}
+
+export interface PowerCard {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  color: string;
+  badge: string;
+}
+
+export interface ActiveCardEvent {
+  cardId: string;
+  playedBy: {
+    id: string;
+    name: string;
+  };
+  timestamp: number;
 }
 
 export interface GameSettings {

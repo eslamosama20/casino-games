@@ -1,0 +1,98 @@
+import { PowerCard } from '../types';
+
+export const POWER_CARDS: PowerCard[] = [
+  {
+    id: 'double_down',
+    title: 'الدبل أو لا شيء 🎯',
+    subtitle: 'مغامرة الكازينو الكبرى',
+    description: 'لو جاوبت السؤال الجاي صح تاخد +2 نقطة، بس لو جاوبته غلط تتخصم منك -2 في السالب!',
+    icon: 'target',
+    color: '#F59E0B',
+    badge: 'مضاعفة نقاط 🔥',
+  },
+  {
+    id: 'sniper_penalty',
+    title: 'التسليب السري 💣',
+    subtitle: 'تصفية حسابات على الهواء',
+    description: 'اختار أي منافس واخصم منه نقطة (-1) فوراً من غير ما يجاوب ولا رصيدك يتأثر.',
+    icon: 'bomb',
+    color: '#EF4444',
+    badge: 'هجوم مباشر 😈',
+  },
+  {
+    id: 'immunity_shield',
+    title: 'الدرع الذهبي 🛡️',
+    subtitle: 'براءة تامة من السالب',
+    description: 'حماية تامة في السؤال الحالي.. لو دوست على الجرس وجاوبت غلط الحكم مش هيخصم منك أي نقطة.',
+    icon: 'shield-check',
+    color: '#3B82F6',
+    badge: 'حصانة وأمان ✨',
+  },
+  {
+    id: 'category_boss',
+    title: 'على مزاجي 👑',
+    subtitle: 'اختيار الفئة الإجباري',
+    description: 'أنت اللي تختار فئة السؤال الجاي بنفسك من الـ 12 فئة، والحكم ملزم يجيب السؤال منها فوراً!',
+    icon: 'crown',
+    color: '#8B5CF6',
+    badge: 'تحكم بالفئة 🎨',
+  },
+  {
+    id: 'robin_hood',
+    title: 'سرقة القرن 🦹‍♂️',
+    subtitle: 'هات نقطة من المتصدر',
+    description: 'اسرق نقطة كاملة حية من اللاعب المتصدر وضيفها لرصيدك (+1 ليك و -1 للمتصدر).',
+    icon: 'hand-coin',
+    color: '#10B981',
+    badge: 'خطف نقاط 💰',
+  },
+  {
+    id: 'freeze_rival',
+    title: 'تجميد الخصم ❄️',
+    subtitle: 'اقعد مكانك ومتتنفسش',
+    description: 'اختار منافس تجمّده وتقفل جرسُه في السؤال الجاي، وميقدرش يدوس ولا يجاوب نهائياً.',
+    icon: 'snowflake',
+    color: '#06B6D4',
+    badge: 'تجميد الجرس 🤐',
+  },
+  {
+    id: 'skip_question',
+    title: 'شهدت ومشت 🔄',
+    subtitle: 'السؤال ده ملغي فوراً',
+    description: 'إلغاء السؤال الحالي تماماً فوراً، وإجبار الحكم إنه ينقل على سؤال جديد فريش للكل.',
+    icon: 'skip-forward',
+    color: '#EC4899',
+    badge: 'تخطي فوري 💨',
+  },
+  {
+    id: 'duel_1v1',
+    title: 'رأس برأس (Duel) ⚔️',
+    subtitle: 'حلبة الصراع الفردي',
+    description: 'اختار خصم واحد تتحداه، والسؤال الجاي التنافس على الجرس هيكون بينكم إنتو الاتنين بس!',
+    icon: 'sword-cross',
+    color: '#F97316',
+    badge: 'تحدي ثنائي 🥊',
+  },
+  {
+    id: 'fifty_fifty',
+    title: 'احذف إجابتين ✂️',
+    subtitle: 'المساعدة بنصف الحل',
+    description: 'الحكم بيفتح الاختيارات الأربعة ويحذف منهم إجابتين غلط فوراً، ويتبقى اختيارين بس.',
+    icon: 'content-cut',
+    color: '#14B8A6',
+    badge: 'حذف خيارين 🔠',
+  },
+  {
+    id: 'wild_joker',
+    title: 'الجوكر المجنون 🎰',
+    subtitle: 'عجلة حظ الكازينو',
+    description: 'ضربة حظ عشوائية من الكازينو: يا تاخد +2 نقطة هدية، يا يصفّرلك السالب، يا نقطة لكل اللي في السالب!',
+    icon: 'slot-machine',
+    color: '#EAB308',
+    badge: 'مفاجأة كازينو ⚡',
+  },
+];
+
+export function getPowerCardById(id: string): PowerCard | undefined {
+  return POWER_CARDS.find((c) => c.id === id);
+}
