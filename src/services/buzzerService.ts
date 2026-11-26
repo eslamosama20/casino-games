@@ -13,7 +13,7 @@ import {
   Unsubscribe,
 } from 'firebase/database';
 import { config } from '../constants/config';
-import { LiveBuzzerRoom, Player, ActiveCardEvent } from '../types';
+import { LiveBuzzerRoom, Player, ActiveCardEvent, RoomMediaState } from '../types';
 import { POWER_CARDS } from '../data/powerCards';
 
 type RoomUpdateListener = (room: LiveBuzzerRoom) => void;
@@ -45,6 +45,7 @@ interface FirebaseRoomData {
     playedBy: { id: string; name: string };
     timestamp: number;
   } | null;
+  currentMedia?: RoomMediaState | null;
   createdAt?: number;
   lastActivity?: number;
 }
@@ -90,6 +91,7 @@ function normalizeRoom(raw: FirebaseRoomData): LiveBuzzerRoom {
     usedCardPlayerIds: raw.usedCardPlayerIds || {},
     usedCardIds: raw.usedCardIds || {},
     activeCardEvent: raw.activeCardEvent || null,
+    currentMedia: raw.currentMedia || null,
   };
 }
 
@@ -342,6 +344,7 @@ class BuzzerService {
         buzzerState: 'locked',
         buzzedBy: null,
         currentOptions: null,
+        currentMedia: null,
         lastActivity: Date.now(),
       };
       if (clearLockouts) {
@@ -364,13 +367,28 @@ class BuzzerService {
         const player = current.players?.[playerId];
         if (!player) return undefined;
 
+        const now = Date.now();
         current.buzzerState = 'buzzed';
         current.buzzedBy = {
           playerId: player.id,
           name: player.name,
-          timestamp: Date.now(),
+          timestamp: now,
         };
-        current.lastActivity = Date.now();
+
+        // If media (e.g. image blur) is active, freeze it at this exact millisecond!
+        if (current.currentMedia && !current.currentMedia.frozenAt && !current.currentMedia.revealed) {
+          const duration = current.currentMedia.revealDuration || 10;
+          const elapsedSec = Math.min(
+            duration,
+            Math.max(1, Math.ceil((now - current.currentMedia.startedAt) / 1000))
+          );
+          const points = elapsedSec <= 3 ? 3 : elapsedSec <= 7 ? 2 : 1;
+          current.currentMedia.frozenAt = now;
+          current.currentMedia.buzzedSecond = elapsedSec;
+          current.currentMedia.pointsValue = points;
+        }
+
+        current.lastActivity = now;
         return current;
       });
     } catch {}
@@ -402,23 +420,56 @@ class BuzzerService {
         };
 
         if (delta > 0) {
+          // If media is active, reveal it 100%!
+          if (current.currentMedia) {
+            current.currentMedia.revealed = true;
+          }
+
           if (player.score >= (current.targetScore || 10)) {
             current.status = 'finished';
             current.buzzerState = 'locked';
             current.winner = { id: player.id, name: player.name, score: player.score };
           } else {
-            // Point awarded (+1): automatically reopen buzzer for everyone!
+            // Point awarded: automatically reopen buzzer for everyone!
             current.lockedOutPlayerIds = {};
             current.buzzerState = 'open';
             current.buzzedBy = null;
           }
         } else if (delta < 0) {
-          // Penalty (-1): automatically reopen buzzer for everyone!
+          // Penalty: if media was frozen, unfreeze blur and resume timer for other players!
+          if (current.currentMedia && current.currentMedia.frozenAt && !current.currentMedia.revealed) {
+            const frozenDuration = Date.now() - current.currentMedia.frozenAt;
+            current.currentMedia.startedAt = current.currentMedia.startedAt + frozenDuration;
+            current.currentMedia.frozenAt = null;
+            current.currentMedia.buzzedSecond = null;
+            current.currentMedia.pointsValue = null;
+          }
+
+          // Automatically reopen buzzer for other players!
           current.lockedOutPlayerIds = {};
           current.buzzerState = 'open';
           current.buzzedBy = null;
         }
         return current;
+      });
+    } catch {}
+  }
+
+  async setRoomMedia(code: string, media: RoomMediaState | null) {
+    try {
+      const db = getDb();
+      await update(ref(db, `rooms/${code}`), {
+        currentMedia: media,
+        lastActivity: Date.now(),
+      });
+    } catch {}
+  }
+
+  async setRoomMediaRevealed(code: string, revealed = true) {
+    try {
+      const db = getDb();
+      await update(ref(db, `rooms/${code}/currentMedia`), {
+        revealed,
       });
     } catch {}
   }

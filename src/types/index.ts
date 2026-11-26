@@ -1,4 +1,17 @@
 export type DifficultyLevel = 'easy' | 'medium' | 'hard';
+export type QuestionMediaType = 'image_blur' | 'audio_clip';
+
+export interface RoomMediaState {
+  type: QuestionMediaType;
+  url: string;
+  title?: string;
+  revealDuration: number; // Duration in seconds (default 10)
+  startedAt: number;     // Timestamp when blur/timer began
+  frozenAt?: number | null; // Timestamp when buzzed (freezes blur)
+  revealed?: boolean;    // When correct answer is revealed
+  buzzedSecond?: number | null; // Exact second number (1-10) when player buzzed
+  pointsValue?: number | null;  // 3, 2, or 1 based on speed
+}
 
 export interface Question {
   id: string;
@@ -8,6 +21,10 @@ export interface Question {
   difficulty?: DifficultyLevel; // سهل، متوسط، صعب
   hint?: string;               // تلميح اختياري للـ Host
   options?: string[];          // اختيارات متعددة مساعدة للمتسابقين
+  mediaType?: QuestionMediaType;
+  mediaUrl?: string;
+  mediaTitle?: string;
+  revealDuration?: number;
 }
 
 export interface Category {
@@ -63,6 +80,7 @@ export interface LiveBuzzerRoom {
   usedCardPlayerIds?: Record<string, string>;
   usedCardIds?: Record<string, boolean>;
   activeCardEvent?: ActiveCardEvent | null;
+  currentMedia?: RoomMediaState | null;
 }
 
 export interface PowerCard {

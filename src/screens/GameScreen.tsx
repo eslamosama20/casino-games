@@ -15,11 +15,13 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
-import { Category, Player, Question, DifficultyLevel, BuzzerState, ActiveCardEvent } from '../types';
+import { Category, Player, Question, DifficultyLevel, BuzzerState, ActiveCardEvent, RoomMediaState } from '../types';
 import { questionService } from '../services/questionService';
 import { soundManager } from '../services/soundService';
 import { buzzerService } from '../services/buzzerService';
 import { PowerCardModal } from '../components/PowerCardModal';
+import { ImageBlurWidget } from '../components/ImageBlurWidget';
+import { AudioMysteryWidget } from '../components/AudioMysteryWidget';
 import { getPowerCardById, POWER_CARDS } from '../data/powerCards';
 
 interface GameScreenProps {
@@ -64,6 +66,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
+  const [roomMedia, setRoomMedia] = useState<RoomMediaState | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
 
@@ -114,6 +117,30 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setIsAnswerVisible(false);
     setShowHint(false);
     setShowOptions(false);
+
+    // Broadcast or setup interactive media state if question is image_blur or audio_clip
+    if (eligibleQuestions[0]?.mediaType) {
+      const initMedia: RoomMediaState = {
+        type: eligibleQuestions[0].mediaType,
+        url: eligibleQuestions[0].mediaUrl || '',
+        title: eligibleQuestions[0].mediaTitle || eligibleQuestions[0].question,
+        revealDuration: eligibleQuestions[0].revealDuration || 10,
+        startedAt: Date.now(),
+        frozenAt: null,
+        revealed: false,
+        buzzedSecond: null,
+        pointsValue: null,
+      };
+      if (liveRoomCode) {
+        buzzerService.setRoomMedia(liveRoomCode, initMedia);
+      }
+      setRoomMedia(initMedia);
+    } else {
+      if (liveRoomCode) {
+        buzzerService.setRoomMedia(liveRoomCode, null);
+      }
+      setRoomMedia(null);
+    }
 
     setLoading(false);
     triggerCardAnimation();
@@ -186,6 +213,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       if (room.code !== liveRoomCode) return;
       setBuzzerState(room.buzzerState);
       setBuzzedBy(room.buzzedBy ? { playerId: room.buzzedBy.playerId, name: room.buzzedBy.name } : null);
+      setRoomMedia(room.currentMedia || null);
       if (room.players && room.players.length > 0) {
         setPlayers(room.players);
       }
@@ -296,6 +324,31 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       setCurrentQuestion(nextQ);
       sessionShownRef.current.add(nextQ.id);
       setCurrentIndex((prev) => prev + 1);
+
+      // Broadcast or setup interactive media state if question is image_blur or audio_clip
+      if (nextQ.mediaType) {
+        const newMedia: RoomMediaState = {
+          type: nextQ.mediaType,
+          url: nextQ.mediaUrl || '',
+          title: nextQ.mediaTitle || nextQ.question,
+          revealDuration: nextQ.revealDuration || 10,
+          startedAt: Date.now(),
+          frozenAt: null,
+          revealed: false,
+          buzzedSecond: null,
+          pointsValue: null,
+        };
+        if (liveRoomCode) {
+          buzzerService.setRoomMedia(liveRoomCode, newMedia);
+        }
+        setRoomMedia(newMedia);
+      } else {
+        if (liveRoomCode) {
+          buzzerService.setRoomMedia(liveRoomCode, null);
+        }
+        setRoomMedia(null);
+      }
+
       triggerCardAnimation();
 
       // Refresh counts
@@ -608,29 +661,36 @@ export const GameScreen: React.FC<GameScreenProps> = ({
               </View>
 
               <View style={styles.buzzerWinnerActions}>
-                <TouchableOpacity
-                  style={styles.buzzerCorrectBtn}
-                  onPress={() => {
-                    updateScore(buzzedBy.playerId, 1, false, customReactionMsg);
-                    setCustomReactionMsg('');
-                  }}
-                  activeOpacity={0.85}
-                >
-                  <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
-                  <Text style={styles.buzzerCorrectBtnText}>صح (+1) وافتح 🔔</Text>
-                </TouchableOpacity>
+                {(() => {
+                  const awardPoints = (roomMedia?.pointsValue && roomMedia.pointsValue > 0) ? roomMedia.pointsValue : 1;
+                  return (
+                    <>
+                      <TouchableOpacity
+                        style={styles.buzzerCorrectBtn}
+                        onPress={() => {
+                          updateScore(buzzedBy.playerId, awardPoints, false, customReactionMsg);
+                          setCustomReactionMsg('');
+                        }}
+                        activeOpacity={0.85}
+                      >
+                        <MaterialCommunityIcons name="check-bold" size={16} color="#0F172A" />
+                        <Text style={styles.buzzerCorrectBtnText}>صح (+{awardPoints}) وافتح 🔔</Text>
+                      </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={styles.buzzerWrongReopenBtn}
-                  onPress={() => {
-                    updateScore(buzzedBy.playerId, -1, true, customReactionMsg);
-                    setCustomReactionMsg('');
-                  }}
-                  activeOpacity={0.85}
-                >
-                  <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
-                  <Text style={styles.buzzerWrongReopenText}>غلط (-1) وافتح 🔄</Text>
-                </TouchableOpacity>
+                      <TouchableOpacity
+                        style={styles.buzzerWrongReopenBtn}
+                        onPress={() => {
+                          updateScore(buzzedBy.playerId, -awardPoints, true, customReactionMsg);
+                          setCustomReactionMsg('');
+                        }}
+                        activeOpacity={0.85}
+                      >
+                        <MaterialCommunityIcons name="close-thick" size={16} color="#FFFFFF" />
+                        <Text style={styles.buzzerWrongReopenText}>غلط (-{awardPoints}) وافتح 🔄</Text>
+                      </TouchableOpacity>
+                    </>
+                  );
+                })()}
 
                 <TouchableOpacity
                   style={styles.buzzerReopenAllBtn}
@@ -725,6 +785,52 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
             {/* Question Text */}
             <Text style={styles.questionText}>{currentQuestion.question}</Text>
+
+            {/* Interactive Image Blur Widget */}
+            {currentQuestion.mediaType === 'image_blur' && (
+              <ImageBlurWidget
+                imageUrl={currentQuestion.mediaUrl || ''}
+                mediaTitle={currentQuestion.mediaTitle || 'صورة مشوشة'}
+                revealDuration={currentQuestion.revealDuration || 10}
+                startedAt={roomMedia?.startedAt}
+                frozenAt={roomMedia?.frozenAt}
+                revealed={roomMedia?.revealed || isAnswerVisible}
+                buzzedSecond={roomMedia?.buzzedSecond}
+                pointsValue={roomMedia?.pointsValue}
+                buzzedByName={buzzedBy?.name}
+                isHost={true}
+                onManualReveal={() => {
+                  setIsAnswerVisible(true);
+                  if (liveRoomCode) {
+                    buzzerService.setRoomMediaRevealed(liveRoomCode, true);
+                  }
+                  setRoomMedia((prev) => (prev ? { ...prev, revealed: true } : null));
+                }}
+              />
+            )}
+
+            {/* Interactive Audio Mystery Widget */}
+            {currentQuestion.mediaType === 'audio_clip' && (
+              <AudioMysteryWidget
+                audioUrl={currentQuestion.mediaUrl}
+                mediaTitle={currentQuestion.mediaTitle || 'مقطع صوتي / إفيه غامض'}
+                duration={currentQuestion.revealDuration || 8}
+                startedAt={roomMedia?.startedAt}
+                frozenAt={roomMedia?.frozenAt}
+                revealed={roomMedia?.revealed || isAnswerVisible}
+                buzzedByName={buzzedBy?.name}
+                buzzedSecond={roomMedia?.buzzedSecond}
+                pointsValue={roomMedia?.pointsValue}
+                isHost={true}
+                onManualReveal={() => {
+                  setIsAnswerVisible(true);
+                  if (liveRoomCode) {
+                    buzzerService.setRoomMediaRevealed(liveRoomCode, true);
+                  }
+                  setRoomMedia((prev) => (prev ? { ...prev, revealed: true } : null));
+                }}
+              />
+            )}
 
             {/* Hint Box (if exists) */}
             {currentQuestion.hint && (
@@ -857,7 +963,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     await questionService.markQuestionAsSeen(currentQuestion.id);
                     if (liveRoomCode) {
                       buzzerService.markSeenForRoom(liveRoomCode, currentQuestion.id);
+                      buzzerService.setRoomMediaRevealed(liveRoomCode, true);
                     }
+                    setRoomMedia((prev) => (prev ? { ...prev, revealed: true } : null));
                     const counts = await questionService.getRemainingCountsByCategory();
                     setCategoryCounts(counts);
                   }

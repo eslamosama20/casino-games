@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 19,
   "categories": [
     {
       "id": "football",
@@ -84,6 +84,20 @@
       "icon": "microphone-variant",
       "color": "#EC4899",
       "description": "فنانين وفنانات مصريين فقط — غنّي أو قول أغنية ليهم!"
+    },
+    {
+      "id": "image_blur",
+      "name": "الصورة المشوشة 🔍",
+      "icon": "image-filter-black-white",
+      "color": "#06B6D4",
+      "description": "خمن الشخصية أو المعلم المشهور من الصورة المشوشة قبل ما توضح!"
+    },
+    {
+      "id": "audio_mystery",
+      "name": "احزر بالصوت والإفيه 🎧",
+      "icon": "headphones",
+      "color": "#F43F5E",
+      "description": "استمع للمقطع الصوتي أو الإفيه وخمن الفيلم أو الأغنية فوراً!"
     }
   ],
   "questions": [
@@ -26058,6 +26072,1096 @@
       "question": "سمّعنا أغنية رمضانية أو عيد لمطرب مصري مشهور 🌙🎉🎤",
       "answer": "أمثلة لأشهر الأغاني الرمضانية المصرية: رمضان جانا (محمد عبد المطلب)، وحوي يا وحوي (أحمد عبد القادر)، أهلاً رمضان (سيد مكاوي)، مرحب شهر الصوم (عبد العزيز محمود)",
       "difficulty": "easy"
+    },
+    {
+      "id": "blur_01",
+      "categoryId": "image_blur",
+      "question": "خمن مين صاحب الصورة المشوشة دي؟ (أسطورة كرة القدم المصرية)",
+      "answer": "محمد صلاح",
+      "difficulty": "easy",
+      "hint": "فخر العرب ونجم ليفربول",
+      "options": [
+        "محمد صلاح",
+        "محمد النني",
+        "محمود تريزيجيه",
+        "عمر مرموش"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "محمد صلاح (Mo Salah)",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_02",
+      "categoryId": "image_blur",
+      "question": "خمن مين الفنان الأسطوري صاحب الصورة دي؟",
+      "answer": "عادل إمام",
+      "difficulty": "easy",
+      "hint": "الزعيم وصاحب مدرسة المشاغبين والواد محروس",
+      "options": [
+        "عادل إمام",
+        "سعيد صالح",
+        "سمير غانم",
+        "محمود عبد العزيز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الزعيم عادل إمام",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_03",
+      "categoryId": "image_blur",
+      "question": "خمن مين الأسطورة التاريخية دي؟ (سيدة الغناء العربي)",
+      "answer": "أم كلثوم",
+      "difficulty": "easy",
+      "hint": "كوكب الشرق وصاحبة أنت عمري",
+      "options": [
+        "أم كلثوم",
+        "أسمهان",
+        "شادية",
+        "نجاة الصغيرة"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كوكب الشرق أم كلثوم",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_04",
+      "categoryId": "image_blur",
+      "question": "خمن مين اللاعب العالمي صاحب الصورة؟",
+      "answer": "ليونيل ميسي",
+      "difficulty": "easy",
+      "hint": "البرغوث بطل كأس العالم 2022",
+      "options": [
+        "ليونيل ميسي",
+        "كريستيانو رونالدو",
+        "نيمار",
+        "لوكا مودريتش"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "ليونيل ميسي (Leo Messi)",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_05",
+      "categoryId": "image_blur",
+      "question": "خمن مين الممثل القدير العبقري صاحب النظرة دي؟",
+      "answer": "أحمد زكي",
+      "difficulty": "easy",
+      "hint": "النمر الأسود وجسد عبد الناصر والسادات",
+      "options": [
+        "أحمد زكي",
+        "نور الشريف",
+        "محمود ياسين",
+        "يحيى الفخراني"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الإمبراطور أحمد زكي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_06",
+      "categoryId": "image_blur",
+      "question": "خمن المعلم السياحي التاريخي المشهور في الصورة؟",
+      "answer": "الأهرامات وأبو الهول",
+      "difficulty": "easy",
+      "hint": "إحدى عجائب الدنيا السبع في الجيزة",
+      "options": [
+        "الأهرامات وأبو الهول",
+        "برج إيفل",
+        "تاج محل",
+        "قلعة قايتباي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أهرامات الجيزة وأبو الهول",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_07",
+      "categoryId": "image_blur",
+      "question": "خمن مين النجم الكروي المشهور بالصورة؟",
+      "answer": "كريستيانو رونالدو",
+      "difficulty": "easy",
+      "hint": "الدون وصاحب احتفال SIUUU",
+      "options": [
+        "كريستيانو رونالدو",
+        "كريم بنزيما",
+        "كيليان مبابي",
+        "هالاند"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كريستيانو رونالدو (CR7)",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_08",
+      "categoryId": "image_blur",
+      "question": "خمن مين المطرب المصري العالمي صاحب اللقب \"الهضبة\"؟",
+      "answer": "عمرو دياب",
+      "difficulty": "easy",
+      "hint": "صاحب أغنية نور العين وتملي معاك",
+      "options": [
+        "عمرو دياب",
+        "محمد منير",
+        "إيهاب توفيق",
+        "تامر حسني"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الهضبة عمرو دياب",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_09",
+      "categoryId": "image_blur",
+      "question": "خمن مين النجم الكوميدي المحبوب صاحب الصورة؟",
+      "answer": "أحمد حلمي",
+      "difficulty": "easy",
+      "hint": "بطل فيلم كدة رضا وعسل أسود وإكس لارج",
+      "options": [
+        "أحمد حلمي",
+        "محمد هنيدي",
+        "أحمد مكي",
+        "كريم عبد العزيز"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "البرنس أحمد حلمي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_10",
+      "categoryId": "image_blur",
+      "question": "خمن مين أسطورة الكورة المصرية صاحب الرقم 22؟",
+      "answer": "محمد أبو تريكة",
+      "difficulty": "easy",
+      "hint": "أمير القلوب وساحر الكرة المصرية في الأهلي ومنتخب مصر",
+      "options": [
+        "محمد أبو تريكة",
+        "محمد بركات",
+        "عماد متعب",
+        "حسني عبد ربه"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الماجيكو محمد أبو تريكة",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_11",
+      "categoryId": "image_blur",
+      "question": "خمن مين الأديب المصري العالمي الحاصل على جائزة نوبل في الأدب؟",
+      "answer": "نجيب محفوظ",
+      "difficulty": "medium",
+      "hint": "صاحب الثلاثية وأولاد حارتنا والحرافيش",
+      "options": [
+        "نجيب محفوظ",
+        "طه حسين",
+        "يوسف إدريس",
+        "توفيق الحكيم"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الأديب العالمي نجيب محفوظ",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_12",
+      "categoryId": "image_blur",
+      "question": "خمن مين أسطورة الكوميديا وصاحب أشهر ضحكة في السينما المصرية؟",
+      "answer": "إسماعيل ياسين",
+      "difficulty": "easy",
+      "hint": "أبو ضحكة جنان وبطل سلسلة أفلام في الجيش والبوليس",
+      "options": [
+        "إسماعيل ياسين",
+        "عبد الفتاح القصري",
+        "زينات صدقي",
+        "شكوكو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "أبو ضحكة جنان إسماعيل ياسين",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_13",
+      "categoryId": "image_blur",
+      "question": "خمن مين المعشوق الجماهيري وقائد نادي الزمالك التاريخي؟",
+      "answer": "شيكابالا",
+      "difficulty": "easy",
+      "hint": "الأباتشي والساحر الأسمر صاحب القدم اليسرى الصاروخية",
+      "options": [
+        "شيكابالا",
+        "حازم إمام",
+        "أحمد سيد زيزو",
+        "أشرف بن شرقي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الأباتشي محمود شيكابالا",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_14",
+      "categoryId": "image_blur",
+      "question": "خمن مين العندليب الأسمر صاحب الصورة؟",
+      "answer": "عبد الحليم حافظ",
+      "difficulty": "easy",
+      "hint": "صاحب أغنية سواح وقارئة الفنجان وموعود",
+      "options": [
+        "عبد الحليم حافظ",
+        "فريد الأطرش",
+        "محمد فوزي",
+        "محمد عبد الوهاب"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "العندليب الأسمر عبد الحليم حافظ",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_15",
+      "categoryId": "image_blur",
+      "question": "خمن مين الفنان صاحب الإفيهات الأيقونية \"صعيدي في الجامعة الأمريكية\"؟",
+      "answer": "محمد هنيدي",
+      "difficulty": "easy",
+      "hint": "بطل همام في أمستردام وفول الصين العظيم",
+      "options": [
+        "محمد هنيدي",
+        "أحمد آدم",
+        "هاني رمزي",
+        "أشرف عبد الباقي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الكوميديان محمد هنيدي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_16",
+      "categoryId": "image_blur",
+      "question": "خمن المعلم المصري الحديث الشهير الواقع في قلب جزيرة الزمالك؟",
+      "answer": "برج القاهرة",
+      "difficulty": "easy",
+      "hint": "زهرة اللوتس الشهيرة التي يبلغ ارتفاعها 187 متراً",
+      "options": [
+        "برج القاهرة",
+        "مسجد محمد علي",
+        "قلعة صلاح الدين",
+        "السد العالي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "برج القاهرة (Cairo Tower)",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_17",
+      "categoryId": "image_blur",
+      "question": "خمن مين النجم المحبوب صاحب لقب \"الكينج\"؟",
+      "answer": "محمد منير",
+      "difficulty": "easy",
+      "hint": "ابن النوبة وصاحب صوت الليلة يا سمرا ويونس وشجر الليمون",
+      "options": [
+        "محمد منير",
+        "علي الحجار",
+        "مدحت صالح",
+        "محمد حماقي"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الكينج محمد منير",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_18",
+      "categoryId": "image_blur",
+      "question": "خمن مين النجم الكوميدي والدرامي المتألق صاحب شخصية \"الكبير أوي\"؟",
+      "answer": "أحمد مكي",
+      "difficulty": "easy",
+      "hint": "بطل الكبير وجوني وحزلقوم وفيلم طير إنت",
+      "options": [
+        "أحمد مكي",
+        "بيومي فؤاد",
+        "محمد سلام",
+        "شيكو"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الكبير أوي أحمد مكي",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_19",
+      "categoryId": "image_blur",
+      "question": "خمن مين المهاجم الفرنسي السريع نجم ريال مدريد الحالي؟",
+      "answer": "كيليان مبابي",
+      "difficulty": "easy",
+      "hint": "بطل مونديال 2018 وصاحب الهاتريك في نهائي 2022",
+      "options": [
+        "كيليان مبابي",
+        "كريم بنزيما",
+        "عثمان ديمبيلي",
+        "فينيسيوس جونيور"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "كيليان مبابي (Kylian Mbappé)",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_20",
+      "categoryId": "image_blur",
+      "question": "خمن مين الأستاذ ورائد المسرح الكوميدي صاحب \"سيدتي الجميلة\"؟",
+      "answer": "فؤاد المهندس",
+      "difficulty": "medium",
+      "hint": "مستر إكس الذي لا يموت وعمو فؤاد",
+      "options": [
+        "فؤاد المهندس",
+        "عبد المنعم مدبولي",
+        "نجيب الريحاني",
+        "توفيق الدقن"
+      ],
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop",
+      "mediaTitle": "الأستاذ فؤاد المهندس",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_01",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب الإفيه الشهير: \"أنا لا بكذب ولا بتجمل.. أنا إنسان واضح\"؟",
+      "answer": "أحمد زكي (فيلم ضد الحكومة)",
+      "difficulty": "easy",
+      "hint": "فيلم ضد الحكومة ومحاكمة المسؤولين",
+      "options": [
+        "أحمد زكي",
+        "نور الشريف",
+        "محمود عبد العزيز",
+        "عادل إمام"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه ضد الحكومة - أحمد زكي",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_02",
+      "categoryId": "audio_mystery",
+      "question": "مين اللي قال: \"الجوازة دي لازم تتم يا فوزي.. ولو باظت أنا مش هسكت!\"؟",
+      "answer": "عادل إمام (التجربة الدنماركية)",
+      "difficulty": "easy",
+      "hint": "مع الوزير قدري المنياوي وأولاده الأربعة",
+      "options": [
+        "عادل إمام",
+        "أحمد راتب",
+        "سعيد صالح",
+        "طلعت زكريا"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه التجربة الدنماركية",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_03",
+      "categoryId": "audio_mystery",
+      "question": "خمن الأغنية الأيقونية التي مطلع لحنها: \"يا واد يا تقيل.. يا مشيبني\" لمين؟",
+      "answer": "سعاد حسني (فيلم خلي بالك من زوزو)",
+      "difficulty": "easy",
+      "hint": "كلمات صلاح جاهين وألحان كمال الطويل",
+      "options": [
+        "سعاد حسني",
+        "صباح",
+        "شادية",
+        "سميرة أحمد"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "أغنية يا واد يا تقيل",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_04",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب الإفيه الكوميدي الخالد: \"ثانية واحدة أتحزم وأجيلك!\"؟",
+      "answer": "محمد هنيدي (فيلم عندليب الدقي)",
+      "difficulty": "easy",
+      "hint": "فوزي وفواز التوأم في دبي",
+      "options": [
+        "محمد هنيدي",
+        "علاء ولي الدين",
+        "محمد سعد",
+        "أحمد حلمي"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه عندليب الدقي - محمد هنيدي",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_05",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب الصوت في الجملة الشهيرة: \"كلنا فاسدون.. لا أستثني أحداً!\"؟",
+      "answer": "أحمد زكي (فيلم ضد الحكومة)",
+      "difficulty": "easy",
+      "hint": "المرافعة الأشهر في تاريخ السينما المصرية",
+      "options": [
+        "أحمد زكي",
+        "محمود المليجي",
+        "فريد شوقي",
+        "صلاح ذو الفقار"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "مرافعة ضد الحكومة الخالدة",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_06",
+      "categoryId": "audio_mystery",
+      "question": "مين قال: \"يا عم صلي على النبي في قلبك.. ده أنا جايلك في مصلحة!\"؟",
+      "answer": "محمد سعد (اللمبي)",
+      "difficulty": "easy",
+      "hint": "شخصية اللمبي الشهيرة مع عم باخ",
+      "options": [
+        "محمد سعد",
+        "أحمد مكي",
+        "محمد رجب",
+        "حسن حسني"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه اللمبي الشهير",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_07",
+      "categoryId": "audio_mystery",
+      "question": "لحن البداية الشهير \"تملي معاك.. ولو حتى بعيد عني\" من غناء مين؟",
+      "answer": "عمرو دياب",
+      "difficulty": "easy",
+      "hint": "ألبوم سنة 2000 وصاحب البلوفر الشهير",
+      "options": [
+        "عمرو دياب",
+        "تامر حسني",
+        "مصطفى قمر",
+        "محمد فؤاد"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "لحن تملي معاك - عمرو دياب",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_08",
+      "categoryId": "audio_mystery",
+      "question": "مين الفنان اللي قال: \"أنا الشاب اللي جاي من الصعيد عشان يحقق حلمه\"؟",
+      "answer": "محمد هنيدي (صعيدي في الجامعة الأمريكية)",
+      "difficulty": "easy",
+      "hint": "خلف الدهشوري خلف في الـ AUC",
+      "options": [
+        "محمد هنيدي",
+        "أحمد السقا",
+        "طارق لطفي",
+        "هاني رمزي"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه خلف الدهشوري خلف",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_09",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب مقولة الرعب والضحك: \"أنا بابا يا يالا!\"؟",
+      "answer": "كريم عبد العزيز (فيلم الباشا تلميذ)",
+      "difficulty": "easy",
+      "hint": "الضابط بسيوني بسيوني مع حمزة الرشيدي",
+      "options": [
+        "كريم عبد العزيز",
+        "رامز جلال",
+        "محمد رجب",
+        "أحمد فتحي"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه الباشا تلميذ",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_10",
+      "categoryId": "audio_mystery",
+      "question": "مقطع اللحن الصعيدي الأسطوري التتر الشهير لمسلسل مين؟",
+      "answer": "ذئاب الجبل",
+      "difficulty": "medium",
+      "hint": "غناء علي الحجار وألحان ياسر عبد الرحمن وقصة البدري وهوارة",
+      "options": [
+        "ذئاب الجبل",
+        "الضوء الشارد",
+        "الليل وآخره",
+        "حدائق الشيطان"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر ذئاب الجبل الخالد",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_11",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب إفيه: \"مفيش فايدة.. البلد دي اللي يشوفها من فوق غير اللي يشوفها من تحت\"؟",
+      "answer": "أحمد حلمي (عسل أسود)",
+      "difficulty": "easy",
+      "hint": "مصري سيد العربي لما نزل مطار القاهرة",
+      "options": [
+        "أحمد حلمي",
+        "إدوارد",
+        "لطفي لبيب",
+        "يوسف داود"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "عسل أسود - أحمد حلمي",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_12",
+      "categoryId": "audio_mystery",
+      "question": "مين صاحب الإفيه العبقري: \"أنا مش قصير قزعة.. أنا طويل وأوزعة\"؟",
+      "answer": "عبد الفتاح القصري (فيلم سكر هانم)",
+      "difficulty": "easy",
+      "hint": "المعلم حنفي في أفلام الأبيض والأسود",
+      "options": [
+        "عبد الفتاح القصري",
+        "إسماعيل ياسين",
+        "حسن فايق",
+        "عبد السلام النابلسي"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه المعلم حنفي",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_13",
+      "categoryId": "audio_mystery",
+      "question": "مين اللي قال الإفيه الشهير: \"شيل إيدك يا ولد.. لا تروح في داهية!\"؟",
+      "answer": "فؤاد المهندس (مسرحية سك على بناتك)",
+      "difficulty": "easy",
+      "hint": "الدكتور رأفت لما كان بيراقب بناته سوسو وفوزية ونادية",
+      "options": [
+        "فؤاد المهندس",
+        "سناء يونس",
+        "أحمد راتب",
+        "شريهان"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه سك على بناتك",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_14",
+      "categoryId": "audio_mystery",
+      "question": "مقدمة الساكسفون الموسيقية الأسطورية في أغنية \"أنت عمري\" لمين؟",
+      "answer": "أم كلثوم (ألحان محمد عبد الوهاب)",
+      "difficulty": "easy",
+      "hint": "لقاء السحاب الأول بين كوكب الشرق وموسيقار الأجيال",
+      "options": [
+        "أم كلثوم",
+        "عبد الحليم حافظ",
+        "فيروز",
+        "فريد الأطرش"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "مقدمة أنت عمري الخالدة",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_15",
+      "categoryId": "audio_mystery",
+      "question": "مين قال: \"يا باسط الخلائق.. ده إنت مصيبة سودة يا راجل!\"؟",
+      "answer": "محمد سعد (فيلم كركر)",
+      "difficulty": "easy",
+      "hint": "كركر مع رضا الحناوي ورضا الكبيرة",
+      "options": [
+        "محمد سعد",
+        "حسن حسني",
+        "لطفي لبيب",
+        "علاء مرسي"
+      ],
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه كركر - محمد سعد",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_001",
+      "categoryId": "image_blur",
+      "question": "من صاحب هذه الصورة المشوشة؟ ركز في التفاصيل قبل ما توضح بالكامل!",
+      "answer": "محمد صلاح (Mo Salah)",
+      "hint": "فخر العرب وهداف ليفربول ومنتخب مصر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_002",
+      "categoryId": "image_blur",
+      "question": "من هو هذا الزعيم والأسطورة السينمائية المصرية صاحب الصورة؟",
+      "answer": "عادل إمام (الزعيم)",
+      "hint": "أشهر ممثل كوميدي وزعيم الفن المصري!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_003",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة النمر الأسود والبريء والإمبراطور في الصورة المشوشة؟",
+      "answer": "أحمد زكي",
+      "hint": "عبقري التمثيل المصري وتقمص الشخصيات (السادات وعبد الحليم وطه حسين)",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_004",
+      "categoryId": "image_blur",
+      "question": "خمن صاحبة الصورة المشوشة: كوكب الشرق وسيدة الغناء العربي!",
+      "answer": "أم كلثوم (ست الكل)",
+      "hint": "صوت مصر الأشهر والمنديل والنظارة السوداء الشهيرة!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_005",
+      "categoryId": "image_blur",
+      "question": "ما هو هذا المعلم التاريخي العالمي المشوش في الصورة؟",
+      "answer": "أهرامات الجيزة وأبو الهول",
+      "hint": "إحدى عجائب الدنيا السبع في مصر!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_006",
+      "categoryId": "image_blur",
+      "question": "من هو العالم المصري الحاصل على جائزة نوبل في الكيمياء في الصورة؟",
+      "answer": "د. أحمد زويل",
+      "hint": "رائد كيمياء الفيمتو ثانية (Femtochemistry)!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_007",
+      "categoryId": "image_blur",
+      "question": "من هو جراح القلوب العالمي الملقب بملك القلوب في الصورة المشوشة؟",
+      "answer": "د. مجدي يعقوب",
+      "hint": "مؤسس مركز أسوان للقلب ورائد زراعة الأعضاء في العالم!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_008",
+      "categoryId": "image_blur",
+      "question": "خمن صاحب الصورة: رائد الرواية العربية والحائز على نوبل للآداب!",
+      "answer": "نجيب محفوظ",
+      "hint": "صاحب الثلاثية (بين القصرين، قصر الشوق، السكرية) وأولاد حارتنا!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_009",
+      "categoryId": "image_blur",
+      "question": "من هو نجم هوليوود والسينما المصرية ولورنس العرب في الصورة المشوشة؟",
+      "answer": "عمر الشريف",
+      "hint": "بطل فيلم دكتور زيفاجو وصراع في الوادي!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_010",
+      "categoryId": "image_blur",
+      "question": "من هو نجم الكوميديا صاحب أفلام (صعيدي في الجامعة الأمريكية وفول الصين العظيم)؟",
+      "answer": "محمد هنيدي",
+      "hint": "قصير القامة وصاحب أكبر إيرادات في تاريخ السينما الشبابية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_011",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة النادي الأهلي ورئيسه الحالي وبيبو الكرة المصرية؟",
+      "answer": "محمود الخطيب (بيبو)",
+      "hint": "اللاعب المصري الوحيد الفائز بالكرة الذهبية الإفريقية عام 1983!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_012",
+      "categoryId": "image_blur",
+      "question": "من هو نجم نادي الزمالك والأباتشي وساحر الكرة المصرية في الصورة؟",
+      "answer": "محمود عبد الرازق (شيكابالا)",
+      "hint": "صاحب القدم اليسرى الساحرة وقائد القلعة البيضاء!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_013",
+      "categoryId": "image_blur",
+      "question": "من هو أمير القلوب وأسطورة النادي الأهلي ومنتخب مصر صاحب القميص 22؟",
+      "answer": "محمد أبو تريكة (أمير القلوب)",
+      "hint": "صاحب قذيفة الصفاقسي 2006 وهدف حسم أمم إفريقيا 2008!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_014",
+      "categoryId": "image_blur",
+      "question": "من هو العميد والهداف التاريخي لمنتخب مصر ومديره الفني الحالي في الصورة؟",
+      "answer": "حسام حسن (العميد)",
+      "hint": "سجل هدف التأهل لكأس العالم 1990 أمام الجزائر وقاد الفراعنة لبطولات إفريقية تاريخية!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_015",
+      "categoryId": "image_blur",
+      "question": "من هو أستاذ الكوميديا والمسرح وصاحب مسرحية (مدرسة المشاغبين وسك على بناتك)؟",
+      "answer": "فؤاد المهندس (الأستاذ)",
+      "hint": "رفيق درب شويكار وكلمته الشهيرة: كلمني شكراً ولا إف إم؟",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_016",
+      "categoryId": "image_blur",
+      "question": "خمن صاحب الصورة المشوشة: العندليب الأسمر وأسطورة الغناء العاطفي والوطني!",
+      "answer": "عبد الحليم حافظ (العندليب الأسمر)",
+      "hint": "غنى قارئة الفنجان وموعود وسواح وأحضان القنال!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1480429370139-e0132c086e2a?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_017",
+      "categoryId": "image_blur",
+      "question": "من هي دلوعة السينما المصرية وصاحبة أغنية (يا حبيبتي يا مصر) ومعبودة الجماهير؟",
+      "answer": "شادية (فاطمة كمال شاكر)",
+      "hint": "بطلة فيلم الزوجة 13 ومسرحية ريا وسكينة!",
+      "difficulty": "medium",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_018",
+      "categoryId": "image_blur",
+      "question": "من هو أشهر كوميديان صاحب الفم والضحكة الأشهر وسلسلة أفلام باسمه في الجيش والأسطول؟",
+      "answer": "إسماعيل ياسين (أبو ضحكة جنان)",
+      "hint": "إسماعيل يس في الجيش والبوليس الحربي والطيران ومستشفى المجانين!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_019",
+      "categoryId": "image_blur",
+      "question": "من هو أسطورة فرقة ثلاثي أضواء المسرح وبطوطة وفطوطة في الصورة؟",
+      "answer": "سمير غانم (فطوطة وسفروت)",
+      "hint": "بطل مسرحية المتزوجون وجحا يحكم المدينة وأهلا يا دكتور!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "blur_020",
+      "categoryId": "image_blur",
+      "question": "من هو نجم السينما صاحب أفلام (الفيل الأزرق، ولاد العم، كيرة والجن، الباشا تلميذ)؟",
+      "answer": "كريم عبد العزيز",
+      "hint": "ابن المخرج الكبير محمد عبد العزيز وأعلى ممثل تحقيقاً للإيرادات حالياً!",
+      "difficulty": "easy",
+      "mediaType": "image_blur",
+      "mediaUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80",
+      "revealDuration": 10
+    },
+    {
+      "id": "audio_001",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا لا بكذب ولا بتجمل، والحلزونة ياما الحلزونة!\" - مين القائل وفيلم إيه؟",
+      "answer": "عادل إمام (مرجان أحمد مرجان)",
+      "hint": "قصيدة شعر شهيرة قدام لجنة الجامعة!",
+      "options": [
+        "عادل إمام - مرجان أحمد مرجان",
+        "محمد هنيدي - صعيدي في الجامعة",
+        "أحمد حلمي - جعلتني مجرماً",
+        "محمد سعد - بوحة"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه الحلزونة ياما الحلزونة 🐌",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_002",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنت نطع يا جعفر.. ولا نسيت لما كنت بتشحت ربع جنيه؟!\" - مين القائل وفيلم إيه؟",
+      "answer": "سعيد صالح (سلام يا صاحبي)",
+      "hint": "صداقة تاريخية بين مرزوق وبركات!",
+      "options": [
+        "سعيد صالح - سلام يا صاحبي",
+        "عادل إمام - المشبوه",
+        "أحمد زكي - كابوريا",
+        "محمود عبد العزيز - الكيف"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حوار المعلم جعفر الشهير 💼",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_003",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه الأيقوني: \"يا باسط اليدين بالكرامة.. يا صايع بالوراثة!\" مين القائل ومسرحية إيه؟",
+      "answer": "سمير غانم (المتزوجون)",
+      "hint": "مشهد صينية البيض ومسعود وسي مسعود!",
+      "options": [
+        "سمير غانم - المتزوجون",
+        "عادل إمام - مدرسة المشاغبين",
+        "سعيد صالح - العيال كبرت",
+        "محمد نجم - عش المجانين"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مشهد البيض الشهير 🥚",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_004",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"ده أنا في الكيمياء كفتة، وفي الفيزياء كفتتين!\" مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (إسماعيلية رايح جاي)",
+      "hint": "فيلم بداية انطلاقة سينما الشباب عام 1997!",
+      "options": [
+        "محمد هنيدي - إسماعيلية رايح جاي",
+        "محمد سعد - اللي بالي بالك",
+        "هاني رمزي - صعيدي رايح جاي",
+        "أحمد آدم - شجيع السيما"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "إفيه امتحانات الثانوية العامة 📚",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_005",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا راجل كبر مخك.. الشكوى لغير الله مذلة، ولا حبة فوق وحبة تحت!\" مين القائل وفيلم إيه؟",
+      "answer": "محمود عبد العزيز - المزاجنجي (الكيف)",
+      "hint": "حوارات الكيميا والكيف وستاتيا وجمالات!",
+      "options": [
+        "محمود عبد العزيز - الكيف",
+        "يحيى الفخراني - الكيف",
+        "أحمد زكي - البيضة والحجر",
+        "عادل إمام - حتى لا يطير الدخان"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "سلطان المزاجنجي في معمل الكيف 🧪",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_006",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"صبح صبح يا عم الحج! صبح على الحلوين..\" مين صاحب هذه التحية الشهيرة وفيلم إيه؟",
+      "answer": "محمد سعد (بوحة الصباح)",
+      "hint": "جزار قادم من الصعيد للبحث عن ورثه في القاهرة!",
+      "options": [
+        "محمد سعد - بوحة",
+        "محمد سعد - اللمبي",
+        "كريم عبد العزيز - الباشا تلميذ",
+        "أحمد مكي - طير انت"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تحية الصباح الأسطورية ☀️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_007",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"تشرب إيه يا عمنا؟ نشرب قهوة.. سادة ولا مظبوط؟ سادة عشان الحزن عميق!\" مين القائل وفيلم إيه؟",
+      "answer": "أحمد حلمي (آسف على الإزعاج)",
+      "hint": "دراما نفسية رائعة من بطولة أحمد حلمي ودلال عبد العزيز ومحمود حميدة!",
+      "options": [
+        "أحمد حلمي - آسف على الإزعاج",
+        "أحمد حلمي - كدة رضا",
+        "كريم عبد العزيز - واحد من الناس",
+        "أحمد عز - ملاكي إسكندرية"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "حوار حسن مع نفسه في الكافيه ☕",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_008",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"شيل إيدك يا جدع! ده أنا أوديك ورا الشمس، ولا الشمس تسقع؟!\" مين القائل وفيلم إيه؟",
+      "answer": "توفيق الدقن (ابن حميدو)",
+      "hint": "الباز أفندي وسقوط العصابة!",
+      "options": [
+        "توفيق الدقن - ابن حميدو",
+        "ستيفان روستي - سيدة القصر",
+        "محمود المليجي - رصيف نمرة 5",
+        "زكي رستم - الفتوة"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "الباز أفندي ساقط توجيهية 🎩",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_009",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"يا أخي طير انت.. هو أنا ناقصك؟! شربات شربات!\" مين القائل وفيلم إيه؟",
+      "answer": "أحمد مكي (طير انت)",
+      "hint": "دكتور بهيج والجني مارد وتحولاته لشخصيات مختلفة!",
+      "options": [
+        "أحمد مكي - طير انت",
+        "ماجد الكدواني - طير انت",
+        "أحمد مكي - لا تراجع ولا استسلام",
+        "شيكو - سمير وشهير وبهير"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "دكتور بهيج والجني مارد 🧞‍♂️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_010",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"كلنا فاسدون.. لا استثني أحداً! حتى بالصمت العاجز!\" مين القائل وفيلم إيه؟",
+      "answer": "أحمد زكي (ضد الحكومة)",
+      "hint": "المرافعة الأشهر في تاريخ السينما المصرية لمصطفى خلف المحامي!",
+      "options": [
+        "أحمد زكي - ضد الحكومة",
+        "عادل إمام - طيور الظلام",
+        "نور الشريف - أهل القمة",
+        "محمود عبد العزيز - البريء"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "أقوى مرافعة قضائية في السينما ⚖️",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_011",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"حد شاف المفتاح يا جدعان؟! مفتاح الشقة فين؟!\" مين القائل ومسرحية إيه؟",
+      "answer": "يونس شلبي - عاطف (العيال كبرت)",
+      "hint": "الابن الأصغر التائه دائماً في عائلة رمضان السكري!",
+      "options": [
+        "يونس شلبي - العيال كبرت",
+        "سعيد صالح - العيال كبرت",
+        "أحمد زكي - العيال كبرت",
+        "حسن مصطفى - العيال كبرت"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "عاطف السكري والمفتاح 🔑",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_012",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"حازم.. حازم.. بسيوني.. بسيوني.. انزل يا حازم!\" مين القائل وفيلم إيه؟",
+      "answer": "كريم عبد العزيز (الباشا تلميذ)",
+      "hint": "الضابط بسيوني متخفي بين طلبة الجامعة الأمريكية!",
+      "options": [
+        "كريم عبد العزيز - الباشا تلميذ",
+        "رامز جلال - الباشا تلميذ",
+        "محمد رجب - الباشا تلميذ",
+        "حسن حسني - الباشا تلميذ"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "نداء بسيوني الشهير 📢",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_013",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"متقوليش يا عمي.. قولي يا عم عصام! أصل أنا صغير في السن وروح شباب!\" مين القائل وفيلم إيه؟",
+      "answer": "علاء ولي الدين (الناظر)",
+      "hint": "الناظر صلاح عاشور وأمه جواهر واللمبي والست زكية!",
+      "options": [
+        "علاء ولي الدين - الناظر",
+        "محمد سعد - الناظر",
+        "أحمد حلمي - الناظر",
+        "حسن حسني - الناظر"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "مدرسة عاشور في فيلم الناظر 🏫",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_014",
+      "categoryId": "audio_mystery",
+      "question": "خمن الإفيه: \"أنا كلمتي متفرقعش في الهوا.. ده أنا الكلمة تطلع من لساني رصاصة!\" مين القائل وفيلم إيه؟",
+      "answer": "محمد هنيدي (فول الصين العظيم)",
+      "hint": "محي الشرقاوي وأسرة الجد عمدة جابر الشرقاوي!",
+      "options": [
+        "محمد هنيدي - فول الصين العظيم",
+        "سعيد طرابيك - فول الصين العظيم",
+        "سامي سرحان - فول الصين العظيم",
+        "سليمان عيد - فول الصين العظيم"
+      ],
+      "difficulty": "easy",
+      "mediaType": "audio_clip",
+      "mediaTitle": "محي الشرقاوي وعشيرة المجرمين 🥢",
+      "revealDuration": 8
+    },
+    {
+      "id": "audio_015",
+      "categoryId": "audio_mystery",
+      "question": "خمن المقطع الغنائي الأيقوني: \"اللي بنى مصر كان في الأصل حلواني.. وعشان كدة مصر يا ولاد حلوة الحلوات!\" مين المغني ومسلسل إيه؟",
+      "answer": "علي الحجار (بوابة الحلواني)",
+      "hint": "أشعار سيد حجاب وألحان بليغ حمدي!",
+      "options": [
+        "علي الحجار - بوابة الحلواني",
+        "محمد الحلو - ليالي الحلمية",
+        "محمد منير - جمهورية زفتى",
+        "مدحت صالح - زيزينيا"
+      ],
+      "difficulty": "medium",
+      "mediaType": "audio_clip",
+      "mediaTitle": "تتر بوابة الحلواني الخالد 🎶",
+      "revealDuration": 8
     }
   ]
 }
