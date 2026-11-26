@@ -20,6 +20,7 @@ import { questionService } from '../services/questionService';
 import { soundManager } from '../services/soundService';
 import { buzzerService } from '../services/buzzerService';
 import { PowerCardModal } from '../components/PowerCardModal';
+import { getPowerCardById, POWER_CARDS } from '../data/powerCards';
 
 interface GameScreenProps {
   players: Player[];
@@ -56,7 +57,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [showOptions, setShowOptions] = useState<boolean>(false);
   const [customReactionMsg, setCustomReactionMsg] = useState<string>('');
   const [activeCardEvent, setActiveCardEvent] = useState<ActiveCardEvent | null>(null);
+  const [inspectCardData, setInspectCardData] = useState<{ cardId: string; playerName: string } | null>(null);
   const [showPowerCardModal, setShowPowerCardModal] = useState<boolean>(false);
+  const [showContestantCardsModal, setShowContestantCardsModal] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
@@ -195,6 +198,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     });
 
     const unsubCard = buzzerService.onPowerCardPlayed((event) => {
+      setInspectCardData(null);
       setActiveCardEvent(event);
       setShowPowerCardModal(true);
     });
@@ -205,6 +209,13 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       unsubCard();
     };
   }, [liveRoomCode]);
+
+  const handleInspectPlayerCard = (pName: string, cardId: string) => {
+    soundManager.playChipClick();
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+    setInspectCardData({ cardId, playerName: pName });
+    setShowPowerCardModal(true);
+  };
 
   // Adjust score (supports negative scores / التسليب!)
   const updateScore = (
@@ -387,8 +398,25 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
         <Text style={styles.topBarTitle}>لوحة إدارة اللعبة</Text>
 
-        <View style={styles.targetBadge}>
-          <Text style={styles.targetBadgeText}>الهدف: {targetScore}</Text>
+        <View style={styles.topBarLeftArea}>
+          <TouchableOpacity
+            style={styles.contestantCardsTopBtn}
+            onPress={() => {
+              soundManager.playChipClick();
+              setShowContestantCardsModal(true);
+            }}
+            activeOpacity={0.8}
+          >
+            <MaterialCommunityIcons name="cards-playing" size={15} color="#F59E0B" />
+            <Text style={styles.contestantCardsTopBtnText}>الكروت 🃏</Text>
+            {players.some((p) => !!p.usedCardId) && (
+              <View style={styles.cardsActiveDot} />
+            )}
+          </TouchableOpacity>
+
+          <View style={styles.targetBadge}>
+            <Text style={styles.targetBadgeText}>الهدف: {targetScore}</Text>
+          </View>
         </View>
       </View>
 
@@ -474,6 +502,29 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     <Text style={styles.miniBtnText}>+1</Text>
                   </TouchableOpacity>
                 </View>
+
+                {/* Referee Card Review Badge */}
+                {(() => {
+                  const cId = p.usedCardId;
+                  const pCard = cId ? getPowerCardById(cId) : undefined;
+                  if (!pCard || !cId) return null;
+                  return (
+                    <TouchableOpacity
+                      style={[
+                        styles.playerPowerCardBadge,
+                        { borderColor: pCard.color, backgroundColor: `${pCard.color}18` },
+                      ]}
+                      onPress={() => handleInspectPlayerCard(p.name, cId)}
+                      activeOpacity={0.75}
+                    >
+                      <MaterialCommunityIcons name={pCard.icon as any} size={12} color={pCard.color} />
+                      <Text style={[styles.playerPowerCardText, { color: pCard.color }]} numberOfLines={1}>
+                        {pCard.title}
+                      </Text>
+                      <MaterialCommunityIcons name="eye" size={11} color={pCard.color} />
+                    </TouchableOpacity>
+                  );
+                })()}
               </View>
             );
           })}
@@ -1028,13 +1079,110 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         </View>
       </Modal>
 
+      {/* Contestant Cards Overview Modal for Host */}
+      <Modal
+        visible={showContestantCardsModal}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowContestantCardsModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.cardsOverviewCard}>
+            <View style={styles.catPickerHeader}>
+              <TouchableOpacity
+                onPress={() => setShowContestantCardsModal(false)}
+                style={styles.closeBtn}
+              >
+                <MaterialCommunityIcons name="close" size={24} color={theme.colors.textMuted} />
+              </TouchableOpacity>
+              <Text style={styles.catPickerTitle}>كروت المتسابقين 🃏</Text>
+            </View>
+
+            <ScrollView style={{ maxHeight: 420 }} showsVerticalScrollIndicator={false}>
+              <Text style={styles.cardsSectionTitle}>حالة كروت المتسابقين في الجيم:</Text>
+
+              {players.map((p) => {
+                const cId = p.usedCardId;
+                const pCard = cId ? getPowerCardById(cId) : undefined;
+                return (
+                  <View key={p.id} style={styles.playerCardRowItem}>
+                    <View style={styles.playerCardRowInfo}>
+                      <Text style={styles.playerCardRowName}>{p.name}</Text>
+                      {pCard ? (
+                        <View style={[styles.cardTagSmall, { backgroundColor: `${pCard.color}25`, borderColor: pCard.color }]}>
+                          <MaterialCommunityIcons name={pCard.icon as any} size={13} color={pCard.color} />
+                          <Text style={[styles.cardTagSmallText, { color: pCard.color }]}>
+                            {pCard.title}
+                          </Text>
+                        </View>
+                      ) : (
+                        <Text style={styles.noCardText}>لم يسحب كارت بعد ⏳</Text>
+                      )}
+                    </View>
+
+                    {pCard ? (
+                      <TouchableOpacity
+                        style={[styles.inspectBtn, { backgroundColor: pCard.color }]}
+                        onPress={() => {
+                          setShowContestantCardsModal(false);
+                          handleInspectPlayerCard(p.name, cId!);
+                        }}
+                        activeOpacity={0.8}
+                      >
+                        <MaterialCommunityIcons name="eye" size={13} color="#0F172A" />
+                        <Text style={styles.inspectBtnText}>فتح الكارت 👁️</Text>
+                      </TouchableOpacity>
+                    ) : (
+                      <View style={styles.disabledBtnPlaceholder}>
+                        <Text style={styles.disabledBtnText}>كارت متاح</Text>
+                      </View>
+                    )}
+                  </View>
+                );
+              })}
+
+              <View style={styles.cardsDivider} />
+              <Text style={styles.cardsSectionTitle}>دليل كروت اللعبة (10 كروت):</Text>
+              <Text style={styles.cardsSectionSubtitle}>اضغط على أي كارت لمعاينة تأثيره وشرحه ومثاله العملي</Text>
+
+              <View style={styles.allCardsGrid}>
+                {POWER_CARDS.map((c) => (
+                  <TouchableOpacity
+                    key={c.id}
+                    style={[styles.miniCardPreview, { borderColor: c.color }]}
+                    onPress={() => {
+                      setShowContestantCardsModal(false);
+                      handleInspectPlayerCard('دليل الكروت', c.id);
+                    }}
+                    activeOpacity={0.8}
+                  >
+                    <MaterialCommunityIcons name={c.icon as any} size={20} color={c.color} />
+                    <Text style={[styles.miniCardPreviewTitle, { color: c.color }]} numberOfLines={1}>
+                      {c.title}
+                    </Text>
+                    <Text style={styles.miniCardPreviewSubtitle} numberOfLines={1}>
+                      {c.badge}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
+
       {/* Full-screen 3D Flipping Power Card Modal for Host */}
       <PowerCardModal
         visible={showPowerCardModal}
-        cardId={activeCardEvent?.cardId}
-        playerName={activeCardEvent?.playedBy.name}
+        cardId={inspectCardData ? inspectCardData.cardId : activeCardEvent?.cardId}
+        playerName={inspectCardData ? inspectCardData.playerName : activeCardEvent?.playedBy.name}
         isSelf={false}
-        onDismiss={() => setShowPowerCardModal(false)}
+        isInspect={!!inspectCardData}
+        initialFlipped={!!inspectCardData}
+        onDismiss={() => {
+          setShowPowerCardModal(false);
+          setInspectCardData(null);
+        }}
       />
     </View>
   );
@@ -1070,6 +1218,38 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     writingDirection: 'rtl',
+  },
+  topBarLeftArea: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  contestantCardsTopBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: 'rgba(245, 158, 11, 0.15)',
+    borderWidth: 1,
+    borderColor: '#F59E0B',
+    paddingHorizontal: 9,
+    paddingVertical: 5,
+    borderRadius: 12,
+    position: 'relative',
+  },
+  contestantCardsTopBtnText: {
+    color: '#F59E0B',
+    fontSize: 11.5,
+    fontWeight: '800',
+    writingDirection: 'rtl',
+  },
+  cardsActiveDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#10B981',
+    position: 'absolute',
+    top: 2,
+    right: 2,
   },
   targetBadge: {
     backgroundColor: theme.colors.surfaceElevated,
@@ -1108,6 +1288,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     overflow: 'visible',
+  },
+  playerPowerCardBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 3,
+    paddingVertical: 3,
+    paddingHorizontal: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+    marginTop: 5,
+    width: '100%',
+  },
+  playerPowerCardText: {
+    fontSize: 10,
+    fontWeight: 'bold',
+    maxWidth: 78,
+    writingDirection: 'rtl',
   },
   scoreCardLeading: {
     borderColor: theme.colors.gold,
@@ -1885,5 +2083,134 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: theme.colors.gold,
+  },
+  // Contestant Cards Overview & Inspector Modal
+  cardsOverviewCard: {
+    width: '100%',
+    maxWidth: 440,
+    maxHeight: '85%',
+    backgroundColor: theme.colors.surface,
+    borderRadius: theme.borderRadius.xl,
+    padding: theme.spacing.lg,
+    borderWidth: 1.5,
+    borderColor: '#F59E0B',
+  },
+  cardsSectionTitle: {
+    color: '#F8FAFC',
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginTop: 8,
+    marginBottom: 4,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+  },
+  cardsSectionSubtitle: {
+    color: '#94A3B8',
+    fontSize: 11,
+    marginBottom: 10,
+    textAlign: 'right',
+    writingDirection: 'rtl',
+  },
+  playerCardRowItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    backgroundColor: 'rgba(15, 23, 42, 0.6)',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.08)',
+    marginBottom: 6,
+  },
+  playerCardRowInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    flex: 1,
+  },
+  playerCardRowName: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  cardTagSmall: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 7,
+    paddingVertical: 2.5,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  cardTagSmallText: {
+    fontSize: 11,
+    fontWeight: 'bold',
+    writingDirection: 'rtl',
+  },
+  noCardText: {
+    color: '#64748B',
+    fontSize: 11,
+    fontStyle: 'italic',
+    writingDirection: 'rtl',
+  },
+  inspectBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 9,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  inspectBtnText: {
+    color: '#0F172A',
+    fontSize: 11,
+    fontWeight: '900',
+  },
+  disabledBtnPlaceholder: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  },
+  disabledBtnText: {
+    color: '#475569',
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  cardsDivider: {
+    height: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    marginVertical: 12,
+  },
+  allCardsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    justifyContent: 'space-between',
+    marginTop: 4,
+  },
+  miniCardPreview: {
+    width: '48%',
+    backgroundColor: 'rgba(15, 23, 42, 0.7)',
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 8,
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  miniCardPreviewTitle: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginTop: 4,
+    textAlign: 'center',
+    writingDirection: 'rtl',
+  },
+  miniCardPreviewSubtitle: {
+    fontSize: 10,
+    color: '#94A3B8',
+    marginTop: 2,
+    textAlign: 'center',
   },
 });

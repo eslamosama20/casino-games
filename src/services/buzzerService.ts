@@ -62,7 +62,12 @@ function getDb(): Database {
 
 function normalizeRoom(raw: FirebaseRoomData): LiveBuzzerRoom {
   const playersArr: Player[] = raw.players
-    ? Object.values(raw.players).sort((a, b) => a.id.localeCompare(b.id))
+    ? Object.values(raw.players)
+        .map((p) => ({
+          ...p,
+          usedCardId: p.usedCardId || (raw.usedCardPlayerIds && raw.usedCardPlayerIds[p.id]) || undefined,
+        }))
+        .sort((a, b) => a.id.localeCompare(b.id))
     : [];
   const lockedOut = raw.lockedOutPlayerIds
     ? Object.keys(raw.lockedOutPlayerIds).filter((k) => raw.lockedOutPlayerIds?.[k])

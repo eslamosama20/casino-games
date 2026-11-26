@@ -21,6 +21,8 @@ interface PowerCardModalProps {
   cardId?: string | null;
   playerName?: string;
   isSelf?: boolean;
+  isInspect?: boolean;
+  initialFlipped?: boolean;
   onDismiss: () => void;
 }
 
@@ -29,6 +31,8 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
   cardId,
   playerName,
   isSelf,
+  isInspect,
+  initialFlipped,
   onDismiss,
 }) => {
   const card: PowerCard | undefined = cardId ? getPowerCardById(cardId) : undefined;
@@ -39,11 +43,16 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
 
   useEffect(() => {
     if (visible && card) {
-      // 1. Audio: dramatic card swoosh entrance
-      soundManager.playCardWhoosh();
+      if (initialFlipped) {
+        soundManager.playReveal();
+        flipAnim.setValue(180);
+      } else {
+        // 1. Audio: dramatic card swoosh entrance
+        soundManager.playCardWhoosh();
+        flipAnim.setValue(0);
+      }
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy).catch(() => {});
 
-      flipAnim.setValue(0);
       scaleAnim.setValue(0.35);
 
       // Phase 1: Card springs up dynamically
@@ -63,24 +72,27 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
       );
       glowLoop.start();
 
-      // Phase 2: 3D Flip reveal with magic fanfare sound
-      const flipTimer = setTimeout(() => {
-        soundManager.playCardMagicReveal();
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+      let flipTimer: ReturnType<typeof setTimeout> | null = null;
+      if (!initialFlipped) {
+        // Phase 2: 3D Flip reveal with magic fanfare sound
+        flipTimer = setTimeout(() => {
+          soundManager.playCardMagicReveal();
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
 
-        Animated.timing(flipAnim, {
-          toValue: 180,
-          duration: 800,
-          useNativeDriver: true,
-        }).start();
-      }, 800);
+          Animated.timing(flipAnim, {
+            toValue: 180,
+            duration: 800,
+            useNativeDriver: true,
+          }).start();
+        }, 800);
+      }
 
       return () => {
-        clearTimeout(flipTimer);
+        if (flipTimer) clearTimeout(flipTimer);
         glowLoop.stop();
       };
     }
-  }, [visible, cardId]);
+  }, [visible, cardId, initialFlipped]);
 
   if (!visible || !card) return null;
 
@@ -108,6 +120,28 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onDismiss}>
       <View style={styles.overlay}>
+        {/* Background tap to dismiss */}
+        <TouchableOpacity
+          style={StyleSheet.absoluteFill}
+          onPress={() => {
+            soundManager.playChipClick();
+            onDismiss();
+          }}
+          activeOpacity={1}
+        />
+
+        {/* Top Quick Close Button */}
+        <TouchableOpacity
+          style={styles.topCloseFloatingBtn}
+          onPress={() => {
+            soundManager.playChipClick();
+            onDismiss();
+          }}
+          activeOpacity={0.8}
+        >
+          <MaterialCommunityIcons name="close" size={24} color="#F8FAFC" />
+        </TouchableOpacity>
+
         {/* Animated 3D Card Container */}
         <Animated.View style={[styles.cardContainer, { transform: [{ scale: scaleAnim }] }]}>
 
@@ -229,9 +263,13 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
               <View style={styles.frontContent}>
                 {/* Who activated banner */}
                 <View style={[styles.playerBanner, { backgroundColor: `${card.color}25`, borderColor: card.color }]}>
-                  <MaterialCommunityIcons name="lightning-bolt" size={16} color={card.color} />
+                  <MaterialCommunityIcons name={isInspect ? 'eye-outline' : 'lightning-bolt'} size={16} color={card.color} />
                   <Text style={[styles.playerBannerText, { color: card.color }]}>
-                    {isSelf ? 'أنت سحبت كارت الحظ! 🎲' : `قام ${playerName || 'متسابق'} بتفعيل هذا الكارت!`}
+                    {isSelf
+                      ? 'أنت سحبت كارت الحظ! 🎲'
+                      : isInspect
+                      ? `كارت المتسابق: ${playerName || 'المتسابق'} 🃏`
+                      : `قام ${playerName || 'متسابق'} بتفعيل هذا الكارت!`}
                   </Text>
                 </View>
 
@@ -285,7 +323,9 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                   }}
                   activeOpacity={0.85}
                 >
-                  <Text style={styles.continueBtnText}>استمرار اللعب 🎲</Text>
+                  <Text style={styles.continueBtnText}>
+                    {isInspect ? 'إغلاق الكارت ✖' : 'استمرار اللعب 🎲'}
+                  </Text>
                 </TouchableOpacity>
               </View>
             </ImageBackground>
@@ -305,6 +345,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     zIndex: 9999,
+  },
+  topCloseFloatingBtn: {
+    position: 'absolute',
+    top: 36,
+    right: 20,
+    zIndex: 10000,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    borderRadius: 20,
+    width: 38,
+    height: 38,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
   },
   cardContainer: {
     width: '100%',
