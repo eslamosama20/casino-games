@@ -12,9 +12,11 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { GameMode, Player } from '../types';
 import { questionService } from '../services/questionService';
+import { soundManager } from '../services/soundService';
 
 interface SetupScreenProps {
   onNext: (settings: { mode: GameMode; targetScore: number; players: Player[] }) => void;
@@ -253,11 +255,15 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
           <Text style={styles.sectionTitle}>نقاط الفوز (التارجت)</Text>
           <View style={styles.scoreRow}>
             <TouchableOpacity
-              style={styles.scoreCounterBtn}
-              onPress={() => setTargetScore(Math.max(3, targetScore - 1))}
+              style={[styles.scoreCounterBtn, styles.scoreCounterMinus]}
+              onPress={() => {
+                soundManager.playChipClick();
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+                setTargetScore(Math.max(3, targetScore - 1));
+              }}
               activeOpacity={0.7}
             >
-              <MaterialCommunityIcons name="minus" size={24} color={theme.colors.gold} />
+              <Text style={styles.counterSymbolMinus}>−</Text>
             </TouchableOpacity>
 
             <View style={styles.scoreDisplay}>
@@ -266,11 +272,15 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
             </View>
 
             <TouchableOpacity
-              style={styles.scoreCounterBtn}
-              onPress={() => setTargetScore(targetScore + 1)}
+              style={[styles.scoreCounterBtn, styles.scoreCounterPlus]}
+              onPress={() => {
+                soundManager.playChipClick();
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+                setTargetScore(targetScore + 1);
+              }}
               activeOpacity={0.7}
             >
-              <MaterialCommunityIcons name="plus" size={24} color={theme.colors.gold} />
+              <Text style={styles.counterSymbolPlus}>+</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -505,14 +515,39 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.spacing.md,
   },
   scoreCounterBtn: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: theme.colors.surfaceElevated,
+    width: 52,
+    height: 52,
+    borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: theme.colors.surfaceBorder,
+    borderWidth: 1.5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  scoreCounterMinus: {
+    backgroundColor: 'rgba(239, 68, 68, 0.15)',
+    borderColor: 'rgba(239, 68, 68, 0.6)',
+  },
+  scoreCounterPlus: {
+    backgroundColor: 'rgba(34, 197, 94, 0.15)',
+    borderColor: 'rgba(34, 197, 94, 0.6)',
+  },
+  counterSymbolMinus: {
+    color: '#EF4444',
+    fontSize: 28,
+    fontWeight: '900',
+    lineHeight: 32,
+    textAlign: 'center',
+  },
+  counterSymbolPlus: {
+    color: '#22C55E',
+    fontSize: 28,
+    fontWeight: '900',
+    lineHeight: 32,
+    textAlign: 'center',
   },
   scoreDisplay: {
     alignItems: 'center',
