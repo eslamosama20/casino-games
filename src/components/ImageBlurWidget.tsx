@@ -98,15 +98,26 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
     ? revealDuration
     : buzzedSecond ?? secondsElapsed;
 
-  // Blur radius: starts at 14px (clearer silhouette & jersey colors), eases down smoothly to 0
-  const blurFraction = Math.max(0, 1 - currentSec / revealDuration);
-  const easedFraction = Math.pow(blurFraction, 1.25);
-  const blurRadius = revealed ? 0 : Math.round(easedFraction * 14);
-  const overlayOpacity = revealed ? 0 : Math.max(0, easedFraction * 0.15);
+  // 3-Stage Blur Schedule:
+  // 0-3s: ~50% blur (7px), 4-6s: ~25% blur (3.5px), 7s+: clear (0px)
+  const blurRadius = revealed
+    ? 0
+    : currentSec <= 3
+    ? 7
+    : currentSec <= 6
+    ? 3.5
+    : 0;
+  const overlayOpacity = revealed
+    ? 0
+    : currentSec <= 3
+    ? 0.08
+    : currentSec <= 6
+    ? 0.03
+    : 0;
 
-  // Points tier:
-  // sec 0-3: 3 pts, sec 4-7: 2 pts, sec 8+: 1 pt
-  const currentPoints = pointsValue ?? (currentSec <= 3 ? 3 : currentSec <= 7 ? 2 : 1);
+  // Points tier matching the 3-second stages:
+  // sec 0-3: 3 pts, sec 4-6: 2 pts, sec 7+: 1 pt
+  const currentPoints = pointsValue ?? (currentSec <= 3 ? 3 : currentSec <= 6 ? 2 : 1);
 
   return (
     <View style={styles.container}>
@@ -160,7 +171,7 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
               : null,
           ]}
           resizeMode="contain"
-          blurRadius={Platform.OS === 'web' ? 0 : Math.max(1, blurRadius)}
+          blurRadius={Platform.OS === 'web' ? 0 : Math.round(blurRadius)}
           onLoad={() => setIsLoading(false)}
           onError={() => setIsLoading(false)}
         />
