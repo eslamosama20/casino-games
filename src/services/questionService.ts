@@ -31,8 +31,8 @@ export const questionService = {
   async getCategories(): Promise<Category[]> {
     try {
       const cachedVersion = await this.getDatasetVersion();
-      const bundleVer = bundledData.version || 1;
-      if (bundleVer > cachedVersion) {
+      const bundleVer = bundledData.version || 25;
+      if (bundleVer >= cachedVersion) {
         await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(bundledData.categories));
         await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(bundledData.questions));
         await AsyncStorage.setItem(DATASET_VERSION_KEY, String(bundleVer));
@@ -52,28 +52,46 @@ export const questionService = {
   async getAllQuestions(): Promise<Question[]> {
     try {
       const cachedVersion = await this.getDatasetVersion();
-      const bundleVer = bundledData.version || 1;
-      if (bundleVer > cachedVersion) {
+      const bundleVer = bundledData.version || 25;
+      if (bundleVer >= cachedVersion) {
         await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(bundledData.categories));
         await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(bundledData.questions));
         await AsyncStorage.setItem(DATASET_VERSION_KEY, String(bundleVer));
-        return bundledData.questions as Question[];
+        return (bundledData.questions as any[]).map((q) => ({
+          ...q,
+          categoryId: q.categoryId || q.category || 'general',
+          category: q.category || q.categoryId || 'general',
+        }));
       }
       const cached = await AsyncStorage.getItem(QUESTIONS_CACHE_KEY);
       if (cached) {
-        return JSON.parse(cached);
+        const parsed = JSON.parse(cached);
+        return (parsed as any[]).map((q) => ({
+          ...q,
+          categoryId: q.categoryId || q.category || 'general',
+          category: q.category || q.categoryId || 'general',
+        }));
       }
     } catch (e) {
       console.warn('Failed to read cached questions:', e);
     }
-    return bundledData.questions as Question[];
+    return (bundledData.questions as any[]).map((q) => ({
+      ...q,
+      categoryId: q.categoryId || q.category || 'general',
+      category: q.category || q.categoryId || 'general',
+    }));
   },
 
   // Get set of seen question IDs
   async getSeenQuestionIds(): Promise<string[]> {
     try {
       const seen = await AsyncStorage.getItem(SEEN_QUESTIONS_KEY);
-      return seen ? JSON.parse(seen) : [];
+      if (seen) return JSON.parse(seen);
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const webSeen = window.localStorage.getItem(SEEN_QUESTIONS_KEY);
+        if (webSeen) return JSON.parse(webSeen);
+      }
+      return [];
     } catch {
       return [];
     }
@@ -85,7 +103,11 @@ export const questionService = {
       const currentSeen = await this.getSeenQuestionIds();
       if (!currentSeen.includes(questionId)) {
         currentSeen.push(questionId);
-        await AsyncStorage.setItem(SEEN_QUESTIONS_KEY, JSON.stringify(currentSeen));
+        const serialized = JSON.stringify(currentSeen);
+        await AsyncStorage.setItem(SEEN_QUESTIONS_KEY, serialized);
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.setItem(SEEN_QUESTIONS_KEY, serialized);
+        }
       }
     } catch (e) {
       console.error('Failed to mark question as seen', e);
@@ -97,6 +119,13 @@ export const questionService = {
     try {
       if (!categoryIds || categoryIds.length === 0) {
         await AsyncStorage.removeItem(SEEN_QUESTIONS_KEY);
+        if (typeof window !== 'undefined' && window.localStorage) {
+          window.localStorage.removeItem(SEEN_QUESTIONS_KEY);
+        }
+        // Force sync bundled questions to cache as well
+        await AsyncStorage.setItem(QUESTIONS_CACHE_KEY, JSON.stringify(bundledData.questions));
+        await AsyncStorage.setItem(CATEGORIES_CACHE_KEY, JSON.stringify(bundledData.categories));
+        await AsyncStorage.setItem(DATASET_VERSION_KEY, String(bundledData.version || 25));
         return;
       }
 
@@ -105,13 +134,20 @@ export const questionService = {
       
       const categoryQuestionIds = new Set(
         allQuestions
-          .filter((q) => categoryIds.includes(q.categoryId))
+          .filter((q) => {
+            const catId = q.categoryId || (q as any).category;
+            return categoryIds.includes(catId);
+          })
           .map((q) => q.id)
       );
 
       // Keep only seen IDs that do NOT belong to the specified categories
       const updatedSeen = currentSeen.filter((id) => !categoryQuestionIds.has(id));
-      await AsyncStorage.setItem(SEEN_QUESTIONS_KEY, JSON.stringify(updatedSeen));
+      const serialized = JSON.stringify(updatedSeen);
+      await AsyncStorage.setItem(SEEN_QUESTIONS_KEY, serialized);
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(SEEN_QUESTIONS_KEY, serialized);
+      }
     } catch (e) {
       console.error('Failed to reset seen questions', e);
     }
@@ -124,11 +160,12 @@ export const questionService = {
 
     const counts: Record<string, number> = {};
     for (const q of allQuestions) {
-      if (!counts[q.categoryId]) {
-        counts[q.categoryId] = 0;
+      const catId = q.categoryId || (q as any).category || 'general';
+      if (!counts[catId]) {
+        counts[catId] = 0;
       }
       if (!seenIds.has(q.id)) {
-        counts[q.categoryId] += 1;
+        counts[catId] += 1;
       }
     }
     return counts;
@@ -139,9 +176,10 @@ export const questionService = {
     const allQuestions = await this.getAllQuestions();
     const seenIds = new Set(await this.getSeenQuestionIds());
 
-    const eligible = allQuestions.filter(
-      (q) => selectedCategoryIds.includes(q.categoryId) && !seenIds.has(q.id)
-    );
+    const eligible = allQuestions.filter((q) => {
+      const catId = q.categoryId || (q as any).category;
+      return selectedCategoryIds.includes(catId) && !seenIds.has(q.id);
+    });
 
     // Fisher-Yates shuffle
     const shuffled = [...eligible];

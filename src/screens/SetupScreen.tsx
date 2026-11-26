@@ -74,7 +74,19 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
     setPlayerNames(updated);
   };
 
-  const handleResetQuestionsHistory = () => {
+  const handleResetQuestionsHistory = async () => {
+    soundManager.playChipClick();
+    if (Platform.OS === 'web') {
+      const confirmed = typeof window !== 'undefined' ? window.confirm('هل أنت متأكد من تصفير سجل كل الأسئلة اللي ظهرت قبل كده عشان تظهر من جديد؟') : true;
+      if (confirmed) {
+        await questionService.resetSeenQuestions();
+        if (typeof window !== 'undefined') {
+          window.alert('تمت العملية بنجاح: تم تصفير سجل الأسئلة وستظهر كل الأسئلة من جديد! ✓');
+        }
+      }
+      return;
+    }
+
     Alert.alert(
       'تصفير الأسئلة',
       'هل أنت متأكد من تصفير سجل كل الأسئلة اللي ظهرت قبل كده عشان تظهر من جديد؟',
