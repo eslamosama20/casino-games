@@ -376,23 +376,21 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       <View style={styles.topBar}>
         <View style={styles.topBarIconsLeft}>
           <TouchableOpacity
-            style={styles.iconCircleBtn}
+            style={[styles.topBarBtn, styles.topBarExitBtn]}
             onPress={handleQuitRequest}
-            activeOpacity={0.7}
+            activeOpacity={0.75}
           >
-            <MaterialCommunityIcons name="close" size={20} color={theme.colors.textMuted} />
+            <Text style={styles.topBarExitText}>✕ خروج</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={styles.iconCircleBtn}
+            style={[styles.topBarBtn, isMuted ? styles.topBarMutedBtn : styles.topBarSoundBtn]}
             onPress={handleToggleMute}
-            activeOpacity={0.7}
+            activeOpacity={0.75}
           >
-            <MaterialCommunityIcons
-              name={isMuted ? 'volume-off' : 'volume-high'}
-              size={20}
-              color={isMuted ? theme.colors.textMuted : theme.colors.gold}
-            />
+            <Text style={[styles.topBarSoundText, isMuted && { color: '#94A3B8' }]}>
+              {isMuted ? '🔇 مكتوم' : '🔊 صوت'}
+            </Text>
           </TouchableOpacity>
         </View>
 
@@ -407,8 +405,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             }}
             activeOpacity={0.8}
           >
-            <MaterialCommunityIcons name="cards-playing" size={15} color="#F59E0B" />
-            <Text style={styles.contestantCardsTopBtnText}>الكروت 🃏</Text>
+            <Text style={styles.contestantCardsTopBtnText}>🃏 الكروت</Text>
             {players.some((p) => !!p.usedCardId) && (
               <View style={styles.cardsActiveDot} />
             )}
@@ -517,11 +514,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                       onPress={() => handleInspectPlayerCard(p.name, cId)}
                       activeOpacity={0.75}
                     >
-                      <MaterialCommunityIcons name={pCard.icon as any} size={12} color={pCard.color} />
                       <Text style={[styles.playerPowerCardText, { color: pCard.color }]} numberOfLines={1}>
-                        {pCard.title}
+                        {pCard.title} 👁️
                       </Text>
-                      <MaterialCommunityIcons name="eye" size={11} color={pCard.color} />
                     </TouchableOpacity>
                   );
                 })()}
@@ -1206,12 +1201,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
   },
-  iconCircleBtn: {
-    padding: 8,
-    backgroundColor: theme.colors.surfaceElevated,
-    borderRadius: 8,
+  topBarBtn: {
+    paddingHorizontal: 9,
+    paddingVertical: 5,
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: theme.colors.surfaceBorder,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  topBarExitBtn: {
+    backgroundColor: 'rgba(239, 68, 68, 0.12)',
+    borderColor: 'rgba(239, 68, 68, 0.5)',
+  },
+  topBarExitText: {
+    color: '#EF4444',
+    fontSize: 11.5,
+    fontWeight: '800',
+    writingDirection: 'rtl',
+  },
+  topBarSoundBtn: {
+    backgroundColor: 'rgba(245, 158, 11, 0.12)',
+    borderColor: 'rgba(245, 158, 11, 0.5)',
+  },
+  topBarMutedBtn: {
+    backgroundColor: 'rgba(100, 116, 139, 0.15)',
+    borderColor: 'rgba(100, 116, 139, 0.4)',
+  },
+  topBarSoundText: {
+    color: '#F59E0B',
+    fontSize: 11.5,
+    fontWeight: '800',
+    writingDirection: 'rtl',
   },
   topBarTitle: {
     color: theme.colors.textPrimary,
