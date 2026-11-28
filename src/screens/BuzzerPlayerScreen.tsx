@@ -8,6 +8,7 @@ import {
   Animated,
   Platform,
   Alert,
+  Modal,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
@@ -64,6 +65,9 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   const [room, setRoom] = useState<LiveBuzzerRoom>(initialRoom);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
   const [isConfirmingBuzz, setIsConfirmingBuzz] = useState<boolean>(false);
+  const [showExitModal, setShowExitModal] = useState<boolean>(false);
+  const [noticeModal, setNoticeModal] = useState<{ title: string; message: string } | null>(null);
+  const selfExitingRef = useRef<boolean>(false);
   const [scoreBubble, setScoreBubble] = useState<{
     id: number;
     delta: number;
@@ -113,23 +117,13 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     });
 
     const unsubClosed = buzzerService.onRoomClosed(() => {
-      const msg = 'الحكم أغلق الغرفة.';
-      if (Platform.OS === 'web' && typeof window !== 'undefined') {
-        window.alert(msg);
-      } else {
-        Alert.alert('انتهت الغرفة', msg);
-      }
-      onExit();
+      if (selfExitingRef.current) return;
+      setNoticeModal({ title: 'انتهت الغرفة', message: 'الحكم أغلق الغرفة.' });
     });
 
     const unsubKicked = buzzerService.onKicked(() => {
-      const msg = 'تم إخراجك من الغرفة بواسطة الحكم.';
-      if (Platform.OS === 'web' && typeof window !== 'undefined') {
-        window.alert(msg);
-      } else {
-        Alert.alert('تنبيه', msg);
-      }
-      onExit();
+      if (selfExitingRef.current) return;
+      setNoticeModal({ title: 'تنبيه', message: 'تم إخراجك من الغرفة بواسطة الحكم.' });
     });
 
     const unsubCard = buzzerService.onPowerCardPlayed((event) => {
@@ -306,25 +300,14 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   };
 
   const handleLeave = () => {
-    const confirmMsg = 'هل تريد الخروج من غرفة الجرس؟';
-    if (Platform.OS === 'web' && typeof window !== 'undefined') {
-      if (window.confirm(confirmMsg)) {
-        buzzerService.disconnect();
-        onExit();
-      }
-    } else {
-      Alert.alert('خروج', confirmMsg, [
-        { text: 'إلغاء', style: 'cancel' },
-        {
-          text: 'خروج',
-          style: 'destructive',
-          onPress: () => {
-            buzzerService.disconnect();
-            onExit();
-          },
-        },
-      ]);
-    }
+    setShowExitModal(true);
+  };
+
+  const confirmLeave = () => {
+    selfExitingRef.current = true;
+    setShowExitModal(false);
+    buzzerService.disconnect();
+    onExit();
   };
 
   const isMyBuzz = room.buzzerState === 'buzzed' && room.buzzedBy?.playerId === playerId;
@@ -406,10 +389,10 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
       {/* Top Bar */}
       <View style={styles.topBar}>
         <View style={styles.topLeftBtns}>
-          <TouchableOpacity style={styles.iconBtn} onPress={handleLeave}>
+          <TouchableOpacity accessibilityRole="button" style={styles.iconBtn} onPress={handleLeave}>
             <Text style={{ color: theme.colors.textSecondary, fontSize: 16, fontWeight: 'bold' }}>✕</Text>
           </TouchableOpacity>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.iconBtn}
             onPress={() => setIsMuted(soundManager.toggleMute())}
           >
@@ -494,7 +477,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
             transform: [{ scale: Animated.multiply(pulseAnim, pressScale) }],
           }}
         >
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             activeOpacity={canBuzz ? 0.75 : 1}
             onPress={handleBuzz}
             disabled={!canBuzz}
@@ -517,7 +500,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 
         {/* Power Card Trigger Button */}
         {room.status === 'playing' && (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={[
               styles.powerCardBtn,
               hasUsedCard && styles.powerCardBtnDisabled,
@@ -614,6 +597,70 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         isSelf={activeCardEvent?.playedBy.id === playerId}
         onDismiss={() => setCardModalVisible(false)}
       />
+
+      {/* In-App Exit Confirmation Modal */}
+      <Modal
+        visible={showExitModal}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowExitModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <Text style={{ fontSize: 36, textAlign: 'center', marginBottom: 8 }}>🚪</Text>
+            <Text style={styles.modalTitle}>خروج من الغرفة</Text>
+            <Text style={styles.modalMessage}>هل تريد الخروج من غرفة الجرس؟</Text>
+            <View style={styles.modalActions}>
+              <TouchableOpacity
+                style={styles.modalCancelBtn}
+                onPress={() => setShowExitModal(false)}
+                accessibilityRole="button"
+                accessibilityLabel="إلغاء"
+              >
+                <Text style={styles.modalCancelText}>إلغاء</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.modalExitBtn}
+                onPress={confirmLeave}
+                accessibilityRole="button"
+                accessibilityLabel="خروج"
+              >
+                <Text style={styles.modalExitText}>خروج</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      {/* In-App Notice Modal (Room Closed / Kicked by Host) */}
+      <Modal
+        visible={Boolean(noticeModal)}
+        transparent
+        animationType="fade"
+        onRequestClose={() => {
+          setNoticeModal(null);
+          onExit();
+        }}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <Text style={{ fontSize: 36, textAlign: 'center', marginBottom: 8 }}>⚠️</Text>
+            <Text style={styles.modalTitle}>{noticeModal?.title}</Text>
+            <Text style={styles.modalMessage}>{noticeModal?.message}</Text>
+            <TouchableOpacity
+              style={[styles.modalExitBtn, { flex: 0, width: '100%', backgroundColor: theme.colors.gold }]}
+              onPress={() => {
+                setNoticeModal(null);
+                onExit();
+              }}
+              accessibilityRole="button"
+              accessibilityLabel="حسناً"
+            >
+              <Text style={[styles.modalExitText, { color: theme.colors.background }]}>حسناً</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 };
@@ -923,5 +970,68 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     textAlign: 'center',
     flexShrink: 1,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.78)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  modalCard: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.colors.surface,
+    borderRadius: 20,
+    padding: 22,
+    borderWidth: 1.5,
+    borderColor: theme.colors.gold,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 19,
+    fontWeight: '900',
+    color: theme.colors.gold,
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  modalMessage: {
+    fontSize: 14,
+    color: theme.colors.textSecondary,
+    textAlign: 'center',
+    marginBottom: 20,
+    lineHeight: 22,
+    writingDirection: 'rtl',
+  },
+  modalActions: {
+    flexDirection: 'row',
+    gap: 12,
+    width: '100%',
+  },
+  modalCancelBtn: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 12,
+    backgroundColor: theme.colors.surfaceElevated,
+    borderWidth: 1,
+    borderColor: theme.colors.surfaceBorder,
+    alignItems: 'center',
+  },
+  modalCancelText: {
+    color: theme.colors.textPrimary,
+    fontWeight: '800',
+    fontSize: 14,
+  },
+  modalExitBtn: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 12,
+    backgroundColor: theme.colors.danger,
+    alignItems: 'center',
+  },
+  modalExitText: {
+    color: '#FFFFFF',
+    fontWeight: '900',
+    fontSize: 14,
   },
 });

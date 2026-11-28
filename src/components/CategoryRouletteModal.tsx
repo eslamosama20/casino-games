@@ -73,7 +73,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
     <Modal visible={visible} transparent animationType="fade">
       <View style={styles.overlay}>
         <View style={styles.card}>
-          <TouchableOpacity style={styles.closeBtn} onPress={onClose} disabled={spinning}>
+          <TouchableOpacity accessibilityRole="button" style={styles.closeBtn} onPress={onClose} disabled={spinning}>
             <Text style={{ fontSize: 20, color: theme.colors.textMuted }}>✕</Text>
           </TouchableOpacity>
 
@@ -93,12 +93,13 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
                 { transform: [{ rotate: spinInterpolation }] },
               ]}
             >
-              {categories.slice(0, 12).map((cat, idx, arr) => {
+              {categories.slice(0, 14).map((cat, idx, arr) => {
                 const angleDeg = (360 / arr.length) * idx;
                 const rad = (angleDeg * Math.PI) / 180;
-                const radius = 56;
+                const radius = 94;
                 const x = Math.sin(rad) * radius;
                 const y = -Math.cos(rad) * radius;
+                const shortName = cat.name.replace(/[^\u0600-\u06FF\s]/g, '').trim().split(' ')[0] || '';
                 return (
                   <View
                     key={cat.id}
@@ -107,14 +108,25 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
                       transform: [{ translateX: x }, { translateY: y }],
                       alignItems: 'center',
                       justifyContent: 'center',
+                      backgroundColor: cat.color ? `${cat.color}28` : 'rgba(255,215,0,0.15)',
+                      borderColor: cat.color || theme.colors.gold,
+                      borderWidth: 1,
+                      borderRadius: 10,
+                      paddingHorizontal: 5,
+                      paddingVertical: 2,
                     }}
                   >
-                    <Text style={{ fontSize: 18 }}>{getCategoryEmoji(cat.id)}</Text>
+                    <Text style={{ fontSize: 16 }}>{getCategoryEmoji(cat.id)}</Text>
+                    {shortName ? (
+                      <Text style={{ fontSize: 9, fontWeight: '800', color: '#F8FAFC' }} numberOfLines={1}>
+                        {shortName}
+                      </Text>
+                    ) : null}
                   </View>
                 );
               })}
               <View style={styles.wheelInner}>
-                <Text style={{ fontSize: 22, textAlign: 'center' }}>🎡</Text>
+                <Text style={{ fontSize: 26, textAlign: 'center' }}>🎡</Text>
               </View>
             </Animated.View>
           </View>
@@ -130,7 +142,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
           {/* Actions */}
           <View style={styles.actionsRow}>
             {selectedCat ? (
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.confirmBtn}
                 onPress={() => {
                   onSelectCategory(selectedCat);
@@ -140,7 +152,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
                 <Text style={styles.confirmBtnText}>العب بالفئة دي الآن 🎯</Text>
               </TouchableOpacity>
             ) : (
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[styles.spinBtn, spinning && styles.spinBtnDisabled]}
                 onPress={startSpin}
                 disabled={spinning}
@@ -205,9 +217,9 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   wheel: {
-    width: 170,
-    height: 170,
-    borderRadius: 85,
+    width: 260,
+    height: 260,
+    borderRadius: 130,
     borderWidth: 5,
     borderColor: theme.colors.gold,
     backgroundColor: theme.colors.surfaceElevated,
@@ -219,15 +231,15 @@ const styles = StyleSheet.create({
     shadowRadius: 15,
   },
   wheelInner: {
-    width: 130,
-    height: 130,
-    borderRadius: 65,
+    width: 62,
+    height: 62,
+    borderRadius: 31,
     backgroundColor: theme.colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
-    borderStyle: 'dashed',
-    borderColor: theme.colors.surfaceBorder,
+    borderColor: theme.colors.gold,
+    zIndex: 5,
   },
   resultBadge: {
     backgroundColor: theme.colors.amberGlow,

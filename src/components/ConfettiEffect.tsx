@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { View, StyleSheet, Animated, Dimensions } from 'react-native';
+import { View, StyleSheet, Animated, Dimensions, Platform } from 'react-native';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const CONFETTI_COLORS = ['#FFD700', '#F59E0B', '#10B981', '#EC4899', '#3B82F6', '#8B5CF6', '#FFFFFF'];
@@ -31,17 +31,17 @@ export const ConfettiEffect: React.FC = () => {
             Animated.timing(p.animY, {
               toValue: SCREEN_HEIGHT + 40,
               duration: p.duration,
-              useNativeDriver: true,
+              useNativeDriver: Platform.OS !== 'web',
             }),
             Animated.timing(p.animX, {
               toValue: p.driftX,
               duration: p.duration,
-              useNativeDriver: true,
+              useNativeDriver: Platform.OS !== 'web',
             }),
             Animated.timing(p.animRotate, {
               toValue: 1,
               duration: p.duration,
-              useNativeDriver: true,
+              useNativeDriver: Platform.OS !== 'web',
             }),
           ]),
         ])

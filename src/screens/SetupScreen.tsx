@@ -161,7 +161,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
       >
         {/* Header */}
         <View style={styles.header}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.resetButton}
             onPress={handleResetQuestionsHistory}
             activeOpacity={0.7}
@@ -190,7 +190,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
 
         {/* Live Buzzer Multiplayer Banner */}
         {onOpenBuzzerLobby && (
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.buzzerEntryBanner}
             onPress={onOpenBuzzerLobby}
             activeOpacity={0.85}
@@ -219,7 +219,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>طريقة اللعب</Text>
           <View style={styles.modeToggleContainer}>
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[
                 styles.modeOption,
                 mode === 'individuals' && styles.modeOptionActive,
@@ -238,7 +238,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[
                 styles.modeOption,
                 mode === 'teams' && styles.modeOptionActive,
@@ -263,7 +263,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>نقاط الفوز (التارجت)</Text>
           <View style={styles.scoreRow}>
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[styles.scoreCounterBtn, styles.scoreCounterMinus]}
               onPress={() => {
                 soundManager.playChipClick();
@@ -280,7 +280,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               <Text style={styles.scoreUnit}>نقاط</Text>
             </View>
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[styles.scoreCounterBtn, styles.scoreCounterPlus]}
               onPress={() => {
                 soundManager.playChipClick();
@@ -306,7 +306,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
           {playerNames.map((name, index) => (
             <View key={index} style={styles.playerItem}>
               {/* Delete button on left */}
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 onPress={() => handleRemovePlayer(index)}
                 style={styles.removeBtn}
                 activeOpacity={0.6}
@@ -337,7 +337,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
 
           {/* Add player row */}
           <View style={styles.addPlayerRow}>
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={styles.addPlayerBtn}
               onPress={handleAddPlayer}
               activeOpacity={0.8}
@@ -374,7 +374,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={styles.primaryBtn}
           onPress={handleContinue}
           activeOpacity={0.85}

@@ -30,7 +30,7 @@ export class ErrorBoundary extends Component<Props, State> {
         <View style={styles.container}>
           <Text style={styles.title}>عذراً، حدث خطأ أثناء تشغيل اللعبة!</Text>
           <Text style={styles.desc}>{this.state.errorText}</Text>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.btn}
             onPress={() => this.setState({ hasError: false, errorText: '' })}
           >

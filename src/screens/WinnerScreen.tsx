@@ -110,7 +110,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={styles.primaryBtn}
           onPress={onNewGameSamePlayers}
           activeOpacity={0.85}
@@ -119,7 +119,7 @@ export const WinnerScreen: React.FC<WinnerScreenProps> = ({
           <Text style={styles.primaryBtnText}>جيم جديد بنفس الأسماء</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={styles.secondaryBtn}
           onPress={onChangePlayers}
           activeOpacity={0.8}

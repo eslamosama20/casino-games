@@ -195,18 +195,20 @@ class BuzzerService {
   async createRoom(targetScore: number): Promise<{ ok: boolean; room?: LiveBuzzerRoom; error?: string }> {
     try {
       const db = getDb();
+      const now = Date.now();
+      const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
       let code = '';
       for (let i = 0; i < 15; i++) {
         const candidate = String(Math.floor(1000 + Math.random() * 9000));
         const snap = await get(ref(db, `rooms/${candidate}`));
-        if (!snap.exists()) {
+        const existingCreatedAt = snap.exists() ? snap.val()?.createdAt : null;
+        if (!snap.exists() || (existingCreatedAt && now - existingCreatedAt > ROOM_TTL_MS)) {
           code = candidate;
           break;
         }
       }
       if (!code) code = String(Math.floor(10000 + Math.random() * 90000));
 
-      const now = Date.now();
       const rawRoom: FirebaseRoomData = {
         code,
         targetScore: Number(targetScore) || 10,
@@ -242,7 +244,7 @@ class BuzzerService {
   ): Promise<{ ok: boolean; playerId?: string; room?: LiveBuzzerRoom; error?: string }> {
     try {
       const code = codeInput.trim();
-      const name = nameInput.trim().slice(0, 24);
+      const name = nameInput.trim().slice(0, 14);
       if (!name) return { ok: false, error: 'اكتب اسمك الأول!' };
 
       const db = getDb();
@@ -250,10 +252,15 @@ class BuzzerService {
       const snap = await get(roomRef);
 
       if (!snap.exists()) {
-        return { ok: false, error: 'كود الغرفة غير صحيح أو الغرفة مغلقة' };
+        return { ok: false, error: 'الغرفة غير موجودة أو مغلقة' };
       }
 
       const raw = snap.val() as FirebaseRoomData;
+      const ROOM_TTL_MS = 24 * 60 * 60 * 1000;
+      if (raw.createdAt && Date.now() - raw.createdAt > ROOM_TTL_MS) {
+        remove(roomRef).catch(() => {});
+        return { ok: false, error: 'الغرفة غير موجودة أو انتهت صلاحيتها' };
+      }
       const existingPlayers = raw.players ? Object.values(raw.players) : [];
 
       // Reconnect if a player with the exact same name is already in the room (prevents ghost duplicates on refresh)

@@ -146,7 +146,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
       >
         {/* Header */}
         <View style={styles.header}>
-          <TouchableOpacity style={styles.backBtn} onPress={handleBackPress} activeOpacity={0.75}>
+          <TouchableOpacity accessibilityRole="button" style={styles.backBtn} onPress={handleBackPress} activeOpacity={0.75}>
             <Text style={{ fontSize: 20, color: theme.colors.textPrimary, fontWeight: 'bold', marginLeft: 4 }}>
               →
             </Text>
@@ -161,7 +161,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
         {/* Role Switcher (only before room is created) */}
         {!hostedRoom && (
           <View style={styles.tabRow}>
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[styles.tabBtn, tab === 'host' && styles.tabBtnActive]}
               onPress={() => {
                 setTab('host');
@@ -175,7 +175,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[styles.tabBtn, tab === 'player' && styles.tabBtnActive]}
               onPress={() => {
                 setTab('player');
@@ -210,7 +210,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
             <Text style={styles.label}>الهدف للفوز (عدد النقاط):</Text>
             <View style={styles.scorePillsRow}>
               {[5, 10, 15, 20].map((val) => (
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   key={val}
                   style={[styles.scorePill, targetScore === val && styles.scorePillActive]}
                   onPress={() => setTargetScore(val)}
@@ -227,7 +227,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               ))}
             </View>
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={styles.primaryBtn}
               onPress={handleCreateRoom}
               disabled={loading}
@@ -250,7 +250,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
           <View style={styles.card}>
             <Text style={styles.lobbySubtitle}>ادّي الكود ده للمتسابقين عشان يدخلوا معاك:</Text>
 
-            <TouchableOpacity style={styles.codeBox} onPress={handleCopyCode} activeOpacity={0.8}>
+            <TouchableOpacity accessibilityRole="button" style={styles.codeBox} onPress={handleCopyCode} activeOpacity={0.8}>
               <Text style={styles.codeDigits}>{'\u2066'}{hostedRoom.code}{'\u2069'}</Text>
               <View style={styles.copyBadge}>
                 <Text style={{ fontSize: 13, marginLeft: 4 }}>
@@ -281,7 +281,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               <View style={styles.playersList}>
                 {hostedRoom.players.map((p, idx) => (
                   <View key={p.id} style={styles.playerRow}>
-                    <TouchableOpacity
+                    <TouchableOpacity accessibilityRole="button"
                       onPress={() => buzzerService.kickPlayer(hostedRoom.code, p.id)}
                       style={styles.kickBtn}
                     >
@@ -302,7 +302,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               </View>
             )}
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={[
                 styles.primaryBtn,
                 hostedRoom.players.length === 0 && styles.primaryBtnDisabled,
@@ -333,7 +333,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               placeholderTextColor={theme.colors.textMuted}
               value={playerName}
               onChangeText={setPlayerName}
-              maxLength={20}
+              maxLength={14}
               textAlign="right"
             />
 
@@ -349,7 +349,7 @@ export const BuzzerLobbyScreen: React.FC<BuzzerLobbyScreenProps> = ({
               textAlign="center"
             />
 
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={styles.primaryBtn}
               onPress={handleJoinRoom}
               disabled={loading}

@@ -62,6 +62,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   const [showPowerCardModal, setShowPowerCardModal] = useState<boolean>(false);
   const [showContestantCardsModal, setShowContestantCardsModal] = useState<boolean>(false);
   const [showExhaustedModal, setShowExhaustedModal] = useState<boolean>(false);
+  const [showExitModal, setShowExitModal] = useState<boolean>(false);
   const [showCategoryPicker, setShowCategoryPicker] = useState<boolean>(false);
   const [chosenCategoryFilter, setChosenCategoryFilter] = useState<string | null>(null);
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>({});
@@ -407,19 +408,10 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
   const diffBadge = getDifficultyBadge(currentQuestion?.difficulty);
 
-  // Safe quit prompt (supports Web window.confirm + Native Alert.alert)
+  // In-app exit confirmation modal (avoids browser window.confirm freezing)
   const handleQuitRequest = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    if (Platform.OS === 'web' && typeof window !== 'undefined') {
-      if (window.confirm('هل تريد إنهاء الجولة والرجوع للقائمة الرئيسية؟')) {
-        onQuitGame();
-      }
-    } else {
-      Alert.alert('إنهاء الجولة', 'هل تريد الرجوع للقائمة الرئيسية؟', [
-        { text: 'إلغاء', style: 'cancel' },
-        { text: 'خروج', style: 'destructive', onPress: onQuitGame },
-      ]);
-    }
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
+    setShowExitModal(true);
   };
 
   return (
@@ -427,7 +419,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       {/* Top Header */}
       <View style={styles.topBar}>
         <View style={styles.topBarIconsLeft}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={[styles.topBarBtn, styles.topBarExitBtn]}
             onPress={handleQuitRequest}
             activeOpacity={0.75}
@@ -435,7 +427,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             <Text style={styles.topBarExitText}>✕ خروج</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={[styles.topBarBtn, isMuted ? styles.topBarMutedBtn : styles.topBarSoundBtn]}
             onPress={handleToggleMute}
             activeOpacity={0.75}
@@ -449,7 +441,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         <Text style={styles.topBarTitle}>لوحة إدارة اللعبة</Text>
 
         <View style={styles.topBarLeftArea}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.contestantCardsTopBtn}
             onPress={() => {
               soundManager.playChipClick();
@@ -535,7 +527,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
                 {/* Score Controls */}
                 <View style={styles.scoreButtonsRow}>
-                  <TouchableOpacity
+                  <TouchableOpacity accessibilityRole="button"
                     style={[styles.miniBtn, styles.miniMinus]}
                     onPress={() => updateScore(p.id, -1)}
                     activeOpacity={0.7}
@@ -543,7 +535,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     <Text style={styles.miniBtnText}>{'\u2066'}-1{'\u2069'}</Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity accessibilityRole="button"
                     style={[styles.miniBtn, styles.miniPlus]}
                     onPress={() => updateScore(p.id, 1)}
                     activeOpacity={0.7}
@@ -558,7 +550,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   const pCard = cId ? getPowerCardById(cId) : undefined;
                   if (!pCard || !cId) return null;
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity accessibilityRole="button"
                       style={[
                         styles.playerPowerCardBadge,
                         { borderColor: pCard.color, backgroundColor: `${pCard.color}18` },
@@ -596,7 +588,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           </View>
 
           {buzzerState === 'locked' && (
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={styles.openBuzzerBtn}
               onPress={() => {
                 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
@@ -612,7 +604,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
           {buzzerState === 'open' && (
             <View style={styles.buzzerOpenRow}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.lockBuzzerSmallBtn}
                 onPress={() => buzzerService.lockBuzzer(liveRoomCode, false)}
                 activeOpacity={0.8}
@@ -650,7 +642,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   returnKeyType="done"
                 />
                 {customReactionMsg.length > 0 && (
-                  <TouchableOpacity
+                  <TouchableOpacity accessibilityRole="button"
                     style={styles.customMsgClearBtn}
                     onPress={() => setCustomReactionMsg('')}
                   >
@@ -664,7 +656,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   const awardPoints = (roomMedia?.pointsValue && roomMedia.pointsValue > 0) ? roomMedia.pointsValue : 1;
                   return (
                     <>
-                      <TouchableOpacity
+                      <TouchableOpacity accessibilityRole="button"
                         style={styles.buzzerCorrectBtn}
                         onPress={() => {
                           updateScore(buzzedBy.playerId, awardPoints, false, customReactionMsg);
@@ -676,7 +668,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                         <Text style={styles.buzzerCorrectBtnText}>صح (+{awardPoints}) وافتح 🔔</Text>
                       </TouchableOpacity>
 
-                      <TouchableOpacity
+                      <TouchableOpacity accessibilityRole="button"
                         style={styles.buzzerWrongReopenBtn}
                         onPress={() => {
                           updateScore(buzzedBy.playerId, -awardPoints, true, customReactionMsg);
@@ -691,7 +683,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                   );
                 })()}
 
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   style={styles.buzzerReopenAllBtn}
                   onPress={() => {
                     setCustomReactionMsg('');
@@ -743,7 +735,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           >
             {/* Category tag & Switcher Button */}
             <View style={styles.categoryRow}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[
                   styles.categoryTag,
                   { backgroundColor: currentCategory?.color ? `${currentCategory.color}25` : theme.colors.amberGlow },
@@ -758,7 +750,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 <Text style={{ fontSize: 11, color: currentCategory?.color || theme.colors.gold }}>▼</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.chooseCatBtn}
                 onPress={() => setShowCategoryPicker(true)}
                 activeOpacity={0.75}
@@ -807,7 +799,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             {/* Hint Box (if exists) */}
             {currentQuestion.hint && (
               <View style={styles.hintWrapper}>
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   style={styles.hintToggleBtn}
                   onPress={() => setShowHint(!showHint)}
                 >
@@ -827,7 +819,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             {/* Multiple Choice Options Lifeline for Contestants */}
             {currentQuestion.options && currentQuestion.options.length > 0 && (
               <View style={styles.optionsWrapper}>
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   style={styles.optionsToggleBtn}
                   onPress={() => {
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -914,7 +906,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 </View>
               )}
 
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[styles.toggleAnswerBtn, isAnswerVisible && styles.toggleAnswerBtnActive]}
                 onPress={async () => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -951,16 +943,16 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             <View style={styles.timerWidget}>
               <View style={styles.timerHeader}>
                 <View style={styles.timerControlsLeft}>
-                  <TouchableOpacity onPress={() => handleResetTimer()} style={styles.timerResetBtn}>
+                  <TouchableOpacity accessibilityRole="button" onPress={() => handleResetTimer()} style={styles.timerResetBtn}>
                     <Text style={{ fontSize: 16 }}>🔄</Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity onPress={handleCycleTimerDuration} style={styles.timerDurationBtn}>
+                  <TouchableOpacity accessibilityRole="button" onPress={handleCycleTimerDuration} style={styles.timerDurationBtn}>
                     <Text style={styles.timerDurationText}>{timerDuration}ث</Text>
                   </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   style={[styles.timerButton, timerRunning && styles.timerButtonActive]}
                   onPress={handleToggleTimer}
                   activeOpacity={0.8}
@@ -1001,7 +993,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={styles.nextBtn}
           onPress={() => handleNextQuestion()}
           activeOpacity={0.85}
@@ -1010,6 +1002,52 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           <Text style={{ fontSize: 20, color: theme.colors.background, marginLeft: 6 }}>⏭</Text>
         </TouchableOpacity>
       </View>
+
+      {/* In-App Exit Confirmation Modal */}
+      <Modal
+        visible={showExitModal}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowExitModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalCard}>
+            <Text style={{ fontSize: 40, textAlign: 'center', marginBottom: 8 }}>🚪</Text>
+            <Text style={styles.modalTitle}>إنهاء الجولة</Text>
+            <Text style={styles.modalMessage}>
+              هل تريد إنهاء الجولة الحالية والرجوع للقائمة الرئيسية؟
+            </Text>
+
+            <View style={styles.modalActions}>
+              <TouchableOpacity
+                style={styles.modalCancelBtn}
+                onPress={() => setShowExitModal(false)}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="إلغاء"
+              >
+                <Text style={styles.modalCancelText}>إلغاء</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={[styles.modalConfirmBtn, { backgroundColor: theme.colors.danger }]}
+                onPress={() => {
+                  setShowExitModal(false);
+                  if (liveRoomCode) {
+                    buzzerService.closeRoom(liveRoomCode);
+                  }
+                  onQuitGame();
+                }}
+                activeOpacity={0.8}
+                accessibilityRole="button"
+                accessibilityLabel="خروج"
+              >
+                <Text style={[styles.modalConfirmText, { color: '#FFFFFF' }]}>خروج</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
 
       {/* Exhausted Questions Modal */}
       <Modal
@@ -1026,7 +1064,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
             </Text>
 
             <View style={styles.modalActions}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.modalCancelBtn}
                 onPress={onQuitGame}
                 activeOpacity={0.8}
@@ -1034,7 +1072,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 <Text style={styles.modalCancelText}>الرجوع للإعدادات</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.modalConfirmBtn}
                 onPress={handleResetPoolAndContinue}
                 activeOpacity={0.8}
@@ -1056,7 +1094,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         <View style={styles.modalOverlay}>
           <View style={styles.catPickerCard}>
             <View style={styles.catPickerHeader}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={styles.closeBtn}
                 onPress={() => setShowCategoryPicker(false)}
                 activeOpacity={0.7}
@@ -1072,7 +1110,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
             <ScrollView style={styles.catListScroll} showsVerticalScrollIndicator={false}>
               {/* Option: Random / All Categories */}
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 style={[
                   styles.catOptionItem,
                   chosenCategoryFilter === null && styles.catOptionItemActive,
@@ -1097,7 +1135,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 const isSelected = chosenCategoryFilter === cat.id;
                 const remaining = categoryCounts[cat.id] ?? 0;
                 return (
-                  <TouchableOpacity
+                  <TouchableOpacity accessibilityRole="button"
                     key={cat.id}
                     style={[
                       styles.catOptionItem,
@@ -1143,7 +1181,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
         <View style={styles.modalOverlay}>
           <View style={styles.cardsOverviewCard}>
             <View style={styles.catPickerHeader}>
-              <TouchableOpacity
+              <TouchableOpacity accessibilityRole="button"
                 onPress={() => setShowContestantCardsModal(false)}
                 style={styles.closeBtn}
               >
@@ -1175,7 +1213,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     </View>
 
                     {pCard ? (
-                      <TouchableOpacity
+                      <TouchableOpacity accessibilityRole="button"
                         style={[styles.inspectBtn, { backgroundColor: pCard.color }]}
                         onPress={() => {
                           setShowContestantCardsModal(false);
@@ -1201,7 +1239,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
               <View style={styles.allCardsGrid}>
                 {POWER_CARDS.map((c) => (
-                  <TouchableOpacity
+                  <TouchableOpacity accessibilityRole="button"
                     key={c.id}
                     style={[styles.miniCardPreview, { borderColor: c.color }]}
                     onPress={() => {

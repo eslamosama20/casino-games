@@ -222,7 +222,7 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
       {/* Host Controls */}
       {isHost && !revealed && (
         <View style={styles.hostControlsRow}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.manualRevealBtn}
             onPress={() => {
               soundManager.playChipClick();

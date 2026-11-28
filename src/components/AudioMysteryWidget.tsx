@@ -73,8 +73,8 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
       const createBarLoop = (val: Animated.Value, minVal: number, maxVal: number, dur: number) => {
         return Animated.loop(
           Animated.sequence([
-            Animated.timing(val, { toValue: maxVal, duration: dur, useNativeDriver: true }),
-            Animated.timing(val, { toValue: minVal, duration: dur, useNativeDriver: true }),
+            Animated.timing(val, { toValue: maxVal, duration: dur, useNativeDriver: Platform.OS !== 'web' }),
+            Animated.timing(val, { toValue: minVal, duration: dur, useNativeDriver: Platform.OS !== 'web' }),
           ])
         );
       };
@@ -296,7 +296,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
 
         {/* Controls */}
         <View style={styles.controlsRow}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={[styles.playBtn, isPlaying && styles.pauseBtn]}
             onPress={handleTogglePlay}
             activeOpacity={0.8}
@@ -310,7 +310,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.replayBtn}
             onPress={handleReplay}
             activeOpacity={0.7}
@@ -320,7 +320,7 @@ export const AudioMysteryWidget: React.FC<AudioMysteryWidgetProps> = ({
           </TouchableOpacity>
 
           {isHost && !revealed && onManualReveal && (
-            <TouchableOpacity
+            <TouchableOpacity accessibilityRole="button"
               style={styles.hostRevealBtn}
               onPress={onManualReveal}
               activeOpacity={0.7}

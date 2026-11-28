@@ -78,14 +78,14 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.backBtn} onPress={onBack} activeOpacity={0.7}>
+        <TouchableOpacity accessibilityRole="button" style={styles.backBtn} onPress={onBack} activeOpacity={0.7}>
           <Text style={{ fontSize: 20, color: theme.colors.textPrimary }}>→</Text>
         </TouchableOpacity>
 
         <Text style={styles.headerTitle}>اختيار الفئات ({categories.length})</Text>
 
         <View style={styles.headerActions}>
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.rouletteTriggerBtn}
             onPress={() => setShowRoulette(true)}
             activeOpacity={0.7}
@@ -94,7 +94,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
             <Text style={styles.rouletteTriggerText}>عجلة الحظ</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity accessibilityRole="button"
             style={styles.selectAllBtn}
             onPress={handleToggleSelectAll}
             activeOpacity={0.7}
@@ -126,7 +126,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
               const remaining = remainingCounts[cat.id] ?? 0;
 
               return (
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   key={cat.id}
                   style={[
                     styles.card,
@@ -191,7 +191,7 @@ export const CategoryScreen: React.FC<CategoryScreenProps> = ({
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={[
             styles.primaryBtn,
             selectedIds.length === 0 && styles.primaryBtnDisabled,

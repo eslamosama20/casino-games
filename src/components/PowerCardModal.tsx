@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Animated,
   ImageBackground,
+  Platform,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { PowerCard } from '../types';
@@ -60,14 +61,14 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
         toValue: 1,
         friction: 5,
         tension: 85,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
       }).start();
 
       // Pulsing glow animation
       const glowLoop = Animated.loop(
         Animated.sequence([
-          Animated.timing(glowAnim, { toValue: 1.25, duration: 650, useNativeDriver: true }),
-          Animated.timing(glowAnim, { toValue: 0.8, duration: 650, useNativeDriver: true }),
+          Animated.timing(glowAnim, { toValue: 1.25, duration: 650, useNativeDriver: Platform.OS !== 'web' }),
+          Animated.timing(glowAnim, { toValue: 0.8, duration: 650, useNativeDriver: Platform.OS !== 'web' }),
         ])
       );
       glowLoop.start();
@@ -82,7 +83,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
           Animated.timing(flipAnim, {
             toValue: 180,
             duration: 800,
-            useNativeDriver: true,
+            useNativeDriver: Platform.OS !== 'web',
           }).start();
         }, 800);
       }
@@ -121,7 +122,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onDismiss}>
       <View style={styles.overlay}>
         {/* Background tap to dismiss */}
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={StyleSheet.absoluteFill}
           onPress={() => {
             soundManager.playChipClick();
@@ -131,7 +132,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
         />
 
         {/* Top Quick Close Button */}
-        <TouchableOpacity
+        <TouchableOpacity accessibilityRole="button"
           style={styles.topCloseFloatingBtn}
           onPress={() => {
             soundManager.playChipClick();
@@ -314,7 +315,7 @@ export const PowerCardModal: React.FC<PowerCardModalProps> = ({
                 </View>
 
                 {/* Dismiss / Continue Button */}
-                <TouchableOpacity
+                <TouchableOpacity accessibilityRole="button"
                   style={[styles.continueBtn, { backgroundColor: card.color }]}
                   onPress={() => {
                     soundManager.playChipClick();
