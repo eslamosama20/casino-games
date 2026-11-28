@@ -805,7 +805,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                 >
                   <Text style={{ fontSize: 15, marginRight: 4 }}>💡</Text>
                   <Text style={styles.hintToggleText}>
-                    {showHint ? 'إخفاء التلميح' : 'تلميح للمتسابق؟ 💡'}
+                    {showHint ? 'إخفاء التلميح' : 'تلميح للمتسابق؟'}
                   </Text>
                 </TouchableOpacity>
                 {showHint && (
