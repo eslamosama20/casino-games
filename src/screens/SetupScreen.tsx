@@ -176,24 +176,12 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
           </View>
         </View>
 
-        {/* Sync Badge */}
-        {syncStatus && (
+        {/* Sync Badge (shown only when online API sync succeeds) */}
+        {syncStatus && syncStatus.isOnline && (
           <View style={styles.syncBadgeContainer}>
-            <View
-              style={[
-                styles.syncBadge,
-                syncStatus.isOnline ? styles.syncBadgeOnline : styles.syncBadgeOffline,
-              ]}
-            >
-              <Text style={{ fontSize: 13, marginLeft: 4 }}>
-                {syncStatus.isOnline ? '☁️' : '⚠️'}
-              </Text>
-              <Text
-                style={[
-                  styles.syncBadgeText,
-                  syncStatus.isOnline ? styles.syncBadgeTextOnline : styles.syncBadgeTextOffline,
-                ]}
-              >
+            <View style={[styles.syncBadge, styles.syncBadgeOnline]}>
+              <Text style={{ fontSize: 13, marginLeft: 4 }}>☁️</Text>
+              <Text style={[styles.syncBadgeText, styles.syncBadgeTextOnline]}>
                 {syncStatus.text}
               </Text>
             </View>
@@ -297,7 +285,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               onPress={() => {
                 soundManager.playChipClick();
                 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
-                setTargetScore(targetScore + 1);
+                setTargetScore(Math.min(50, targetScore + 1));
               }}
               activeOpacity={0.7}
             >
