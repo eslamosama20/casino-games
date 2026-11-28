@@ -1,59 +1,35 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>كازينو الألعاب</title>
-    <meta name="description" content="كازينو الألعاب - لعبة التحديات والمسابقات مع جرس لايف للمتسابقين وأسئلة تفاعلية حية" />
-    <link rel="icon" href="/casino-games/favicon.ico"/>
-    <link rel="apple-touch-icon" href="/casino-games/apple-touch-icon.png"/>
-    <meta name="theme-color" content="#0B0F19" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
-      html, body {
+      /* These styles make the body full-height */
+      html,
+      body {
         height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #0B0F19;
       }
+      /* These styles disable body scrolling if you are using <ScrollView> */
       body {
         overflow: hidden;
-        -webkit-font-smoothing: antialiased;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       }
+      /* These styles make the root element full-height */
       #root {
         display: flex;
         height: 100%;
         flex: 1;
-        background-color: #0B0F19;
-      }
-
-      @font-face {
-        font-family: 'MaterialCommunityIcons';
-        src: url('/casino-games/fonts/MaterialCommunityIcons.6e435534bd35da5fef04168860a9b8fa.ttf') format('truetype'),
-             url('/casino-games/fonts/MaterialCommunityIcons.ttf') format('truetype');
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'Ionicons';
-        src: url('/casino-games/fonts/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf') format('truetype'),
-             url('/casino-games/fonts/Ionicons.ttf') format('truetype');
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'FontAwesome';
-        src: url('/casino-games/fonts/FontAwesome.b06871f281fee6b241d60582ae9369b9.ttf') format('truetype'),
-             url('/casino-games/fonts/FontAwesome.ttf') format('truetype');
-        font-display: swap;
       }
     </style>
-  </head>
+  <link rel="icon" href="/favicon.ico"/></head>
 
   <body>
-    <noscript>يجب تفعيل الجافاسكربت لتشغيل اللعبة.</noscript>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!-- The root element for your Expo app. -->
     <div id="root"></div>
-    <script src="/casino-games/_expo/static/js/web/index-50e005bcd96a857ce7cbb421675be34e.js" defer></script>
-  </body>
+  <script src="/_expo/static/js/web/index-142febd653bf063155f3c0ac57600824.js" defer></script>
+</body>
 </html>
