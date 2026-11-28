@@ -1,5 +1,5 @@
 {
-  "version": 27,
+  "version": 28,
   "categories": [
     {
       "id": "football",
@@ -10717,7 +10717,7 @@
     {
       "id": "rev_080",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'ن - س - ل'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'ن - ا - س - ل'؟",
       "answer": "لسان",
       "hint": "عضو التذوق والنطق في الفم",
       "difficulty": "easy",
@@ -10744,7 +10744,7 @@
     {
       "id": "rev_083",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'س - ي - أ - ر'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'س - ي - ئ - ر'؟",
       "answer": "رئيس",
       "hint": "قائد الدولة أو المؤسسة",
       "difficulty": "easy",
@@ -10789,7 +10789,7 @@
     {
       "id": "rev_088",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'م - ه - ر'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'م - ر - ه'؟",
       "answer": "هرم",
       "hint": "بناء فرعوني مثلث كأهرامات الجيزة",
       "difficulty": "easy",
@@ -10816,7 +10816,7 @@
     {
       "id": "rev_091",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'ح - ل - ا - س'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'ح - ا - ل - س'؟",
       "answer": "سلاح",
       "hint": "أداة القتال والدفاع في المعركة",
       "difficulty": "easy",
@@ -10852,7 +10852,7 @@
     {
       "id": "rev_095",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'ة - ف - ا - ص - ع'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'ة - ف - ص - ا - ع'؟",
       "answer": "عاصفة",
       "hint": "رياح شديدة وأمطار وأتربة",
       "difficulty": "easy",
@@ -10870,7 +10870,7 @@
     {
       "id": "rev_097",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'ف - ت - ح - م'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'ف - ح - ت - م'؟",
       "answer": "متحف",
       "hint": "مبنى حفظ وعرض الآثار القديمة",
       "difficulty": "easy",
@@ -10879,7 +10879,7 @@
     {
       "id": "rev_098",
       "categoryId": "reversed_words",
-      "question": "اقرأ الكلمة المعكوسة: 'ر - ج - ت'؟",
+      "question": "اقرأ الكلمة المعكوسة: 'ر - ج - ا - ت'؟",
       "answer": "تاجر",
       "hint": "يبيع ويشتري البضائع في السوق",
       "difficulty": "easy",

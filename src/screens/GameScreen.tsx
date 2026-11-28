@@ -86,7 +86,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       toValue: 1,
       friction: 6,
       tension: 60,
-      useNativeDriver: true,
+      useNativeDriver: Platform.OS !== 'web',
     }).start();
   };
 
@@ -274,7 +274,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       toValue: 1,
       friction: 4,
       tension: 75,
-      useNativeDriver: true,
+      useNativeDriver: Platform.OS !== 'web',
     }).start();
     setTimeout(() => {
       setScoreBadge(null);
@@ -308,7 +308,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
     setShowHint(false);
     setShowOptions(false);
     if (liveRoomCode) {
-      buzzerService.openBuzzer(liveRoomCode, true);
+      buzzerService.openBuzzer(liveRoomCode, true, true);
     }
 
     const filterToUse = specificCatId !== undefined ? specificCatId : chosenCategoryFilter;
@@ -528,7 +528,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
 
                 <View style={styles.scoreRow}>
                   <Text style={[styles.scoreMain, p.score < 0 && styles.scoreNegative]}>
-                    {p.score}
+                    {'\u2066'}{p.score}{'\u2069'}
                   </Text>
                   <Text style={styles.scoreTarget}>/{targetScore}</Text>
                 </View>
@@ -540,7 +540,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     onPress={() => updateScore(p.id, -1)}
                     activeOpacity={0.7}
                   >
-                    <Text style={styles.miniBtnText}>-1</Text>
+                    <Text style={styles.miniBtnText}>{'\u2066'}-1{'\u2069'}</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
@@ -548,7 +548,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
                     onPress={() => updateScore(p.id, 1)}
                     activeOpacity={0.7}
                   >
-                    <Text style={styles.miniBtnText}>+1</Text>
+                    <Text style={styles.miniBtnText}>{'\u2066'}+1{'\u2069'}</Text>
                   </TouchableOpacity>
                 </View>
 
@@ -1406,6 +1406,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
     writingDirection: 'rtl',
+    maxWidth: 96,
   },
   floatingScoreBadge: {
     position: 'absolute',
@@ -1456,6 +1457,7 @@ const styles = StyleSheet.create({
     color: theme.colors.gold,
     fontSize: 22,
     fontWeight: 'bold',
+    writingDirection: 'ltr',
   },
   scoreNegative: {
     color: theme.colors.danger,
@@ -1494,6 +1496,7 @@ const styles = StyleSheet.create({
     color: theme.colors.textPrimary,
     fontSize: 13,
     fontWeight: 'bold',
+    writingDirection: 'ltr',
   },
   centerSectionScroll: {
     flex: 1,
@@ -1911,6 +1914,8 @@ const styles = StyleSheet.create({
   },
   catPickerCard: {
     width: '100%',
+    maxWidth: 460,
+    alignSelf: 'center',
     maxHeight: '80%',
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.xl,

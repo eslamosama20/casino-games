@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,10 +7,12 @@ import {
   Animated,
   Easing,
   Modal,
+  Platform,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { theme } from '../constants/theme';
 import { Category } from '../types';
+import { getCategoryEmoji } from '../constants/emojis';
 
 interface RouletteModalProps {
   visible: boolean;
@@ -29,6 +31,15 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
   const [selectedCat, setSelectedCat] = useState<Category | null>(null);
   const spinValue = useRef(new Animated.Value(0)).current;
 
+  // Always reset previous result when reopening modal
+  useEffect(() => {
+    if (visible) {
+      setSelectedCat(null);
+      setSpinning(false);
+      spinValue.setValue(0);
+    }
+  }, [visible, spinValue]);
+
   const startSpin = () => {
     if (spinning || categories.length === 0) return;
     setSpinning(true);
@@ -44,7 +55,7 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
       toValue: targetDeg,
       duration: 3200,
       easing: Easing.out(Easing.cubic),
-      useNativeDriver: true,
+      useNativeDriver: Platform.OS !== 'web',
     }).start(() => {
       const winner = categories[randomIndex];
       setSelectedCat(winner);
@@ -82,8 +93,28 @@ export const CategoryRouletteModal: React.FC<RouletteModalProps> = ({
                 { transform: [{ rotate: spinInterpolation }] },
               ]}
             >
+              {categories.slice(0, 12).map((cat, idx, arr) => {
+                const angleDeg = (360 / arr.length) * idx;
+                const rad = (angleDeg * Math.PI) / 180;
+                const radius = 56;
+                const x = Math.sin(rad) * radius;
+                const y = -Math.cos(rad) * radius;
+                return (
+                  <View
+                    key={cat.id}
+                    style={{
+                      position: 'absolute',
+                      transform: [{ translateX: x }, { translateY: y }],
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Text style={{ fontSize: 18 }}>{getCategoryEmoji(cat.id)}</Text>
+                  </View>
+                );
+              })}
               <View style={styles.wheelInner}>
-                <Text style={{ fontSize: 56, textAlign: 'center' }}>🎰</Text>
+                <Text style={{ fontSize: 22, textAlign: 'center' }}>🎡</Text>
               </View>
             </Animated.View>
           </View>
@@ -136,6 +167,8 @@ const styles = StyleSheet.create({
   },
   card: {
     width: '100%',
+    maxWidth: 440,
+    alignSelf: 'center',
     backgroundColor: theme.colors.surface,
     borderRadius: theme.borderRadius.xl,
     padding: theme.spacing.xl,

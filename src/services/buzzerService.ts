@@ -255,20 +255,32 @@ class BuzzerService {
 
       const raw = snap.val() as FirebaseRoomData;
       const existingPlayers = raw.players ? Object.values(raw.players) : [];
-      if (existingPlayers.length >= 16) {
-        return { ok: false, error: 'الغرفة ممتلئة (الحد الأقصى 16 لاعب)' };
+
+      // Reconnect if a player with the exact same name is already in the room (prevents ghost duplicates on refresh)
+      const existingMatch = existingPlayers.find(
+        (p) => p.name.trim().toLowerCase() === name.toLowerCase()
+      );
+
+      let playerId: string;
+      if (existingMatch) {
+        playerId = existingMatch.id;
+        await update(ref(db, `rooms/${code}/players/${playerId}`), {
+          connected: true,
+        });
+      } else {
+        if (existingPlayers.length >= 16) {
+          return { ok: false, error: 'الغرفة ممتلئة (الحد الأقصى 16 لاعب)' };
+        }
+        playerId = `lp_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+        const playerObj: Player = {
+          id: playerId,
+          name,
+          score: 0,
+          connected: true,
+        };
+        const playerRef = ref(db, `rooms/${code}/players/${playerId}`);
+        await set(playerRef, playerObj);
       }
-
-      const playerId = `lp_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
-      const playerObj: Player = {
-        id: playerId,
-        name,
-        score: 0,
-        connected: true,
-      };
-
-      const playerRef = ref(db, `rooms/${code}/players/${playerId}`);
-      await set(playerRef, playerObj);
 
       // Automatically mark disconnected if phone drops offline
       try {
@@ -322,7 +334,7 @@ class BuzzerService {
     } catch {}
   }
 
-  async openBuzzer(code: string, resetLockouts = false) {
+  async openBuzzer(code: string, resetLockouts = false, clearOptions = false) {
     try {
       const db = getDb();
       const updates: Record<string, any> = {
@@ -332,6 +344,9 @@ class BuzzerService {
       };
       if (resetLockouts) {
         updates.lockedOutPlayerIds = null;
+      }
+      if (clearOptions) {
+        updates.currentOptions = null;
       }
       await update(ref(db, `rooms/${code}`), updates);
     } catch {}
@@ -355,43 +370,51 @@ class BuzzerService {
   }
 
   // ATOMIC FIRST-PRESS TRANSACTION: Guaranteed only the very first press wins!
-  async pressBuzzer(code: string, playerId: string) {
+  // applyLocally: false prevents optimistic UI flash ("أنت الأول") on losing devices before server confirms.
+  async pressBuzzer(code: string, playerId: string): Promise<boolean> {
     try {
       const db = getDb();
       const roomRef = ref(db, `rooms/${code}`);
-      await runTransaction(roomRef, (current: FirebaseRoomData | null) => {
-        // On Firebase RTDB speculative first pass, current can be null -> return null (not undefined) so Firebase fetches server state
-        if (current === null) return null;
-        if (current.buzzerState !== 'open') return undefined; // Abort: already buzzed or locked
-        if (current.lockedOutPlayerIds && current.lockedOutPlayerIds[playerId]) return undefined;
-        const player = current.players?.[playerId];
-        if (!player) return undefined;
+      const result = await runTransaction(
+        roomRef,
+        (current: FirebaseRoomData | null) => {
+          // On Firebase RTDB speculative first pass, current can be null -> return null (not undefined) so Firebase fetches server state
+          if (current === null) return null;
+          if (current.buzzerState !== 'open') return undefined; // Abort: already buzzed or locked
+          if (current.lockedOutPlayerIds && current.lockedOutPlayerIds[playerId]) return undefined;
+          const player = current.players?.[playerId];
+          if (!player) return undefined;
 
-        const now = Date.now();
-        current.buzzerState = 'buzzed';
-        current.buzzedBy = {
-          playerId: player.id,
-          name: player.name,
-          timestamp: now,
-        };
+          const now = Date.now();
+          current.buzzerState = 'buzzed';
+          current.buzzedBy = {
+            playerId: player.id,
+            name: player.name,
+            timestamp: now,
+          };
 
-        // If media (e.g. image blur) is active, freeze it at this exact millisecond!
-        if (current.currentMedia && !current.currentMedia.frozenAt && !current.currentMedia.revealed) {
-          const duration = current.currentMedia.revealDuration || 10;
-          const elapsedSec = Math.min(
-            duration,
-            Math.max(1, Math.ceil((now - current.currentMedia.startedAt) / 1000))
-          );
-          const points = elapsedSec <= 3 ? 3 : elapsedSec <= 7 ? 2 : 1;
-          current.currentMedia.frozenAt = now;
-          current.currentMedia.buzzedSecond = elapsedSec;
-          current.currentMedia.pointsValue = points;
-        }
+          // If media (e.g. image blur) is active, freeze it at this exact millisecond!
+          if (current.currentMedia && !current.currentMedia.frozenAt && !current.currentMedia.revealed) {
+            const duration = current.currentMedia.revealDuration || 10;
+            const elapsedSec = Math.min(
+              duration,
+              Math.max(1, Math.ceil((now - current.currentMedia.startedAt) / 1000))
+            );
+            const points = elapsedSec <= 3 ? 3 : elapsedSec <= 6 ? 2 : 1;
+            current.currentMedia.frozenAt = now;
+            current.currentMedia.buzzedSecond = elapsedSec;
+            current.currentMedia.pointsValue = points;
+          }
 
-        current.lastActivity = now;
-        return current;
-      });
-    } catch {}
+          current.lastActivity = now;
+          return current;
+        },
+        { applyLocally: false }
+      );
+      return Boolean(result.committed);
+    } catch {
+      return false;
+    }
   }
 
   async updateScore(

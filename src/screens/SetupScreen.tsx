@@ -104,11 +104,31 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
     );
   };
 
+  const handleSwitchMode = (nextMode: GameMode) => {
+    setMode(nextMode);
+    setPlayerNames((prev) =>
+      prev.map((n, idx) => {
+        const trimmed = n.trim();
+        if (nextMode === 'teams' && /^اللاعب\s+\d+$/.test(trimmed)) {
+          return `فريق ${idx + 1}`;
+        }
+        if (nextMode === 'individuals' && /^فريق\s+\d+$/.test(trimmed)) {
+          return `اللاعب ${idx + 1}`;
+        }
+        return n;
+      })
+    );
+  };
+
   const handleContinue = () => {
-    // Validate names are not empty
+    // Validate names are not empty and deduplicate identical names
+    const seenCounts: Record<string, number> = {};
     const cleanedNames = playerNames.map((n, idx) => {
-      const trimmed = n.trim();
-      return trimmed.length > 0 ? trimmed : (mode === 'teams' ? `فريق ${idx + 1}` : `اللاعب ${idx + 1}`);
+      const trimmed = n.trim().slice(0, 14);
+      const baseName = trimmed.length > 0 ? trimmed : (mode === 'teams' ? `فريق ${idx + 1}` : `اللاعب ${idx + 1}`);
+      const key = baseName.toLowerCase();
+      seenCounts[key] = (seenCounts[key] || 0) + 1;
+      return seenCounts[key] > 1 ? `${baseName} (${seenCounts[key]})` : baseName;
     });
 
     if (cleanedNames.length < 2) {
@@ -216,7 +236,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
                 styles.modeOption,
                 mode === 'individuals' && styles.modeOptionActive,
               ]}
-              onPress={() => setMode('individuals')}
+              onPress={() => handleSwitchMode('individuals')}
               activeOpacity={0.8}
             >
               <Text style={{ fontSize: 18, marginLeft: 6 }}>👤</Text>
@@ -235,7 +255,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
                 styles.modeOption,
                 mode === 'teams' && styles.modeOptionActive,
               ]}
-              onPress={() => setMode('teams')}
+              onPress={() => handleSwitchMode('teams')}
               activeOpacity={0.8}
             >
               <Text style={{ fontSize: 18, marginLeft: 6 }}>👥</Text>
@@ -316,6 +336,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
                 placeholder={mode === 'teams' ? `فريق ${index + 1}` : `اللاعب ${index + 1}`}
                 placeholderTextColor={theme.colors.textMuted}
                 textAlign="right"
+                maxLength={14}
                 returnKeyType="done"
               />
 
@@ -345,6 +366,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onNext, onOpenBuzzerLo
               value={newPlayerInput}
               onChangeText={setNewPlayerInput}
               textAlign="right"
+              maxLength={14}
               onSubmitEditing={handleAddPlayer}
               returnKeyType="done"
             />

@@ -63,6 +63,7 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
 }) => {
   const [room, setRoom] = useState<LiveBuzzerRoom>(initialRoom);
   const [isMuted, setIsMuted] = useState<boolean>(soundManager.isMuted());
+  const [isConfirmingBuzz, setIsConfirmingBuzz] = useState<boolean>(false);
   const [scoreBubble, setScoreBubble] = useState<{
     id: number;
     delta: number;
@@ -224,22 +225,22 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         toValue: 1,
         friction: 5,
         tension: 90,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
       }),
       Animated.timing(bubbleOpacity, {
         toValue: 1,
         duration: 180,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
       }),
       Animated.timing(bubbleFloatY, {
         toValue: -115,
         duration: 2450,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
       }),
       Animated.timing(bubbleDriftX, {
         toValue: driftX,
         duration: 2450,
-        useNativeDriver: true,
+        useNativeDriver: Platform.OS !== 'web',
       }),
     ]).start();
 
@@ -250,12 +251,12 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
         Animated.timing(bubbleScale, {
           toValue: 1.48,
           duration: 190,
-          useNativeDriver: true,
+          useNativeDriver: Platform.OS !== 'web',
         }),
         Animated.timing(bubbleOpacity, {
           toValue: 0,
           duration: 190,
-          useNativeDriver: true,
+          useNativeDriver: Platform.OS !== 'web',
         }),
       ]).start(() => setScoreBubble(null));
     }, 2250);
@@ -272,11 +273,17 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
   const canBuzz = room.status === 'playing' && room.buzzerState === 'open' && !isLockedOut;
 
   useEffect(() => {
-    if (canBuzz) {
+    if (room.buzzerState !== 'open') {
+      setIsConfirmingBuzz(false);
+    }
+  }, [room.buzzerState]);
+
+  useEffect(() => {
+    if (canBuzz && !isConfirmingBuzz) {
       const loop = Animated.loop(
         Animated.sequence([
-          Animated.timing(pulseAnim, { toValue: 1.07, duration: 480, useNativeDriver: true }),
-          Animated.timing(pulseAnim, { toValue: 1.0, duration: 480, useNativeDriver: true }),
+          Animated.timing(pulseAnim, { toValue: 1.07, duration: 480, useNativeDriver: Platform.OS !== 'web' }),
+          Animated.timing(pulseAnim, { toValue: 1.0, duration: 480, useNativeDriver: Platform.OS !== 'web' }),
         ])
       );
       loop.start();
@@ -284,16 +291,18 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     } else {
       pulseAnim.setValue(1);
     }
-  }, [canBuzz, pulseAnim]);
+  }, [canBuzz, isConfirmingBuzz, pulseAnim]);
 
-  const handleBuzz = () => {
-    if (!canBuzz) return;
+  const handleBuzz = async () => {
+    if (!canBuzz || isConfirmingBuzz) return;
+    setIsConfirmingBuzz(true);
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy).catch(() => {});
     Animated.sequence([
-      Animated.timing(pressScale, { toValue: 0.9, duration: 60, useNativeDriver: true }),
-      Animated.spring(pressScale, { toValue: 1, friction: 4, useNativeDriver: true }),
+      Animated.timing(pressScale, { toValue: 0.9, duration: 60, useNativeDriver: Platform.OS !== 'web' }),
+      Animated.spring(pressScale, { toValue: 1, friction: 4, useNativeDriver: Platform.OS !== 'web' }),
     ]).start();
-    buzzerService.pressBuzzer(room.code, playerId);
+    await buzzerService.pressBuzzer(room.code, playerId);
+    setIsConfirmingBuzz(false);
   };
 
   const handleLeave = () => {
@@ -378,6 +387,12 @@ export const BuzzerPlayerScreen: React.FC<BuzzerPlayerScreenProps> = ({
     buzzerLabel = 'مقفول عليك';
     buzzerSub = 'استنى السؤال الجاي ⏳';
     buzzerEmoji = '⛔';
+  } else if (isConfirmingBuzz) {
+    buzzerBg = '#B45309';
+    buzzerBorder = '#FBBF24';
+    buzzerLabel = 'جاري التأكيد...';
+    buzzerSub = 'بنتحقق من أسرع ضغطة ⏳';
+    buzzerEmoji = '⏳';
   } else if (canBuzz) {
     buzzerBg = '#DC2626';
     buzzerBorder = '#FBBF24';

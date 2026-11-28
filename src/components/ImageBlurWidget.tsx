@@ -82,8 +82,8 @@ export const ImageBlurWidget: React.FC<ImageBlurWidgetProps> = ({
     if (frozenAt && !revealed) {
       const loop = Animated.loop(
         Animated.sequence([
-          Animated.timing(pulseAnim, { toValue: 1.05, duration: 400, useNativeDriver: true }),
-          Animated.timing(pulseAnim, { toValue: 1, duration: 400, useNativeDriver: true }),
+          Animated.timing(pulseAnim, { toValue: 1.05, duration: 400, useNativeDriver: Platform.OS !== 'web' }),
+          Animated.timing(pulseAnim, { toValue: 1, duration: 400, useNativeDriver: Platform.OS !== 'web' }),
         ])
       );
       loop.start();
