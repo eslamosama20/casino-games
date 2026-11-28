@@ -69668,21 +69668,6 @@
       ]
     },
     {
-      "id": "egs2_002",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أم كلثوم؟",
-      "answer": "طماي الزهايرة",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "توشكى الجديدة",
-        "بنغازي",
-        "الفيوم",
-        "طماي الزهايرة"
-      ]
-    },
-    {
       "id": "egs2_003",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة أم كلثوم؟",
@@ -69710,21 +69695,6 @@
         "1929",
         "1932",
         "1930"
-      ]
-    },
-    {
-      "id": "egs2_005",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت داليدا؟",
-      "answer": "شبرا",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "فارسكور",
-        "المغرب",
-        "محافظة المنيا",
-        "شبرا"
       ]
     },
     {
@@ -69758,21 +69728,6 @@
       ]
     },
     {
-      "id": "egs2_008",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عمرو دياب؟",
-      "answer": "بورسعيد",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الهرم",
-        "بورسعيد",
-        "وادي زم",
-        "أسوان"
-      ]
-    },
-    {
       "id": "egs2_009",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة سميرة سعيد؟",
@@ -69785,21 +69740,6 @@
         "1958",
         "1957",
         "1961"
-      ]
-    },
-    {
-      "id": "egs2_010",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سميرة سعيد؟",
-      "answer": "الرباط",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة القاهرة",
-        "سكربيك",
-        "الرباط",
-        "الإسماعيلية"
       ]
     },
     {
@@ -69818,21 +69758,6 @@
       ]
     },
     {
-      "id": "egs2_012",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت مينا مسعود؟",
-      "answer": "القاهرة",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "توشكى الجديدة",
-        "القاهرة",
-        "دمياط",
-        "سانتا مونيكا"
-      ]
-    },
-    {
       "id": "egs2_013",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة نتاشا أطلس؟",
@@ -69848,21 +69773,6 @@
       ]
     },
     {
-      "id": "egs2_014",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت نتاشا أطلس؟",
-      "answer": "سكربيك",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سكربيك",
-        "دمياط",
-        "السويس",
-        "أسوان"
-      ]
-    },
-    {
       "id": "egs2_015",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة عبد الحليم حافظ؟",
@@ -69875,21 +69785,6 @@
         "1925",
         "1929",
         "1932"
-      ]
-    },
-    {
-      "id": "egs2_016",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عبد الحليم حافظ؟",
-      "answer": "الحلوات",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "المغرب",
-        "مغاغة",
-        "محافظة البحيرة",
-        "الحلوات"
       ]
     },
     {
@@ -69923,21 +69818,6 @@
       ]
     },
     {
-      "id": "egs2_019",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت صباح؟",
-      "answer": "بدادون",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "السويس",
-        "الرياض",
-        "بدادون",
-        "بنغازي"
-      ]
-    },
-    {
       "id": "egs2_020",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة صباح؟",
@@ -69965,21 +69845,6 @@
         "1898",
         "1903",
         "1902"
-      ]
-    },
-    {
-      "id": "egs2_022",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمد عبد الوهاب؟",
-      "answer": "القاهرة",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سانتا مونيكا",
-        "القاهرة",
-        "محافظة البحيرة",
-        "أنتويرب"
       ]
     },
     {
@@ -70013,21 +69878,6 @@
       ]
     },
     {
-      "id": "egs2_025",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت وردة الجزائرية؟",
-      "answer": "باريس",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سيدي جابر",
-        "الإسماعيلية",
-        "باريس",
-        "الحلوات"
-      ]
-    },
-    {
       "id": "egs2_026",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة وردة الجزائرية؟",
@@ -70055,21 +69905,6 @@
         "1931",
         "1932",
         "1933"
-      ]
-    },
-    {
-      "id": "egs2_028",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت شادية؟",
-      "answer": "القاهرة",
-      "difficulty": "easy",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الجمالية",
-        "القاهرة",
-        "محافظة البحيرة",
-        "إمبابة"
       ]
     },
     {
@@ -70103,21 +69938,6 @@
       ]
     },
     {
-      "id": "egs2_031",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت فريد الأطرش؟",
-      "answer": "السويداء",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الجمالية",
-        "السويداء",
-        "دمنهور",
-        "السيدة زينب"
-      ]
-    },
-    {
       "id": "egs2_032",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة فريد الأطرش؟",
@@ -70145,21 +69965,6 @@
         "1947",
         "1943",
         "1946"
-      ]
-    },
-    {
-      "id": "egs2_034",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سعاد حسني؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سكربيك",
-        "دمياط",
-        "السويداء",
-        "القاهرة"
       ]
     },
     {
@@ -70208,21 +70013,6 @@
       ]
     },
     {
-      "id": "egs2_038",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت شيرين عبد الوهاب؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "المغرب",
-        "مركز فاقوس",
-        "القاهرة",
-        "محافظة الإسكندرية"
-      ]
-    },
-    {
       "id": "egs2_039",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة ليلى مراد؟",
@@ -70235,21 +70025,6 @@
         "1921",
         "1915",
         "1918"
-      ]
-    },
-    {
-      "id": "egs2_040",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ليلى مراد؟",
-      "answer": "محافظة الإسكندرية",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "أبو ظبي",
-        "الدرعية",
-        "محافظة الإسكندرية",
-        "إمبابة"
       ]
     },
     {
@@ -70283,21 +70058,6 @@
       ]
     },
     {
-      "id": "egs2_043",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حمزة نمرة؟",
-      "answer": "الدرعية",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "مصر",
-        "الدرعية",
-        "المنصورة"
-      ]
-    },
-    {
       "id": "egs2_044",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة روبي؟",
@@ -70310,21 +70070,6 @@
         "1980",
         "1985",
         "1979"
-      ]
-    },
-    {
-      "id": "egs2_045",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت روبي؟",
-      "answer": "محافظة القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "أسوان",
-        "أنتويرب",
-        "الإسماعيلية",
-        "محافظة القاهرة"
       ]
     },
     {
@@ -70343,21 +70088,6 @@
       ]
     },
     {
-      "id": "egs2_047",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت هشام عباس؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "آخن",
-        "السويداء",
-        "القاهرة",
-        "الزقازيق"
-      ]
-    },
-    {
       "id": "egs2_048",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة دنيا سمير غانم؟",
@@ -70373,21 +70103,6 @@
       ]
     },
     {
-      "id": "egs2_049",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت دنيا سمير غانم؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "العباسية",
-        "القاهرة",
-        "مغاغة",
-        "بيروت"
-      ]
-    },
-    {
       "id": "egs2_050",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة فايزة أحمد؟",
@@ -70400,21 +70115,6 @@
         "1934",
         "1935",
         "1932"
-      ]
-    },
-    {
-      "id": "egs2_051",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت فايزة أحمد؟",
-      "answer": "صيدا",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "وادي زم",
-        "آخن",
-        "الشرابية",
-        "صيدا"
       ]
     },
     {
@@ -70448,21 +70148,6 @@
       ]
     },
     {
-      "id": "egs2_054",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت كارول سماحة؟",
-      "answer": "بيروت",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "شبرا",
-        "بنغازي",
-        "سانتا مونيكا"
-      ]
-    },
-    {
       "id": "egs2_055",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة رشدي أباظة؟",
@@ -70475,21 +70160,6 @@
         "1926",
         "1929",
         "1928"
-      ]
-    },
-    {
-      "id": "egs2_056",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رشدي أباظة؟",
-      "answer": "الزقازيق",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الحلوات",
-        "الفيوم",
-        "دمياط",
-        "الزقازيق"
       ]
     },
     {
@@ -70523,21 +70193,6 @@
       ]
     },
     {
-      "id": "egs2_059",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت تامر حسني؟",
-      "answer": "الهرم",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "الهرم",
-        "ههيا",
-        "الرياض"
-      ]
-    },
-    {
       "id": "egs2_060",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة تحية كاريوكا؟",
@@ -70550,21 +70205,6 @@
         "1911",
         "1915",
         "1916"
-      ]
-    },
-    {
-      "id": "egs2_061",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت تحية كاريوكا؟",
-      "answer": "الإسماعيلية",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الفيوم",
-        "آخن",
-        "أبو ظبي",
-        "الإسماعيلية"
       ]
     },
     {
@@ -70598,21 +70238,6 @@
       ]
     },
     {
-      "id": "egs2_064",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت نجاة الصغيرة؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "المنصورة",
-        "القاهرة",
-        "العباسية",
-        "الدرعية"
-      ]
-    },
-    {
       "id": "egs2_065",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة كليمينت رافين؟",
@@ -70625,21 +70250,6 @@
         "1948",
         "1946",
         "1944"
-      ]
-    },
-    {
-      "id": "egs2_066",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت كليمينت رافين؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "ههيا",
-        "دمنهور",
-        "القاهرة",
-        "محافظة القاهرة"
       ]
     },
     {
@@ -70658,21 +70268,6 @@
       ]
     },
     {
-      "id": "egs2_068",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت يسرا؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الخرنفش",
-        "القاهرة",
-        "الجيزة",
-        "الفيوم"
-      ]
-    },
-    {
       "id": "egs2_069",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة أنوشكا؟",
@@ -70685,21 +70280,6 @@
         "1965",
         "1962",
         "1960"
-      ]
-    },
-    {
-      "id": "egs2_070",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أنوشكا؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة المنيا",
-        "طنطا",
-        "دمياط",
-        "القاهرة"
       ]
     },
     {
@@ -70718,21 +70298,6 @@
       ]
     },
     {
-      "id": "egs2_072",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت تامينو؟",
-      "answer": "أنتويرب",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمشق",
-        "الرباط",
-        "أنتويرب",
-        "مصر"
-      ]
-    },
-    {
       "id": "egs2_073",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة محمد منير؟",
@@ -70745,21 +70310,6 @@
         "1958",
         "1950",
         "1956"
-      ]
-    },
-    {
-      "id": "egs2_074",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمد منير؟",
-      "answer": "أسوان",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة الإسكندرية",
-        "أسوان",
-        "صيدا",
-        "بدادون"
       ]
     },
     {
@@ -70778,21 +70328,6 @@
       ]
     },
     {
-      "id": "egs2_076",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت آمال ماهر؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة القاهرة",
-        "دمنهور",
-        "الخرنفش",
-        "القاهرة"
-      ]
-    },
-    {
       "id": "egs2_077",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة بوب عزام؟",
@@ -70805,21 +70340,6 @@
         "1925",
         "1924",
         "1921"
-      ]
-    },
-    {
-      "id": "egs2_078",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت بوب عزام؟",
-      "answer": "الإسكندرية",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "طنطا",
-        "الإسكندرية",
-        "القاهرة",
-        "مصر"
       ]
     },
     {
@@ -70853,21 +70373,6 @@
       ]
     },
     {
-      "id": "egs2_081",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمد رمضان؟",
-      "answer": "محافظة قنا",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة قنا",
-        "فارسكور",
-        "روما",
-        "وادي زم"
-      ]
-    },
-    {
       "id": "egs2_082",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة رامي صبري؟",
@@ -70883,21 +70388,6 @@
       ]
     },
     {
-      "id": "egs2_083",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رامي صبري؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "القاهرة",
-        "باريس",
-        "السيدة زينب"
-      ]
-    },
-    {
       "id": "egs2_084",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة منير مراد؟",
@@ -70910,21 +70400,6 @@
         "1927",
         "1923",
         "1926"
-      ]
-    },
-    {
-      "id": "egs2_085",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت منير مراد؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الدرعية",
-        "دمياط",
-        "آخن",
-        "القاهرة"
       ]
     },
     {
@@ -70958,21 +70433,6 @@
       ]
     },
     {
-      "id": "egs2_088",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت جنات؟",
-      "answer": "وادي زم",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "شبرا",
-        "وادي زم",
-        "السويس",
-        "الكويت"
-      ]
-    },
-    {
       "id": "egs2_089",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة ليلى غفران؟",
@@ -70988,21 +70448,6 @@
       ]
     },
     {
-      "id": "egs2_090",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ليلى غفران؟",
-      "answer": "المغرب",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "المغرب",
-        "أبو النمرس",
-        "الرباط",
-        "السويداء"
-      ]
-    },
-    {
       "id": "egs2_091",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة هدى سلطان؟",
@@ -71015,21 +70460,6 @@
         "1925",
         "1928",
         "1922"
-      ]
-    },
-    {
-      "id": "egs2_092",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت هدى سلطان؟",
-      "answer": "كفر أبو جندي",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "روما",
-        "كفر أبو جندي",
-        "الزقازيق",
-        "الجيزة"
       ]
     },
     {
@@ -71063,21 +70493,6 @@
       ]
     },
     {
-      "id": "egs2_095",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حمزة علاء الدين؟",
-      "answer": "توشكى الجديدة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "توشكى الجديدة",
-        "وادي زم",
-        "القاهرة",
-        "أسوان"
-      ]
-    },
-    {
       "id": "egs2_096",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة حمزة علاء الدين؟",
@@ -71108,21 +70523,6 @@
       ]
     },
     {
-      "id": "egs2_098",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمد حماقي؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "المنصورة",
-        "بدادون",
-        "القاهرة",
-        "إمبابة"
-      ]
-    },
-    {
       "id": "egs2_099",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة كارمن سليمان؟",
@@ -71138,21 +70538,6 @@
       ]
     },
     {
-      "id": "egs2_100",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت كارمن سليمان؟",
-      "answer": "الزقازيق",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الإسماعيلية",
-        "دمنهور",
-        "سكربيك",
-        "الزقازيق"
-      ]
-    },
-    {
       "id": "egs2_101",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة رياض السنباطي؟",
@@ -71165,21 +70550,6 @@
         "1906",
         "1903",
         "1909"
-      ]
-    },
-    {
-      "id": "egs2_102",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رياض السنباطي؟",
-      "answer": "فارسكور",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمشق",
-        "وادي زم",
-        "فارسكور",
-        "أنتويرب"
       ]
     },
     {
@@ -71213,21 +70583,6 @@
       ]
     },
     {
-      "id": "egs2_105",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت إيهاب توفيق؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "باريس",
-        "مركز فاقوس",
-        "القاهرة",
-        "إمبابة"
-      ]
-    },
-    {
       "id": "egs2_106",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة مريم صالح؟",
@@ -71240,21 +70595,6 @@
         "1989",
         "1990",
         "1983"
-      ]
-    },
-    {
-      "id": "egs2_107",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت مريم صالح؟",
-      "answer": "محافظة بني سويف",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "توشكى الجديدة",
-        "الإسماعيلية",
-        "روما",
-        "محافظة بني سويف"
       ]
     },
     {
@@ -71273,21 +70613,6 @@
       ]
     },
     {
-      "id": "egs2_112",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت مصطفى قمر؟",
-      "answer": "الإسكندرية",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الإسكندرية",
-        "باريس",
-        "العباسية",
-        "الزقازيق"
-      ]
-    },
-    {
       "id": "egs2_113",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة أحمد عدوية؟",
@@ -71300,21 +70625,6 @@
         "1949",
         "1941",
         "1945"
-      ]
-    },
-    {
-      "id": "egs2_114",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أحمد عدوية؟",
-      "answer": "محافظة المنيا",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "إمبابة",
-        "روما",
-        "أنتويرب",
-        "محافظة المنيا"
       ]
     },
     {
@@ -71348,21 +70658,6 @@
       ]
     },
     {
-      "id": "egs2_117",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت دينا؟",
-      "answer": "روما",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "السويداء",
-        "الكويت",
-        "روما",
-        "صيدا"
-      ]
-    },
-    {
       "id": "egs2_118",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة إسماعيل ياسين؟",
@@ -71375,21 +70670,6 @@
         "1917",
         "1911",
         "1916"
-      ]
-    },
-    {
-      "id": "egs2_119",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت إسماعيل ياسين؟",
-      "answer": "السويس",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الهرم",
-        "الزقازيق",
-        "بورسعيد",
-        "السويس"
       ]
     },
     {
@@ -71453,21 +70733,6 @@
       ]
     },
     {
-      "id": "egs2_124",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت هاني شاكر؟",
-      "answer": "السيدة زينب",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمياط",
-        "عابدين",
-        "بنغازي",
-        "السيدة زينب"
-      ]
-    },
-    {
       "id": "egs2_125",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة هاني شاكر؟",
@@ -71498,21 +70763,6 @@
       ]
     },
     {
-      "id": "egs2_127",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ميس حمدان؟",
-      "answer": "أبو ظبي",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "السويداء",
-        "الحلوات",
-        "سانتا مونيكا",
-        "أبو ظبي"
-      ]
-    },
-    {
       "id": "egs2_128",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة دينا الوديدي؟",
@@ -71525,21 +70775,6 @@
         "1985",
         "1987",
         "1990"
-      ]
-    },
-    {
-      "id": "egs2_129",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت دينا الوديدي؟",
-      "answer": "الجيزة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "طماي الزهايرة",
-        "بيروت",
-        "سكربيك",
-        "الجيزة"
       ]
     },
     {
@@ -71558,21 +70793,6 @@
       ]
     },
     {
-      "id": "egs2_131",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أسماء أبو اليزيد؟",
-      "answer": "القاهرة",
-      "difficulty": "medium",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "آخن",
-        "دمنهور",
-        "القاهرة",
-        "السويداء"
-      ]
-    },
-    {
       "id": "egs2_132",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة زيزي عادل؟",
@@ -71588,21 +70808,6 @@
       ]
     },
     {
-      "id": "egs2_133",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت زيزي عادل؟",
-      "answer": "الكويت",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "مغاغة",
-        "الكويت",
-        "دمنهور",
-        "طنطا"
-      ]
-    },
-    {
       "id": "egs2_134",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة الشيخ إمام؟",
@@ -71615,21 +70820,6 @@
         "1916",
         "1920",
         "1914"
-      ]
-    },
-    {
-      "id": "egs2_135",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت الشيخ إمام؟",
-      "answer": "أبو النمرس",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الهرم",
-        "آخن",
-        "محافظة القاهرة",
-        "أبو النمرس"
       ]
     },
     {
@@ -71663,21 +70853,6 @@
       ]
     },
     {
-      "id": "egs2_138",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت علي كوبان؟",
-      "answer": "أسوان",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الرياض",
-        "الفيوم",
-        "الإسكندرية",
-        "أسوان"
-      ]
-    },
-    {
       "id": "egs2_139",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة علي كوبان؟",
@@ -71708,21 +70883,6 @@
       ]
     },
     {
-      "id": "egs2_141",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت مي كساب؟",
-      "answer": "طنطا",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "السويداء",
-        "أبو النمرس",
-        "طنطا",
-        "فارسكور"
-      ]
-    },
-    {
       "id": "egs2_142",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة شويكار؟",
@@ -71735,21 +70895,6 @@
         "1941",
         "1934",
         "1938"
-      ]
-    },
-    {
-      "id": "egs2_143",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت شويكار؟",
-      "answer": "الإسكندرية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الإسكندرية",
-        "الحلوات",
-        "طماي الزهايرة",
-        "محافظة الإسكندرية"
       ]
     },
     {
@@ -71783,21 +70928,6 @@
       ]
     },
     {
-      "id": "egs2_146",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حنان الطويل؟",
-      "answer": "الفيوم",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "الفيوم",
-        "بدادون",
-        "الإسماعيلية"
-      ]
-    },
-    {
       "id": "egs2_147",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة حنان الطويل؟",
@@ -71828,21 +70958,6 @@
       ]
     },
     {
-      "id": "egs2_149",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سمية الخشاب؟",
-      "answer": "الإسكندرية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "باريس",
-        "بنغازي",
-        "الإسكندرية",
-        "الرياض"
-      ]
-    },
-    {
       "id": "egs2_150",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة بليغ حمدي؟",
@@ -71855,21 +70970,6 @@
         "1934",
         "1936",
         "1939"
-      ]
-    },
-    {
-      "id": "egs2_151",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت بليغ حمدي؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "وادي زم",
-        "أبو ظبي",
-        "أنتويرب",
-        "القاهرة"
       ]
     },
     {
@@ -71903,21 +71003,6 @@
       ]
     },
     {
-      "id": "egs2_154",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمد فوزي؟",
-      "answer": "كفر أبو جندي",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "أبو النمرس",
-        "كفر أبو جندي",
-        "بنغازي",
-        "الرياض"
-      ]
-    },
-    {
       "id": "egs2_155",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة محمد فوزي؟",
@@ -71945,21 +71030,6 @@
         "1921",
         "1929",
         "1924"
-      ]
-    },
-    {
-      "id": "egs2_157",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت فؤاد المهندس؟",
-      "answer": "العباسية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "كفر أبو جندي",
-        "العباسية",
-        "بيروت",
-        "أبو النمرس"
       ]
     },
     {
@@ -71993,21 +71063,6 @@
       ]
     },
     {
-      "id": "egs2_160",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سما المصري؟",
-      "answer": "ههيا",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "العباسية",
-        "الدرعية",
-        "ههيا",
-        "أبو النمرس"
-      ]
-    },
-    {
       "id": "egs2_161",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة سيمون؟",
@@ -72020,21 +71075,6 @@
         "1966",
         "1969",
         "1963"
-      ]
-    },
-    {
-      "id": "egs2_162",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سيمون؟",
-      "answer": "شبرا",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الدرعية",
-        "شبرا",
-        "طنطا",
-        "عابدين"
       ]
     },
     {
@@ -72053,21 +71093,6 @@
       ]
     },
     {
-      "id": "egs2_164",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت فاطمة سعيد؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بورسعيد",
-        "القاهرة",
-        "سانتا مونيكا",
-        "الشرابية"
-      ]
-    },
-    {
       "id": "egs2_165",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة دنيا مسعود؟",
@@ -72080,21 +71105,6 @@
         "1979",
         "1982",
         "1981"
-      ]
-    },
-    {
-      "id": "egs2_166",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت دنيا مسعود؟",
-      "answer": "الإسكندرية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "محافظة المنيا",
-        "الدرعية",
-        "أسوان",
-        "الإسكندرية"
       ]
     },
     {
@@ -72113,21 +71123,6 @@
       ]
     },
     {
-      "id": "egs2_168",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حميد الشاعري؟",
-      "answer": "بنغازي",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "القاهرة",
-        "الزقازيق",
-        "بنغازي",
-        "عابدين"
-      ]
-    },
-    {
       "id": "egs2_169",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة أيتن عامر؟",
@@ -72140,21 +71135,6 @@
         "1991",
         "1986",
         "1987"
-      ]
-    },
-    {
-      "id": "egs2_170",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أيتن عامر؟",
-      "answer": "سيدي جابر",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سيدي جابر",
-        "توشكى الجديدة",
-        "الرباط",
-        "مغاغة"
       ]
     },
     {
@@ -72173,21 +71153,6 @@
       ]
     },
     {
-      "id": "egs2_172",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ساندي؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "القاهرة",
-        "السويس",
-        "محافظة بني سويف",
-        "محافظة الإسكندرية"
-      ]
-    },
-    {
       "id": "egs2_173",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة عمر خورشيد؟",
@@ -72200,21 +71165,6 @@
         "1944",
         "1945",
         "1947"
-      ]
-    },
-    {
-      "id": "egs2_174",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عمر خورشيد؟",
-      "answer": "عابدين",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "آخن",
-        "الشرابية",
-        "العباسية",
-        "عابدين"
       ]
     },
     {
@@ -72248,21 +71198,6 @@
       ]
     },
     {
-      "id": "egs2_177",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حكيم؟",
-      "answer": "مغاغة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "توشكى الجديدة",
-        "مغاغة",
-        "روما",
-        "مركز فاقوس"
-      ]
-    },
-    {
       "id": "egs2_178",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة زكريا أحمد؟",
@@ -72275,21 +71210,6 @@
         "1901",
         "1892",
         "1896"
-      ]
-    },
-    {
-      "id": "egs2_179",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت زكريا أحمد؟",
-      "answer": "الفيوم",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "كفر أبو جندي",
-        "الإسكندرية",
-        "الفيوم",
-        "محافظة القاهرة"
       ]
     },
     {
@@ -72323,21 +71243,6 @@
       ]
     },
     {
-      "id": "egs2_182",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رائف؟",
-      "answer": "واشنطن العاصمة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الزقازيق",
-        "بدادون",
-        "الدرعية",
-        "واشنطن العاصمة"
-      ]
-    },
-    {
       "id": "egs2_183",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة داود حسني؟",
@@ -72350,21 +71255,6 @@
         "1874",
         "1875",
         "1869"
-      ]
-    },
-    {
-      "id": "egs2_184",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت داود حسني؟",
-      "answer": "الجمالية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "أبو النمرس",
-        "الشرابية",
-        "إمبابة",
-        "الجمالية"
       ]
     },
     {
@@ -72398,21 +71288,6 @@
       ]
     },
     {
-      "id": "egs2_187",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت شريفة فاضل؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سكربيك",
-        "محافظة القاهرة",
-        "القاهرة",
-        "محافظة الإسكندرية"
-      ]
-    },
-    {
       "id": "egs2_188",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة شريفة فاضل؟",
@@ -72443,21 +71318,6 @@
       ]
     },
     {
-      "id": "egs2_190",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت تامر عاشور؟",
-      "answer": "دمياط",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "كفر أبو جندي",
-        "دمياط",
-        "الهرم",
-        "بيروت"
-      ]
-    },
-    {
       "id": "egs2_191",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة رشا رزق؟",
@@ -72473,21 +71333,6 @@
       ]
     },
     {
-      "id": "egs2_192",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رشا رزق؟",
-      "answer": "دمشق",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمشق",
-        "بنغازي",
-        "الجيزة",
-        "بيروت"
-      ]
-    },
-    {
       "id": "egs2_193",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة شعبان عبد الرحيم؟",
@@ -72500,21 +71345,6 @@
         "1954",
         "1955",
         "1956"
-      ]
-    },
-    {
-      "id": "egs2_194",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت شعبان عبد الرحيم؟",
-      "answer": "الشرابية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمياط",
-        "الحلوات",
-        "الشرابية",
-        "الإسكندرية"
       ]
     },
     {
@@ -72548,21 +71378,6 @@
       ]
     },
     {
-      "id": "egs2_197",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت سيد مكاوي؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "صيدا",
-        "سكربيك",
-        "القاهرة",
-        "العباسية"
-      ]
-    },
-    {
       "id": "egs2_198",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة سيد مكاوي؟",
@@ -72593,21 +71408,6 @@
       ]
     },
     {
-      "id": "egs2_200",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت رانيا يوسف؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بورسعيد",
-        "وادي زم",
-        "القاهرة",
-        "محافظة القاهرة"
-      ]
-    },
-    {
       "id": "egs2_201",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة حمادة هلال؟",
@@ -72620,21 +71420,6 @@
         "1980",
         "1976",
         "1977"
-      ]
-    },
-    {
-      "id": "egs2_202",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت حمادة هلال؟",
-      "answer": "مركز فاقوس",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الرياض",
-        "مركز فاقوس",
-        "الجيزة",
-        "محافظة بني سويف"
       ]
     },
     {
@@ -72653,21 +71438,6 @@
       ]
     },
     {
-      "id": "egs2_204",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت مي سليم؟",
-      "answer": "أبو ظبي",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "مركز فاقوس",
-        "أبو ظبي",
-        "سانتا مونيكا",
-        "باريس"
-      ]
-    },
-    {
       "id": "egs2_205",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة هاني عادل؟",
@@ -72680,21 +71450,6 @@
         "1981",
         "1973",
         "1972"
-      ]
-    },
-    {
-      "id": "egs2_206",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت هاني عادل؟",
-      "answer": "مصر",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "وادي زم",
-        "عابدين",
-        "مصر",
-        "أبو ظبي"
       ]
     },
     {
@@ -72713,21 +71468,6 @@
       ]
     },
     {
-      "id": "egs2_208",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ياسمين علي؟",
-      "answer": "محافظة البحيرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الكويت",
-        "محافظة المنيا",
-        "محافظة البحيرة",
-        "إمبابة"
-      ]
-    },
-    {
       "id": "egs2_209",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة ويجز؟",
@@ -72740,21 +71480,6 @@
         "1997",
         "2001",
         "2000"
-      ]
-    },
-    {
-      "id": "egs2_210",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ويجز؟",
-      "answer": "الإسكندرية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الإسكندرية",
-        "الكويت",
-        "مركز فاقوس",
-        "بدادون"
       ]
     },
     {
@@ -72773,21 +71498,6 @@
       ]
     },
     {
-      "id": "egs2_212",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت علي الحجار؟",
-      "answer": "إمبابة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "إمبابة",
-        "باريس",
-        "ههيا",
-        "وادي زم"
-      ]
-    },
-    {
       "id": "egs2_213",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة محمود شكوكو؟",
@@ -72800,21 +71510,6 @@
         "1909",
         "1908",
         "1915"
-      ]
-    },
-    {
-      "id": "egs2_214",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت محمود شكوكو؟",
-      "answer": "مصر",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "وادي زم",
-        "مصر",
-        "أبو النمرس",
-        "القاهرة"
       ]
     },
     {
@@ -72848,21 +71543,6 @@
       ]
     },
     {
-      "id": "egs2_217",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عتاب؟",
-      "answer": "الرياض",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الرياض",
-        "عابدين",
-        "الجمالية",
-        "السويداء"
-      ]
-    },
-    {
       "id": "egs2_218",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة عتاب؟",
@@ -72893,21 +71573,6 @@
       ]
     },
     {
-      "id": "egs2_220",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت جيهان راتب؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "سيدي جابر",
-        "عابدين",
-        "صيدا",
-        "القاهرة"
-      ]
-    },
-    {
       "id": "egs2_221",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة كارم محمود؟",
@@ -72920,21 +71585,6 @@
         "1922",
         "1927",
         "1920"
-      ]
-    },
-    {
-      "id": "egs2_222",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت كارم محمود؟",
-      "answer": "دمنهور",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "دمنهور",
-        "الحلوات",
-        "وادي زم",
-        "طنطا"
       ]
     },
     {
@@ -72968,21 +71618,6 @@
       ]
     },
     {
-      "id": "egs2_225",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت جابر أبو حسين؟",
-      "answer": "مصر",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "مصر",
-        "الإسكندرية",
-        "مغاغة",
-        "بدادون"
-      ]
-    },
-    {
       "id": "egs2_226",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة توفي المطرب/ـة جابر أبو حسين؟",
@@ -73010,21 +71645,6 @@
         "1932",
         "1935",
         "1931"
-      ]
-    },
-    {
-      "id": "egs2_228",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت نجاح سلام؟",
-      "answer": "بيروت",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الرباط",
-        "الهرم",
-        "الرياض",
-        "بيروت"
       ]
     },
     {
@@ -73058,21 +71678,6 @@
       ]
     },
     {
-      "id": "egs2_231",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت نسمة محجوب؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بدادون",
-        "مصر",
-        "القاهرة",
-        "إمبابة"
-      ]
-    },
-    {
       "id": "egs2_232",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة ميرهان حسين؟",
@@ -73085,21 +71690,6 @@
         "1982",
         "1984",
         "1983"
-      ]
-    },
-    {
-      "id": "egs2_233",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت ميرهان حسين؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "باريس",
-        "الهرم",
-        "الزقازيق",
-        "القاهرة"
       ]
     },
     {
@@ -73118,21 +71708,6 @@
       ]
     },
     {
-      "id": "egs2_235",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت أمير عيد؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "القاهرة",
-        "طنطا",
-        "الزقازيق",
-        "سانتا مونيكا"
-      ]
-    },
-    {
       "id": "egs2_236",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة هايدي موسى؟",
@@ -73148,21 +71723,6 @@
       ]
     },
     {
-      "id": "egs2_237",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت هايدي موسى؟",
-      "answer": "المنصورة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الهرم",
-        "واشنطن العاصمة",
-        "سكربيك",
-        "المنصورة"
-      ]
-    },
-    {
       "id": "egs2_238",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة كمال حسني؟",
@@ -73175,21 +71735,6 @@
         "1930",
         "1932",
         "1926"
-      ]
-    },
-    {
-      "id": "egs2_239",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت كمال حسني؟",
-      "answer": "الجمالية",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بيروت",
-        "سكربيك",
-        "سانتا مونيكا",
-        "الجمالية"
       ]
     },
     {
@@ -73223,21 +71768,6 @@
       ]
     },
     {
-      "id": "egs2_242",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عايدة الأيوبي؟",
-      "answer": "آخن",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "واشنطن العاصمة",
-        "آخن",
-        "مركز فاقوس",
-        "أنتويرب"
-      ]
-    },
-    {
       "id": "egs2_243",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة فتحية أحمد؟",
@@ -73250,21 +71780,6 @@
         "1898",
         "1894",
         "1896"
-      ]
-    },
-    {
-      "id": "egs2_244",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت فتحية أحمد؟",
-      "answer": "الخرنفش",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "بدادون",
-        "الخرنفش",
-        "المنصورة",
-        "أبو ظبي"
       ]
     },
     {
@@ -73298,21 +71813,6 @@
       ]
     },
     {
-      "id": "egs2_247",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عمرو مصطفى؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "ههيا",
-        "القاهرة",
-        "الزقازيق",
-        "السويس"
-      ]
-    },
-    {
       "id": "egs2_248",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة آن برانجر؟",
@@ -73328,21 +71828,6 @@
       ]
     },
     {
-      "id": "egs2_249",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت آن برانجر؟",
-      "answer": "القاهرة",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "القاهرة",
-        "الجمالية",
-        "بيروت",
-        "مغاغة"
-      ]
-    },
-    {
       "id": "egs2_251",
       "categoryId": "egyptian_singers",
       "question": "في أي سنة وُلد المطرب/ـة عبده الحامولي؟",
@@ -73355,21 +71840,6 @@
         "1835",
         "1836",
         "1839"
-      ]
-    },
-    {
-      "id": "egs2_252",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت عبده الحامولي؟",
-      "answer": "طنطا",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "الخرنفش",
-        "روما",
-        "طنطا",
-        "واشنطن العاصمة"
       ]
     },
     {
@@ -73400,21 +71870,6 @@
         "1994",
         "1990",
         "1991"
-      ]
-    },
-    {
-      "id": "egs2_255",
-      "categoryId": "egyptian_singers",
-      "question": "في أي مدينة أو قرية وُلد/ت لارا إسكندر؟",
-      "answer": "سانتا مونيكا",
-      "difficulty": "hard",
-      "category": "egyptian_singers",
-      "hint": "مطرب مصري",
-      "options": [
-        "وادي زم",
-        "سانتا مونيكا",
-        "الزقازيق",
-        "المنصورة"
       ]
     },
     {
@@ -94027,6 +92482,776 @@
       "categoryId": "music_proverbs",
       "question": "كمّل المثل الشعبي: 'اتغدى بيه...'؟",
       "answer": "قبل ما يتعشى بيك",
+      "difficulty": "easy",
+      "category": "music_proverbs"
+    },
+    {
+      "id": "egs3_001",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت دينا الوديدي؟",
+      "answer": "الجيزة",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "طنطا",
+        "الجيزة",
+        "ههيا",
+        "السويس"
+      ]
+    },
+    {
+      "id": "egs3_002",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت عمرو دياب؟",
+      "answer": "بورسعيد",
+      "difficulty": "easy",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الجيزة",
+        "الإسماعيلية",
+        "بورسعيد",
+        "طنطا"
+      ]
+    },
+    {
+      "id": "egs3_003",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت إسماعيل ياسين؟",
+      "answer": "السويس",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "فارسكور",
+        "دمنهور",
+        "السويس",
+        "الجيزة"
+      ]
+    },
+    {
+      "id": "egs3_004",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت علي كوبان؟",
+      "answer": "أسوان",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "طنطا",
+        "دمياط",
+        "الجيزة",
+        "أسوان"
+      ]
+    },
+    {
+      "id": "egs3_005",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت محمد منير؟",
+      "answer": "أسوان",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "أسوان",
+        "الإسماعيلية",
+        "مغاغة",
+        "السويس"
+      ]
+    },
+    {
+      "id": "egs3_006",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت مصطفى قمر؟",
+      "answer": "الإسكندرية",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "السويس",
+        "الجيزة",
+        "الإسكندرية",
+        "مغاغة"
+      ]
+    },
+    {
+      "id": "egs3_007",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت سمية الخشاب؟",
+      "answer": "الإسكندرية",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الإسكندرية",
+        "مغاغة",
+        "دمنهور",
+        "دمياط"
+      ]
+    },
+    {
+      "id": "egs3_008",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت بوب عزام؟",
+      "answer": "الإسكندرية",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الفيوم",
+        "طنطا",
+        "المنصورة",
+        "الإسكندرية"
+      ]
+    },
+    {
+      "id": "egs3_009",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت شويكار؟",
+      "answer": "الإسكندرية",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الإسكندرية",
+        "بورسعيد",
+        "دمنهور",
+        "فارسكور"
+      ]
+    },
+    {
+      "id": "egs3_010",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت دنيا مسعود؟",
+      "answer": "الإسكندرية",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الجيزة",
+        "السويس",
+        "الإسكندرية",
+        "دمنهور"
+      ]
+    },
+    {
+      "id": "egs3_011",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت رشدي أباظة؟",
+      "answer": "الزقازيق",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الزقازيق",
+        "السويس",
+        "بورسعيد",
+        "الفيوم"
+      ]
+    },
+    {
+      "id": "egs3_012",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت كارمن سليمان؟",
+      "answer": "الزقازيق",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "المنصورة",
+        "الزقازيق",
+        "الإسماعيلية",
+        "دمياط"
+      ]
+    },
+    {
+      "id": "egs3_013",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت تامر عاشور؟",
+      "answer": "دمياط",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "دمنهور",
+        "مغاغة",
+        "دمياط",
+        "الجيزة"
+      ]
+    },
+    {
+      "id": "egs3_014",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت حنان الطويل؟",
+      "answer": "الفيوم",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "طنطا",
+        "الفيوم",
+        "المنصورة",
+        "مغاغة"
+      ]
+    },
+    {
+      "id": "egs3_015",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت زكريا أحمد؟",
+      "answer": "الفيوم",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "المنصورة",
+        "أسوان",
+        "الفيوم",
+        "فارسكور"
+      ]
+    },
+    {
+      "id": "egs3_016",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت تحية كاريوكا؟",
+      "answer": "الإسماعيلية",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "بورسعيد",
+        "مغاغة",
+        "الإسماعيلية",
+        "فارسكور"
+      ]
+    },
+    {
+      "id": "egs3_017",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت هايدي موسى؟",
+      "answer": "المنصورة",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "المنصورة",
+        "السويس",
+        "الزقازيق",
+        "فارسكور"
+      ]
+    },
+    {
+      "id": "egs3_018",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت مي كساب؟",
+      "answer": "طنطا",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "دمياط",
+        "طنطا",
+        "فارسكور",
+        "بورسعيد"
+      ]
+    },
+    {
+      "id": "egs3_019",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت عبده الحامولي؟",
+      "answer": "طنطا",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "فارسكور",
+        "الجيزة",
+        "المنصورة",
+        "طنطا"
+      ]
+    },
+    {
+      "id": "egs3_020",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت كارم محمود؟",
+      "answer": "دمنهور",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "فارسكور",
+        "السويس",
+        "دمنهور",
+        "دمياط"
+      ]
+    },
+    {
+      "id": "egs3_021",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت حكيم؟",
+      "answer": "مغاغة",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الجيزة",
+        "الإسماعيلية",
+        "دمياط",
+        "مغاغة"
+      ]
+    },
+    {
+      "id": "egs3_022",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت سما المصري؟",
+      "answer": "ههيا",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "دمياط",
+        "الفيوم",
+        "الإسكندرية",
+        "ههيا"
+      ]
+    },
+    {
+      "id": "egs3_023",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة وُلد/ت رياض السنباطي؟",
+      "answer": "فارسكور",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الإسكندرية",
+        "دمياط",
+        "بورسعيد",
+        "فارسكور"
+      ]
+    },
+    {
+      "id": "egs3_024",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت مي سليم؟",
+      "answer": "الإمارات العربية المتحدة",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الجزائر",
+        "الإمارات العربية المتحدة",
+        "العراق",
+        "المملكة المتحدة"
+      ]
+    },
+    {
+      "id": "egs3_025",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت ميس حمدان؟",
+      "answer": "الإمارات العربية المتحدة",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "تونس",
+        "الولايات المتحدة",
+        "المغرب",
+        "الإمارات العربية المتحدة"
+      ]
+    },
+    {
+      "id": "egs3_026",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت سميرة سعيد؟",
+      "answer": "المغرب",
+      "difficulty": "easy",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "العراق",
+        "الجزائر",
+        "المغرب",
+        "الولايات المتحدة"
+      ]
+    },
+    {
+      "id": "egs3_027",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت رشا رزق؟",
+      "answer": "سوريا",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "السودان",
+        "سوريا",
+        "لبنان",
+        "الأردن"
+      ]
+    },
+    {
+      "id": "egs3_028",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت حميد الشاعري؟",
+      "answer": "ليبيا",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "فرنسا",
+        "ليبيا",
+        "الجزائر",
+        "السودان"
+      ]
+    },
+    {
+      "id": "egs3_029",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت فايزة أحمد؟",
+      "answer": "لبنان",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "المغرب",
+        "لبنان",
+        "تونس",
+        "السودان"
+      ]
+    },
+    {
+      "id": "egs3_030",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت ليلى غفران؟",
+      "answer": "المغرب",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "المغرب",
+        "المملكة المتحدة",
+        "السودان",
+        "سوريا"
+      ]
+    },
+    {
+      "id": "egs3_031",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت حمزة نمرة؟",
+      "answer": "السعودية",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الأردن",
+        "السعودية",
+        "المملكة المتحدة",
+        "المغرب"
+      ]
+    },
+    {
+      "id": "egs3_032",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت فريد الأطرش؟",
+      "answer": "سوريا",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الأردن",
+        "الإمارات العربية المتحدة",
+        "لبنان",
+        "سوريا"
+      ]
+    },
+    {
+      "id": "egs3_033",
+      "categoryId": "egyptian_singers",
+      "question": "في أي دولة وُلد/ت جنات؟",
+      "answer": "المغرب",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "الولايات المتحدة",
+        "المغرب",
+        "السعودية",
+        "ليبيا"
+      ]
+    },
+    {
+      "id": "fb2_1381",
+      "categoryId": "football",
+      "question": "ما جنسية اللاعب ماساهيرو إندو؟",
+      "answer": "اليابان",
+      "difficulty": "hard",
+      "category": "football",
+      "hint": "لاعب كرة قدم",
+      "options": [
+        "بلجيكا",
+        "اليابان",
+        "البرازيل",
+        "الأرجنتين"
+      ]
+    },
+    {
+      "id": "egs2_108",
+      "categoryId": "egyptian_singers",
+      "question": "في أي سنة وُلد المطرب/ـة فيروز؟",
+      "answer": "1943",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "1940",
+        "1944",
+        "1943",
+        "1947"
+      ]
+    },
+    {
+      "id": "egs2_109",
+      "categoryId": "egyptian_singers",
+      "question": "في أي مدينة أو قرية وُلد/ت فيروز؟",
+      "answer": "القاهرة",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "القاهرة",
+        "مغاغة",
+        "ههيا",
+        "الفيوم"
+      ]
+    },
+    {
+      "id": "egs2_110",
+      "categoryId": "egyptian_singers",
+      "question": "في أي سنة توفي المطرب/ـة فيروز؟",
+      "answer": "2016",
+      "difficulty": "medium",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "2014",
+        "2020",
+        "2018",
+        "2016"
+      ]
+    },
+    {
+      "id": "egs2_250",
+      "categoryId": "egyptian_singers",
+      "question": "في أي سنة توفي المطرب/ـة آن برانجر؟",
+      "answer": "1983",
+      "difficulty": "hard",
+      "category": "egyptian_singers",
+      "hint": "مطرب مصري",
+      "options": [
+        "1985",
+        "1980",
+        "1982",
+        "1983"
+      ]
+    },
+    {
+      "id": "rid2_003",
+      "categoryId": "riddles",
+      "question": "حاجة ليها أسنان ومبتعضش.. إيه هي؟",
+      "answer": "المشط",
+      "difficulty": "easy",
+      "category": "riddles",
+      "options": [
+        "المنشار",
+        "المشط",
+        "الكماشة",
+        "الزرافة"
+      ]
+    },
+    {
+      "id": "rid2_013",
+      "categoryId": "riddles",
+      "question": "حاجة إنت بتديها ومبتبقاش عندك.. إيه هي؟",
+      "answer": "كلمتك",
+      "difficulty": "medium",
+      "category": "riddles",
+      "options": [
+        "كلمتك",
+        "هديتك",
+        "وقتك",
+        "فلوسك"
+      ]
+    },
+    {
+      "id": "rid2_023",
+      "categoryId": "riddles",
+      "question": "حاجة تتفتح وتتقفل وفيها كل أسرارك.. إيه هي؟",
+      "answer": "الشنطة",
+      "difficulty": "easy",
+      "category": "riddles",
+      "options": [
+        "الشنطة",
+        "الباب",
+        "الدرج",
+        "المخ"
+      ]
+    },
+    {
+      "id": "rid2_028",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يكتب ولا يقرأ؟",
+      "answer": "القلم",
+      "difficulty": "easy",
+      "category": "riddles",
+      "options": [
+        "الكتاب",
+        "الدفتر",
+        "الحبر",
+        "القلم"
+      ]
+    },
+    {
+      "id": "rid2_038",
+      "categoryId": "riddles",
+      "question": "ما هو الحيوان الذي ينام وعيناه مفتوحتان؟",
+      "answer": "السمكة",
+      "difficulty": "medium",
+      "category": "riddles",
+      "options": [
+        "الفهد",
+        "القط",
+        "الجمل",
+        "السمكة"
+      ]
+    },
+    {
+      "id": "rid2_045",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي يحرق الناس وهو ماء؟",
+      "answer": "الماء الساخن",
+      "difficulty": "medium",
+      "category": "riddles",
+      "options": [
+        "الماء الساخن",
+        "الصابون",
+        "المطر",
+        "الثلج"
+      ]
+    },
+    {
+      "id": "rid2_047",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي له أسنان ولا يعض؟",
+      "answer": "المنشار",
+      "difficulty": "easy",
+      "category": "riddles",
+      "options": [
+        "الذئب",
+        "الفأر",
+        "الكلب",
+        "المنشار"
+      ]
+    },
+    {
+      "id": "rid2_049",
+      "categoryId": "riddles",
+      "question": "ما هو الشيء الذي له ثلاث أرجل ولا يمشي؟",
+      "answer": "الحامل",
+      "difficulty": "hard",
+      "category": "riddles",
+      "options": [
+        "الطاولة",
+        "المقلاة",
+        "الكرسي",
+        "الحامل"
+      ]
+    },
+    {
+      "id": "cha2_057",
+      "categoryId": "challenges",
+      "question": "تحدي السرعة: اذكر 4 دول بتبدأ بحرف 'ز' في 10 ثواني!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "medium",
+      "category": "challenges"
+    },
+    {
+      "id": "cha2_139",
+      "categoryId": "challenges",
+      "question": "تحدي السرعة: اذكر 4 فواكه أو خضروات بتبدأ بحرف 'ط' في 10 ثواني!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "easy",
+      "category": "challenges"
+    },
+    {
+      "id": "cha2_185",
+      "categoryId": "challenges",
+      "question": "تحدي السرعة: اذكر 4 أكلات مصرية بتبدأ بحرف 'ط' في 10 ثواني!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "easy",
+      "category": "challenges"
+    },
+    {
+      "id": "cha2_230",
+      "categoryId": "challenges",
+      "question": "تحدي الـ 5 ثواني: قول 3 فواكه أو خضروات بتبدأ بحرف 'ز'!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "easy",
+      "category": "challenges"
+    },
+    {
+      "id": "cha2_246",
+      "categoryId": "challenges",
+      "question": "تحدي الـ 5 ثواني: قول 3 دول بتبدأ بحرف 'ط'!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "medium",
+      "category": "challenges"
+    },
+    {
+      "id": "cha2_263",
+      "categoryId": "challenges",
+      "question": "تحدي السرعة: اذكر 4 أكلات مصرية بتبدأ بحرف 'ز' في 10 ثواني!",
+      "answer": "أي إجابات صحيحة بالعدد المطلوب، والحكم يقرر",
+      "difficulty": "easy",
+      "category": "challenges"
+    },
+    {
+      "id": "mus2_050",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'اللي مش قد الفيل...'؟",
+      "answer": "ما يلعب معاه",
+      "difficulty": "easy",
+      "category": "music_proverbs"
+    },
+    {
+      "id": "mus2_053",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'اللي يقرب من النار...'؟",
+      "answer": "يتحرق",
+      "difficulty": "medium",
+      "category": "music_proverbs"
+    },
+    {
+      "id": "mus2_054",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'اللي يتق الله...'؟",
+      "answer": "يجعل له مخرجا",
+      "difficulty": "easy",
+      "category": "music_proverbs"
+    },
+    {
+      "id": "mus2_055",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'كتر الكلام...'؟",
+      "answer": "يضيع الكلام",
+      "difficulty": "easy",
+      "category": "music_proverbs"
+    },
+    {
+      "id": "mus2_065",
+      "categoryId": "music_proverbs",
+      "question": "كمّل المثل الشعبي: 'يا طالب الدنيا...'؟",
+      "answer": "الدنيا غرارة",
       "difficulty": "easy",
       "category": "music_proverbs"
     }
